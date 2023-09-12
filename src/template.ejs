@@ -5,13 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title><%= htmlWebpackPlugin.options.title%></title>
   </head>
+
   <body>
-    <div class="container"></div>
-    <header class="photo-banner"></header>
-    <div class="main">
-      <div class="left-nav"></div>
-      <div class="content-box"></div>
+    <div class="container">
+      <div class="photo-banner"></div>
+
+      <div class="main">
+        <div class="left-nav"></div>
+        <div class="content-box"></div>
+      </div>
+
+      <div class="footer">
+        <p class="my-copyright">Jenn Guneratne © 2023</p>
+        <a
+          href="https://github.com/jguneratne/photo-gallery"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img
+            class="github-logo"
+            src="<%=require('../src/assets/imgs/GitHub-Mark-32px.png') %>"
+            alt="Octocat GitHub Logo"
+          />
+        </a>
+      </div>
     </div>
-    <footer class="footer"></footer>
   </body>
 </html>
