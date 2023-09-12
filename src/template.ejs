@@ -21,7 +21,19 @@
                 alt="Back Arrow Icon"
               />
             </div>
-            <div class="photo-box"></div>
+            <div class="photo-box">
+              <picture>
+                <source
+                  media="(max-width: 600px)"
+                  srcset="<%=require('../src/assets/imgs/Guneratne_2023.06.09_bee-vertical.jpg') %>"
+                  alt="Honeybee on a sage flower."
+                />
+                <img
+                  src="<%=require('../src/assets/imgs/Guneratne_2023.06.09_bee-horizontal.jpg') %>"
+                  alt="Honeybee on a sage flower."
+                />
+              </picture>
+            </div>
             <div class="forward-arrow">
               <img
                 class="arrow"

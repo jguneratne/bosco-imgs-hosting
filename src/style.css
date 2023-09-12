@@ -53,6 +53,10 @@
   height: min-content;
 }
 
+.photo-box {
+  max-width: min-content;
+}
+
 .footer {
   grid-area: 3 / 1 / 4 / 2;
   height: min-content;
