@@ -12,7 +12,11 @@ module.exports = {
   devtool: "inline-source-map",
   plugins: [
     new HtmlWebpackPlugin({
-      title: "Webpack Template",
+      title: "Photo Gallery",
+      filename: "index.html", 
+      template: "src/template.ejs", 
+      inject: body,
+      scriptloading: ["module"],
     }),
   ],
   module: {
@@ -24,10 +28,24 @@ module.exports = {
       {
         test: /\.(png|svg|jpg|jpeg|gif)$/i,
         type: "asset/resource",
+        generator: {
+          filename: "./assets/[name]-[hash][ext]",
+        },
       },
       {
         test: /\.(woff|woff2|eot|ttf|otf)$/i,
         type: "asset/resource",
+      },
+      {
+        test: /\.html$/i,
+        use: [
+          {
+            loader: "html-loader",
+            options: {
+              root: path.resolve(__dirname, "src"),
+            },
+          },
+        ],
       },
     ],
   },
