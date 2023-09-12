@@ -1,1 +1,3 @@
-console.log("webpack setup");
+import "./style.css";
+
+console.log("photogallery");

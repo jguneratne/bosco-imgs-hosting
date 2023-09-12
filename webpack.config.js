@@ -13,9 +13,9 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       title: "Photo Gallery",
-      filename: "index.html", 
-      template: "src/template.ejs", 
-      inject: body,
+      filename: "index.html",
+      template: "src/template.ejs",
+      inject: "body",
       scriptloading: ["module"],
     }),
   ],
