@@ -29,6 +29,30 @@
   background-color: blueviolet;
 }
 
+.slider-box {
+  background-color: aliceblue;
+  min-height: 10px;
+  max-width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 4ch;
+
+  display: grid;
+  grid-template-columns: 1fr 5fr 1fr;
+  align-content: center;
+  justify-items: center;
+}
+
+.back-arrow,
+.forward-arrow {
+  width: min-content;
+}
+
+.arrow {
+  width: 5ch;
+  height: min-content;
+}
+
 .footer {
   grid-area: 3 / 1 / 4 / 2;
   height: min-content;
