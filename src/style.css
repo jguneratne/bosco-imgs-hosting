@@ -1,7 +1,7 @@
 * {
   margin: 0;
   padding: 0;
-  height: 100%;
+  min-height: 100%;
   box-sizing: border-box;
 }
 
@@ -9,7 +9,7 @@
   max-width: 1600px;
   height: min-content;
   display: grid;
-  grid-template-rows: 1fr 4fr 1fr;
+  grid-template-rows: 1fr 5fr 1fr;
 }
 
 .photo-banner {
@@ -50,11 +50,14 @@
 
 .arrow {
   width: 5ch;
-  height: min-content;
 }
 
 .photo-box {
   max-width: min-content;
+}
+
+.photo-box img {
+  width: 800px;
 }
 
 .footer {
