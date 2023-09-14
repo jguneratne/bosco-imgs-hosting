@@ -29,6 +29,14 @@
   background-color: blueviolet;
 }
 
+.content-box {
+  grid-area: 1 / 2 / 2 / 3;
+}
+
+.gallery {
+  padding: 4ch;
+}
+
 .slider-box {
   border: 1px solid black;
   background-color: aliceblue;
@@ -36,7 +44,6 @@
   max-width: 1400px;
   margin-left: auto;
   margin-right: auto;
-  margin: 4ch;
 
   display: grid;
   grid-template-columns: 1fr 5fr 1fr;
