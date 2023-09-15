@@ -100,6 +100,14 @@
   padding-top: 3ch;
 }
 
+.photo-box picture {
+  display: none;
+}
+
+.photo-box .picture--active {
+  display: block;
+}
+
 .photo-box img {
   width: 800px;
 }
