@@ -1,7 +1,8 @@
 import "./style.css";
 
-import sliderAnimation from "./photoSlider";
+import { sliderAnimation, highlightCircles } from "./photoSlider";
 
 console.log("photogallery");
 
 sliderAnimation();
+highlightCircles();
