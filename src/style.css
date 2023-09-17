@@ -76,7 +76,7 @@
   border-radius: 50%;
 }
 
-.circle-iconn--active {
+.circle-icon--active {
   outline: 1px black solid;
   outline-offset: -1ch;
   background-color: lightgray;

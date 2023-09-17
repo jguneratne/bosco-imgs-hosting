@@ -1,6 +1,6 @@
-export function sliderAnimation() {
-  const galleryImgs = Array.from(document.querySelectorAll("picture"));
+import { galleryImgs, circleIcons } from "./querySelectors";
 
+export function sliderAnimation() {
   console.log(galleryImgs);
 
   let i = 0;
@@ -24,24 +24,51 @@ export function sliderAnimation() {
 }
 
 export function highlightCircles() {
-  const circleIcons = Array.from(document.querySelectorAll(".circle-icon"));
-
   let i = 0;
 
   const selectCircleIcon = function () {
     if (i === 0) {
-      circleIcons[i].classList.add("circle-iconn--active");
+      circleIcons[i].classList.add("circle-icon--active");
     } else if (i === circleIcons.length) {
-      circleIcons[i - 1].classList.remove("circle-iconn--active");
-      circleIcons[0].classList.add("circle-iconn--active");
+      circleIcons[i - 1].classList.remove("circle-icon--active");
+      circleIcons[0].classList.add("circle-icon--active");
       i = 0;
     } else {
-      circleIcons[i - 1].classList.remove("circle-iconn--active");
-      circleIcons[i].classList.add("circle-iconn--active");
+      circleIcons[i - 1].classList.remove("circle-icon--active");
+      circleIcons[i].classList.add("circle-icon--active");
     }
 
     i++;
   };
 
   setInterval(selectCircleIcon, 3000);
+}
+
+export function clickCircles() {
+  circleIcons.forEach((icon) => {
+    icon.addEventListener("pointerdown", () => {
+      const circleIconDiv = document.querySelector(".img-dots");
+      const sliderBox = circleIconDiv.parentElement;
+      const circleIconNum = icon.dataset.forNum;
+      const photoToDisplay = sliderBox.querySelector(
+        `picture[data-num="${circleIconNum}"]`
+      );
+
+      //   console.log(circleIconDiv);
+      //   console.log(sliderBox);
+      //   console.log(circleIconNum);
+      //   console.log(photoToDisplay);
+
+      circleIconDiv.querySelectorAll(".circle-icon").forEach((circle) => {
+        circle.classList.remove("circle-icon--active");
+      });
+
+      sliderBox.querySelectorAll("picture").forEach((pic) => {
+        pic.classList.remove("picture--active");
+      });
+
+      icon.classList.add("circle-icon--active");
+      photoToDisplay.classList.add("picture--active");
+    });
+  });
 }
