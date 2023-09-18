@@ -124,11 +124,20 @@ export function rightArrowCtrl() {
   });
 }
 
-// export function leftArrowCtrl() {
-//   let i = 0;
-//   let j = 0;
+export function leftArrowCtrl() {
+  let i = 0;
+  let j = 0;
 
-//   leftArrow.addEventListener("pointerdown", () => {
-
-//   });
-// }
+  leftArrow.addEventListener("pointerdown", () => {
+    if (
+      i === 0 &&
+      galleryImgs[i].classList.contains("picture--active") &&
+      j === 0 &&
+      circleIcons[j].classList.contains("circle-icon--active")
+    ) {
+      // Remove active classList from [0] index and add active classList to final index
+    } else {
+      // Remove active classList from current index and add active classList to index-1
+    }
+  });
+}
