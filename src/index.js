@@ -1,9 +1,19 @@
 import "./style.css";
 
-import { sliderAnimation, highlightCircles, clickCircles } from "./photoSlider";
+import {
+  defaultGallerySetting,
+  // sliderAnimation,
+  // highlightCircles,
+  clickCircles,
+  rightArrowCtrl,
+  // leftArrowCtrl,
+} from "./photoSlider";
 
 console.log("photogallery");
 
-sliderAnimation();
-highlightCircles();
+defaultGallerySetting();
+// sliderAnimation();
+// highlightCircles();
 clickCircles();
+rightArrowCtrl();
+// leftArrowCtrl();
