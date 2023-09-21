@@ -135,9 +135,20 @@ export function leftArrowCtrl() {
       j === 0 &&
       circleIcons[j].classList.contains("circle-icon--active")
     ) {
-      // Remove active classList from [0] index and add active classList to final index
+      console.log(true);
+      i = galleryImgs.length - 1;
+      j = circleIcons.length - 1;
+      galleryImgs[i].classList.add("picture--active");
+      circleIcons[j].classList.add("circle-icon--active");
+      galleryImgs[0].classList.remove("picture--active");
+      circleIcons[0].classList.remove("circle-icon--active");
     } else {
-      // Remove active classList from current index and add active classList to index-1
+      i = i - 1;
+      j = j - 1;
+      galleryImgs[i].classList.add("picture--active");
+      circleIcons[j].classList.add("circle-icon--active");
+      galleryImgs[i + 1].classList.remove("picture--active");
+      circleIcons[j + 1].classList.remove("circle-icon--active");
     }
   });
 }
