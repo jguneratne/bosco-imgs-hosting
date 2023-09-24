@@ -2,8 +2,8 @@ import "./style.css";
 
 import {
   defaultGallerySetting,
-  // sliderAnimation,
-  // highlightCircles,
+  //   sliderAnimation,
+  //   highlightCircles,
   clickCircles,
   rightArrowCtrl,
   leftArrowCtrl,

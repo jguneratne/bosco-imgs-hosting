@@ -35,26 +35,26 @@ export function defaultGallerySetting() {
 //   setInterval(advanceSlides, 3000);
 // }
 
-// export function highlightCircles() {
-//   let i = 0;
+export function highlightCircles() {
+  let i = 0;
 
-//   const selectCircleIcon = function () {
-//     if (i === 0) {
-//       circleIcons[i].classList.add("circle-icon--active");
-//     } else if (i === circleIcons.length) {
-//       circleIcons[i - 1].classList.remove("circle-icon--active");
-//       circleIcons[0].classList.add("circle-icon--active");
-//       i = 0;
-//     } else {
-//       circleIcons[i - 1].classList.remove("circle-icon--active");
-//       circleIcons[i].classList.add("circle-icon--active");
-//     }
+  const selectCircleIcon = function () {
+    if (i === 0) {
+      circleIcons[i].classList.add("circle-icon--active");
+    } else if (i === circleIcons.length) {
+      circleIcons[i - 1].classList.remove("circle-icon--active");
+      circleIcons[0].classList.add("circle-icon--active");
+      i = 0;
+    } else {
+      circleIcons[i - 1].classList.remove("circle-icon--active");
+      circleIcons[i].classList.add("circle-icon--active");
+    }
 
-//     i++;
-//   };
+    i++;
+  };
 
-//   setInterval(selectCircleIcon, 3000);
-// }
+  setInterval(selectCircleIcon, 3000);
+}
 
 export function clickCircles() {
   circleIcons.forEach((icon) => {
@@ -102,9 +102,8 @@ export function rightArrowCtrl() {
       galleryImgs[i].classList.add("picture--active");
       circleIcons[j - 1].classList.remove("circle-icon--active");
       circleIcons[j].classList.add("circle-icon--active");
-    } else if (i === 0 && j === 0) {
-      galleryImgs[i].classList.add("picture--active");
-      circleIcons[j].classList.add("circle-icon--active");
+      console.log(i);
+      console.log(j);
     } else if (i === galleryImgs.length && j === circleIcons.length) {
       galleryImgs[i - 1].classList.remove("picture--active");
       galleryImgs[0].classList.add("picture--active");
@@ -112,11 +111,15 @@ export function rightArrowCtrl() {
       circleIcons[0].classList.add("circle-icon--active");
       i = 0;
       j = 0;
+      console.log(i);
+      console.log(j);
     } else {
       galleryImgs[i - 1].classList.remove("picture--active");
       galleryImgs[i].classList.add("picture--active");
       circleIcons[j - 1].classList.remove("circle-icon--active");
       circleIcons[j].classList.add("circle-icon--active");
+      console.log(i);
+      console.log(j);
     }
 
     i++;
@@ -142,13 +145,15 @@ export function leftArrowCtrl() {
       circleIcons[j].classList.add("circle-icon--active");
       galleryImgs[0].classList.remove("picture--active");
       circleIcons[0].classList.remove("circle-icon--active");
+      console.log(i);
+      console.log(j);
     } else {
+      galleryImgs[i].classList.remove("picture--active");
+      circleIcons[j].classList.remove("circle-icon--active");
       i = i - 1;
       j = j - 1;
       galleryImgs[i].classList.add("picture--active");
       circleIcons[j].classList.add("circle-icon--active");
-      galleryImgs[i + 1].classList.remove("picture--active");
-      circleIcons[j + 1].classList.remove("circle-icon--active");
     }
   });
 }
