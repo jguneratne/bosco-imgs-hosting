@@ -66,14 +66,9 @@
   gap: 6ch;
 }
 
-/* .img-btn {
-  background: none;
-  border: none;
-} */
-
 .circle-icon {
-  width: 3ch;
-  height: 3ch;
+  width: 2ch;
+  height: 2ch;
   border-radius: 50%;
   border: 1px solid black;
   background-color: transparent;
