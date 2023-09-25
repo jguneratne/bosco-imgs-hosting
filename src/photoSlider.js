@@ -89,13 +89,10 @@ export function clickCircles() {
 
 export function arrowCtrl() {
   let currentSlide = photoBox.querySelector(".picture--active");
-  let currentSlideIndex = currentSlide.dataset.num;
   let nextSlide = currentSlide.nextElementSibling;
   let prevSlide = currentSlide.previousElementSibling;
 
   sliderBox.addEventListener("pointerdown", (e) => {
-    e.preventDefault();
-
     if (e.target === rightArrow) {
       if (nextSlide === null) {
         nextSlide = galleryImgs[0];
@@ -104,7 +101,6 @@ export function arrowCtrl() {
       currentSlide.classList.remove("picture--active");
       nextSlide.classList.add("picture--active");
       currentSlide = photoBox.querySelector(".picture--active");
-      currentSlideIndex = currentSlide.dataset.num;
       nextSlide = currentSlide.nextElementSibling;
       prevSlide = currentSlide.previousElementSibling;
     }
@@ -117,7 +113,6 @@ export function arrowCtrl() {
       currentSlide.classList.remove("picture--active");
       prevSlide.classList.add("picture--active");
       currentSlide = photoBox.querySelector(".picture--active");
-      currentSlideIndex = currentSlide.dataset.num;
       nextSlide = currentSlide.nextElementSibling;
       prevSlide = currentSlide.previousElementSibling;
 
