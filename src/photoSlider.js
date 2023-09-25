@@ -1,4 +1,6 @@
 import {
+  sliderBox,
+  photoBox,
   galleryImgs,
   circleIcons,
   rightArrow,
@@ -85,75 +87,49 @@ export function clickCircles() {
   });
 }
 
-export function rightArrowCtrl() {
-  let i = 0;
-  let j = 0;
+export function arrowCtrl() {
+  let currentSlide = photoBox.querySelector(".picture--active");
+  let currentSlideIndex = currentSlide.dataset.num;
+  let nextSlide = currentSlide.nextElementSibling;
+  let prevSlide = currentSlide.previousElementSibling;
 
-  rightArrow.addEventListener("pointerdown", () => {
-    if (
-      i === 0 &&
-      galleryImgs[i].classList.contains("picture--active") &&
-      j === 0 &&
-      circleIcons[j].classList.contains("circle-icon--active")
-    ) {
-      i = i + 1;
-      j = j + 1;
-      galleryImgs[i - 1].classList.remove("picture--active");
-      galleryImgs[i].classList.add("picture--active");
-      circleIcons[j - 1].classList.remove("circle-icon--active");
-      circleIcons[j].classList.add("circle-icon--active");
-      console.log(i);
-      console.log(j);
-    } else if (i === galleryImgs.length && j === circleIcons.length) {
-      galleryImgs[i - 1].classList.remove("picture--active");
-      galleryImgs[0].classList.add("picture--active");
-      circleIcons[j - 1].classList.remove("circle-icon--active");
-      circleIcons[0].classList.add("circle-icon--active");
-      i = 0;
-      j = 0;
-      console.log(i);
-      console.log(j);
-    } else {
-      galleryImgs[i - 1].classList.remove("picture--active");
-      galleryImgs[i].classList.add("picture--active");
-      circleIcons[j - 1].classList.remove("circle-icon--active");
-      circleIcons[j].classList.add("circle-icon--active");
-      console.log(i);
-      console.log(j);
+  sliderBox.addEventListener("pointerdown", (e) => {
+    e.preventDefault();
+
+    if (e.target === rightArrow) {
+      if (nextSlide === null) {
+        nextSlide = galleryImgs[0];
+      }
+
+      currentSlide.classList.remove("picture--active");
+      nextSlide.classList.add("picture--active");
+      currentSlide = photoBox.querySelector(".picture--active");
+      currentSlideIndex = currentSlide.dataset.num;
+      nextSlide = currentSlide.nextElementSibling;
+      prevSlide = currentSlide.previousElementSibling;
     }
 
-    i++;
-    j++;
-  });
-}
+    if (e.target === leftArrow) {
+      if (currentSlide === galleryImgs[0]) {
+        prevSlide = galleryImgs[galleryImgs.length - 1];
+      }
 
-export function leftArrowCtrl() {
-  let i = 0;
-  let j = 0;
+      currentSlide.classList.remove("picture--active");
+      prevSlide.classList.add("picture--active");
+      currentSlide = photoBox.querySelector(".picture--active");
+      currentSlideIndex = currentSlide.dataset.num;
+      nextSlide = currentSlide.nextElementSibling;
+      prevSlide = currentSlide.previousElementSibling;
 
-  leftArrow.addEventListener("pointerdown", () => {
-    if (
-      i === 0 &&
-      galleryImgs[i].classList.contains("picture--active") &&
-      j === 0 &&
-      circleIcons[j].classList.contains("circle-icon--active")
-    ) {
-      console.log(true);
-      i = galleryImgs.length - 1;
-      j = circleIcons.length - 1;
-      galleryImgs[i].classList.add("picture--active");
-      circleIcons[j].classList.add("circle-icon--active");
-      galleryImgs[0].classList.remove("picture--active");
-      circleIcons[0].classList.remove("circle-icon--active");
-      console.log(i);
-      console.log(j);
-    } else {
-      galleryImgs[i].classList.remove("picture--active");
-      circleIcons[j].classList.remove("circle-icon--active");
-      i = i - 1;
-      j = j - 1;
-      galleryImgs[i].classList.add("picture--active");
-      circleIcons[j].classList.add("circle-icon--active");
+      if (prevSlide === null) {
+        prevSlide = galleryImgs[galleryImgs.length - 1];
+      }
     }
+
+    // console.log(currentSlide);
+    console.log(nextSlide);
+    console.log(prevSlide);
+    // console.log(currentSlideIndex);
+    // console.log(galleryImgs.length - 1);
   });
 }
