@@ -2,6 +2,7 @@ import {
   sliderBox,
   photoBox,
   galleryImgs,
+  circleNav,
   circleIcons,
   rightArrow,
   leftArrow,
@@ -92,17 +93,33 @@ export function arrowCtrl() {
   let nextSlide = currentSlide.nextElementSibling;
   let prevSlide = currentSlide.previousElementSibling;
 
+  let currentCircle = circleNav.querySelector(".circle-icon--active");
+  let nextCircle = currentCircle.nextElementSibling;
+  let prevCircle = currentCircle.previousElementSibling;
+
   sliderBox.addEventListener("pointerdown", (e) => {
     if (e.target === rightArrow) {
+      console.log(currentCircle);
+      console.log(nextCircle);
       if (nextSlide === null) {
         nextSlide = galleryImgs[0];
       }
 
+      if (nextCircle === null) {
+        nextCircle = circleIcons[0];
+      }
+
       currentSlide.classList.remove("picture--active");
       nextSlide.classList.add("picture--active");
+      currentCircle.classList.remove("circle-icon--active");
+      nextCircle.classList.add("circle-icon--active");
+
       currentSlide = photoBox.querySelector(".picture--active");
       nextSlide = currentSlide.nextElementSibling;
       prevSlide = currentSlide.previousElementSibling;
+      currentCircle = circleNav.querySelector(".circle-icon--active");
+      nextCircle = currentCircle.nextElementSibling;
+      prevCircle = currentCircle.previousElementSibling;
     }
 
     if (e.target === leftArrow) {
@@ -110,16 +127,26 @@ export function arrowCtrl() {
         prevSlide = galleryImgs[galleryImgs.length - 1];
       }
 
+      if (currentCircle === circleIcons[0] || prevCircle === null) {
+        prevCircle = circleIcons[circleIcons.length - 1];
+      }
+
       currentSlide.classList.remove("picture--active");
       prevSlide.classList.add("picture--active");
+      currentCircle.classList.remove("circle-icon--active");
+      prevCircle.classList.add("circle-icon--active");
+
       currentSlide = photoBox.querySelector(".picture--active");
       nextSlide = currentSlide.nextElementSibling;
       prevSlide = currentSlide.previousElementSibling;
+      currentCircle = circleNav.querySelector(".circle-icon--active");
+      nextCircle = currentCircle.nextElementSibling;
+      prevCircle = currentCircle.previousElementSibling;
     }
 
     // console.log(currentSlide);
-    console.log(nextSlide);
-    console.log(prevSlide);
+    // console.log(nextSlide);
+    // console.log(prevSlide);
     // console.log(currentSlideIndex);
     // console.log(galleryImgs.length - 1);
   });
