@@ -106,7 +106,7 @@ export function arrowCtrl() {
     }
 
     if (e.target === leftArrow) {
-      if (currentSlide === galleryImgs[0]) {
+      if (currentSlide === galleryImgs[0] || prevSlide === null) {
         prevSlide = galleryImgs[galleryImgs.length - 1];
       }
 
@@ -115,10 +115,6 @@ export function arrowCtrl() {
       currentSlide = photoBox.querySelector(".picture--active");
       nextSlide = currentSlide.nextElementSibling;
       prevSlide = currentSlide.previousElementSibling;
-
-      if (prevSlide === null) {
-        prevSlide = galleryImgs[galleryImgs.length - 1];
-      }
     }
 
     // console.log(currentSlide);
