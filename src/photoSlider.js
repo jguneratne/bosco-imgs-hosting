@@ -15,28 +15,28 @@ export function defaultGallerySetting() {
   circleIcons[j].classList.add("circle-icon--active");
 }
 
-// export function sliderAnimation() {
-//   console.log(galleryImgs);
+export function sliderAnimation() {
+  console.log(galleryImgs);
 
-//   let i = 0;
+  let i = 0;
 
-//   const advanceSlides = function () {
-//     if (i === 0) {
-//       galleryImgs[i].classList.add("picture--active");
-//     } else if (i === galleryImgs.length) {
-//       galleryImgs[i - 1].classList.remove("picture--active");
-//       galleryImgs[0].classList.add("picture--active");
-//       i = 0;
-//     } else {
-//       galleryImgs[i - 1].classList.remove("picture--active");
-//       galleryImgs[i].classList.add("picture--active");
-//     }
+  const advanceSlides = function () {
+    if (i === 0) {
+      galleryImgs[i].classList.add("picture--active");
+    } else if (i === galleryImgs.length) {
+      galleryImgs[i - 1].classList.remove("picture--active");
+      galleryImgs[0].classList.add("picture--active");
+      i = 0;
+    } else {
+      galleryImgs[i - 1].classList.remove("picture--active");
+      galleryImgs[i].classList.add("picture--active");
+    }
 
-//     i++;
-//   };
+    i++;
+  };
 
-//   setInterval(advanceSlides, 3000);
-// }
+  setInterval(advanceSlides, 3000);
+}
 
 export function highlightCircles() {
   let i = 0;
@@ -60,31 +60,24 @@ export function highlightCircles() {
 }
 
 export function clickCircles() {
-  circleIcons.forEach((icon) => {
-    icon.addEventListener("pointerdown", () => {
-      const circleIconDiv = document.querySelector(".img-dots");
-      const sliderBox = circleIconDiv.parentElement;
-      const circleIconNum = icon.dataset.forNum;
-      const photoToDisplay = sliderBox.querySelector(
-        `picture[data-num="${circleIconNum}"]`
-      );
+  let currentSlide = photoBox.querySelector(".picture--active");
+  let currentCircle = circleNav.querySelector(".circle-icon--active");
 
-      //   console.log(circleIconDiv);
-      //   console.log(sliderBox);
-      //   console.log(circleIconNum);
-      //   console.log(photoToDisplay);
+  circleNav.addEventListener("pointerdown", (e) => {
+    const targetDot = e.target;
+    // console.log(targetDot);
+    const targetDotIndex = targetDot.dataset.circle;
+    //console.log(targetDotIndex);
+    const targetImg = galleryImgs[targetDotIndex];
+    console.log(targetImg);
 
-      circleIconDiv.querySelectorAll(".circle-icon").forEach((circle) => {
-        circle.classList.remove("circle-icon--active");
-      });
+    currentSlide.classList.remove("picture--active");
+    currentCircle.classList.remove("circle-icon--active");
+    targetImg.classList.add("picture--active");
+    targetDot.classList.add("circle-icon--active");
 
-      sliderBox.querySelectorAll("picture").forEach((pic) => {
-        pic.classList.remove("picture--active");
-      });
-
-      //icon.classList.add("circle-icon--active");
-      photoToDisplay.classList.add("picture--active");
-    });
+    currentSlide = targetImg;
+    currentCircle = targetDot;
   });
 }
 
@@ -99,8 +92,6 @@ export function arrowCtrl() {
 
   sliderBox.addEventListener("pointerdown", (e) => {
     if (e.target === rightArrow) {
-      console.log(currentCircle);
-      console.log(nextCircle);
       if (nextSlide === null) {
         nextSlide = galleryImgs[0];
       }
@@ -143,11 +134,5 @@ export function arrowCtrl() {
       nextCircle = currentCircle.nextElementSibling;
       prevCircle = currentCircle.previousElementSibling;
     }
-
-    // console.log(currentSlide);
-    // console.log(nextSlide);
-    // console.log(prevSlide);
-    // console.log(currentSlideIndex);
-    // console.log(galleryImgs.length - 1);
   });
 }

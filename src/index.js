@@ -6,7 +6,6 @@ import {
   //   highlightCircles,
   clickCircles,
   arrowCtrl,
-  // leftArrowCtrl,
 } from "./photoSlider";
 
 console.log("photogallery");
@@ -16,4 +15,3 @@ defaultGallerySetting();
 // highlightCircles();
 clickCircles();
 arrowCtrl();
-//leftArrowCtrl();
