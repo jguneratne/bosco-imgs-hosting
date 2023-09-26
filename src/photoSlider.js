@@ -6,6 +6,8 @@ import {
   circleIcons,
   rightArrow,
   leftArrow,
+  slidePosition,
+  circlePosition,
 } from "./querySelectors";
 
 export function defaultGallerySetting() {
@@ -82,57 +84,75 @@ export function clickCircles() {
 }
 
 export function arrowCtrl() {
-  let currentSlide = photoBox.querySelector(".picture--active");
-  let nextSlide = currentSlide.nextElementSibling;
-  let prevSlide = currentSlide.previousElementSibling;
-
-  let currentCircle = circleNav.querySelector(".circle-icon--active");
-  let nextCircle = currentCircle.nextElementSibling;
-  let prevCircle = currentCircle.previousElementSibling;
-
   sliderBox.addEventListener("pointerdown", (e) => {
     if (e.target === rightArrow) {
-      if (nextSlide === null) {
-        nextSlide = galleryImgs[0];
+      if (slidePosition.nextSlidePosition === null) {
+        slidePosition.nextSlidePosition = galleryImgs[0];
       }
 
-      if (nextCircle === null) {
-        nextCircle = circleIcons[0];
+      if (circlePosition.nextCirclePosition === null) {
+        circlePosition.nextCirclePosition = circleIcons[0];
       }
 
-      currentSlide.classList.remove("picture--active");
-      nextSlide.classList.add("picture--active");
-      currentCircle.classList.remove("circle-icon--active");
-      nextCircle.classList.add("circle-icon--active");
+      slidePosition.currentSlidePosition.classList.remove("picture--active");
+      slidePosition.nextSlidePosition.classList.add("picture--active");
+      circlePosition.currentCirclePosition.classList.remove(
+        "circle-icon--active"
+      );
+      circlePosition.nextCirclePosition.classList.add("circle-icon--active");
 
-      currentSlide = photoBox.querySelector(".picture--active");
-      nextSlide = currentSlide.nextElementSibling;
-      prevSlide = currentSlide.previousElementSibling;
-      currentCircle = circleNav.querySelector(".circle-icon--active");
-      nextCircle = currentCircle.nextElementSibling;
-      prevCircle = currentCircle.previousElementSibling;
+      slidePosition.currentSlidePosition =
+        photoBox.querySelector(".picture--active");
+      slidePosition.nextSlidePosition =
+        slidePosition.currentSlidePosition.nextElementSibling;
+      slidePosition.prevSlidePosition =
+        slidePosition.currentSlidePosition.previousElementSibling;
+      circlePosition.currentCirclePosition = circleNav.querySelector(
+        ".circle-icon--active"
+      );
+      circlePosition.nextCirclePosition =
+        circlePosition.currentCirclePosition.nextElementSibling;
+      circlePosition.prevCirclePosition =
+        circlePosition.currentCirclePosition.previousElementSibling;
     }
 
     if (e.target === leftArrow) {
-      if (currentSlide === galleryImgs[0] || prevSlide === null) {
-        prevSlide = galleryImgs[galleryImgs.length - 1];
+      if (
+        slidePosition.currentSlidePosition === galleryImgs[0] ||
+        (slidePosition.prevSlidePosition === undefined ||
+          slidePosition.prevSlidePosition) === null
+      ) {
+        slidePosition.prevSlidePosition = galleryImgs[galleryImgs.length - 1];
       }
 
-      if (currentCircle === circleIcons[0] || prevCircle === null) {
-        prevCircle = circleIcons[circleIcons.length - 1];
+      if (
+        circlePosition.currentCirclePosition === circleIcons[0] ||
+        circlePosition.prevCirclePosition === undefined ||
+        circlePosition.prevCirclePosition === null
+      ) {
+        circlePosition.prevCirclePosition = circleIcons[circleIcons.length - 1];
       }
 
-      currentSlide.classList.remove("picture--active");
-      prevSlide.classList.add("picture--active");
-      currentCircle.classList.remove("circle-icon--active");
-      prevCircle.classList.add("circle-icon--active");
+      slidePosition.currentSlidePosition.classList.remove("picture--active");
+      slidePosition.prevSlidePosition.classList.add("picture--active");
+      circlePosition.currentCirclePosition.classList.remove(
+        "circle-icon--active"
+      );
+      circlePosition.prevCirclePosition.classList.add("circle-icon--active");
 
-      currentSlide = photoBox.querySelector(".picture--active");
-      nextSlide = currentSlide.nextElementSibling;
-      prevSlide = currentSlide.previousElementSibling;
-      currentCircle = circleNav.querySelector(".circle-icon--active");
-      nextCircle = currentCircle.nextElementSibling;
-      prevCircle = currentCircle.previousElementSibling;
+      slidePosition.currentSlidePosition =
+        photoBox.querySelector(".picture--active");
+      slidePosition.nextSlidePosition =
+        slidePosition.currentSlidePosition.nextElementSibling;
+      slidePosition.prevSlidePosition =
+        slidePosition.currentSlidePosition.previousElementSibling;
+      circlePosition.currentCirclePosition = circleNav.querySelector(
+        ".circle-icon--active"
+      );
+      circlePosition.nextCirclePosition =
+        circlePosition.currentCirclePosition.nextElementSibling;
+      circlePosition.prevCirclePosition =
+        circlePosition.currentCirclePosition.previousElementSibling;
     }
   });
 }
