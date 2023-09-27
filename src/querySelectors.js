@@ -8,70 +8,74 @@ export const circleIcons = Array.from(
 export const rightArrow = document.querySelector("[data-forward-arrow]");
 export const leftArrow = document.querySelector("[data-back-arrow]");
 
-export let targetIndex = 0;
-export let currentSlide = galleryImgs[targetIndex];
-export let nextSlide = galleryImgs[targetIndex + 1];
-export let prevSlide = galleryImgs[targetIndex - 1];
-export let currentCircle = circleIcons[targetIndex];
-export let nextCircle = circleIcons[targetIndex + 1];
-export let prevCircle = circleIcons[targetIndex - 1];
+export let setIndex = {
+  currentIndex: 0,
+
+  get targetIndex() {
+    return this.currentIndex;
+  },
+
+  set targetIndex(newTargetIndex) {
+    this.currentIndex = newTargetIndex;
+  },
+};
 
 export const slidePosition = {
-  findCurrentSlide: currentSlide,
-  findNextSlide: nextSlide,
-  findPrevSlide: prevSlide,
+  currentSlide: galleryImgs[setIndex.currentIndex],
+  nextSlide: galleryImgs[setIndex.currentIndex + 1],
+  prevSlide: galleryImgs[setIndex.currentIndex - 1],
 
   get currentSlidePosition() {
-    return this.findCurrentSlide;
+    return this.currentSlide;
   },
 
   set currentSlidePosition(newCurrentSlide) {
-    this.findCurrentSlide = newCurrentSlide;
+    this.currentSlide = newCurrentSlide;
   },
 
   get nextSlidePosition() {
-    return this.findNextSlide;
+    return this.nextSlide;
   },
 
   set nextSlidePosition(newNextSlide) {
-    this.findNextSlide = newNextSlide;
+    this.nextSlide = newNextSlide;
   },
 
   get prevSlidePosition() {
-    return this.findPrevSlide;
+    return this.prevSlide;
   },
 
   set prevSlidePosition(newPrevSlide) {
-    this.findPrevSlide = newPrevSlide;
+    this.prevSlide = newPrevSlide;
   },
 };
 
 export const circlePosition = {
-  findCurrentCircle: currentCircle,
-  findNextCircle: nextCircle,
-  findPrevCircle: prevCircle,
+  currentCircle: circleIcons[setIndex.currentIndex],
+  nextCircle: circleIcons[setIndex.currentIndex + 1],
+  prevCircle: circleIcons[setIndex.currentIndex - 1],
 
   get currentCirclePosition() {
-    return this.findCurrentCircle;
+    return this.currentCircle;
   },
 
   set currentCirclePosition(newCurrentCircle) {
-    this.findCurrentCircle = newCurrentCircle;
+    this.currentCircle = newCurrentCircle;
   },
 
   get nextCirclePosition() {
-    return this.findNextCircle;
+    return this.nextCircle;
   },
 
   set nextCirclePosition(newNextCircle) {
-    this.findNextCircle = newNextCircle;
+    this.nextCircle = newNextCircle;
   },
 
   get prevCirclePosition() {
-    return this.findPrevSlide;
+    return this.prevSlide;
   },
 
   set prevCirclePosition(newPrevCircle) {
-    this.findPrevSlide = newPrevCircle;
+    this.prevSlide = newPrevCircle;
   },
 };
