@@ -63,24 +63,65 @@ export function highlightCircles() {
 }
 
 export function clickCircles() {
-  let currentSlide = photoBox.querySelector(".picture--active");
-  let currentCircle = circleNav.querySelector(".circle-icon--active");
-
   circleNav.addEventListener("pointerdown", (e) => {
-    const targetDot = e.target;
-    // console.log(targetDot);
-    const targetDotIndex = targetDot.dataset.circle;
-    //console.log(targetDotIndex);
-    const targetImg = galleryImgs[targetDotIndex];
-    console.log(targetImg);
+    setIndex.targetIndex = e.target.dataset.circle;
+    console.log(setIndex.targetIndex);
 
-    currentSlide.classList.remove("picture--active");
-    currentCircle.classList.remove("circle-icon--active");
-    targetImg.classList.add("picture--active");
-    targetDot.classList.add("circle-icon--active");
+    slidePosition.currentSlidePosition.classList.remove("picture--active");
+    circlePosition.currentCirclePosition.classList.remove(
+      "circle-icon--active"
+    );
 
-    currentSlide = targetImg;
-    currentCircle = targetDot;
+    slidePosition.currentSlidePosition = galleryImgs[setIndex.targetIndex];
+    console.log(slidePosition.currentSlidePosition);
+    slidePosition.currentSlidePosition.classList.add("picture--active");
+
+    circlePosition.currentCirclePosition = circleIcons[setIndex.targetIndex];
+    console.log(circlePosition.currentCirclePosition);
+    circlePosition.currentCirclePosition.classList.add("circle-icon--active");
+
+    if (
+      slidePosition.currentSlidePosition ===
+        galleryImgs[galleryImgs.length - 1] &&
+      circlePosition.currentCirclePosition ===
+        circleIcons[circleIcons.length - 1]
+    ) {
+      slidePosition.nextSlidePosition = galleryImgs[0];
+      slidePosition.prevSlidePosition = galleryImgs[setIndex.targetIndex - 1];
+      circlePosition.nextCirclePosition = circleIcons[0];
+      circlePosition.prevCirclePosition = circleIcons[setIndex.targetIndex - 1];
+
+      // console.log(slidePosition.currentSlidePosition);
+      // console.log(slidePosition.prevSlidePosition);
+      // console.log(slidePosition.nextSlidePosition);
+      // console.log(circlePosition.currentCirclePosition);
+      // console.log(circlePosition.prevCirclePosition);
+      // console.log(circlePosition.nextCirclePosition);
+    } else if (
+      slidePosition.currentSlidePosition === galleryImgs[0] &&
+      circlePosition.currentCirclePosition === circleIcons[0]
+    ) {
+      // console.log(setIndex.targetIndex);
+      // console.log(slidePosition.currentSlidePosition);
+
+      slidePosition.nextSlidePosition = galleryImgs[0 + 1];
+      // console.log(slidePosition.nextSlidePosition);
+
+      slidePosition.prevSlidePosition = galleryImgs[galleryImgs.length - 1];
+      // console.log(slidePosition.prevSlidePosition);
+
+      circlePosition.nextCirclePosition = circleIcons[0 + 1];
+      // console.log(circlePosition.nextCirclePosition);
+
+      circlePosition.prevCirclePosition = circleIcons[circleIcons.length - 1];
+      // console.log(circlePosition.currentCirclePosition);
+      // console.log(circlePosition.prevCirclePosition);
+    } else {
+      slidePosition.nextSlidePosition = galleryImgs[setIndex.targetIndex + 1];
+      slidePosition.prevSlidePosition = galleryImgs[setIndex.targetIndex - 1];
+      circlePosition.nextCirclePosition = circleIcons[setIndex.targetIndex + 1];
+      circlePosition.prevCircle = circleIcons[setIndex.targetIndex - 1];
+    }
   });
 }
 
