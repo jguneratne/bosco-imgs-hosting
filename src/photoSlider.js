@@ -92,10 +92,6 @@ export function arrowCtrl() {
         circlePosition.nextCirclePosition = circleIcons[0];
       }
 
-      if (setIndex.targetIndex > galleryImgs.length - 1) {
-        resetIndexes();
-      }
-
       slidePosition.currentSlidePosition.classList.remove("picture--active");
       slidePosition.nextSlidePosition.classList.add("picture--active");
       circlePosition.currentCirclePosition.classList.remove(
@@ -106,37 +102,26 @@ export function arrowCtrl() {
       setIndex.targetIndex++;
       console.log(setIndex.targetIndex);
 
-      slidePosition.currentSlidePosition = galleryImgs[setIndex.targetIndex];
-      slidePosition.nextSlidePosition = galleryImgs[setIndex.targetIndex + 1];
-      slidePosition.prevSlidePosition = galleryImgs[setIndex.targetIndex - 1];
-      circlePosition.currentCirclePosition = circleIcons[setIndex.targetIndex];
-      circlePosition.nextCirclePosition = circleIcons[setIndex.targetIndex + 1];
-      circlePosition.prevCirclePosition = circleIcons[setIndex.targetIndex - 1];
-
-      console.log(slidePosition.currentSlidePosition);
-      console.log(slidePosition.nextSlidePosition);
-      console.log(slidePosition.prevSlidePosition);
+      if (setIndex.targetIndex > galleryImgs.length - 1) {
+        resetIndexes();
+      } else {
+        slidePosition.currentSlidePosition = galleryImgs[setIndex.targetIndex];
+        slidePosition.nextSlidePosition = galleryImgs[setIndex.targetIndex + 1];
+        slidePosition.prevSlidePosition = galleryImgs[setIndex.targetIndex - 1];
+        circlePosition.currentCirclePosition =
+          circleIcons[setIndex.targetIndex];
+        circlePosition.nextCirclePosition =
+          circleIcons[setIndex.targetIndex + 1];
+        circlePosition.prevCirclePosition =
+          circleIcons[setIndex.targetIndex - 1];
+      }
     }
 
     if (e.target === leftArrow) {
-      //   if (
-      //     slidePosition.currentSlidePosition === galleryImgs[0] &&
-      //     circlePosition.currentCirclePosition === circleIcons[0]
-      //   ) {
-      //     console.log("true");
-      //     resetIndexes();
-      //   } else {
-      //     console.log("false");
-      //   }
-
       if (
         slidePosition.currentSlidePosition === galleryImgs[0] &&
-        // slidePosition.prevSlidePosition === undefined &&
         circlePosition.currentCirclePosition === circleIcons[0]
-        // circlePosition.prevCirclePosition === undefined
       ) {
-        console.log("true");
-
         slidePosition.prevSlide = galleryImgs[galleryImgs.length - 1];
         circlePosition.prevCircle = circleIcons[circleIcons.lengh - 1];
 
@@ -148,17 +133,18 @@ export function arrowCtrl() {
         setIndex.targetIndex = galleryImgs.length - 1;
 
         slidePosition.currentSlidePosition = galleryImgs[setIndex.targetIndex];
-        slidePosition.currentSlidePosition.classList.add("picture--active");
         slidePosition.prevSlidePosition = galleryImgs[setIndex.targetIndex - 1];
         slidePosition.nextSlidePosition = galleryImgs[0];
         circlePosition.currentCirclePosition =
           circleIcons[setIndex.targetIndex];
-        circlePosition.currentCirclePosition.classList.add(
-          "circle-icon--active"
-        );
         circlePosition.prevCirclePosition =
           circleIcons[setIndex.targetIndex - 1];
         circlePosition.nextCirclePosition = circleIcons[0];
+
+        slidePosition.currentSlidePosition.classList.add("picture--active");
+        circlePosition.currentCirclePosition.classList.add(
+          "circle-icon--active"
+        );
       } else {
         slidePosition.currentSlidePosition.classList.remove("picture--active");
         slidePosition.prevSlidePosition.classList.add("picture--active");
@@ -168,7 +154,6 @@ export function arrowCtrl() {
         circlePosition.prevCirclePosition.classList.add("circle-icon--active");
 
         setIndex.targetIndex--;
-        console.log(setIndex.targetIndex);
 
         slidePosition.currentSlidePosition = galleryImgs[setIndex.targetIndex];
         slidePosition.nextSlidePosition = galleryImgs[setIndex.targetIndex + 1];
