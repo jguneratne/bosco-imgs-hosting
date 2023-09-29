@@ -2,8 +2,7 @@ import "./style.css";
 
 import {
   defaultGallerySetting,
-  //   sliderAnimation,
-  //   highlightCircles,
+  sliderAnimation,
   clickCircles,
   arrowCtrl,
 } from "./photoSlider";
@@ -11,7 +10,6 @@ import {
 console.log("photogallery");
 
 defaultGallerySetting();
-// sliderAnimation();
-// highlightCircles();
+sliderAnimation();
 clickCircles();
 arrowCtrl();

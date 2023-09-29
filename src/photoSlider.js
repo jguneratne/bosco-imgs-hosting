@@ -19,47 +19,7 @@ export function defaultGallerySetting() {
 }
 
 export function sliderAnimation() {
-  console.log(galleryImgs);
-
-  let i = 0;
-
-  const advanceSlides = function () {
-    if (i === 0) {
-      galleryImgs[i].classList.add("picture--active");
-    } else if (i === galleryImgs.length) {
-      galleryImgs[i - 1].classList.remove("picture--active");
-      galleryImgs[0].classList.add("picture--active");
-      i = 0;
-    } else {
-      galleryImgs[i - 1].classList.remove("picture--active");
-      galleryImgs[i].classList.add("picture--active");
-    }
-
-    i++;
-  };
-
-  setInterval(advanceSlides, 3000);
-}
-
-export function highlightCircles() {
-  let i = 0;
-
-  const selectCircleIcon = function () {
-    if (i === 0) {
-      circleIcons[i].classList.add("circle-icon--active");
-    } else if (i === circleIcons.length) {
-      circleIcons[i - 1].classList.remove("circle-icon--active");
-      circleIcons[0].classList.add("circle-icon--active");
-      i = 0;
-    } else {
-      circleIcons[i - 1].classList.remove("circle-icon--active");
-      circleIcons[i].classList.add("circle-icon--active");
-    }
-
-    i++;
-  };
-
-  setInterval(selectCircleIcon, 3000);
+  setInterval(slideRight, 3000);
 }
 
 export function clickCircles() {
