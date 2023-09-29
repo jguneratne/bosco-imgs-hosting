@@ -4,7 +4,7 @@ import {
   defaultGallerySetting,
   //   sliderAnimation,
   //   highlightCircles,
-  // clickCircles,
+  clickCircles,
   arrowCtrl,
 } from "./photoSlider";
 
@@ -13,5 +13,5 @@ console.log("photogallery");
 defaultGallerySetting();
 // sliderAnimation();
 // highlightCircles();
-//clickCircles();
+clickCircles();
 arrowCtrl();
