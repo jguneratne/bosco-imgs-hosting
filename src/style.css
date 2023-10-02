@@ -9,7 +9,7 @@
   max-width: 1600px;
   height: min-content;
   display: grid;
-  grid-template-rows: 1fr 5fr 1fr;
+  grid-template-rows: 2fr 5fr 0.2fr;
 }
 
 .photo-banner {
