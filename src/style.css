@@ -93,11 +93,12 @@
 }
 
 .photo-box {
-  background-color: aqua;
+  padding: 3ch 0 2ch 0;
   height: min-content;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr;
+  justify-items: center;
 }
 
 .photo-box picture {
