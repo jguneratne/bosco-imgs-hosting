@@ -49,11 +49,11 @@
   grid-template-columns: 1fr 5fr 1fr;
   grid-template-rows: 10fr 1fr;
   align-content: center;
-  justify-items: center;
 }
 
 .back-arrow {
   grid-area: 1 / 1 / 3 / 2;
+  justify-self: flex-start;
 }
 
 .img-dots {
@@ -80,6 +80,7 @@
 
 .forward-arrow {
   grid-area: 1 / 3 / 3 / 4;
+  justify-self: flex-end;
 }
 
 .back-arrow,
@@ -92,16 +93,25 @@
 }
 
 .photo-box {
-  max-width: min-content;
-  padding-top: 3ch;
+  background-color: aqua;
+  height: min-content;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
 }
 
 .photo-box picture {
-  display: none;
+  grid-area: 1 / 1 / 2 / 2;
+  transition: visibility 0s 500ms, opacity 500ms linear;
+  visibility: hidden;
+  opacity: 0;
 }
 
 .photo-box .picture--active {
-  display: block;
+  grid-area: 1 / 1 / 2 / 2;
+  transition: opacity 500ms linear;
+  visibility: visible;
+  opacity: 1;
 }
 
 .photo-box img {
