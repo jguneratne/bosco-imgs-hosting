@@ -15,7 +15,7 @@
         <div class="content-box">
           <!-- FIRST GALLERY -->
 
-          <div class="gallery insect-gallery">
+          <!-- <div class="gallery insect-gallery">
             <div class="slider-box">
               <div class="back-arrow">
                 <img
@@ -27,7 +27,6 @@
               </div>
 
               <div class="photo-box">
-                <!-- <p>Test Content</p> -->
                 <picture data-num="0">
                   <source
                     media="(max-width: 600px)"
@@ -82,21 +81,22 @@
                 />
               </div>
             </div>
-          </div>
+          </div> -->
 
           <!-- SECOND GALLERY -->
-          <!-- <div class="gallery wild-animal-gallery">
+          <div class="gallery wild-animal-gallery">
             <div class="slider-box">
               <div class="back-arrow">
                 <img
                   class="arrow"
+                  data-back-arrow
                   src="<%=require('../src/assets/imgs/reshot-icon-arrow-chevron-left-975UQXVKZF.svg') %>"
                   alt="Back Arrow Icon"
                 />
               </div>
 
               <div class="photo-box">
-                <picture >
+                <picture data-num="0">
                   <source
                     media="(max-width: 600px)"
                     srcset="<%=require('../src/assets/imgs/Guneratne_2023.06.28_bunny-vertical.jpg') %>"
@@ -108,7 +108,7 @@
                   />
                 </picture>
 
-                <picture>
+                <picture data-num="1">
                   <source
                     media="(max-width: 600px)"
                     srcset="<%=require('../src/assets/imgs/Guneratne_2023.06.29_bird-vertical.jpg') %>"
@@ -120,7 +120,7 @@
                   />
                 </picture>
 
-                <picture>
+                <picture data-num="2">
                   <source
                     media="(max-width: 600px)"
                     srcset="<%=require('../src/assets/imgs/Guneratne_2023.08.20_seagull-vertical.jpg') %>"
@@ -133,39 +133,24 @@
                 </picture>
               </div>
 
-              <div class="img-dots">
-                <button type="button" class="img-btn" data-num="0">
-                  <img
-                    class="circle-icon "
-                    src="<%=require('../src/assets/imgs/211717_circle_icon.svg') %>"
-                    alt="Circle Icon for Image Slider Navigation"
-                  />
-                </button>
-                <button type="button" class="img-btn" data-num="1">
-                  <img
-                    class="circle-icon"
-                    src="<%=require('../src/assets/imgs/211717_circle_icon.svg') %>"
-                    alt="Circle Icon for Image Slider Navigation"
-                  />
-                </button>
-                <button type="button" class="img-btn" data-num="2">
-                  <img
-                    class="circle-icon"
-                    src="<%=require('../src/assets/imgs/211717_circle_icon.svg') %>"
-                    alt="Circle Icon for Image Slider Navigation"
-                  />
-                </button>
+              <div class="img-dots-container">
+                <div class="img-dots">
+                  <div class="circle-icon" data-circle="0"></div>
+                  <div class="circle-icon" data-circle="1"></div>
+                  <div class="circle-icon" data-circle="2"></div>
+                </div>
               </div>
 
               <div class="forward-arrow">
                 <img
                   class="arrow"
+                  data-forward-arrow
                   src="<%=require('../src/assets/imgs/reshot-icon-arrow-chevron-right-WDGHUKQ634.svg') %>"
                   alt="Forward Arrow Icon"
                 />
               </div>
             </div>
-          </div> -->
+          </div>
         </div>
       </div>
 
