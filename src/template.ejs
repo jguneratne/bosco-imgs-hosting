@@ -8,7 +8,21 @@
 
   <body>
     <div class="container">
-      <div class="photo-banner"></div>
+      <div class="photo-banner">
+        <div class="pic-div">
+          <picture>
+            <source
+              media="(max-width: 600px)"
+              srcset="<%=require('../src/assets/imgs/Guneratne_2023.08.04_raspberries-long.jpg') %>"
+              alt="A bunch of red and black raspberries growing on a bush."
+            />
+            <img
+              src="<%=require('../src/assets/imgs/Guneratne_2023.08.04_raspberries-short.jpg') %>"
+              alt="A bunch of red and black raspberries growing on a bush."
+            />
+          </picture>
+        </div>
+      </div>
 
       <div class="main">
         <div class="left-nav"></div>
