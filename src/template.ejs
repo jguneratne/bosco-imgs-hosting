@@ -8,27 +8,29 @@
 
   <body>
     <div class="container">
-      <div class="photo-banner">
-        <div class="pic-div">
-          <picture>
-            <source
-              media="(max-width: 600px)"
-              srcset="<%=require('../src/assets/imgs/Guneratne_2023.08.04_raspberries-long.jpg') %>"
-              alt="A bunch of red and black raspberries growing on a bush."
-            />
-            <img
-              src="<%=require('../src/assets/imgs/Guneratne_2023.08.04_raspberries-short.jpg') %>"
-              alt="A bunch of red and black raspberries growing on a bush."
-            />
-          </picture>
-        </div>
-      </div>
+      <div class="header"></div>
 
       <div class="main">
         <div class="content-box">
-          <!-- FIRST GALLERY -->
+          <!-- HOME PAGE -->
+          <div class="home">
+            <div class="pic-div">
+              <picture>
+                <source
+                  media="(max-width: 600px)"
+                  srcset="<%=require('../src/assets/imgs/Guneratne_2023.08.04_raspberries-long.jpg') %>"
+                  alt="A bunch of red and black raspberries growing on a bush."
+                />
+                <img
+                  src="<%=require('../src/assets/imgs/Guneratne_2023.08.04_raspberries-short.jpg') %>"
+                  alt="A bunch of red and black raspberries growing on a bush."
+                />
+              </picture>
+            </div>
+          </div>
 
-          <div class="gallery insect-gallery">
+          <!-- FIRST GALLERY -->
+          <!-- <div class="gallery insect-gallery">
             <div class="slider-box">
               <div class="back-arrow">
                 <img
@@ -102,7 +104,7 @@
                 />
               </div>
             </div>
-          </div>
+          </div> -->
 
           <!-- SECOND GALLERY -->
           <!-- <div class="gallery wild-animal-gallery">
@@ -184,18 +186,23 @@
       </div>
 
       <div class="footer">
-        <p class="my-copyright">Jenn Guneratne © 2023</p>
-        <a
-          href="https://github.com/jguneratne/photo-gallery"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <img
-            class="github-logo"
-            src="<%=require('../src/assets/imgs/GitHub-Mark-32px.png') %>"
-            alt="Octocat GitHub Logo"
-          />
-        </a>
+        <div class="copyright-div">
+          <p class="my-copyright">Jenn Guneratne © 2023</p>
+        </div>
+
+        <div class="logo-div">
+          <a
+            href="https://github.com/jguneratne/photo-gallery"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              class="github-logo"
+              src="<%=require('../src/assets/imgs/GitHub-Mark-32px.png') %>"
+              alt="Octocat GitHub Logo"
+            />
+          </a>
+        </div>
       </div>
     </div>
   </body>

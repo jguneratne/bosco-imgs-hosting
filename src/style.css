@@ -9,13 +9,12 @@
   max-width: 1600px;
   height: min-content;
   display: grid;
-  grid-template-rows: 2fr 5fr 0.2fr;
+  grid-template-rows: 0.7fr 7fr 0.2fr;
 }
 
-.photo-banner {
+.header {
   background-color: aqua;
   grid-area: 1 / 1 / 2 / 2;
-  max-height: 300px;
 }
 
 .pic-div {
@@ -24,6 +23,7 @@
 }
 
 .pic-div picture img {
+  vertical-align: middle; /* Removes padding added to picture at bottom */
   width: 100%;
   height: 100%;
   object-position: center;
@@ -147,21 +147,27 @@
 
   display: grid;
   grid-template-columns: 1fr 1fr;
-  align-items: center;
+}
+
+.copyright-div {
+  display: grid;
+  align-content: center;
 }
 
 .footer p {
   text-align: right;
+  vertical-align: middle;
+  align-self: center;
   height: min-content;
   margin-right: 1ch;
 }
 
-.footer a {
+.footer .logo-div a {
   text-align: left;
   height: min-content;
   margin-left: 1ch;
 }
 
-.footer a img {
+.footer .logo-div a img {
   height: 3ch;
 }
