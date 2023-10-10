@@ -37,14 +37,6 @@
   display: grid;
 }
 
-/* .left-nav {
-  background-color: blueviolet;
-} */
-
-/* .content-box {
-  grid-area: 1 / 2 / 2 / 3;
-} */
-
 .gallery {
   padding: 4ch;
 }
