@@ -35,16 +35,15 @@
   background-color: blanchedalmond;
 
   display: grid;
-  grid-template-columns: 1fr 6fr;
 }
 
-.left-nav {
+/* .left-nav {
   background-color: blueviolet;
-}
+} */
 
-.content-box {
+/* .content-box {
   grid-area: 1 / 2 / 2 / 3;
-}
+} */
 
 .gallery {
   padding: 4ch;
@@ -62,11 +61,11 @@
   grid-template-columns: 1fr 5fr 1fr;
   grid-template-rows: 10fr 1fr;
   align-content: center;
+  justify-items: center;
 }
 
 .back-arrow {
   grid-area: 1 / 1 / 3 / 2;
-  justify-self: flex-start;
 }
 
 .img-dots {
@@ -101,12 +100,12 @@
 
 .forward-arrow {
   grid-area: 1 / 3 / 3 / 4;
-  justify-self: flex-end;
 }
 
 .back-arrow,
 .forward-arrow {
   width: min-content;
+  justify-self: center;
 }
 
 .arrow {
