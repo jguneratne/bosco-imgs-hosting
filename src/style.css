@@ -62,7 +62,7 @@
   padding-top: 4ch;
   padding-bottom: 4ch;
   display: grid;
-  grid-template-columns: 1fr 80rem 1fr;
+  grid-template-columns: 1fr minmax(20rem, 80rem) 1fr;
 }
 
 .slider-box {
