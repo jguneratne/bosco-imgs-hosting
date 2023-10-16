@@ -21,6 +21,29 @@
 .header {
   background-color: aqua;
   grid-area: header;
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 8ch;
+  padding-top: 2ch;
+  padding-bottom: 1ch;
+}
+
+.menu-items {
+  width: min-content;
+}
+
+.menu-items ul {
+  list-style-type: none;
+  display: flex;
+  gap: 5ch;
+}
+
+.menu-items ul:hover {
+  cursor: pointer;
+}
+
+.drop-down-sub {
+  display: none;
 }
 
 /* Main Content */
