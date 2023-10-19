@@ -11,6 +11,9 @@ export const circleIcons = Array.from(
 export const rightArrow = document.querySelector("[data-forward-arrow]");
 export const leftArrow = document.querySelector("[data-back-arrow]");
 
+export const dropDownMain = document.querySelector(".drop-down-main");
+export const dropDownSub = document.querySelector(".drop-down-sub");
+
 export let setIndex = {
   currentIndex: 0,
 

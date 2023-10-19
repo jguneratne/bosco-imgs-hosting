@@ -9,20 +9,29 @@
   <body>
     <div class="container">
       <div class="header">
-        <menu class="menu-items">
-          <ul>
-            <li>Home</li>
-            <li class="drop-down-main">
-              Galleries
-              <ul>
-                <li class="drop-down-sub">Wildlife</li>
-                <li class="drop-down-sub">Insects</li>
-              </ul>
-            </li>
-            <li>About</li>
-            <li>Contact</li>
-          </ul>
-        </menu>
+        <div class="menu-items">
+          <button class="menu-btn">
+            <span>Home</span>
+          </button>
+
+          <div class="drop-down-div">
+            <button class="menu-btn dropdown-btn">
+              <span>Galleries</span>
+              <div class="gal-arrow"></div>
+            </button>
+            <ul class="dropdown-content">
+              <li style="--delay: 1"><a href="#">Wildlife</a></li>
+              <li style="--delay: 2"><a href="#">Insects</a></li>
+            </ul>
+          </div>
+
+          <button class="menu-btn">
+            <span>About</span>
+          </button>
+          <button class="menu-btn">
+            <span>Contact</span>
+          </button>
+        </div>
       </div>
 
       <div class="main">
