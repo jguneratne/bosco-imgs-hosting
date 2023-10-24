@@ -18,7 +18,7 @@
   }
 }
 
-@-webkit-keyframes slide-down {
+@-webkit-keyframes slide-down-reverse {
   0% {
     opacity: 1;
     -webkit-transform: translateY(5px);
@@ -112,8 +112,6 @@
   color: black;
   text-align: center;
   position: relative;
-  /* transition: 0.5s; */
-  /* transition-delay: calc(60ms * var(--delay)); */
 }
 
 .dropdown-content li:not(:first-child) {
@@ -148,6 +146,11 @@
   grid-template-areas:
     "images"
     "footer";
+}
+
+h2 {
+  text-align: center;
+  margin-top: 3ch;
 }
 
 /* Home Tab */
