@@ -69,6 +69,7 @@
 
 .dropdown-div {
   position: relative;
+  width: 14ch;
 }
 
 .gal-btn-div {
@@ -133,7 +134,7 @@
   visibility: visible;
 }
 
-.dropdown-div .dropdown-btn .gal-arrow--active {
+.dropdown-div .gal-btn-div .gal-arrow--active {
   transform: rotate(180deg);
 }
 
