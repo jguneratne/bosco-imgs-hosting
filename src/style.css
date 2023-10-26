@@ -3,6 +3,12 @@
   padding: 0;
   min-height: 100%;
   box-sizing: border-box;
+
+  --main-col: #fffbeb;
+  --head-foot-col: #cfe6ea;
+  --dropdown-item-col: rgba(235, 219, 188, 0.7);
+  --dropdown-item-col-hov: rgba(235, 219, 188, 1);
+  --slider-box-col: #f7fcfc;
 }
 
 @-webkit-keyframes slide-down {
@@ -45,46 +51,72 @@
 /* Header Content */
 
 .header {
-  background-color: aqua;
+  background-color: var(--head-foot-col);
   grid-area: header;
   display: flex;
   justify-content: flex-end;
   padding-right: 8ch;
   padding-top: 2ch;
-  padding-bottom: 1ch;
+  padding-bottom: 0;
 }
 
 .menu-items {
   max-width: 60rem;
-  margin-right: 5ch;
+  height: 6ch;
   display: flex;
   gap: 4ch;
-}
-
-.menu-btn {
-  background: none;
-  border: none;
-  padding: 0.7em 0.5em;
-  cursor: pointer;
 }
 
 .dropdown-div {
   position: relative;
 }
 
-.dropdown-btn {
+.gal-btn-div {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0.7em 0.5em;
+}
+
+.menu-btn,
+.dropdown-btn {
+  background: none;
+  border: none;
+  width: 12ch;
+  padding: 2ch;
+}
+
+.dropdown-btn {
+  width: 14ch;
+}
+
+.gal-span {
+  margin-left: -1.5ch;
+}
+
+/* Set pseudo-element to preset width of element; prevents hover from changing size of element when bold */
+.menu-btn:after,
+.dropdown-btn:after,
+.dropdown-btn:after {
+  display: block;
+  content: attr(title);
+  font-weight: bold;
+  height: 1px;
+  color: transparent;
+  overflow: hidden;
+  visibility: hidden;
+}
+
+.menu-btn:hover {
+  background-color: var(--main-col);
+  border-radius: 2ch 2ch 0 0;
+  font-weight: bold;
   cursor: pointer;
 }
 
 .gal-arrow {
+  align-self: center;
   border-left: 5px solid transparent;
   border-right: 5px solid transparent;
   border-top: 6px solid black;
-  margin-left: 0.7ch;
+  margin-left: -3.2ch;
   transition: transform ease-in-out 0.3s;
 }
 
@@ -107,7 +139,7 @@
 
 .dropdown-content--active li.dropdown-item--active {
   -webkit-animation: slide-down 0.5s ease-in-out both;
-  background: rgba(211, 211, 211, 0.7);
+  background: var(--dropdown-item-col);
   border-radius: 0.5em;
   color: black;
   text-align: center;
@@ -119,8 +151,16 @@
 }
 
 .dropdown-content li:hover {
-  background: rgba(211, 211, 211, 1);
+  background: var(--dropdown-item-col-hov);
   text-decoration: underline;
+}
+
+.dropdown-content--active li:first-child a {
+  display: block;
+  padding: 0.7em 0.5em;
+  color: black;
+  margin-top: 2ch;
+  text-decoration: none;
 }
 
 .dropdown-content--active li a {
@@ -135,7 +175,7 @@
 
 .main {
   grid-area: main; /*  Main area contains content tabs and footer */
-  background-color: blanchedalmond;
+  background-color: var(--main-col);
   overflow: scroll;
 }
 
@@ -181,7 +221,7 @@ h2 {
 .slider-box {
   grid-area: 1 / 2 / 2 / 3;
   border: 1px solid black;
-  background-color: aliceblue;
+  background-color: var(--slider-box-col);
   min-height: 0.625rem;
   max-width: 87.5rem;
   margin-left: auto;
@@ -276,7 +316,7 @@ h2 {
 
 .main .footer-div {
   grid-area: footer;
-  background-color: aqua;
+  background-color: var(--head-foot-col);
   padding: 1ch;
 }
 
