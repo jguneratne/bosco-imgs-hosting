@@ -64,7 +64,17 @@
   max-width: 60rem;
   height: 6ch;
   display: flex;
-  gap: 4ch;
+  gap: 1.5ch;
+}
+
+ul {
+  list-style-type: "✓";
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  list-style-type: none;
 }
 
 .dropdown-div {
@@ -77,11 +87,20 @@
 }
 
 .menu-btn,
+.menu-btn a,
 .dropdown-btn {
-  background: none;
-  border: none;
+  text-decoration: none;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  color: black;
   width: 12ch;
   padding: 2ch;
+  display: flex;
+  justify-content: center;
+}
+
+.dropdown-btn {
+  display: block;
 }
 
 .dropdown-btn {
@@ -94,7 +113,6 @@
 
 /* Set pseudo-element to preset width of element; prevents hover from changing size of element when bold */
 .menu-btn:after,
-.dropdown-btn:after,
 .dropdown-btn:after {
   display: block;
   content: attr(title);
@@ -105,9 +123,15 @@
   visibility: hidden;
 }
 
-.menu-btn:hover {
+.menu-btn:hover,
+.menu-btn:focus,
+.menu-btn.selected,
+.gal-btn-div:hover,
+.gal-btn-div:focus {
   background-color: var(--main-col);
   border-radius: 2ch 2ch 0 0;
+  border: none;
+  outline: none;
   font-weight: bold;
   cursor: pointer;
 }
