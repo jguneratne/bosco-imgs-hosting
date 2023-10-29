@@ -1,3 +1,16 @@
+// Drop Down
+export const dropDownDiv = document.querySelector(".dropdown-div");
+export const dropDownCarat = document.querySelector(".gal-arrow");
+export const dropDownContent = document.querySelector(".dropdown-content");
+export const dropDownItems = Array.from(
+  document.querySelectorAll(".dropdown-item")
+);
+
+// Tab Control
+
+export const tabLinks = Array.from(document.querySelectorAll("[href]"));
+
+// Photo Gallery
 export const sliderBox = document.querySelector(".slider-box");
 export const photoBox = document.querySelector(".photo-box");
 export const galleryImgs = Array.from(photoBox.children);
@@ -10,14 +23,6 @@ export const circleIcons = Array.from(
 );
 export const rightArrow = document.querySelector("[data-forward-arrow]");
 export const leftArrow = document.querySelector("[data-back-arrow]");
-
-export const dropDownDiv = document.querySelector(".dropdown-div");
-export const dropDownBtn = document.querySelector(".dropdown-btn");
-export const dropDownCarat = document.querySelector(".gal-arrow");
-export const dropDownContent = document.querySelector(".dropdown-content");
-export const dropDownItems = Array.from(
-  document.querySelectorAll(".dropdown-item")
-);
 
 export let setIndex = {
   currentIndex: 0,

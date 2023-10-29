@@ -1,6 +1,5 @@
 import {
   dropDownDiv,
-  dropDownBtn,
   dropDownCarat,
   dropDownContent,
   dropDownItems,
@@ -8,10 +7,9 @@ import {
 
 export function showSubMenu() {
   dropDownDiv.addEventListener("pointerdown", (e) => {
-    if (e.target === dropDownBtn) {
+    console.log(e.target);
+    if (e.target.nodeName === "A" || e.target === dropDownCarat) {
       console.log("click");
-      dropDownDiv.classList.toggle("dropdown-div--active");
-      dropDownBtn.classList.toggle("dropdown-btn--active");
       dropDownCarat.classList.toggle("gal-arrow--active");
       dropDownContent.classList.toggle("dropdown-content--active");
       dropDownItems.forEach((item) => {
