@@ -9,6 +9,8 @@ import {
 
 import { showSubMenu } from "./dropDown";
 
+import { initializeTabs } from "./tabCtrl";
+
 console.log("photogallery");
 
 defaultGallerySetting();
@@ -16,3 +18,4 @@ sliderAnimation();
 clickCircles();
 arrowCtrl();
 showSubMenu();
+initializeTabs();

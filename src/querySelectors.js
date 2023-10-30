@@ -8,7 +8,11 @@ export const dropDownItems = Array.from(
 
 // Tab Control
 
-export const tabLinks = Array.from(document.querySelectorAll("[href]"));
+export const menuItems = document.querySelector(".menu-items");
+export const menuChildren = Array.from(menuItems.getElementsByTagName("*")); //gets all children and gradchildren of menu
+export const contentDivs = Array.from(
+  document.getElementsByClassName(".tab-content")
+);
 
 // Photo Gallery
 export const sliderBox = document.querySelector(".slider-box");

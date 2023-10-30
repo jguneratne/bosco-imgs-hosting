@@ -8,6 +8,7 @@ module.exports = {
     "./src/photoSlider.js",
     "./src/querySelectors.js",
     "./src/dropDown.js",
+    "./src/tabCtrl.js",
   ],
   output: {
     filename: "bundle.js",
