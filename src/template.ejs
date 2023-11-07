@@ -10,40 +10,42 @@
     <div class="container">
       <div class="header">
         <ul id="tabs" class="menu-items">
-          <div class="menu-btn" title="Home">
-            <li>
+          <div class="menu-btn" title="Home" >
+            <li data-for-tab="home">
               <a href="#home">Home</a>
             </li>
           </div>
 
           <div class="dropdown-div menu-btn dropdown-btn" title="Galleries"">
-             <ul>
+            <div class="gal-btn-div">
+              <ul>
                 <li>
                   <a href="#galleries">Galleries</a>
                 </li>
               </ul>
 
               <div class="gal-arrow"></div>
+            </div>
             
 
             <ul class="dropdown-content">
-              <li style="--delay: 1" class="dropdown-item" title="Wildlife">
+              <li style="--delay: 1" class="dropdown-item" title="Wildlife" data-for-tab="wildlife-gallery">
                 <a href="#wildlife-gallery">Wildlife</a>
               </li>
-              <li style="--delay: 2" class="dropdown-item" title="Insects">
+              <li style="--delay: 2" class="dropdown-item" title="Insects" data-for-tab="insect-gallery">
                 <a href="#insect-gallery">Insects</a>
               </li>
             </ul>
           </div>
 
-          <div class="menu-btn" title="About">
-            <li>
+          <div class="menu-btn" title="About" >
+            <li data-for-tab="about">
               <a href="#about">About</a>
             </li>
           </div>
 
-          <div class="menu-btn" title="Contact">
-            <li>
+          <div class="menu-btn" title="Contact" >
+            <li data-for-tab="home">
               <a href="#contact">Contact </a>
             </li>
           </div>
@@ -51,13 +53,13 @@
       </div>
 
       <div class="main">
-        <div class="content-box">
-          <!-- HOME PAGE -->
-          <div class="tab-content " id="home" tabindex="0">
+      <div class="content-box">
+       <!-- HOME PAGE -->
+        <div class="tab-content" id="home" tabindex="0">
             <div class="home">
               <h2>Home Content Coming Soon!</h2>
               <div class="pic-div">
-                <!-- <picture>
+        <!-- <picture>
                   <source
                     media="(max-width: 600px)"
                     srcset="<%=require('../src/assets/imgs/Guneratne_2023.08.04_raspberries-long.jpg') %>"
@@ -68,12 +70,12 @@
                     alt="A bunch of red and black raspberries growing on a bush."
                   />
                 </picture> -->
-              </div>
+        </div>
             </div>
           </div>
 
-          <!-- FIRST GALLERY -->
-          <div class="tab-content " id="insect-gallery" tabindex="0">
+        <!-- FIRST GALLERY -->
+        <div class="tab-content" id="insect-gallery" tabindex="0">
             <div class="gallery insect-gallery">
               <div class="slider-box">
                 <div class="back-arrow">
@@ -151,9 +153,9 @@
             </div>
           </div>
 
-          <!-- SECOND GALLERY -->
+        <!-- SECOND GALLERY -->
 
-          <div class="tab-content tab-content--selected" id="wildlife-gallery" tabindex="0">
+        <div class="tab-content" id="wildlife-gallery" tabindex="0">
             <div class="gallery wildlife-gallery">
               <div class="slider-box">
                 <div class="back-arrow">
@@ -231,40 +233,41 @@
             </div>
           </div>
 
-          <!-- ABOUT -->
-          <div class="tab-content" id="about" tabindex="0">
+        <!-- ABOUT -->
+        <div class="tab-content" id="about" tabindex="0">
             <div class="about">
               <h2>About Content Coming Soon!</h2>
             </div>
           </div>
 
-          <!-- CONTACT -->
-          <div class="tab-content" id="contact">
+        <!-- CONTACT -->
+        <div class="tab-content" id="contact">
             <div class="contact">
               <h2>Contact Form Coming Soon!</h2>
             </div>
           </div>
 
-          <div class="footer-div">
-            <div class="footer">
-              <div class="copyright-div">
-                <p class="my-copyright">Jenn Guneratne © 2023</p>
-              </div>
+        </div>
+      </div>
 
-              <div class="logo-div">
-                <a
-                  href="https://github.com/jguneratne/photo-gallery"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <img
-                    class="github-logo"
-                    src="<%=require('../src/assets/imgs/GitHub-Mark-32px.png') %>"
-                    alt="Octocat GitHub Logo"
-                  />
-                </a>
-              </div>
-            </div>
+      <div class="footer-div">
+        <div class="footer">
+          <div class="copyright-div">
+            <p class="my-copyright">Jenn Guneratne © 2023</p>
+          </div>
+
+          <div class="logo-div">
+            <a
+              href="https://github.com/jguneratne/photo-gallery"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                class="github-logo"
+                src="<%=require('../src/assets/imgs/GitHub-Mark-32px.png') %>"
+                alt="Octocat GitHub Logo"
+              />
+            </a>
           </div>
         </div>
       </div>
