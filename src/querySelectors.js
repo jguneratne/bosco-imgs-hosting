@@ -10,6 +10,7 @@ export const dropDownItems = Array.from(
 export const menuChildrenDiv = document.querySelector(".menu-items");
 export const menuLinks = Array.from(menuChildrenDiv.getElementsByTagName("LI"));
 export const menuBtnStyle = document.querySelectorAll(".menu-btn");
+export const galleryLinkParent = document.querySelector(".dropdown-content");
 export const tabContentDiv = document.querySelector(".content-box");
 export const tabContent = document.querySelectorAll(".tab-content");
 
