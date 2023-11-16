@@ -4,7 +4,10 @@ import {
   galleryLinkParent,
   tabContent,
 } from "./querySelectors";
+
 import { showSubMenu } from "./dropDown";
+
+import { sliderAnimation } from "./photoSlider";
 
 export function defaultSelectedSettings() {
   let i = 0;
@@ -39,6 +42,7 @@ export function navigateTabs() {
                 content.classList.remove("selected");
               });
               content.classList.add("selected");
+              sliderAnimation();
             }
           });
         }

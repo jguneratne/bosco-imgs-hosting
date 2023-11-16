@@ -1,6 +1,5 @@
 import {
   sliderBox,
-  photoBox,
   galleryImgs,
   circleNav,
   circleIconDivs,
