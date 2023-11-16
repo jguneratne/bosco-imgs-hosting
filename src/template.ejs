@@ -10,13 +10,13 @@
     <div class="container">
       <div class="header">
         <ul id="tabs" class="menu-items">
-          <div class="menu-btn" title="Home" >
-            <li data-for-tab="home">
+          <div class="menu-btn selected" data-tab="home" title="Home" >
+            <li >
               <a href="#home">Home</a>
             </li>
           </div>
 
-          <div class="dropdown-div menu-btn dropdown-btn" title="Galleries"">
+          <div class="dropdown-div menu-btn dropdown-btn" data-tab="galleries" title="Galleries"">
             <div class="gal-btn-div">
               <ul>
                 <li>
@@ -29,23 +29,23 @@
             
 
             <ul class="dropdown-content">
-              <li style="--delay: 1" class="dropdown-item" title="Wildlife" data-for-tab="wildlife-gallery">
+              <li style="--delay: 1" class="dropdown-item" title="Wildlife" >
                 <a href="#wildlife-gallery">Wildlife</a>
               </li>
-              <li style="--delay: 2" class="dropdown-item" title="Insects" data-for-tab="insect-gallery">
+              <li style="--delay: 2" class="dropdown-item" title="Insects" >
                 <a href="#insect-gallery">Insects</a>
               </li>
             </ul>
           </div>
 
-          <div class="menu-btn" title="About" >
-            <li data-for-tab="about">
+          <div class="menu-btn" data-tab="about" title="About" >
+            <li >
               <a href="#about">About</a>
             </li>
           </div>
 
-          <div class="menu-btn" title="Contact" >
-            <li data-for-tab="home">
+          <div class="menu-btn" data-tab="contact" title="Contact" >
+            <li >
               <a href="#contact">Contact </a>
             </li>
           </div>
@@ -55,11 +55,11 @@
       <div class="main">
       <div class="content-box">
        <!-- HOME PAGE -->
-        <div class="tab-content" id="home" tabindex="0">
+        <div class="tab-content selected" id="home" tabindex="0">
             <div class="home">
               <h2>Home Content Coming Soon!</h2>
-              <div class="pic-div">
-        <!-- <picture>
+              <!-- <div class="pic-div">
+               <picture>
                   <source
                     media="(max-width: 600px)"
                     srcset="<%=require('../src/assets/imgs/Guneratne_2023.08.04_raspberries-long.jpg') %>"
@@ -69,8 +69,8 @@
                     src="<%=require('../src/assets/imgs/Guneratne_2023.08.04_raspberries-short.jpg') %>"
                     alt="A bunch of red and black raspberries growing on a bush."
                   />
-                </picture> -->
-        </div>
+                </picture> 
+              </div>-->
             </div>
           </div>
 
@@ -248,7 +248,7 @@
           </div>
 
         </div>
-      </div>
+      </div> 
 
       <div class="footer-div">
         <div class="footer">

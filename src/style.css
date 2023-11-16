@@ -122,10 +122,19 @@ li {
   visibility: hidden;
 }
 
-.menu-btn:hover,
-.menu-btn:focus,
 .menu-btn.selected {
   background-color: var(--main-col);
+  border-radius: 2ch 2ch 0 0;
+  border: none;
+  outline: none;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.menu-btn:hover,
+.menu-btn:focus {
+  text-decoration: underline black;
+  text-decoration-thickness: 0.3ch;
   border-radius: 2ch 2ch 0 0;
   border: none;
   outline: none;
@@ -222,20 +231,18 @@ h2 {
   left: 0;
   right: 0;
   text-align: center;
-}
-
-/* .tab-content {
   display: none;
 }
 
-.tab-content--selected {
+.tab-content.selected {
   display: initial;
 }
 
 .pic-div {
   width: 100%;
   height: 100%;
-} */
+}
+*/
 
 /* .pic-div picture img {
   grid-area: images;

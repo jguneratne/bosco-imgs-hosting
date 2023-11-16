@@ -7,9 +7,7 @@ import {
   arrowCtrl,
 } from "./photoSlider";
 
-import { showSubMenu } from "./dropDown";
-
-import { initializeTabs } from "./tabCtrl";
+import { navigateTabs } from "./tabCtrl";
 
 console.log("photogallery");
 
@@ -17,5 +15,4 @@ defaultGallerySetting();
 sliderAnimation();
 clickCircles();
 arrowCtrl();
-showSubMenu();
-initializeTabs();
+navigateTabs();

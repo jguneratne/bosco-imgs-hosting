@@ -7,12 +7,11 @@ export const dropDownItems = Array.from(
 );
 
 // Tab Control
-
-export const menuItems = document.querySelector(".menu-items");
-export const menuChildren = Array.from(menuItems.getElementsByTagName("*")); //gets all children and gradchildren of menu
-export const contentDivs = Array.from(
-  document.getElementsByClassName(".tab-content")
-);
+export const menuChildrenDiv = document.querySelector(".menu-items");
+export const menuLinks = Array.from(menuChildrenDiv.getElementsByTagName("LI"));
+export const menuBtnStyle = document.querySelectorAll(".menu-btn");
+export const tabContentDiv = document.querySelector(".content-box");
+export const tabContent = document.querySelectorAll(".tab-content");
 
 // Photo Gallery
 export const sliderBox = document.querySelector(".slider-box");
