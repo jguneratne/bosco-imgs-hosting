@@ -42,7 +42,7 @@
   height: 100vh;
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 1fr 8fr 0.8fr;
+  grid-template-rows: minmax(2.7rem, 3rem) 8fr minmax(1.25rem, 2.5rem);
   grid-template-areas:
     "header"
     "main"
@@ -124,9 +124,7 @@ li {
 
 .menu-btn:hover,
 .menu-btn:focus,
-.menu-btn.selected,
-.gal-btn-div:hover,
-.gal-btn-div:focus {
+.menu-btn.selected {
   background-color: var(--main-col);
   border-radius: 2ch 2ch 0 0;
   border: none;
@@ -200,6 +198,7 @@ li {
   grid-area: main;
   background-color: var(--main-col);
   overflow: scroll;
+  height: min-content;
 }
 
 h2 {
@@ -209,6 +208,9 @@ h2 {
 
 .content-box {
   position: relative;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
 }
 
 /* Home Tab */
@@ -249,19 +251,17 @@ h2 {
 .gallery {
   padding-top: 4ch;
   padding-bottom: 4ch;
-  display: grid;
-  grid-template-columns: 1fr minmax(20rem, 80rem) 1fr;
 }
 
 .slider-box {
-  grid-area: 1 / 2 / 2 / 3;
   border: 1px solid black;
   background-color: var(--slider-box-col);
   min-height: 0.625rem;
-  max-height: 100%;
-  max-width: 87.5rem;
+  width: 87.5rem;
+  max-width: min-content;
   margin-left: auto;
   margin-right: auto;
+  padding: 0 5ch 0 5ch;
 
   display: grid;
   grid-template-columns: 1fr 5fr 1fr;
@@ -322,6 +322,7 @@ h2 {
 
 .photo-box {
   padding: 3ch 0 2ch 0;
+  margin: 0 5ch 0 5ch;
   height: min-content;
   max-width: min-content;
   display: grid;
