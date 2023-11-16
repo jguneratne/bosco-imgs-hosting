@@ -7,7 +7,7 @@ import {
   arrowCtrl,
 } from "./photoSlider";
 
-import { navigateTabs } from "./tabCtrl";
+import { defaultSelectedSettings, navigateTabs } from "./tabCtrl";
 
 console.log("photogallery");
 
@@ -15,4 +15,5 @@ defaultGallerySetting();
 sliderAnimation();
 clickCircles();
 arrowCtrl();
+defaultSelectedSettings();
 navigateTabs();

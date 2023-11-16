@@ -2,10 +2,16 @@ import {
   menuLinks,
   menuBtnStyle,
   galleryLinkParent,
-  tabContentDiv,
   tabContent,
 } from "./querySelectors";
 import { showSubMenu } from "./dropDown";
+
+export function defaultSelectedSettings() {
+  let i = 0;
+  let j = 0;
+  menuBtnStyle[i].classList.add("selected");
+  tabContent[j].classList.add("selected");
+}
 
 export function navigateTabs() {
   menuLinks.forEach((link) => {
