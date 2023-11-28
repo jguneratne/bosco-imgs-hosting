@@ -62,7 +62,7 @@ export function sliderBoxCtrl(hrefTagText) {
   });
 
   sliderAnimation();
-  clickCircles();
+  clickCircles(hrefTagText);
   arrowCtrl();
 }
 
@@ -70,26 +70,32 @@ export function sliderAnimation() {
   setInterval(slideRight, 3000);
 }
 
-export function clickCircles() {
-  circleNav.addEventListener("pointerdown", (e) => {
-    setIndex.targetIndex = e.target.dataset.circle;
-    console.log(setIndex.targetIndex);
+export function clickCircles(hrefTagText) {
+  circleNav.forEach((nav) => {
+    if (nav.dataset.name === hrefTagText) {
+      nav.addEventListener("pointerdown", (e) => {
+        setIndex.targetIndex = e.target.dataset.circle;
+        console.log(setIndex.targetIndex);
 
-    slidePosition.currentSlidePosition.classList.remove("picture--active");
-    circleDivPosition.currentCircleDivPosition.classList.remove(
-      "circle-icon-div--active"
-    );
-    circlePosition.currentCirclePosition.classList.remove(
-      "circle-icon--active"
-    );
+        slidePosition.currentSlidePosition.classList.remove("picture--active");
+        circleDivPosition.currentCircleDivPosition.classList.remove(
+          "circle-icon-div--active"
+        );
+        circlePosition.currentCirclePosition.classList.remove(
+          "circle-icon--active"
+        );
 
-    handleIndexes();
+        handleIndexes();
 
-    slidePosition.currentSlidePosition.classList.add("picture--active");
-    circleDivPosition.currentCircleDivPosition.classList.add(
-      "circle-icon-div--active"
-    );
-    circlePosition.currentCirclePosition.classList.add("circle-icon--active");
+        slidePosition.currentSlidePosition.classList.add("picture--active");
+        circleDivPosition.currentCircleDivPosition.classList.add(
+          "circle-icon-div--active"
+        );
+        circlePosition.currentCirclePosition.classList.add(
+          "circle-icon--active"
+        );
+      });
+    }
   });
 }
 
