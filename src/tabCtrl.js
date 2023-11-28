@@ -7,7 +7,7 @@ import {
 
 import { showSubMenu } from "./dropDown";
 
-import { sliderAnimation } from "./photoSlider";
+import { sliderBoxCtrl } from "./photoSlider";
 
 export function defaultSelectedSettings() {
   let i = 0;
@@ -42,7 +42,7 @@ export function navigateTabs() {
                 content.classList.remove("selected");
               });
               content.classList.add("selected");
-              sliderAnimation();
+              sliderBoxCtrl(hrefTagText);
             }
           });
         }

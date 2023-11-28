@@ -1,7 +1,9 @@
 import {
-  sliderBox,
+  sliderBoxes,
+  photoBoxes,
   galleryImgs,
   circleNav,
+  circleIconContainer,
   circleIconDivs,
   circleIcons,
   rightArrow,
@@ -12,12 +14,56 @@ import {
   circlePosition,
 } from "./querySelectors";
 
-export function defaultGallerySetting() {
-  let i = 0;
-  let j = 0;
-  galleryImgs[i].classList.add("picture--active");
-  circleIconDivs[j].classList.add("circle-icon-div--active");
-  circleIcons[j].classList.add("circle-icon--active");
+export function sliderBoxCtrl(hrefTagText) {
+  photoBoxes.forEach((box) => {
+    if (box.dataset.name === hrefTagText) {
+      galleryImgs.boxImgsArray = Array.from(box.children);
+
+      console.log(galleryImgs.boxImgs);
+
+      slidePosition.currentSlidePosition =
+        galleryImgs.boxImgs[setIndex.currentIndex];
+      console.log(slidePosition.currentSlidePosition);
+
+      slidePosition.currentSlidePosition.classList.add("picture--active");
+    }
+  });
+
+  circleIconContainer.forEach((container) => {
+    if (container.dataset.name === hrefTagText) {
+      circleIconDivs.circleDivsArray = Array.from(container.children);
+      console.log(circleIconDivs.circleDivsArray);
+
+      circleDivPosition.currentCircleDivPosition =
+        circleIconDivs.circleDivs[setIndex.currentIndex];
+      console.log(circleDivPosition.currentCircleDivPosition);
+
+      circleIconDivs.circleDivs[setIndex.currentIndex].classList.add(
+        "circle-icon-div--active"
+      );
+    }
+  });
+
+  circleNav.forEach((nav) => {
+    if (nav.dataset.name === hrefTagText) {
+      circleIcons.circleIconsArray = Array.from(
+        nav.querySelectorAll(".circle-icon")
+      );
+      console.log(circleIcons.circles);
+
+      circlePosition.currentCirclePosition =
+        circleIcons.circles[setIndex.currentIndex];
+      console.log(circlePosition.currentCirclePosition);
+
+      circleIcons.circles[setIndex.currentIndex].classList.add(
+        "circle-icon--active"
+      );
+    }
+  });
+
+  sliderAnimation();
+  clickCircles();
+  arrowCtrl();
 }
 
 export function sliderAnimation() {
@@ -48,71 +94,94 @@ export function clickCircles() {
 }
 
 export function arrowCtrl() {
-  sliderBox.addEventListener("pointerdown", (e) => {
-    if (e.target === rightArrow) {
-      slideRight();
-    }
+  sliderBoxes.forEach((box) => {
+    box.addEventListener("pointerdown", (e) => {
+      if (e.target === rightArrow) {
+        slideRight();
+      }
 
-    if (e.target === leftArrow) {
-      slideLeft();
-    }
+      if (e.target === leftArrow) {
+        slideLeft();
+      }
+    });
   });
 }
 
 function handleIndexes() {
   if (setIndex.targetIndex < 0) {
-    setIndex.targetIndex = galleryImgs.length - 1;
-    slidePosition.currentSlidePosition = galleryImgs[setIndex.targetIndex];
-    slidePosition.nextSlidePosition = galleryImgs[0];
-    slidePosition.prevSlidePosition = galleryImgs[setIndex.targetIndex - 1];
+    setIndex.targetIndex = galleryImgs.boxImgs.length - 1;
+    slidePosition.currentSlidePosition =
+      galleryImgs.boxImgs[setIndex.targetIndex];
+    slidePosition.nextSlidePosition = galleryImgs.boxImgs[0];
+    slidePosition.prevSlidePosition =
+      galleryImgs.boxImgs[setIndex.targetIndex - 1];
     circleDivPosition.currentCircleDivPosition =
-      circleIconDivs[setIndex.targetIndex];
-    circleDivPosition.nextCircleDivPosition = circleIconDivs[0];
+      circleIconDivs.circleDivs[setIndex.targetIndex];
+    circleDivPosition.nextCircleDivPosition = circleIconDivs.circleDivs[0];
     circleDivPosition.prevCircleDivPosition =
-      circleIconDivs[setIndex.targetIndex - 1];
-    circlePosition.currentCirclePosition = circleIcons[setIndex.targetIndex];
-    circlePosition.nextCirclePosition = circleIcons[0];
-    circlePosition.prevCirclePosition = circleIcons[setIndex.targetIndex - 1];
+      circleIconDivs.circleDivs[setIndex.targetIndex - 1];
+    circlePosition.currentCirclePosition =
+      circleIcons.circles[setIndex.targetIndex];
+    circlePosition.nextCirclePosition = circleIcons.circles[0];
+    circlePosition.prevCirclePosition =
+      circleIcons.circles[setIndex.targetIndex - 1];
   } else if (setIndex.targetIndex === 0) {
-    slidePosition.currentSlidePosition = galleryImgs[setIndex.targetIndex];
-    slidePosition.nextSlidePosition = galleryImgs[setIndex.targetIndex + 1];
-    slidePosition.prevSlidePosition = galleryImgs[galleryImgs.length - 1];
+    slidePosition.currentSlidePosition =
+      galleryImgs.boxImgs[setIndex.targetIndex];
+    slidePosition.nextSlidePosition =
+      galleryImgs.boxImgs[setIndex.targetIndex + 1];
+    slidePosition.prevSlidePosition =
+      galleryImgs.boxImgs[galleryImgs.boxImgs.length - 1];
     circleDivPosition.currentCircleDivPosition =
-      circleIconDivs[setIndex.targetIndex];
+      circleIconDivs.circleDivs[setIndex.targetIndex];
     circleDivPosition.nextCircleDivPosition =
-      circleIconDivs[setIndex.targetIndex + 1];
+      circleIconDivs.circleDivs[setIndex.targetIndex + 1];
     circleDivPosition.prevCircleDivPosition =
-      circleIconDivs[setIndex.targetIndex - 1];
-    circlePosition.currentCirclePosition = circleIcons[setIndex.targetIndex];
-    circlePosition.nextCirclePosition = circleIcons[setIndex + 1];
-    circlePosition.prevCirclePosition = circleIcons[circleIcons.lengh - 1];
-  } else if (setIndex.targetIndex > galleryImgs.length - 1) {
+      circleIconDivs.circleDivs[setIndex.targetIndex - 1];
+    circlePosition.currentCirclePosition =
+      circleIcons.circles[setIndex.targetIndex];
+    circlePosition.nextCirclePosition = circleIcons.circles[setIndex + 1];
+    circlePosition.prevCirclePosition =
+      circleIcons.circles[circleIcons.circles.lengh - 1];
+  } else if (setIndex.targetIndex > galleryImgs.boxImgs.length - 1) {
     setIndex.targetIndex = 0;
-    slidePosition.currentSlidePosition = galleryImgs[setIndex.targetIndex];
-    slidePosition.nextSlidePosition = galleryImgs[setIndex.targetIndex + 1];
-    slidePosition.prevSlidePosition = galleryImgs[galleryImgs.length - 1];
+    slidePosition.currentSlidePosition =
+      galleryImgs.boxImgs[setIndex.targetIndex];
+    slidePosition.nextSlidePosition =
+      galleryImgs.boxImgs[setIndex.targetIndex + 1];
+    slidePosition.prevSlidePosition =
+      galleryImgs.boxImgs[galleryImgs.boxImgs.length - 1];
     circleDivPosition.currentCircleDivPosition =
-      circleIconDivs[setIndex.targetIndex];
+      circleIconDivs.circleDivs[setIndex.targetIndex];
     circleDivPosition.nextCircleDivPosition =
-      circleIconDivs[setIndex.targetIndex + 1];
+      circleIconDivs.circleDivs[setIndex.targetIndex + 1];
     circleDivPosition.prevCircleDivPosition =
-      circleIconDivs[setIndex.targetIndex - 1];
-    circlePosition.currentCirclePosition = circleIcons[setIndex.targetIndex];
-    circlePosition.nextCirclePosition = circleIcons[setIndex.targetIndex + 1];
-    circlePosition.prevCirclePosition = circleIcons[circleIcons.length - 1];
+      circleIconDivs.circleDivs[setIndex.targetIndex - 1];
+    circlePosition.currentCirclePosition =
+      circleIcons.circles[setIndex.targetIndex];
+    circlePosition.nextCirclePosition =
+      circleIcons.circles[setIndex.targetIndex + 1];
+    circlePosition.prevCirclePosition =
+      circleIcons[circleIcons.circles.length - 1];
   } else {
-    slidePosition.currentSlidePosition = galleryImgs[setIndex.targetIndex];
-    slidePosition.nextSlidePosition = galleryImgs[setIndex.targetIndex + 1];
-    slidePosition.prevSlidePosition = galleryImgs[setIndex.targetIndex - 1];
+    slidePosition.currentSlidePosition =
+      galleryImgs.boxImgs[setIndex.targetIndex];
+    slidePosition.nextSlidePosition =
+      galleryImgs.boxImgs[setIndex.targetIndex + 1];
+    slidePosition.prevSlidePosition =
+      galleryImgs.boxImgs[setIndex.targetIndex - 1];
     circleDivPosition.currentCircleDivPosition =
-      circleIconDivs[setIndex.targetIndex];
+      circleIconDivs.circleDivs[setIndex.targetIndex];
     circleDivPosition.nextCircleDivPosition =
-      circleIconDivs[setIndex.targetIndex + 1];
+      circleIconDivs.circleDivs[setIndex.targetIndex + 1];
     circleDivPosition.prevCircleDivPosition =
-      circleIconDivs[setIndex.targetIndex - 1];
-    circlePosition.currentCirclePosition = circleIcons[setIndex.targetIndex];
-    circlePosition.nextCirclePosition = circleIcons[setIndex.targetIndex + 1];
-    circlePosition.prevCirclePosition = circleIcons[setIndex.targetIndex - 1];
+      circleIconDivs.circleDivs[setIndex.targetIndex - 1];
+    circlePosition.currentCirclePosition =
+      circleIcons.circles[setIndex.targetIndex];
+    circlePosition.nextCirclePosition =
+      circleIcons.circles[setIndex.targetIndex + 1];
+    circlePosition.prevCirclePosition =
+      circleIcons.circles[setIndex.targetIndex - 1];
   }
 }
 

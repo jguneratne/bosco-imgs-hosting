@@ -14,16 +14,48 @@ export const galleryLinkParent = document.querySelector(".dropdown-content");
 export const tabContent = document.querySelectorAll(".tab-content");
 
 // Photo Gallery
-export const sliderBox = document.querySelector(".slider-box");
-export const photoBox = document.querySelector(".photo-box");
-export const galleryImgs = Array.from(photoBox.children);
-export const circleNav = document.querySelector(".img-dots-container");
-export const circleIconDivs = Array.from(
-  document.querySelectorAll(".circle-icon-div")
-);
-export const circleIcons = Array.from(
-  document.querySelectorAll(".circle-icon")
-);
+export const sliderBoxes = document.querySelectorAll(".slider-box");
+export const photoBoxes = document.querySelectorAll(".photo-box");
+
+export let galleryImgs = {
+  boxImgs: [],
+
+  get boxImgsArray() {
+    return this.boxImgs;
+  },
+
+  set boxImgsArray(currentBoxImgs) {
+    this.boxImgs = currentBoxImgs;
+  },
+};
+
+export const circleNav = document.querySelectorAll(".img-dots-container");
+export const circleIconContainer = document.querySelectorAll(".img-dots");
+
+export let circleIconDivs = {
+  circleDivs: [],
+
+  get circleDivsArray() {
+    return this.circleDivs;
+  },
+
+  set circleDivsArray(newCircleDivsArray) {
+    this.circleDivs = newCircleDivsArray;
+  },
+};
+
+export let circleIcons = {
+  circles: [],
+
+  get circleIconsArray() {
+    return this.circles;
+  },
+
+  set circleIconsArray(newCirclesArray) {
+    this.circles = newCirclesArray;
+  },
+};
+
 export const rightArrow = document.querySelector("[data-forward-arrow]");
 export const leftArrow = document.querySelector("[data-back-arrow]");
 
@@ -39,10 +71,10 @@ export let setIndex = {
   },
 };
 
-export const slidePosition = {
-  currentSlide: galleryImgs[setIndex.currentIndex],
-  nextSlide: galleryImgs[setIndex.currentIndex + 1],
-  prevSlide: galleryImgs[setIndex.currentIndex - 1],
+export let slidePosition = {
+  currentSlide: galleryImgs.boxImgs[setIndex.currentIndex],
+  nextSlide: galleryImgs.boxImgs[setIndex.currentIndex + 1],
+  prevSlide: galleryImgs.boxImgs[setIndex.currentIndex - 1],
 
   get currentSlidePosition() {
     return this.currentSlide;
@@ -69,10 +101,10 @@ export const slidePosition = {
   },
 };
 
-export const circleDivPosition = {
-  currentCircleDiv: circleIconDivs[setIndex.currentIndex],
-  nextCircleDiv: circleIconDivs[setIndex.currentIndex + 1],
-  prevCircleDiv: circleIconDivs[setIndex.currentIndex - 1],
+export let circleDivPosition = {
+  currentCircleDiv: circleIconDivs.circleDivs[setIndex.currentIndex],
+  nextCircleDiv: circleIconDivs.circleDivs[setIndex.currentIndex + 1],
+  prevCircleDiv: circleIconDivs.circleDivs[setIndex.currentIndex - 1],
 
   get currentCircleDivPosition() {
     return this.currentCircleDiv;
@@ -82,7 +114,7 @@ export const circleDivPosition = {
     this.currentCircleDiv = newCurrentCircleDiv;
   },
 
-  get nextCirclePositionDiv() {
+  get nextCircleDivPosition() {
     return this.nextCircleDiv;
   },
 
@@ -99,10 +131,10 @@ export const circleDivPosition = {
   },
 };
 
-export const circlePosition = {
-  currentCircle: circleIcons[setIndex.currentIndex],
-  nextCircle: circleIcons[setIndex.currentIndex + 1],
-  prevCircle: circleIcons[setIndex.currentIndex - 1],
+export let circlePosition = {
+  currentCircle: circleIcons.circles[setIndex.currentIndex],
+  nextCircle: circleIcons.circles[setIndex.currentIndex + 1],
+  prevCircle: circleIcons.circles[setIndex.currentIndex - 1],
 
   get currentCirclePosition() {
     return this.currentCircle;
