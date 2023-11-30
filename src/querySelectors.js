@@ -14,6 +14,18 @@ export const galleryLinkParent = document.querySelector(".dropdown-content");
 export const tabContent = document.querySelectorAll(".tab-content");
 
 // Photo Gallery
+export let getAnimationID = {
+  animationID: undefined,
+
+  get animationIDValue() {
+    return this.animationID;
+  },
+
+  set animationIDValue(newAnimationValue) {
+    this.animationID = newAnimationValue;
+  },
+};
+
 export const sliderBoxes = document.querySelectorAll(".slider-box");
 export const photoBoxes = document.querySelectorAll(".photo-box");
 

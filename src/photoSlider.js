@@ -1,4 +1,5 @@
 import {
+  getAnimationID,
   sliderBoxes,
   photoBoxes,
   galleryImgs,
@@ -13,6 +14,10 @@ import {
   circleDivPosition,
   circlePosition,
 } from "./querySelectors";
+
+export function checkCircleArray() {
+  console.log(circleIconDivs.circles === undefined);
+}
 
 export function sliderBoxCtrl(hrefTagText) {
   photoBoxes.forEach((box) => {
@@ -67,7 +72,11 @@ export function sliderBoxCtrl(hrefTagText) {
 }
 
 export function sliderAnimation() {
-  setInterval(slideRight, 3000);
+  getAnimationID.animationIDValue = setInterval(slideRight, 3000);
+}
+
+export function resetSliderAnimation() {
+  clearInterval(getAnimationID.animationID);
 }
 
 export function clickCircles(hrefTagText) {
@@ -191,8 +200,20 @@ function handleIndexes() {
   }
 }
 
+export function resetIndexes() {
+  setIndex.targetIndex = 0;
+  slidePosition.currentSlidePosition.classList.remove("picture--active");
+  circleDivPosition.currentCircleDivPosition.classList.remove(
+    "circle-icon-div--active"
+  );
+  circlePosition.currentCirclePosition.classList.remove("circle-icon--active");
+}
+
 function slideRight() {
   slidePosition.currentSlidePosition.classList.remove("picture--active");
+  circleDivPosition.currentCircleDivPosition.classList.remove(
+    "circle-icon-div--active"
+  );
   circlePosition.currentCirclePosition.classList.remove("circle-icon--active");
 
   setIndex.targetIndex++;
@@ -200,6 +221,9 @@ function slideRight() {
   handleIndexes();
 
   slidePosition.currentSlidePosition.classList.add("picture--active");
+  circleDivPosition.currentCircleDivPosition.classList.add(
+    "circle-icon-div--active"
+  );
   circlePosition.currentCirclePosition.classList.add("circle-icon--active");
 
   // console.log(slidePosition.currentSlidePosition);
@@ -212,6 +236,9 @@ function slideRight() {
 
 function slideLeft() {
   slidePosition.currentSlidePosition.classList.remove("picture--active");
+  circleDivPosition.currentCircleDivPosition.classList.remove(
+    "circle-icon-div--active"
+  );
   circlePosition.currentCirclePosition.classList.remove("circle-icon--active");
 
   setIndex.targetIndex--;
@@ -219,6 +246,9 @@ function slideLeft() {
   handleIndexes();
 
   slidePosition.currentSlidePosition.classList.add("picture--active");
+  circleDivPosition.currentCircleDivPosition.classList.add(
+    "circle-icon-div--active"
+  );
   circlePosition.currentCirclePosition.classList.add("circle-icon--active");
 
   // console.log(slidePosition.currentSlidePosition);

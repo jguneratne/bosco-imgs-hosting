@@ -3,11 +3,16 @@ import {
   menuBtnStyle,
   galleryLinkParent,
   tabContent,
+  getAnimationID,
 } from "./querySelectors";
 
 import { showSubMenu } from "./dropDown";
 
-import { sliderBoxCtrl } from "./photoSlider";
+import {
+  sliderBoxCtrl,
+  resetSliderAnimation,
+  resetIndexes,
+} from "./photoSlider";
 
 export function defaultSelectedSettings() {
   let i = 0;
@@ -42,6 +47,12 @@ export function navigateTabs() {
                 content.classList.remove("selected");
               });
               content.classList.add("selected");
+
+              if (getAnimationID.animationID !== undefined) {
+                resetSliderAnimation();
+                resetIndexes();
+              }
+
               sliderBoxCtrl(hrefTagText);
             }
           });
