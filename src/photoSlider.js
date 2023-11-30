@@ -7,8 +7,8 @@ import {
   circleIconContainer,
   circleIconDivs,
   circleIcons,
-  rightArrow,
-  leftArrow,
+  getRightArrow,
+  getLeftArrow,
   setIndex,
   slidePosition,
   circleDivPosition,
@@ -68,7 +68,7 @@ export function sliderBoxCtrl(hrefTagText) {
 
   sliderAnimation();
   clickCircles(hrefTagText);
-  arrowCtrl();
+  arrowCtrl(hrefTagText);
 }
 
 export function sliderAnimation() {
@@ -108,17 +108,25 @@ export function clickCircles(hrefTagText) {
   });
 }
 
-export function arrowCtrl() {
+export function arrowCtrl(hrefTagText) {
   sliderBoxes.forEach((box) => {
-    box.addEventListener("pointerdown", (e) => {
-      if (e.target === rightArrow) {
-        slideRight();
-      }
+    if (box.dataset.name === hrefTagText) {
+      console.log(true);
+      getRightArrow.rightArrowLocation = box.querySelector(
+        "[data-forward-arrow]"
+      );
+      getLeftArrow.leftArrowLocation = box.querySelector("[data-back-arrow]");
 
-      if (e.target === leftArrow) {
-        slideLeft();
-      }
-    });
+      box.addEventListener("pointerdown", (e) => {
+        if (e.target === getRightArrow.rightArrow) {
+          slideRight();
+        }
+
+        if (e.target === getLeftArrow.leftArrow) {
+          slideLeft();
+        }
+      });
+    }
   });
 }
 

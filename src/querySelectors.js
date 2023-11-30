@@ -68,8 +68,29 @@ export let circleIcons = {
   },
 };
 
-export const rightArrow = document.querySelector("[data-forward-arrow]");
-export const leftArrow = document.querySelector("[data-back-arrow]");
+export const getRightArrow = {
+  rightArrow: undefined,
+
+  get rightArrowLocation() {
+    return this.rightArrow;
+  },
+
+  set rightArrowLocation(newRightArrow) {
+    this.rightArrow = newRightArrow;
+  },
+};
+
+export const getLeftArrow = {
+  leftArrow: undefined,
+
+  get leftArrowLocation() {
+    return this.leftArrow;
+  },
+
+  set leftArrowLocation(newLeftArrow) {
+    this.leftArrow = newLeftArrow;
+  },
+};
 
 export let setIndex = {
   currentIndex: 0,
