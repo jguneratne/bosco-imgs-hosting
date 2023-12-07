@@ -1,9 +1,9 @@
 import {
   menuLinks,
   menuBtnStyle,
-  galleryLinkParent,
   tabContent,
   getAnimationID,
+  dropDownContent,
 } from "./querySelectors";
 
 import { showSubMenu } from "./dropDown";
@@ -36,6 +36,8 @@ export function navigateTabs() {
                 btn.classList.remove("selected");
               });
               btn.classList.add("selected");
+            } else if (btn.classList.contains("selected")) {
+              return;
             }
           });
         }
@@ -44,9 +46,11 @@ export function navigateTabs() {
           tabContent.forEach((content) => {
             if (hrefTagText === content.id) {
               tabContent.forEach((content) => {
-                content.classList.remove("selected");
+                if (content.classList.contains("selected")) {
+                  content.classList.remove("selected");
+                }
               });
-              content.classList.add("selected");
+              content.classList.toggle("selected");
 
               if (getAnimationID.animationID !== undefined) {
                 resetSliderAnimation();
@@ -59,9 +63,9 @@ export function navigateTabs() {
         }
 
         if (hrefTagText === "galleries") {
-          showSubMenu();
           selectMenuBtn();
-        } else if (hrefTagText.parentNode === galleryLinkParent) {
+          showSubMenu(hrefTagText);
+        } else if (hrefTagText.parentNode === dropDownContent) {
           showSubMenu();
           selectTabContent();
         } else {
