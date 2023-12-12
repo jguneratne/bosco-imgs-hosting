@@ -5,44 +5,46 @@ import {
   dropDownItems,
 } from "./querySelectors";
 
-import { menuLinks } from "./querySelectors";
-
-export function showSubMenu(hrefTagText) {
-  dropDownDiv.addEventListener("pointerdown", (e) => {
-    console.log(hrefTagText);
-    console.log(e.currentTarget);
-
-    if (dropDownContent.classList.contains("dropdown-content--active")) {
-      dropDownContent.classList.toggle("dropdown-content--active");
-      dropDownCarat.classList.toggle("gal-arrow--active");
-      dropDownItems.forEach((item) => {
-        item.classList.toggle("dropdown-item--active");
-      });
-    } else {
-      e.preventDefault();
-      dropDownCarat.classList.toggle("gal-arrow--active");
-      dropDownContent.classList.toggle("dropdown-content--active");
-      dropDownItems.forEach((item) => {
-        item.classList.toggle("dropdown-item--active");
-      });
+export function galleriesClickMenu() {
+  dropDownDiv.addEventListener("focusin", (e) => {
+    if (
+      (e.target.nodeName === "A" || e.target === dropDownCarat) &&
+      !dropDownContent.classList.contains("dropdown-content--active")
+    ) {
+      addActiveState();
+    } else if (
+      (e.target.nodeName === "A" || e.target === dropDownCarat) &&
+      dropDownContent.classList.contains("dropdown-content--active")
+    ) {
+      removeActiveState();
     }
+  });
+}
 
-    // if ( e.currentTarget === dropDownDiv &&
-    //   hrefTagText === "galleries" &&
-    //   (e.target.nodeName === "A" || e.target === dropDownCarat)
-    // ) {
-    //   e.preventDefault();
-    //   dropDownCarat.classList.toggle("gal-arrow--active");
-    //   dropDownContent.classList.toggle("dropdown-content--active");
-    //   dropDownItems.forEach((item) => {
-    //     item.classList.toggle("dropdown-item--active");
-    //   });
-    // } else if (dropDownContent.classList.contains("dropdown-content--active")) {
-    //   dropDownContent.classList.toggle("dropdown-content--active");
-    //   dropDownCarat.classList.toggle("gal-arrow--active");
-    //   dropDownItems.forEach((item) => {
-    //     item.classList.toggle("dropdown-item--active");
-    //   });
-    // }
+export function showSubMenu() {
+  dropDownDiv.addEventListener("focusin", () => {
+    addActiveState();
+  });
+}
+
+export function hideSubMenu() {
+  dropDownDiv.addEventListener("focusout", () => {
+    removeActiveState();
+  });
+}
+
+function addActiveState() {
+  dropDownCarat.classList.add("gal-arrow--active");
+  dropDownContent.classList.add("dropdown-content--active");
+  dropDownItems.forEach((item) => {
+    item.classList.add("dropdown-item--active");
+  });
+}
+
+function removeActiveState() {
+  dropDownContent.classList.remove("dropdown-content--active");
+  dropDownCarat.classList.remove("gal-arrow--active");
+  dropDownItems.forEach((item) => {
+    item.classList.remove("dropdown-item--active");
   });
 }

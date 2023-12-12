@@ -6,7 +6,7 @@ import {
   dropDownContent,
 } from "./querySelectors";
 
-import { showSubMenu } from "./dropDown";
+import { galleriesClickMenu, hideSubMenu, showSubMenu } from "./dropDown";
 
 import {
   sliderBoxCtrl,
@@ -64,13 +64,14 @@ export function navigateTabs() {
 
         if (hrefTagText === "galleries") {
           selectMenuBtn();
-          showSubMenu(hrefTagText);
+          galleriesClickMenu();
         } else if (hrefTagText.parentNode === dropDownContent) {
-          showSubMenu();
           selectTabContent();
+          hideSubMenu();
         } else {
           selectMenuBtn();
           selectTabContent();
+          hideSubMenu();
         }
       }
     });
