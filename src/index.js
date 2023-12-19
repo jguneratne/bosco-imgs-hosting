@@ -1,8 +1,9 @@
 import "./style.css";
 
-import { defaultSelectedSettings, navigateTabs } from "./tabCtrl";
+import { defaultSelectedSettings, changeTabs } from "./tabCtrl";
 
 console.log("photogallery");
 
 defaultSelectedSettings();
-navigateTabs();
+
+changeTabs();

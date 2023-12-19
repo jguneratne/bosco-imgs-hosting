@@ -5,15 +5,15 @@ import {
   dropDownItems,
 } from "./querySelectors";
 
-export function galleriesClickMenu(hrefTag) {
-  console.log(hrefTag);
+export function galleriesClickMenu(hrefTagText) {
+  console.log(hrefTagText);
   if (
-    hrefTag === "galleries" &&
+    hrefTagText === "galleries" &&
     !dropDownContent.classList.contains("dropdown-content--active")
   ) {
     addActiveState();
   } else if (
-    hrefTag === "galleries" &&
+    hrefTagText === "galleries" &&
     dropDownContent.classList.contains("dropdown-content--active")
   ) {
     removeActiveState();
