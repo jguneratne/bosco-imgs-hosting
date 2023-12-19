@@ -4,6 +4,7 @@ import {
   tabContent,
   getAnimationID,
   dropDownContent,
+  menuChildrenDiv,
 } from "./querySelectors";
 
 import { galleriesClickMenu, hideSubMenu, showSubMenu } from "./dropDown";
@@ -22,58 +23,52 @@ export function defaultSelectedSettings() {
 }
 
 export function navigateTabs() {
-  menuLinks.forEach((link) => {
-    link.addEventListener("pointerdown", (e) => {
-      if (e.target instanceof HTMLAnchorElement) {
-        let hrefTag = e.target.href;
-        let hrefTagText = hrefTag.substring(hrefTag.indexOf("#") + 1);
-        console.log(hrefTagText);
+  window.addEventListener("hashchange", () => {
+    console.log(location.hash);
+    let hrefTag = location.hash.substring(location.hash.indexOf("#") + 1);
+    console.log(hrefTag);
 
-        function selectMenuBtn() {
+    function selectMenuBtn() {
+      menuBtnStyle.forEach((btn) => {
+        if (hrefTag === btn.dataset.tab) {
           menuBtnStyle.forEach((btn) => {
-            if (hrefTagText === btn.dataset.tab) {
-              menuBtnStyle.forEach((btn) => {
-                btn.classList.remove("selected");
-              });
-              btn.classList.add("selected");
-            } else if (btn.classList.contains("selected")) {
-              return;
-            }
+            btn.classList.remove("selected");
           });
+          btn.classList.add("selected");
         }
+      });
+    }
 
-        function selectTabContent() {
+    function selectTabContent() {
+      tabContent.forEach((content) => {
+        if (hrefTag === content.id) {
           tabContent.forEach((content) => {
-            if (hrefTagText === content.id) {
-              tabContent.forEach((content) => {
-                if (content.classList.contains("selected")) {
-                  content.classList.remove("selected");
-                }
-              });
-              content.classList.toggle("selected");
-
-              if (getAnimationID.animationID !== undefined) {
-                resetSliderAnimation();
-                resetIndexes();
-              }
-
-              sliderBoxCtrl(hrefTagText);
+            if (content.classList.contains("selected")) {
+              content.classList.remove("selected");
             }
           });
-        }
+          content.classList.add("selected");
 
-        if (hrefTagText === "galleries") {
-          selectMenuBtn();
-          galleriesClickMenu();
-        } else if (hrefTagText.parentNode === dropDownContent) {
-          selectTabContent();
-          hideSubMenu();
-        } else {
-          selectMenuBtn();
-          selectTabContent();
-          hideSubMenu();
+          // if (getAnimationID.animationID !== undefined) {
+          //   resetSliderAnimation();
+          //   resetIndexes();
+          // }
+
+          // sliderBoxCtrl(hrefTagText);
         }
-      }
-    });
+      });
+    }
+
+    if (hrefTag === "galleries") {
+      selectMenuBtn();
+      galleriesClickMenu(hrefTag);
+    } else if (hrefTag.parentNode === dropDownContent) {
+      selectTabContent();
+      hideSubMenu();
+    } else {
+      selectMenuBtn();
+      selectTabContent();
+      hideSubMenu();
+    }
   });
 }

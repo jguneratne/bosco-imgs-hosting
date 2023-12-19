@@ -5,32 +5,23 @@ import {
   dropDownItems,
 } from "./querySelectors";
 
-export function galleriesClickMenu() {
-  dropDownDiv.addEventListener("focusin", (e) => {
-    if (
-      (e.target.nodeName === "A" || e.target === dropDownCarat) &&
-      !dropDownContent.classList.contains("dropdown-content--active")
-    ) {
-      addActiveState();
-    } else if (
-      (e.target.nodeName === "A" || e.target === dropDownCarat) &&
-      dropDownContent.classList.contains("dropdown-content--active")
-    ) {
-      removeActiveState();
-    }
-  });
-}
-
-export function showSubMenu() {
-  dropDownDiv.addEventListener("focusin", () => {
+export function galleriesClickMenu(hrefTag) {
+  console.log(hrefTag);
+  if (
+    hrefTag === "galleries" &&
+    !dropDownContent.classList.contains("dropdown-content--active")
+  ) {
     addActiveState();
-  });
+  } else if (
+    hrefTag === "galleries" &&
+    dropDownContent.classList.contains("dropdown-content--active")
+  ) {
+    removeActiveState();
+  }
 }
 
 export function hideSubMenu() {
-  dropDownDiv.addEventListener("focusout", () => {
-    removeActiveState();
-  });
+  removeActiveState();
 }
 
 function addActiveState() {
