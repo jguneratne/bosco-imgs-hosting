@@ -53,12 +53,12 @@ export function changeTabs() {
               });
               content.classList.toggle("selected");
 
-              // if (getAnimationID.animationID !== undefined) {
-              //   resetSliderAnimation();
-              //   resetIndexes();
-              // }
+              if (getAnimationID.animationID !== undefined) {
+                resetSliderAnimation();
+                resetIndexes();
+              }
 
-              // sliderBoxCtrl(hrefTagText);
+              sliderBoxCtrl(hrefTagText);
             }
           });
         }
