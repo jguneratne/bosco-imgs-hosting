@@ -229,7 +229,7 @@ h2 {
   margin-right: auto;
   text-align: center;
   height: 100%;
-  /* display: none; */
+  display: none;
 }
 
 .tab-content.selected {
