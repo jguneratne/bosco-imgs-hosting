@@ -39,10 +39,11 @@
 
 .container {
   max-width: 100rem;
-  height: 100vh;
+  /* height: 100vh; */
+  background-color: bisque;
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: minmax(2.7rem, 3rem) 8fr minmax(1.25rem, 2.5rem);
+  grid-template-rows: 3rem minmax(auto, 1fr) 2.5rem;
   grid-template-areas:
     "header"
     "main"
@@ -206,8 +207,6 @@ li {
 .main {
   grid-area: main;
   background-color: var(--main-col);
-  overflow: scroll;
-  height: min-content;
 }
 
 h2 {
@@ -216,7 +215,7 @@ h2 {
 }
 
 .content-box {
-  position: relative;
+  width: 100%;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr;
@@ -225,13 +224,12 @@ h2 {
 /* Home Tab */
 
 .tab-content {
-  position: absolute;
+  grid-area: 1 / 1 / 2 / 2;
   margin-left: auto;
   margin-right: auto;
-  left: 0;
-  right: 0;
   text-align: center;
-  display: none;
+  height: 100%;
+  /* display: none; */
 }
 
 .tab-content.selected {
@@ -242,7 +240,6 @@ h2 {
   width: 100%;
   height: 100%;
 }
-*/
 
 /* .pic-div picture img {
   grid-area: images;
@@ -256,7 +253,6 @@ h2 {
 /* Galleries */
 
 .gallery {
-  padding-top: 4ch;
   padding-bottom: 4ch;
 }
 
@@ -264,11 +260,8 @@ h2 {
   border: 1px solid black;
   background-color: var(--slider-box-col);
   min-height: 0.625rem;
-  width: 87.5rem;
-  max-width: min-content;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 0 5ch 0 5ch;
+  max-width: 70rem;
+  margin: 5ch auto 5ch auto;
 
   display: grid;
   grid-template-columns: 1fr 5fr 1fr;
@@ -328,10 +321,8 @@ h2 {
 }
 
 .photo-box {
-  padding: 3ch 0 2ch 0;
-  margin: 0 5ch 0 5ch;
-  height: min-content;
-  max-width: min-content;
+  padding: 3ch 0 0 0;
+  min-width: min-content;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr;
