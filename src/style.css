@@ -1,7 +1,6 @@
 * {
   margin: 0;
   padding: 0;
-  /* height: 100%; */
   box-sizing: border-box;
 
   --fallback-col: #fcf4d1;
@@ -13,6 +12,7 @@
 }
 
 body {
+  min-height: 100vh;
   background-color: var(--fallback-col);
 }
 
@@ -43,15 +43,14 @@ body {
 }
 
 .container {
-  /* max-width: 100rem; */
-  max-width: 87.5rem;
+  max-width: 100rem;
   height: 100vh;
   margin-left: auto;
   margin-right: auto;
   background-color: bisque;
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: min-content 1fr min-content;
+  grid-template-rows: min-content minmax(auto, 1fr) min-content;
   grid-template-areas:
     "header"
     "main"
@@ -71,7 +70,6 @@ body {
 
 .menu-items {
   max-width: 60rem;
-  height: 100%;
   display: flex;
   gap: 1.5ch;
   align-self: center;
@@ -125,7 +123,7 @@ li {
   display: block;
   content: attr(title);
   font-weight: bold;
-  height: 1px;
+  /* height: 1px; */
   color: transparent;
   overflow: hidden;
   visibility: hidden;
@@ -215,29 +213,31 @@ li {
 .main {
   grid-area: main;
   background-color: var(--main-col);
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
 }
 
 h2 {
   text-align: center;
-  margin-top: 3ch;
-  height: 100%;
+  padding: 3ch;
 }
 
 .home {
-  background-image: url("../src/assets/imgs/Guneratne_2023.08.04_raspberries-long.jpg");
-  background-position: center;
+  background-image: url("../src/assets/imgs/Guneratne_2023.08.19_homeimg-1200p.jpg");
+  background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
   height: 100%;
 }
 
-.content-box {
+/* .content-box {
   width: 100%;
   height: 100%;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr;
-}
+} */
 
 /* Home Tab */
 
@@ -254,10 +254,10 @@ h2 {
   display: initial;
 }
 
-.pic-div {
+/* .pic-div {
   width: 100%;
   height: 100%;
-}
+} */
 
 /* .pic-div picture img {
   grid-area: images;
@@ -303,9 +303,9 @@ h2 {
   justify-content: center;
 }
 
-.circle-icon-div {
+/* .circle-icon-div {
   height: 100%;
-}
+} */
 
 .circle-icon {
   width: 2ch;
@@ -389,16 +389,48 @@ h2 {
   text-align: right;
   vertical-align: middle;
   align-self: center;
-  height: min-content;
+  /* height: min-content; */
   margin-right: 1ch;
 }
 
 .footer .logo-div a {
   text-align: left;
-  height: min-content;
+  /* height: min-content; */
   margin-left: 1ch;
 }
 
 .footer .logo-div a img {
   height: 3ch;
+}
+
+/* Media Queries */
+
+@media (max-width: 480px) {
+  .home {
+    background-image: url("../src/assets/imgs/Guneratne_2023.08.19_homeimg-480p.jpg");
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100%;
+  }
+}
+
+@media (481px <= width <= 768px) {
+  .home {
+    background-image: url("../src/assets/imgs/Guneratne_2023.08.19_homeimg-768p.jpg");
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100%;
+  }
+}
+
+@media (769px <= width <= 1024px) {
+  .home {
+    background-image: url("../src/assets/imgs/Guneratne_2023.08.19_homeimg-1024p.jpg");
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100%;
+  }
 }
