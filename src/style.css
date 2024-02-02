@@ -3,12 +3,13 @@
   padding: 0;
   box-sizing: border-box;
 
-  --fallback-col: #fcf4d1;
+  --fallback-col: #fffbeb;
   --main-col: #fffbeb;
-  --head-foot-col: #cfe6ea;
-  --dropdown-item-col: rgba(235, 219, 188, 0.7);
-  --dropdown-item-col-hov: rgba(235, 219, 188, 1);
-  --slider-box-col: #f7fcfc;
+  --head-foot-col: #004055;
+  --dropdown-item-col: #ebdbbc;
+  --slider-box-col: #708090;
+  --dark-font-col: #34515e;
+  --light-font-col: #e0ffff;
 }
 
 body {
@@ -101,7 +102,7 @@ li {
   text-decoration: none;
   text-align: center;
   font-family: Arial, Helvetica, sans-serif;
-  color: black;
+  color: var(--light-font-col);
   width: 12ch;
   padding: 0.4em;
   display: flex;
@@ -123,7 +124,6 @@ li {
   display: block;
   content: attr(title);
   font-weight: bold;
-  /* height: 1px; */
   color: transparent;
   overflow: hidden;
   visibility: hidden;
@@ -138,9 +138,14 @@ li {
   cursor: pointer;
 }
 
+.menu-btn.selected li a {
+  color: var(--dark-font-col);
+  text-decoration: var(--dark-font-col);
+}
+
 .menu-btn:hover,
 .menu-btn:focus {
-  text-decoration: underline black;
+  text-decoration: underline var(--light-font-col);
   text-decoration-thickness: 0.3ch;
   border-radius: 2ch 2ch 0 0;
   border: none;
@@ -149,10 +154,16 @@ li {
   cursor: pointer;
 }
 
+.menu-btn:hover.selected li a,
+.menu-btn:focus.selected li a {
+  text-decoration: underline var(--dark-font-col);
+  text-decoration-thickness: 0.3ch;
+}
+
 .gal-arrow {
   border-left: 5px solid transparent;
   border-right: 5px solid transparent;
-  border-top: 6px solid black;
+  border-top: 6px solid var(--light-font-col);
   margin-left: -1.2ch;
   transition: transform ease-in-out 0.3s;
 }
@@ -160,7 +171,7 @@ li {
 .dropdown-content {
   list-style: none;
   position: absolute;
-  color: black;
+  color: var(--dark-font-col);
   z-index: 10;
   top: 3.5ch;
   visibility: hidden;
@@ -168,9 +179,15 @@ li {
 
 .dropdown-content--active {
   visibility: visible;
+  color: var(--dark-font-col);
 }
 
-.dropdown-div .gal-arrow--active {
+.menu-btn.selected .gal-btn-div .gal-arrow {
+  border-top: 6px solid var(--dark-font-col);
+}
+
+.menu-btn.selected .gal-btn-div .gal-arrow--active {
+  border-top: 6px solid var(--dark-font-col);
   transform: rotate(180deg);
 }
 
@@ -178,7 +195,7 @@ li {
   -webkit-animation: slide-down 0.5s ease-in-out both;
   background: var(--dropdown-item-col);
   border-radius: 0.5em;
-  color: black;
+  color: var(--dark-font-col);
   text-align: center;
   position: relative;
 }
@@ -188,14 +205,14 @@ li {
 }
 
 .dropdown-content li:hover {
-  background: var(--dropdown-item-col-hov);
+  font-weight: bold;
   text-decoration: underline;
 }
 
 .dropdown-content--active li:first-child a {
   display: block;
   padding: 0.7em 0.5em;
-  color: black;
+  color: var(--dark-font-col);
   margin-top: 2ch;
   text-decoration: none;
 }
@@ -203,7 +220,7 @@ li {
 .dropdown-content--active li a {
   display: block;
   padding: 0.7em 0.5em;
-  color: black;
+  color: var(--dark-font-col);
   margin: 0.1em 0;
   text-decoration: none;
 }
@@ -220,16 +237,17 @@ li {
 
 h2 {
   text-align: center;
+  color: var(--dark-font-col);
   padding: 2em;
 }
 
-.home {
+/* .home {
   background-image: url("../src/assets/imgs/Guneratne_2023.08.19_homeimg-1200p.jpg");
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
   height: 100%;
-}
+} */
 
 /* .content-box {
   width: 100%;
@@ -275,7 +293,8 @@ h2 {
 }
 
 .slider-box {
-  border: 1px solid black;
+  border: 1px solid var(--dark-font-col);
+  border-radius: 3em;
   background-color: var(--slider-box-col);
   min-height: 0.625rem;
   max-width: 70rem;
@@ -312,7 +331,7 @@ h2 {
   height: 2ch;
   margin: 2ch;
   border-radius: 50%;
-  border: 1px solid black;
+  border: 1px solid var(--light-font-col);
   background-color: transparent;
 }
 
@@ -389,13 +408,12 @@ h2 {
   text-align: right;
   vertical-align: middle;
   align-self: center;
-  /* height: min-content; */
   margin-right: 1ch;
+  color: var(--light-font-col);
 }
 
 .footer .logo-div a {
   text-align: left;
-  /* height: min-content; */
   margin-left: 1ch;
 }
 
