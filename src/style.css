@@ -64,8 +64,8 @@ body {
   grid-area: header;
   display: flex;
   justify-content: flex-end;
-  padding-right: 8ch;
-  padding-top: 1ch;
+  padding-right: 3em;
+  padding-top: 1.2em;
 }
 
 .menu-items {
@@ -103,7 +103,7 @@ li {
   font-family: Arial, Helvetica, sans-serif;
   color: black;
   width: 12ch;
-  padding: 1ch;
+  padding: 0.4em;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -220,7 +220,7 @@ li {
 
 h2 {
   text-align: center;
-  padding: 3ch;
+  padding: 2em;
 }
 
 .home {
@@ -271,7 +271,7 @@ h2 {
 /* Galleries */
 
 .gallery {
-  padding-bottom: 10ch;
+  padding-bottom: 3em;
 }
 
 .slider-box {
@@ -340,7 +340,7 @@ h2 {
 }
 
 .photo-box {
-  padding: 3ch 0 0 0;
+  padding: 3em 0 0 0;
   min-width: min-content;
   display: grid;
   grid-template-columns: 1fr;
@@ -372,7 +372,7 @@ h2 {
 .footer-div {
   grid-area: footer;
   background-color: var(--head-foot-col);
-  padding: 1ch;
+  padding: 1em;
 }
 
 .footer {
