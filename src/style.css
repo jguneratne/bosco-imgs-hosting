@@ -273,11 +273,11 @@ h2 {
   border-radius: 3em;
   background-color: var(--slider-box-col);
   min-height: 0.625rem;
-  max-width: 70rem;
+  max-width: 85%;
   margin: 5ch auto 5ch auto;
 
   display: grid;
-  grid-template-columns: 1fr minmax(1fr, 5fr) 1fr;
+  grid-template-columns: 1fr 10fr 1fr;
   grid-template-rows: 10fr 1fr;
   align-content: center;
   justify-items: center;
@@ -297,10 +297,6 @@ h2 {
   align-items: center;
   justify-content: center;
 }
-
-/* .circle-icon-div {
-  height: 100%;
-} */
 
 .circle-icon {
   width: 2ch;
@@ -335,8 +331,7 @@ h2 {
 }
 
 .photo-box {
-  padding: 3em 0 0 0;
-  min-width: min-content;
+  padding: 2em 0 0 0;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr;
@@ -349,6 +344,12 @@ h2 {
   transition: visibility 0s 500ms, opacity 500ms linear;
   visibility: hidden;
   opacity: 0;
+
+  display: flex;
+  flex-grow: 1;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
 }
 
 .photo-box .picture--active {
@@ -356,10 +357,14 @@ h2 {
   transition: opacity 500ms linear;
   visibility: visible;
   opacity: 1;
-}
 
-.photo-box img {
-  width: 50rem;
+  display: flex;
+  flex-grow: 1;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+
+  object-fit: contain;
 }
 
 /* Footer */
@@ -399,32 +404,15 @@ h2 {
 
 /* Media Queries */
 
-@media (max-width: 480px) {
-  .home {
-    background-image: url("../src/assets/imgs/Guneratne_2023.08.19_homeimg-480p.jpg");
-    background-position: center center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    height: 100%;
-  }
-}
-
-@media (481px <= width <= 768px) {
-  .home {
-    background-image: url("../src/assets/imgs/Guneratne_2023.08.19_homeimg-768p.jpg");
-    background-position: center center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    height: 100%;
+@media (320px <= width <= 768px) {
+  .slider-box {
+    /* grid-template-columns: 1fr 6fr 1fr; */
+    width: 90%;
   }
 }
 
 @media (769px <= width <= 1024px) {
-  .home {
-    background-image: url("../src/assets/imgs/Guneratne_2023.08.19_homeimg-1024p.jpg");
-    background-position: center center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    height: 100%;
+  .slider-box {
+    width: 85%;
   }
 }
