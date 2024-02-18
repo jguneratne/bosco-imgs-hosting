@@ -9,6 +9,7 @@
   --dropdown-item-col: #ebdbbc;
   --slider-box-col: #708090;
   --dark-font-col: #34515e;
+  --dark-hov-col: #18262c;
   --light-font-col: #e0ffff;
 }
 
@@ -72,7 +73,7 @@ body {
 .menu-items {
   max-width: 60rem;
   display: flex;
-  gap: 1.5ch;
+  gap: 1em;
   align-self: center;
   justify-content: flex-end;
 }
@@ -131,7 +132,7 @@ li {
 
 .menu-btn.selected {
   background-color: var(--main-col);
-  border-radius: 2ch 2ch 0 0;
+  border-radius: 1em 1em 0 0;
   border: none;
   outline: none;
   font-weight: bold;
@@ -143,21 +144,31 @@ li {
   text-decoration: var(--dark-font-col);
 }
 
-.menu-btn:hover,
-.menu-btn:focus {
+.hov-style:hover,
+.hov-style:focus,
+.gal-hov:hover,
+.gal-hov:focus {
   text-decoration: underline var(--light-font-col);
   text-decoration-thickness: 0.3ch;
-  border-radius: 2ch 2ch 0 0;
-  border: none;
-  outline: none;
   font-weight: bold;
   cursor: pointer;
 }
 
-.menu-btn:hover.selected li a,
-.menu-btn:focus.selected li a {
+.wildlife:hover,
+.wildlife:focus,
+.insect:hover,
+.insect:focus {
+  text-decoration: underline var(--dark-hov-col);
+  color: var(--dark-hov-col);
+}
+
+.hov-style:hover.selected,
+.hov-style:focus.selected,
+.gal-hov:hover.selected,
+.gal-hov:focus.selected {
   text-decoration: underline var(--dark-font-col);
   text-decoration-thickness: 0.3ch;
+  color: var(--dark-hov-col);
 }
 
 .gal-arrow {
@@ -204,11 +215,6 @@ li {
   margin-top: 0.5ch;
 }
 
-.dropdown-content li:hover {
-  font-weight: bold;
-  text-decoration: underline;
-}
-
 .dropdown-content--active li:first-child a {
   display: block;
   padding: 0.7em 0.5em;
@@ -241,22 +247,6 @@ h2 {
   padding: 2em;
 }
 
-/* .home {
-  background-image: url("../src/assets/imgs/Guneratne_2023.08.19_homeimg-1200p.jpg");
-  background-position: center center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  height: 100%;
-} */
-
-/* .content-box {
-  width: 100%;
-  height: 100%;
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 1fr;
-} */
-
 /* Home Tab */
 
 .tab-content {
@@ -271,20 +261,6 @@ h2 {
 .tab-content.selected {
   display: initial;
 }
-
-/* .pic-div {
-  width: 100%;
-  height: 100%;
-} */
-
-/* .pic-div picture img {
-  grid-area: images;
-  vertical-align: middle; /* Removes padding added to picture at bottom */
-/*width: 100%;
-  height: auto
-  object-position: center;
-  object-fit: cover;
-} */
 
 /* Galleries */
 
