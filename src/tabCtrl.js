@@ -10,7 +10,7 @@ import {
 import { galleriesClickMenu, hideSubMenu, showSubMenu } from "./dropDown";
 
 import {
-  sliderBoxCtrl,
+  // sliderBoxCtrl,
   resetSliderAnimation,
   resetIndexes,
 } from "./photoSlider";
@@ -58,7 +58,7 @@ export function changeTabs() {
                 resetIndexes();
               }
 
-              sliderBoxCtrl(hrefTagText);
+              // sliderBoxCtrl(hrefTagText);
             }
           });
         }

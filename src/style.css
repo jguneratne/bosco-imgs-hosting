@@ -273,12 +273,13 @@ h2 {
   border-radius: 3em;
   background-color: var(--slider-box-col);
   min-height: 0.625rem;
-  max-width: 85%;
+  /* max-height: 100vh; */
+  max-width: min-content;
   margin: 5ch auto 5ch auto;
 
   display: grid;
-  grid-template-columns: 1fr 10fr 1fr;
-  grid-template-rows: 10fr 1fr;
+  grid-template-columns: 5em min-content 5em;
+  grid-template-rows: min-content min-content;
   align-content: center;
   justify-items: center;
 }
@@ -350,6 +351,8 @@ h2 {
   justify-content: center;
   align-items: center;
   width: 100%;
+  max-height: 100%;
+  object-fit: contain;
 }
 
 .photo-box .picture--active {
@@ -358,13 +361,13 @@ h2 {
   visibility: visible;
   opacity: 1;
 
-  display: flex;
+  /* display: flex;
   flex-grow: 1;
   justify-content: center;
-  align-items: center;
-  width: 100%;
+  align-items: center; */
+  /* width: 100%;
 
-  object-fit: contain;
+  object-fit: contain; */
 }
 
 /* Footer */

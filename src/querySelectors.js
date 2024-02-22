@@ -12,7 +12,7 @@ export const menuLinks = Array.from(menuChildrenDiv.getElementsByTagName("LI"));
 export const menuBtnStyle = document.querySelectorAll(".menu-btn");
 export const tabContent = document.querySelectorAll(".tab-content");
 
-// Photo Gallery
+// // Photo Gallery
 export let getAnimationID = {
   animationID: undefined,
 
@@ -25,170 +25,170 @@ export let getAnimationID = {
   },
 };
 
-export const sliderBoxes = document.querySelectorAll(".slider-box");
-export const photoBoxes = document.querySelectorAll(".photo-box");
+// export const sliderBoxes = document.querySelectorAll(".slider-box");
+// export const photoBoxes = document.querySelectorAll(".photo-box");
 
-export let galleryImgs = {
-  boxImgs: [],
+// export let galleryImgs = {
+//   boxImgs: [],
 
-  get boxImgsArray() {
-    return this.boxImgs;
-  },
+//   get boxImgsArray() {
+//     return this.boxImgs;
+//   },
 
-  set boxImgsArray(currentBoxImgs) {
-    this.boxImgs = currentBoxImgs;
-  },
-};
+//   set boxImgsArray(currentBoxImgs) {
+//     this.boxImgs = currentBoxImgs;
+//   },
+// };
 
-export const circleNav = document.querySelectorAll(".img-dots-container");
-export const circleIconContainer = document.querySelectorAll(".img-dots");
+// export const circleNav = document.querySelectorAll(".img-dots-container");
+// export const circleIconContainer = document.querySelectorAll(".img-dots");
 
-export let circleIconDivs = {
-  circleDivs: [],
+// export let circleIconDivs = {
+//   circleDivs: [],
 
-  get circleDivsArray() {
-    return this.circleDivs;
-  },
+//   get circleDivsArray() {
+//     return this.circleDivs;
+//   },
 
-  set circleDivsArray(newCircleDivsArray) {
-    this.circleDivs = newCircleDivsArray;
-  },
-};
+//   set circleDivsArray(newCircleDivsArray) {
+//     this.circleDivs = newCircleDivsArray;
+//   },
+// };
 
-export let circleIcons = {
-  circles: [],
+// export let circleIcons = {
+//   circles: [],
 
-  get circleIconsArray() {
-    return this.circles;
-  },
+//   get circleIconsArray() {
+//     return this.circles;
+//   },
 
-  set circleIconsArray(newCirclesArray) {
-    this.circles = newCirclesArray;
-  },
-};
+//   set circleIconsArray(newCirclesArray) {
+//     this.circles = newCirclesArray;
+//   },
+// };
 
-export const getRightArrow = {
-  rightArrow: undefined,
+// export const getRightArrow = {
+//   rightArrow: undefined,
 
-  get rightArrowLocation() {
-    return this.rightArrow;
-  },
+//   get rightArrowLocation() {
+//     return this.rightArrow;
+//   },
 
-  set rightArrowLocation(newRightArrow) {
-    this.rightArrow = newRightArrow;
-  },
-};
+//   set rightArrowLocation(newRightArrow) {
+//     this.rightArrow = newRightArrow;
+//   },
+// };
 
-export const getLeftArrow = {
-  leftArrow: undefined,
+// export const getLeftArrow = {
+//   leftArrow: undefined,
 
-  get leftArrowLocation() {
-    return this.leftArrow;
-  },
+//   get leftArrowLocation() {
+//     return this.leftArrow;
+//   },
 
-  set leftArrowLocation(newLeftArrow) {
-    this.leftArrow = newLeftArrow;
-  },
-};
+//   set leftArrowLocation(newLeftArrow) {
+//     this.leftArrow = newLeftArrow;
+//   },
+// };
 
-export let setIndex = {
-  currentIndex: 0,
+// export let setIndex = {
+//   currentIndex: 0,
 
-  get targetIndex() {
-    return this.currentIndex;
-  },
+//   get targetIndex() {
+//     return this.currentIndex;
+//   },
 
-  set targetIndex(newTargetIndex) {
-    this.currentIndex = newTargetIndex;
-  },
-};
+//   set targetIndex(newTargetIndex) {
+//     this.currentIndex = newTargetIndex;
+//   },
+// };
 
-export let slidePosition = {
-  currentSlide: galleryImgs.boxImgs[setIndex.currentIndex],
-  nextSlide: galleryImgs.boxImgs[setIndex.currentIndex + 1],
-  prevSlide: galleryImgs.boxImgs[setIndex.currentIndex - 1],
+// export let slidePosition = {
+//   currentSlide: galleryImgs.boxImgs[setIndex.currentIndex],
+//   nextSlide: galleryImgs.boxImgs[setIndex.currentIndex + 1],
+//   prevSlide: galleryImgs.boxImgs[setIndex.currentIndex - 1],
 
-  get currentSlidePosition() {
-    return this.currentSlide;
-  },
+//   get currentSlidePosition() {
+//     return this.currentSlide;
+//   },
 
-  set currentSlidePosition(newCurrentSlide) {
-    this.currentSlide = newCurrentSlide;
-  },
+//   set currentSlidePosition(newCurrentSlide) {
+//     this.currentSlide = newCurrentSlide;
+//   },
 
-  get nextSlidePosition() {
-    return this.nextSlide;
-  },
+//   get nextSlidePosition() {
+//     return this.nextSlide;
+//   },
 
-  set nextSlidePosition(newNextSlide) {
-    this.nextSlide = newNextSlide;
-  },
+//   set nextSlidePosition(newNextSlide) {
+//     this.nextSlide = newNextSlide;
+//   },
 
-  get prevSlidePosition() {
-    return this.prevSlide;
-  },
+//   get prevSlidePosition() {
+//     return this.prevSlide;
+//   },
 
-  set prevSlidePosition(newPrevSlide) {
-    this.prevSlide = newPrevSlide;
-  },
-};
+//   set prevSlidePosition(newPrevSlide) {
+//     this.prevSlide = newPrevSlide;
+//   },
+// };
 
-export let circleDivPosition = {
-  currentCircleDiv: circleIconDivs.circleDivs[setIndex.currentIndex],
-  nextCircleDiv: circleIconDivs.circleDivs[setIndex.currentIndex + 1],
-  prevCircleDiv: circleIconDivs.circleDivs[setIndex.currentIndex - 1],
+// export let circleDivPosition = {
+//   currentCircleDiv: circleIconDivs.circleDivs[setIndex.currentIndex],
+//   nextCircleDiv: circleIconDivs.circleDivs[setIndex.currentIndex + 1],
+//   prevCircleDiv: circleIconDivs.circleDivs[setIndex.currentIndex - 1],
 
-  get currentCircleDivPosition() {
-    return this.currentCircleDiv;
-  },
+//   get currentCircleDivPosition() {
+//     return this.currentCircleDiv;
+//   },
 
-  set currentCircleDivPosition(newCurrentCircleDiv) {
-    this.currentCircleDiv = newCurrentCircleDiv;
-  },
+//   set currentCircleDivPosition(newCurrentCircleDiv) {
+//     this.currentCircleDiv = newCurrentCircleDiv;
+//   },
 
-  get nextCircleDivPosition() {
-    return this.nextCircleDiv;
-  },
+//   get nextCircleDivPosition() {
+//     return this.nextCircleDiv;
+//   },
 
-  set nextCircleDivPosition(newNextCircleDiv) {
-    this.nextCircleDiv = newNextCircleDiv;
-  },
+//   set nextCircleDivPosition(newNextCircleDiv) {
+//     this.nextCircleDiv = newNextCircleDiv;
+//   },
 
-  get prevCircleDivPosition() {
-    return this.prevCircleDiv;
-  },
+//   get prevCircleDivPosition() {
+//     return this.prevCircleDiv;
+//   },
 
-  set prevCircleDivPosition(newPrevCircleDiv) {
-    this.prevCircleDiv = newPrevCircleDiv;
-  },
-};
+//   set prevCircleDivPosition(newPrevCircleDiv) {
+//     this.prevCircleDiv = newPrevCircleDiv;
+//   },
+// };
 
-export let circlePosition = {
-  currentCircle: circleIcons.circles[setIndex.currentIndex],
-  nextCircle: circleIcons.circles[setIndex.currentIndex + 1],
-  prevCircle: circleIcons.circles[setIndex.currentIndex - 1],
+// export let circlePosition = {
+//   currentCircle: circleIcons.circles[setIndex.currentIndex],
+//   nextCircle: circleIcons.circles[setIndex.currentIndex + 1],
+//   prevCircle: circleIcons.circles[setIndex.currentIndex - 1],
 
-  get currentCirclePosition() {
-    return this.currentCircle;
-  },
+//   get currentCirclePosition() {
+//     return this.currentCircle;
+//   },
 
-  set currentCirclePosition(newCurrentCircle) {
-    this.currentCircle = newCurrentCircle;
-  },
+//   set currentCirclePosition(newCurrentCircle) {
+//     this.currentCircle = newCurrentCircle;
+//   },
 
-  get nextCirclePosition() {
-    return this.nextCircle;
-  },
+//   get nextCirclePosition() {
+//     return this.nextCircle;
+//   },
 
-  set nextCirclePosition(newNextCircle) {
-    this.nextCircle = newNextCircle;
-  },
+//   set nextCirclePosition(newNextCircle) {
+//     this.nextCircle = newNextCircle;
+//   },
 
-  get prevCirclePosition() {
-    return this.prevCircle;
-  },
+//   get prevCirclePosition() {
+//     return this.prevCircle;
+//   },
 
-  set prevCirclePosition(newPrevCircle) {
-    this.prevSlide = newPrevCircle;
-  },
-};
+//   set prevCirclePosition(newPrevCircle) {
+//     this.prevSlide = newPrevCircle;
+//   },
+// };
