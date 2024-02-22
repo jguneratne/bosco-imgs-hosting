@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= htmlWebpackPlugin.options.title%></title>
+  </head>
+
+  <body>
+    <div class="container">
+      <header class="header">
+        <nav>
+          <ul class="menu-items" id="tabs">
+            <div class="menu-btn hov-style" data-tab="home" title="Home">
+              <li>
+                <a href="../src/template.ejs">Home</a>
+              </li>
+            </div>
+
+            <div
+              class="dropdown-div menu-btn gal-hov dropdown-btn"
+              data-tab="galleries"
+              title="Galleries"
+            >
+              <div class="gal-btn-div">
+                <ul>
+                  <li>
+                    <a href="#galleries">Galleries</a>
+                  </li>
+                </ul>
+
+                <div class="gal-arrow"></div>
+              </div>
+
+              <ul class="dropdown-content">
+                <li
+                  class="dropdown-item wildlife"
+                  style="--delay: 1"
+                  title="Wildlife"
+                >
+                  <a href="../src/first-gallery.ejs">Wildlife</a>
+                </li>
+                <li
+                  class="dropdown-item insect"
+                  style="--delay: 2"
+                  title="Insects"
+                >
+                  <a href="../src/second-gallery.ejs">Insects</a>
+                </li>
+              </ul>
+            </div>
+
+            <div class="menu-btn hov-style" data-tab="about" title="About">
+              <li>
+                <a href="../src/about.ejs">About</a>
+              </li>
+            </div>
+
+            <div class="menu-btn hov-style" data-tab="contact" title="Contact">
+              <li>
+                <a href="../src/contact.ejs">Contact</a>
+              </li>
+            </div>
+          </ul>
+        </nav>
+      </header>
+      <main class="main">
+        <!-- FIRST GALLERY -->
+        <section class="tab-content" id="wildlife-gallery">
+          <div class="gallery wildlife-gallery">
+            <div class="slider-box" data-name="wildlife-gallery">
+              <!-- <div class="slider-row-one"></div> -->
+              <div class="back-arrow">
+                <img
+                  class="arrow"
+                  data-back-arrow
+                  src="<%=require('../src/assets/imgs/reshot-icon-arrow-chevron-left-975UQXVKZF.svg') %>"
+                  alt="Back Arrow Icon"
+                />
+              </div>
+
+              <div class="photo-box" data-name="wildlife-gallery">
+                <picture class="picture--active">
+                  <source
+                    media="(max-width: 620px)"
+                    srcset="<%=require('../src/assets/imgs/Guneratne_2023.06.28_bunny-vertical-300p.jpg') %>"
+                  />
+
+                  <source
+                    media="(max-width: 850px)"
+                    srcset="<%=require('../src/assets/imgs/Guneratne_2023.06.28_bunny-vertical-450p.jpg') %>"
+                  />
+
+                  <source
+                    media="(max-width: 1062px)"
+                    srcset="<%=require('../src/assets/imgs/Guneratne_2023.06.28_bunny-horizontal-600p.jpg') %>"
+                  />
+
+                  <img
+                    src="<%=require('../src/assets/imgs/Guneratne_2023.06.28_bunny-horizontal-800p.jpg') %>"
+                    alt="Bunny eating long grass."
+                  />
+                </picture>
+
+                <picture>
+                  <source
+                    media="(max-width: 620px)"
+                    srcset="<%=require('../src/assets/imgs/Guneratne_2023.06.29_bird-vertical-300p.jpg') %>"
+                  />
+
+                  <source
+                    media="(max-width: 850px)"
+                    srcset="<%=require('../src/assets/imgs/Guneratne_2023.06.29_bird-vertical-450p.jpg') %>"
+                  />
+
+                  <source
+                    media="(max-width: 1062px)"
+                    srcset="<%=require('../src/assets/imgs/Guneratne_2023.06.29_bird-horizontal-600p.jpg') %>"
+                  />
+
+                  <img
+                    src="<%=require('../src/assets/imgs/Guneratne_2023.06.29_bird-horizontal-800p.jpg') %>"
+                    alt="Bird on a tree branch"
+                  />
+                </picture>
+
+                <picture>
+                  <source
+                    media="(max-width: 620px)"
+                    srcset="<%=require('../src/assets/imgs/Guneratne_2023.08.20_seagull-vertical-300p.jpg') %>"
+                  />
+
+                  <source
+                    media="(max-width: 850px)"
+                    srcset="<%=require('../src/assets/imgs/Guneratne_2023.08.20_seagull-vertical-450p.jpg') %>"
+                  />
+
+                  <source
+                    media="(max-width: 1062px)"
+                    srcset="<%=require('../src/assets/imgs/Guneratne_2023.08.20_seagull-horizontal-600p.jpg') %>"
+                  />
+
+                  <img
+                    src="<%=require('../src/assets/imgs/Guneratne_2023.08.20_seagull-horizontal-800p.jpg') %>"
+                    alt="Seagull at the ocean."
+                  />
+                </picture>
+              </div>
+
+              <div class="img-dots-container" data-name="wildlife-gallery">
+                <div class="img-dots" data-name="wildlife-gallery">
+                  <div
+                    class="circle-icon-div"
+                    data-circle="0"
+                    data-name="wildlife-gallery"
+                  >
+                    <div
+                      class="circle-icon"
+                      data-circle="0"
+                      data-name="wildlife-gallery"
+                    ></div>
+                  </div>
+
+                  <div
+                    class="circle-icon-div"
+                    data-circle="1"
+                    data-name="wildlife-gallery"
+                  >
+                    <div
+                      class="circle-icon"
+                      data-circle="1"
+                      data-name="wildlife-gallery"
+                    ></div>
+                  </div>
+
+                  <div
+                    class="circle-icon-div"
+                    data-circle="2"
+                    data-name="wildlife-gallery"
+                  >
+                    <div
+                      class="circle-icon"
+                      data-circle="2"
+                      data-name="wildlife-gallery"
+                    ></div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="forward-arrow">
+                <img
+                  class="arrow"
+                  data-forward-arrow
+                  src="<%=require('../src/assets/imgs/reshot-icon-arrow-chevron-right-WDGHUKQ634.svg') %>"
+                  alt="Forward Arrow Icon"
+                />
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="footer-div">
+        <div class="footer">
+          <div class="copyright-div">
+            <p class="my-copyright">Jenn Guneratne © 2024</p>
+          </div>
+
+          <div class="logo-div">
+            <a
+              href="https://github.com/jguneratne/photo-gallery"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                src="<%=require('../src/assets/imgs/github-mark-white.svg') %>"
+                alt="Octocat GitHub Logo"
+                class="github-logo"
+              />
+            </a>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

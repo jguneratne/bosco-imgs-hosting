@@ -19,13 +19,42 @@ module.exports = {
   devtool: "inline-source-map",
   plugins: [
     new HtmlWebpackPlugin({
-      title: "Photo Gallery",
+      title: "Home: Photo Gallery",
       filename: "index.html",
       template: "src/template.ejs",
       inject: "body",
       scriptloading: ["module"],
     }),
+    new HtmlWebpackPlugin({
+      title: "Wildlife Gallery",
+      filename: "wildlife-gallery.html",
+      template: "src/first-gallery.ejs",
+      inject: "body",
+      scriptloading: ["module"],
+    }),
+    new HtmlWebpackPlugin({
+      title: "Insect Gallery",
+      filename: "insect-gallery.html",
+      template: "src/second-gallery.ejs",
+      inject: "body",
+      scriptloading: ["module"],
+    }),
+    new HtmlWebpackPlugin({
+      title: "About",
+      filename: "about.html",
+      template: "src/about.ejs",
+      inject: "body",
+      scriptloading: ["module"],
+    }),
+    new HtmlWebpackPlugin({
+      title: "Contact",
+      filename: "contact.html",
+      template: "src/contact.ejs",
+      inject: "body",
+      scriptloading: ["module"],
+    }),
   ],
+
   module: {
     rules: [
       {
