@@ -6,10 +6,10 @@ module.exports = {
   mode: "development",
   entry: [
     "./src/index.js",
-    "./src/photoSlider.js",
+    // "./src/photoSlider.js",
     "./src/querySelectors.js",
-    "./src/dropDown.js",
-    "./src/tabCtrl.js",
+    // "./src/dropDown.js",
+    "./src/navStyles.js",
   ],
   output: {
     filename: "bundle.js",
@@ -82,6 +82,11 @@ module.exports = {
             },
           },
         ],
+      },
+      {
+        test: /\.js$/,
+        enforce: "pre",
+        use: ["source-map-loader"],
       },
     ],
   },

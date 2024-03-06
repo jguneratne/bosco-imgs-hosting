@@ -1,9 +1,10 @@
 import "./style.css";
 
-import { defaultSelectedSettings, changeTabs } from "./tabCtrl";
+import { ctrlTabHighlight } from "./navStyles";
+
+import { galleriesClickMenu } from "./dropDown";
 
 console.log("photogallery");
 
-defaultSelectedSettings();
-
-changeTabs();
+ctrlTabHighlight();
+galleriesClickMenu();

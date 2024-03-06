@@ -111,6 +111,16 @@ li {
   align-items: center;
 }
 
+/* Try to add style to clicked menu btn */
+/* .menu-btn a:active {
+  background-color: var(--main-col);
+  border-radius: 1em 1em 0 0;
+  border: none;
+  outline: none;
+  font-weight: bold;
+  cursor: pointer;
+} */
+
 .dropdown-btn {
   width: 15ch;
 }
@@ -130,7 +140,22 @@ li {
   visibility: hidden;
 }
 
-.menu-btn.selected {
+/* .menu-btn:active {
+  background-color: var(--main-col);
+  border-radius: 1em 1em 0 0;
+  border: none;
+  outline: none;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.menu-btn:active li a {
+  color: var(--dark-font-col);
+  text-decoration: var(--dark-font-col);
+} */
+
+.menu-btn.selected,
+.dropdown-div.selected {
   background-color: var(--main-col);
   border-radius: 1em 1em 0 0;
   border: none;
@@ -255,12 +280,12 @@ h2 {
   margin-right: auto;
   text-align: center;
   width: 100%;
-  display: none;
+  /* display: none; */
 }
 
-.tab-content.selected {
+/* .tab-content.selected {
   display: initial;
-}
+} */
 
 /* Galleries */
 

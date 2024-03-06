@@ -1,16 +1,23 @@
+// Menu Variables
+export const currentPage = window.location.href;
+export const fullPageName = currentPage.substring(
+  currentPage.lastIndexOf("/") + 1
+);
+export const indexOfExtension = fullPageName.indexOf(".");
+export const shortPageName = fullPageName.substring(0, indexOfExtension);
+
 // Drop Down
 export const dropDownDiv = document.querySelector(".dropdown-div");
 export const dropDownCarat = document.querySelector(".gal-arrow");
-export const dropDownContent = document.querySelector(".dropdown-content");
+export const dropDownMenu = document.querySelector(".dropdown-content");
+export const navigation = document.querySelector("nav");
+
+// Nav Styles
+export const menuChildrenDiv = document.querySelector(".menu-items");
+export const menuBtnStyle = Array.from(document.querySelectorAll(".menu-btn"));
 export const dropDownItems = Array.from(
   document.querySelectorAll(".dropdown-item")
 );
-
-// Tab Control
-export const menuChildrenDiv = document.querySelector(".menu-items");
-export const menuLinks = Array.from(menuChildrenDiv.getElementsByTagName("LI"));
-export const menuBtnStyle = document.querySelectorAll(".menu-btn");
-export const tabContent = document.querySelectorAll(".tab-content");
 
 // // Photo Gallery
 export let getAnimationID = {
