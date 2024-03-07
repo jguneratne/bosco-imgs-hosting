@@ -14,7 +14,7 @@ import {
   slidePosition,
   circleDivPosition,
   circlePosition,
-} from "./querySelectors";
+} from "./variables";
 
 export function sliderBoxCtrl() {
   photoBoxes.forEach((box) => {

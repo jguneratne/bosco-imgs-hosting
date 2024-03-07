@@ -1,18 +1,10 @@
 import {
-  currentPage,
-  fullPageName,
-  indexOfExtension,
-  shortPageName,
-  menuLinks,
   menuBtnStyle,
   navigation,
-  dropDownDiv,
   dropDownCarat,
   dropDownMenu,
   dropDownItems,
-} from "./querySelectors";
-
-import { showGalNavLink } from "./navStyles";
+} from "./variables";
 
 export function galleriesClickMenu() {
   navigation.addEventListener("pointerdown", (e) => {

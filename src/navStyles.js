@@ -5,7 +5,7 @@ import {
   dropDownDiv,
   dropDownItems,
   sliderBoxes,
-} from "./querySelectors";
+} from "./variables";
 
 import {
   sliderBoxCtrl,

@@ -6,9 +6,9 @@ module.exports = {
   mode: "development",
   entry: [
     "./src/index.js",
-    // "./src/photoSlider.js",
-    "./src/querySelectors.js",
-    // "./src/dropDown.js",
+    "./src/photoSlider.js",
+    "./src/variables.js",
+    "./src/dropDown.js",
     "./src/navStyles.js",
   ],
   output: {
