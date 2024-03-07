@@ -12,11 +12,11 @@ import {
 
 // import { galleriesClickMenu, hideSubMenu, showSubMenu } from "./dropDown";
 
-// import {
-//   sliderBoxCtrl,
-//   resetSliderAnimation,
-//   resetIndexes,
-// } from "./photoSlider";
+import {
+  sliderBoxCtrl,
+  resetSliderAnimation,
+  resetIndexes,
+} from "./photoSlider";
 
 export function ctrlTabHighlight() {
   menuBtnStyle.forEach((btn) => {
@@ -46,6 +46,9 @@ export function showCurrentNavLink() {
       shortPageName === "second-gallery"
     ) {
       showGalNavLink();
+      sliderBoxCtrl();
+      resetSliderAnimation();
+      resetIndexes();
     }
   });
 }
