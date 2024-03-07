@@ -1,16 +1,11 @@
 import {
-  currentPage,
-  fullPageName,
-  indexOfExtension,
   shortPageName,
   menuBtnStyle,
   getAnimationID,
   dropDownDiv,
   dropDownItems,
-  menuChildrenDiv,
+  sliderBoxes,
 } from "./querySelectors";
-
-// import { galleriesClickMenu, hideSubMenu, showSubMenu } from "./dropDown";
 
 import {
   sliderBoxCtrl,
@@ -29,9 +24,6 @@ export function ctrlTabHighlight() {
       showCurrentNavLink();
     }
   });
-
-  console.log(menuBtnStyle);
-  console.log(dropDownItems);
 }
 
 export function showCurrentNavLink() {
@@ -47,8 +39,6 @@ export function showCurrentNavLink() {
     ) {
       showGalNavLink();
       sliderBoxCtrl();
-      resetSliderAnimation();
-      resetIndexes();
     }
   });
 }
@@ -64,70 +54,15 @@ function showGalNavLink() {
       });
       dropDownDiv.classList.add("selected");
     }
+
+    sliderBoxes.forEach((box) => {
+      if (
+        box.dataset.name === shortPageName &&
+        getAnimationID.animationID !== undefined
+      ) {
+        resetSliderAnimation();
+        resetIndexes();
+      }
+    });
   });
 }
-
-// export function changeTabs() {
-//   menuLinks.forEach((link) => {
-//     link.addEventListener("pointerdown", (e) => {
-//       e.preventDefault();
-//       console.log(e.target.dataset);
-//       console.log(menuLinks.textContent);
-//       console.log(menuLinks.outerText);
-//       console.log(menuLinks.innerText);
-//       console.log(menuLinks.innerHTML);
-//       console.log(menuLinks.dataset);
-//       if (e.target.dataset === menuLinks) {
-//         // let hrefTag = e.target.href;
-//         // let hrefTagText = hrefTag.substring(hrefTag.indexOf("#") + 1);
-//         // console.log(hrefTagText);
-//         console.log(e.target);
-
-//         function selectMenuBtn() {
-//           menuBtnStyle.forEach((btn) => {
-//             if (hrefTagText === btn.dataset.tab) {
-//               menuBtnStyle.forEach((btn) => {
-//                 btn.classList.remove("selected");
-//               });
-//               btn.classList.add("selected");
-//             } else if (btn.classList.contains("selected")) {
-//               return;
-//             }
-//           });
-//         }
-
-//         function selectTabContent() {
-//           tabContent.forEach((content) => {
-//             if (hrefTagText === content.id) {
-//               tabContent.forEach((content) => {
-//                 if (content.classList.contains("selected")) {
-//                   content.classList.remove("selected");
-//                 }
-//               });
-//               content.classList.toggle("selected");
-
-//               if (getAnimationID.animationID !== undefined) {
-//                 resetSliderAnimation();
-//                 resetIndexes();
-//               }
-
-//               // sliderBoxCtrl(hrefTagText);
-//             }
-//           });
-//         }
-
-//         if (hrefTagText === "galleries") {
-//           selectMenuBtn();
-//           galleriesClickMenu(hrefTagText);
-//         } else if (hrefTagText.parentNode === dropDownContent) {
-//           selectTabContent();
-//           hideSubMenu();
-//         } else {
-//           selectMenuBtn();
-//           selectTabContent();
-//           hideSubMenu();
-//         }
-//       }
-//     });
-//   });
-// }
