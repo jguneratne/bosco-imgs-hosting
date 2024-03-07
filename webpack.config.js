@@ -27,14 +27,14 @@ module.exports = {
     }),
     new HtmlWebpackPlugin({
       title: "Wildlife Gallery",
-      filename: "wildlife-gallery.html",
+      filename: "first-gallery.html",
       template: "src/first-gallery.ejs",
       inject: "body",
       scriptloading: ["module"],
     }),
     new HtmlWebpackPlugin({
       title: "Insect Gallery",
-      filename: "insect-gallery.html",
+      filename: "second-gallery.html",
       template: "src/second-gallery.ejs",
       inject: "body",
       scriptloading: ["module"],

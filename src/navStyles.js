@@ -42,8 +42,8 @@ export function showCurrentNavLink() {
       });
       btn.classList.add("selected");
     } else if (
-      shortPageName === "wildlife-gallery" ||
-      shortPageName === "insect-gallery"
+      shortPageName === "first-gallery" ||
+      shortPageName === "second-gallery"
     ) {
       showGalNavLink();
     }
@@ -52,8 +52,10 @@ export function showCurrentNavLink() {
 
 function showGalNavLink() {
   dropDownItems.forEach((item) => {
-    if (item.dataset.name === "first-gal") {
-      console.log("wildlife");
+    if (
+      item.dataset.name === "first-gal" ||
+      item.dataset.name === "second-gal"
+    ) {
       menuBtnStyle.forEach((btn) => {
         btn.classList.remove("selected");
       });
