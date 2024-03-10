@@ -290,7 +290,9 @@ h2 {
 /* Galleries */
 
 .gallery {
-  padding-bottom: 3em;
+  display: flex;
+  min-height: 100%;
+  align-items: center;
 }
 
 .slider-box {
