@@ -70,7 +70,7 @@
       <main class="main">
         <!-- FIRST GALLERY -->
         <section class="tab-content" id="first-gallery">
-          <div class="gallery wildlife-gallery">
+          <div class="gallery">
             <div class="slider-box" data-name="first-gallery">
               <!-- <div class="slider-row-one"></div> -->
               <div class="back-arrow">
@@ -84,71 +84,263 @@
 
               <div class="photo-box" data-name="first-gallery">
                 <picture class="picture--active">
+                  <!-- BUNNY -->
                   <source
-                    media="(max-width: 620px)"
-                    srcset="<%=require('../src/assets/imgs/Guneratne_2023.06.28_bunny-vertical-300p.jpg') %>"
+                    media="(300px <= width <= 599px) and (orientation: portrait)"
+                    srcset="<%=require('../src/assets/imgs/Guneratne_2023.06.28_bunny-vertical-320p.jpg') %>"
                   />
 
                   <source
-                    media="(max-width: 850px)"
-                    srcset="<%=require('../src/assets/imgs/Guneratne_2023.06.28_bunny-vertical-450p.jpg') %>"
+                    media="(600px <= width <= 799px) and (orientation: portrait)"
+                    srcset="<%=require('../src/assets/imgs/Guneratne_2023.06.28_bunny-vertical-580p.jpg') %>"
                   />
 
                   <source
-                    media="(max-width: 1062px)"
-                    srcset="<%=require('../src/assets/imgs/Guneratne_2023.06.28_bunny-horizontal-600p.jpg') %>"
+                    media="(800px <= width <= 1020px) and (orientation: portrait)"
+                    srcset="<%=require('../src/assets/imgs/Guneratne_2023.06.28_bunny-vertical-700p.jpg') %>"
+                  />
+
+                  <source
+                    media="(1021px <= width <= 1280px) and (orientation: portrait)"
+                    srcset="<%=require('../src/assets/imgs/Guneratne_2023.06.28_bunny-vertical-900p.jpg') %>"
+                  />
+
+                  <source
+                    media="(640px <= width <= 959px) and (orientation: landscape)"
+                    srcset="<%=require('../src/assets/imgs/Guneratne_2023.06.28_bunny-horizontal-620p.jpg') %>"
+                  />
+
+                  <source
+                    media="(960px <= width <= 1279px) and (orientation: landscape)"
+                    srcset="<%=require('../src/assets/imgs/Guneratne_2023.06.28_bunny-horizontal-940p.jpg') %>"
+                  />
+
+                  <source
+                    media="(1280px <= width <= 1599px) and (orientation: landscape)"
+                    srcset="<%=require('../src/assets/imgs/Guneratne_2023.06.28_bunny-horizontal-1200p.jpg') %>"
                   />
 
                   <img
-                    src="<%=require('../src/assets/imgs/Guneratne_2023.06.28_bunny-horizontal-800p.jpg') %>"
+                    src="<%=require('../src/assets/imgs/Guneratne_2023.06.28_bunny-horizontal-1500p.jpg') %>"
                     alt="Bunny eating long grass."
                   />
                 </picture>
 
-                <picture>
+                <picture class="picture--active">
+                  <!-- BEE -->
                   <source
-                    media="(max-width: 620px)"
-                    srcset="<%=require('../src/assets/imgs/Guneratne_2023.06.29_bird-vertical-300p.jpg') %>"
+                    media="(300px <= width <= 599px) and (orientation: portrait)"
+                    srcset="<%=require('../src/assets/imgs/Guneratne_2023.06.09_bee-vertical-320p.jpg') %>"
                   />
 
                   <source
-                    media="(max-width: 850px)"
-                    srcset="<%=require('../src/assets/imgs/Guneratne_2023.06.29_bird-vertical-450p.jpg') %>"
+                    media="(600px <= width <= 799px) and (orientation: portrait)"
+                    srcset="<%=require('../src/assets/imgs/Guneratne_2023.06.09_bee-vertical-580p.jpg') %>"
                   />
 
                   <source
-                    media="(max-width: 1062px)"
-                    srcset="<%=require('../src/assets/imgs/Guneratne_2023.06.29_bird-horizontal-600p.jpg') %>"
+                    media="(800px <= width <= 1020px) and (orientation: portrait)"
+                    srcset="<%=require('../src/assets/imgs/Guneratne_2023.06.09_bee-vertical-700p.jpg') %>"
+                  />
+
+                  <source
+                    media="(1021px <= width <= 1280px) and (orientation: portrait)"
+                    srcset="<%=require('../src/assets/imgs/Guneratne_2023.06.09_bee-vertical-900p.jpg') %>"
+                  />
+
+                  <source
+                    media="(640px <= width <= 959px) and (orientation: landscape)"
+                    srcset="<%=require('../src/assets/imgs/Guneratne_2023.06.09_bee-horizontal-620p.jpg') %>"
+                  />
+
+                  <source
+                    media="(960px <= width <= 1279px) and (orientation: landscape)"
+                    srcset="<%=require('../src/assets/imgs/Guneratne_2023.06.09_bee-horizontal-940p.jpg') %>"
+                  />
+
+                  <source
+                    media="(1280px <= width <= 1599px) and (orientation: landscape)"
+                    srcset="<%=require('../src/assets/imgs/Guneratne_2023.06.09_bee-horizontal-1200p.jpg') %>"
                   />
 
                   <img
-                    src="<%=require('../src/assets/imgs/Guneratne_2023.06.29_bird-horizontal-800p.jpg') %>"
+                    src="<%=require('../src/assets/imgs/Guneratne_2023.06.09_bee-horizontal-1500p.jpg') %>"
+                    alt="Honeybee on a sage flower."
+                  />
+                </picture>
+
+                <picture>
+                  <!-- BIRD -->
+                  <source
+                    media="(300px <= width <= 599px) and (orientation: portrait)"
+                    srcset="<%=require('../src/assets/imgs/Guneratne_2023.06.29_bird-vertical-320p.jpg') %>"
+                  />
+
+                  <source
+                    media="(600px <= width <= 799px) and (orientation: portrait)"
+                    srcset="<%=require('../src/assets/imgs/Guneratne_2023.06.29_bird-vertical-580p.jpg') %>"
+                  />
+
+                  <source
+                    media="(800px <= width <= 1020px) and (orientation: portrait)"
+                    srcset="<%=require('../src/assets/imgs/Guneratne_2023.06.29_bird-vertical-700p.jpg') %>"
+                  />
+
+                  <source
+                    media="(1021px <= width <= 1280px) and (orientation: portrait)"
+                    srcset="<%=require('../src/assets/imgs/Guneratne_2023.06.29_bird-vertical-900p.jpg') %>"
+                  />
+
+                  <source
+                    media="(640px <= width <= 959px) and (orientation: landscape)"
+                    srcset="<%=require('../src/assets/imgs/Guneratne_2023.06.29_bird-horizontal-620p.jpg') %>"
+                  />
+
+                  <source
+                    media="(960px <= width <= 1279px) and (orientation: landscape)"
+                    srcset="<%=require('../src/assets/imgs/Guneratne_2023.06.29_bird-horizontal-940p.jpg') %>"
+                  />
+
+                  <source
+                    media="(1280px <= width <= 1599px) and (orientation: landscape)"
+                    srcset="<%=require('../src/assets/imgs/Guneratne_2023.06.29_bird-horizontal-1200p.jpg') %>"
+                  />
+
+                  <img
+                    src="<%=require('../src/assets/imgs/Guneratne_2023.06.29_bird-horizontal-1500.jpg') %>"
                     alt="Bird on a tree branch"
                   />
                 </picture>
 
                 <picture>
+                  <!-- GRASSHOPPER -->
                   <source
-                    media="(max-width: 620px)"
-                    srcset="<%=require('../src/assets/imgs/Guneratne_2023.08.20_seagull-vertical-300p.jpg') %>"
+                    media="(300px <= width <= 599px) and (orientation: portrait)"
+                    srcset="<%=require('../src/assets/imgs/Guneratne_2023.08.26_grasshopper-vertical-320p.jpg') %>"
                   />
 
                   <source
-                    media="(max-width: 850px)"
-                    srcset="<%=require('../src/assets/imgs/Guneratne_2023.08.20_seagull-vertical-450p.jpg') %>"
+                    media="(600px <= width <= 799px) and (orientation: portrait)"
+                    srcset="<%=require('../src/assets/imgs/Guneratne_2023.08.26_grasshopper-vertical-580p.jpg') %>"
                   />
 
                   <source
-                    media="(max-width: 1062px)"
-                    srcset="<%=require('../src/assets/imgs/Guneratne_2023.08.20_seagull-horizontal-600p.jpg') %>"
+                    media="(800px <= width <= 1020px) and (orientation: portrait)"
+                    srcset="<%=require('../src/assets/imgs/Guneratne_2023.08.26_grasshopper-vertical-700p.jpg') %>"
+                  />
+
+                  <source
+                    media="(1021px <= width <= 1280px) and (orientation: portrait)"
+                    srcset="<%=require('../src/assets/imgs/Guneratne_2023.08.26_grasshopper-vertical-900p.jpg') %>"
+                  />
+
+                  <source
+                    media="(640px <= width <= 959px) and (orientation: landscape)"
+                    srcset="<%=require('../src/assets/imgs/Guneratne_2023.08.26_grasshopper-horizontal-620p.jpg') %>"
+                  />
+
+                  <source
+                    media="(960px <= width <= 1279px) and (orientation: landscape)"
+                    srcset="<%=require('../src/assets/imgs/Guneratne_2023.08.26_grasshopper-horizontal-940p.jpg') %>"
+                  />
+
+                  <source
+                    media="(1280px <= width <= 1599px) and (orientation: landscape)"
+                    srcset="<%=require('../src/assets/imgs/Guneratne_2023.08.26_grasshopper-horizontal-1200p.jpg') %>"
                   />
 
                   <img
-                    src="<%=require('../src/assets/imgs/Guneratne_2023.08.20_seagull-horizontal-800p.jpg') %>"
+                    src="<%=require('../src/assets/imgs/Guneratne_2023.08.26_grasshopper-horizontal-1500p.jpg') %>"
+                    alt="Grasshopper on a leaf."
+                  />
+                </picture>
+
+                <picture>
+                  <!-- SEAGULL -->
+                  <source
+                    media="(300px <= width <= 599px) and (orientation: portrait)"
+                    srcset="<%=require('../src/assets/imgs/Guneratne_2023.08.20_seagull-vertical-320p.jpg') %>"
+                  />
+
+                  <source
+                    media="(600px <= width <= 799px) and (orientation: portrait)"
+                    srcset="<%=require('../src/assets/imgs/Guneratne_2023.08.20_seagull-vertical-580p.jpg') %>"
+                  />
+
+                  <source
+                    media="(800px <= width <= 1020px) and (orientation: portrait)"
+                    srcset="<%=require('../src/assets/imgs/Guneratne_2023.08.20_seagull-vertical-700p.jpg') %>"
+                  />
+
+                  <source
+                    media="(1021px <= width <= 1280px) and (orientation: portrait)"
+                    srcset="<%=require('../src/assets/imgs/Guneratne_2023.08.20_seagull-vertical-900p.jpg') %>"
+                  />
+
+                  <source
+                    media="(640px <= width <= 959px) and (orientation: landscape)"
+                    srcset="<%=require('../src/assets/imgs/Guneratne_2023.08.20_seagull-horizontal-620.jpg') %>"
+                  />
+
+                  <source
+                    media="(960px <= width <= 1279px) and (orientation: landscape)"
+                    srcset="<%=require('../src/assets/imgs/Guneratne_2023.08.20_seagull-horizontal-940.jpg') %>"
+                  />
+
+                  <source
+                    media="(1280px <= width <= 1599px) and (orientation: landscape)"
+                    srcset="<%=require('../src/assets/imgs/Guneratne_2023.08.20_seagull-horizontal-1200p.jpg') %>"
+                  />
+
+                  <img
+                    src="<%=require('../src/assets/imgs/Guneratne_2023.08.20_seagull-horizontal-1500.jpg') %>"
                     alt="Seagull at the ocean."
                   />
                 </picture>
               </div>
+
+              <picture>
+                <!-- CATERPILLAR -->
+                <source
+                  media="(300px <= width <= 599px) and (orientation: portrait)"
+                  srcset="<%=require('../src/assets/imgs/Guneratne_2023.09.05_caterpillar-vertical-320p.jpg') %>"
+                />
+
+                <source
+                  media="(600px <= width <= 799px) and (orientation: portrait)"
+                  srcset="<%=require('../src/assets/imgs/Guneratne_2023.09.05_caterpillar-vertical-580p.jpg') %>"
+                />
+
+                <source
+                  media="(800px <= width <= 1020px) and (orientation: portrait)"
+                  srcset="<%=require('../src/assets/imgs/Guneratne_2023.09.05_caterpillar-vertical-700p.jpg') %>"
+                />
+
+                <source
+                  media="(1021px <= width <= 1280px) and (orientation: portrait)"
+                  srcset="<%=require('../src/assets/imgs/Guneratne_2023.09.05_caterpillar-vertical-900p.jpg') %>"
+                />
+
+                <source
+                  media="(640px <= width <= 959px) and (orientation: landscape)"
+                  srcset="<%=require('../src/assets/imgs/Guneratne_2023.09.05_caterpillar-horizontal-620p.jpg') %>"
+                />
+
+                <source
+                  media="(960px <= width <= 1279px) and (orientation: landscape)"
+                  srcset="<%=require('../src/assets/imgs/Guneratne_2023.09.05_caterpillar-horizontal-940p.jpg') %>"
+                />
+
+                <source
+                  media="(1280px <= width <= 1599px) and (orientation: landscape)"
+                  srcset="<%=require('../src/assets/imgs/Guneratne_2023.09.05_caterpillar-horizontal-1200p.jpg') %>"
+                />
+
+                <img
+                  src="<%=require('../src/assets/imgs/Guneratne_2023.09.05_caterpillar-horizontal-1500p.jpg') %>"
+                  alt="Caterpillar on a dill plant."
+                />
+              </picture>
 
               <div class="img-dots-container" data-name="first-gallery">
                 <div class="img-dots" data-name="first-gallery">
@@ -184,6 +376,42 @@
                     <div
                       class="circle-icon"
                       data-circle="2"
+                      data-name="first-gallery"
+                    ></div>
+                  </div>
+
+                  <div
+                    class="circle-icon-div"
+                    data-circle="3"
+                    data-name="first-gallery"
+                  >
+                    <div
+                      class="circle-icon"
+                      data-circle="3"
+                      data-name="first-gallery"
+                    ></div>
+                  </div>
+
+                  <div
+                    class="circle-icon-div"
+                    data-circle="4"
+                    data-name="first-gallery"
+                  >
+                    <div
+                      class="circle-icon"
+                      data-circle="4"
+                      data-name="first-gallery"
+                    ></div>
+                  </div>
+
+                  <div
+                    class="circle-icon-div"
+                    data-circle="5"
+                    data-name="first-gallery"
+                  >
+                    <div
+                      class="circle-icon"
+                      data-circle="5"
                       data-name="first-gallery"
                     ></div>
                   </div>
