@@ -301,7 +301,7 @@ h2 {
   background-color: var(--slider-box-col);
   min-height: 0.625rem;
   /* max-height: 100vh; */
-  max-width: min-content;
+  max-width: 95%;
   margin: 5ch auto 5ch auto;
 
   display: grid;
@@ -434,9 +434,8 @@ h2 {
 
 /* Media Queries */
 
-@media (320px <= width <= 768px) {
+/* @media (320px <= width <= 768px) {
   .slider-box {
-    /* grid-template-columns: 1fr 6fr 1fr; */
     width: 90%;
   }
 }
@@ -445,4 +444,4 @@ h2 {
   .slider-box {
     width: 85%;
   }
-}
+} */
