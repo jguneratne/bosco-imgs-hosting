@@ -318,6 +318,7 @@ h2 {
 .img-dots-container {
   grid-area: 2 / 2 / 3 / 3;
   max-width: 40rem;
+  margin: 1.6rem 0 1rem 0;
 }
 
 .img-dots {
@@ -325,7 +326,6 @@ h2 {
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
-  margin: 1rem 0 1rem 0;
 }
 
 .circle-icon {
