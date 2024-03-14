@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
 
   --fallback-col: #fffbeb;
   --main-col: #fffbeb;
@@ -111,16 +112,6 @@ li {
   align-items: center;
 }
 
-/* Try to add style to clicked menu btn */
-/* .menu-btn a:active {
-  background-color: var(--main-col);
-  border-radius: 1em 1em 0 0;
-  border: none;
-  outline: none;
-  font-weight: bold;
-  cursor: pointer;
-} */
-
 .dropdown-btn {
   width: 15ch;
 }
@@ -139,20 +130,6 @@ li {
   overflow: hidden;
   visibility: hidden;
 }
-
-/* .menu-btn:active {
-  background-color: var(--main-col);
-  border-radius: 1em 1em 0 0;
-  border: none;
-  outline: none;
-  font-weight: bold;
-  cursor: pointer;
-}
-
-.menu-btn:active li a {
-  color: var(--dark-font-col);
-  text-decoration: var(--dark-font-col);
-} */
 
 .menu-btn.selected,
 .dropdown-div.selected {
@@ -280,12 +257,7 @@ h2 {
   margin-right: auto;
   text-align: center;
   width: 100%;
-  /* display: none; */
 }
-
-/* .tab-content.selected {
-  display: initial;
-} */
 
 /* Galleries */
 
@@ -300,7 +272,6 @@ h2 {
   border-radius: 3em;
   background-color: var(--slider-box-col);
   min-height: 0.625rem;
-  /* max-height: 100vh; */
   max-width: 95%;
   margin: 5ch auto 5ch auto;
 
@@ -389,14 +360,60 @@ h2 {
   transition: opacity 500ms linear;
   visibility: visible;
   opacity: 1;
+}
 
-  /* display: flex;
-  flex-grow: 1;
-  justify-content: center;
-  align-items: center; */
-  /* width: 100%;
+/* Contact Form */
 
-  object-fit: contain; */
+.contact-header {
+  margin-top: 1.5em;
+}
+
+.required-text {
+  padding-bottom: 2em;
+}
+
+fieldset {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 60%;
+  margin: 0 auto 5em auto;
+  padding: 1em;
+  border: none;
+}
+
+label {
+  display: flex;
+  padding: 0.5em;
+}
+
+.input-type {
+  width: 13ch;
+  text-align: left;
+  padding-right: 1em;
+}
+
+.input-box-msg {
+  resize: both;
+}
+
+input,
+textarea {
+  width: 60ch;
+  border-radius: 0.5em;
+  outline: none;
+  border: 1px solid var(--head-foot-col);
+  padding: 0.5em 1em 0.5em 1em;
+}
+
+textarea {
+  resize: both;
+}
+
+.send-contact {
+  padding: 0.5em;
+  margin: 1.5em 0 1.5em 0;
+  max-width: min-content;
 }
 
 /* Footer */
@@ -436,14 +453,12 @@ h2 {
 
 /* Media Queries */
 
-/* @media (320px <= width <= 768px) {
-  .slider-box {
-    width: 90%;
+@media (max-width: 620px) {
+  label {
+    flex-direction: column;
+  }
+
+  .input-type {
+    margin-bottom: 0.5em;
   }
 }
-
-@media (769px <= width <= 1024px) {
-  .slider-box {
-    width: 85%;
-  }
-} */

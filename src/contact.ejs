@@ -69,10 +69,59 @@
 
       <main class="main">
         <!-- CONTACT -->
-        <section class="tab-content" id="contact">
-          <div class="contact">
-            <h2>Contact Form Coming Soon!</h2>
-          </div>
+        <section class="tab-content contact-tab" id="contact">
+          <form action="#" method="POSt">
+            <h1 class="contact-header">Get In Touch!</h1>
+
+            <fieldset>
+              <p class="required-text">
+                Required fields are followed by
+                <span aria-label="required">*</span>
+              </p>
+
+              <label for="name">
+                <div class="input-type">
+                  Name: <span aria-label="required">*</span>
+                </div>
+                <div class="input-box">
+                  <input
+                    id="name"
+                    type="text"
+                    name="name"
+                    placeholder="This form is not yet active."
+                    required
+                  />
+                </div>
+              </label>
+
+              <label for="email">
+                <div class="input-type">
+                  Email: <span aria-label="required">*</span>
+                </div>
+                <div class="input-box">
+                  <input id="email" type="email" name="email" required />
+                </div>
+              </label>
+
+              <label for="message">
+                <div class="input-type">
+                  Message: <span aria-label="required">*</span>
+                </div>
+                <div class="input-box">
+                  <textarea
+                    name="message"
+                    id="message"
+                    rows="15"
+                    cols="50"
+                    placeholder="This form is not yet active."
+                    required
+                  ></textarea>
+                </div>
+              </label>
+
+              <button class="send-contact" type="button">Submit</button>
+            </fieldset>
+          </form>
         </section>
       </main>
 
