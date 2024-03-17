@@ -417,9 +417,18 @@ textarea {
 }
 
 .send-contact {
-  padding: 0.5em;
+  padding: 0.5em 2em 0.5em 2em;
   margin: 1.5em 0 1.5em 0;
   max-width: min-content;
+  font-size: 2ch;
+  border-radius: 0.5em;
+  border: 1px solid var(--head-foot-col);
+}
+
+.send-contact:hover {
+  background-color: var(--dark-font-col);
+  color: var(--light-font-col);
+  cursor: pointer;
 }
 
 /* Footer */
