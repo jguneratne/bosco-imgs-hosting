@@ -376,21 +376,27 @@ fieldset {
   display: flex;
   flex-direction: column;
   align-items: center;
-  max-width: 60%;
-  margin: 0 auto 5em auto;
+  width: 100%;
+  margin-bottom: 5em;
   padding: 1em;
   border: none;
+  align-items: center;
 }
 
 label {
   display: flex;
+  flex-direction: column;
   padding: 0.5em;
 }
 
 .input-type {
   width: 13ch;
   text-align: left;
-  padding-right: 1em;
+  padding: 0 1em 0.6em 0;
+}
+
+.input-box {
+  padding-bottom: 1.5em;
 }
 
 .input-box-msg {
@@ -399,7 +405,7 @@ label {
 
 input,
 textarea {
-  width: 60ch;
+  width: 80ch;
   border-radius: 0.5em;
   outline: none;
   border: 1px solid var(--head-foot-col);
@@ -454,11 +460,15 @@ textarea {
 /* Media Queries */
 
 @media (max-width: 620px) {
-  label {
-    flex-direction: column;
+  input,
+  textarea {
+    width: 60ch;
   }
+}
 
-  .input-type {
-    margin-bottom: 0.5em;
+@media (max-width: 450px) {
+  input,
+  textarea {
+    width: 45ch;
   }
 }
