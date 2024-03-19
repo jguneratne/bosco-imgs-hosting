@@ -6,6 +6,8 @@ export const fullPageName = currentPage.substring(
 export const indexOfExtension = fullPageName.indexOf(".");
 export const shortPageName = fullPageName.substring(0, indexOfExtension);
 
+export const mainElement = document.querySelector(".main");
+
 // Drop Down
 export const dropDownDiv = document.querySelector(".dropdown-div");
 export const dropDownCarat = document.querySelector(".gal-arrow");
