@@ -26,6 +26,13 @@ module.exports = {
       scriptloading: ["module"],
     }),
     new HtmlWebpackPlugin({
+      title: "Galleries",
+      filename: "galleries.html",
+      template: "src/galleries.ejs",
+      inject: "body",
+      scriptloading: ["module"],
+    }),
+    new HtmlWebpackPlugin({
       title: "Wildlife Gallery",
       filename: "first-gallery.html",
       template: "src/first-gallery.ejs",
@@ -33,7 +40,7 @@ module.exports = {
       scriptloading: ["module"],
     }),
     new HtmlWebpackPlugin({
-      title: "Insect Gallery",
+      title: "Events Gallery",
       filename: "second-gallery.html",
       template: "src/second-gallery.ejs",
       inject: "body",
