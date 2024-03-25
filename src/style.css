@@ -521,6 +521,18 @@ textarea {
   cursor: pointer;
 }
 
+/* About Page */
+
+.about {
+  min-height: 100%;
+  background-image: url(../src/assets/imgs/about-page/Guneratne_2023.10.01_about-horizontal-1200p.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+
+  /* display: flex; */
+}
+
 /* Footer */
 
 .footer-div {
@@ -579,6 +591,10 @@ textarea {
     margin: 5em 0;
     row-gap: 5em;
   }
+
+  .about {
+    background-image: url(../src/assets/imgs/about-page/Guneratne_2023.10.01_about-vertical-800p.jpg);
+  }
 }
 
 @media (max-width: 800px) and (orientation: portrait) {
@@ -597,6 +613,10 @@ textarea {
     margin: 4em 0;
     row-gap: 3em;
   }
+
+  .about {
+    background-image: url(../src/assets/imgs/about-page/Guneratne_2023.10.01_about-vertical-400p.jpg);
+  }
 }
 
 @media (min-width: 1201px) and (orientation: portrait) {
@@ -614,6 +634,10 @@ textarea {
     margin: 5em 0;
     row-gap: 5em;
   }
+
+  .about {
+    background-image: url(../src/assets/imgs/about-page/Guneratne_2023.10.01_about-vertical-1200p.jpg);
+  }
 }
 
 @media (max-width: 1280px) and (orientation: landscape) {
@@ -629,6 +653,10 @@ textarea {
 
   .galleries {
     grid-template-columns: 1fr 80% 1fr;
+  }
+
+  .about {
+    background-image: url(../src/assets/imgs/about-page/Guneratne_2023.10.01_about-horizontal-1200p.jpg);
   }
 }
 
@@ -647,6 +675,10 @@ textarea {
     padding: 1.4rem 2rem;
     border-radius: 1em;
     font-size: 1.6ch;
+  }
+
+  .about {
+    background-image: url(../src/assets/imgs/about-page/Guneratne_2023.10.01_about-horizontal-800p.jpg);
   }
 }
 
@@ -673,6 +705,10 @@ textarea {
   .thumbnails {
     margin: auto 0;
     row-gap: 6em;
+  }
+
+  .about {
+    background-image: url(../src/assets/imgs/about-page/Guneratne_2023.10.01_about-horizontal-1600p.jpg);
   }
 }
 
