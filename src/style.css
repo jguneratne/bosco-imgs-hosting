@@ -270,14 +270,22 @@ h2 {
   display: flex;
 }
 
-.home-box {
+.home-box,
+.logo-box {
   min-height: 100%;
   width: 100%;
-  border: 1px solid yellow;
-
   display: flex;
   align-items: center;
   justify-content: space-evenly;
+}
+
+.logo-box {
+  align-items: flex-end;
+  justify-content: flex-start;
+}
+
+.logo {
+  max-width: 90%;
 }
 
 .cta-btn {
@@ -595,6 +603,12 @@ textarea {
     display: grid;
   }
 
+  .logo-box {
+    align-items: flex-start;
+    justify-content: center;
+    margin-top: 2ch;
+  }
+
   .cta-btn {
     padding: 3rem 4rem;
     border-radius: 1.2em;
@@ -698,6 +712,11 @@ textarea {
     gap: 6ch;
   }
 
+  .logo-box {
+    justify-content: center;
+    margin-bottom: 1ch;
+  }
+
   .galleries {
     grid-template-columns: 1fr 80% 1fr;
   }
@@ -753,6 +772,11 @@ textarea {
     flex-direction: column;
     justify-content: center;
     gap: 10ch;
+  }
+
+  .logo-box {
+    justify-content: center;
+    margin-bottom: 10ch;
   }
 
   .cta-btn {
