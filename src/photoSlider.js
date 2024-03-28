@@ -63,7 +63,6 @@ export function sliderBoxCtrl() {
     }
   });
 
-  // resetSliderAnimation();
   sliderAnimation();
   clickCircles();
   arrowCtrl();

@@ -6,5 +6,13 @@ import { galleriesClickMenu } from "./dropDown";
 
 console.log("photogallery");
 
-ctrlTabHighlight();
-galleriesClickMenu();
+// document.addEventListener("DOMContentLoaded", () => {
+//   ctrlTabHighlight();
+//   galleriesClickMenu();
+// });
+
+window.addEventListener("load", (e) => {
+  console.log("The page is loaded");
+  ctrlTabHighlight();
+  galleriesClickMenu();
+});

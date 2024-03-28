@@ -60,8 +60,8 @@ function showGalNavLink() {
         box.dataset.name === shortPageName &&
         getAnimationID.animationID !== undefined
       ) {
-        resetSliderAnimation();
         resetIndexes();
+        resetSliderAnimation();
       }
     });
   });
