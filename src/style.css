@@ -146,10 +146,18 @@ li {
   text-decoration: var(--dark-font-col);
 }
 
+.menu-btn.selected li a:focus {
+  outline: 3px solid var(--slider-box-col);
+  border-radius: 1em;
+}
+
+.menu-btn li a:focus {
+  outline: 3px solid #fff;
+  border-radius: 1em;
+}
+
 .hov-style:hover,
-.hov-style:focus,
-.gal-hov:hover,
-.gal-hov:focus {
+.gal-hov:hover {
   text-decoration: underline var(--light-font-col);
   text-decoration-thickness: 0.3ch;
   font-weight: bold;
@@ -286,9 +294,24 @@ h2 {
 
 .logo {
   max-width: 90%;
+  border: 3px solid transparent;
+  border-radius: 1em;
+}
+
+.logo:focus {
+  border: 3px solid var(--main-col);
+  border-radius: 1em;
+  outline: none;
+}
+
+.home-box a:focus {
+  opacity: 100%;
+  border: 3px solid var(--head-foot-col);
+  outline: none;
 }
 
 .cta-btn {
+  text-decoration: none;
   background-color: var(--dropdown-item-col);
   opacity: 70%;
   padding: 2rem 3rem;
