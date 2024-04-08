@@ -367,16 +367,20 @@ h2 {
   padding-bottom: 1em;
 }
 
-.thumbnail-link:hover {
+.thumbnail-link:hover,
+.thumbnail-link:focus {
   cursor: pointer;
+  outline: none;
 }
 
-.thumbnail-link:hover .thumbnail-img {
+.thumbnail-link:hover .thumbnail-img,
+.thumbnail-link:focus .thumbnail-img {
   cursor: pointer;
   border: 1.5px solid var(--main-col);
 }
 
-.thumbnail-link:hover .gal-title {
+.thumbnail-link:hover .gal-title,
+.thumbnail-link:focus .gal-title {
   text-decoration: underline;
 }
 
