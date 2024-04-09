@@ -9,6 +9,22 @@ import {
 } from "./variables";
 
 export function galleriesClickMenu() {
+  navigation.addEventListener("keydown", (e) => {
+    if (
+      (e.key === " " || e.key === "Enter") &&
+      e.target.innerText.toLowerCase() === "galleries" &&
+      !dropDownMenu.classList.contains("dropdown-content--active")
+    ) {
+      addActiveState();
+    } else if (
+      (e.key === " " || e.key === "Enter") &&
+      e.target.innerText.toLowerCase() === "galleries" &&
+      dropDownMenu.classList.contains("dropdown-content--active")
+    ) {
+      removeActiveState();
+    }
+  });
+
   navigation.addEventListener("pointerdown", (e) => {
     if (
       e.target.innerText.toLowerCase() === "galleries" &&

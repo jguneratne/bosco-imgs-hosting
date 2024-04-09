@@ -147,13 +147,13 @@ li {
 }
 
 .menu-btn.selected li a:focus {
-  outline: 3px solid var(--slider-box-col);
-  border-radius: 1em;
+  outline: 3px solid var(--dark-hov-col);
+  border-radius: 0.5em;
 }
 
 .menu-btn li a:focus {
   outline: 3px solid #fff;
-  border-radius: 1em;
+  border-radius: 0.5em;
 }
 
 .hov-style:hover,
