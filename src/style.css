@@ -532,13 +532,23 @@ input,
 textarea {
   width: 80ch;
   border-radius: 0.5em;
-  outline: none;
-  border: 1px solid var(--head-foot-col);
+  outline: 1px solid var(--slider-box-col);
+  border: 2px solid transparent;
   padding: 0.5em 1em 0.5em 1em;
 }
 
 textarea {
   resize: both;
+}
+
+input:hover,
+textarea:hover {
+  cursor: pointer;
+}
+
+input:focus,
+textarea:focus {
+  border: 2px solid var(--dark-hov-col);
 }
 
 .send-contact {
@@ -547,13 +557,18 @@ textarea {
   max-width: min-content;
   font-size: 2ch;
   border-radius: 0.5em;
-  border: 1px solid var(--head-foot-col);
+  border: 2px solid transparent;
+  outline: 1px solid var(--slider-box-col);
 }
 
 .send-contact:hover {
   background-color: var(--dark-font-col);
   color: var(--light-font-col);
   cursor: pointer;
+}
+
+.send-contact:focus {
+  border: 2px solid var(--dark-hov-col);
 }
 
 /* About Page */
