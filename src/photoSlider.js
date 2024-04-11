@@ -48,6 +48,11 @@ export function sliderBoxCtrl() {
       // console.log(slidePosition.currentSlidePosition);
       slidePosition.currentSlidePosition.classList.add("picture--active");
 
+      circleNav.thisCircleNav = thisSliderBox.querySelector(
+        ".img-dots-container"
+      );
+      // console.log(circleNav.currentCircleNav);
+
       circleIconDivs.circleDivsArray = Array.from(
         thisSliderBox.getElementsByClassName("circle-icon-div")
       );
@@ -84,23 +89,40 @@ export function sliderAnimation() {
 }
 
 export function clickCircles() {
-  circleNav.forEach((nav) => {
-    if (nav.dataset.name === shortPageName) {
-      nav.addEventListener("pointerdown", (e) => {
-        setIndex.targetIndex = e.target.dataset.circle;
-        // console.log(setIndex.targetIndex);
+  circleNav.currentCircleNav.addEventListener("pointerdown", (e) => {
+    console.log(e.target);
 
-        clearActiveState();
-        handleIndexes();
-        addActiveState();
-      });
+    if (
+      e.target.classList.contains("circle-icon-div") ||
+      e.target.classList.contains("circle-icon")
+    ) {
+      // console.log(e.target.classList);
+      setIndex.targetIndex = e.target.dataset.circle;
+
+      clearActiveState();
+      handleIndexes();
+      addActiveState();
+    }
+  });
+
+  circleNav.currentCircleNav.addEventListener("keydown", (e) => {
+    if (
+      (e.key === " " || e.key === "Enter") &&
+      (e.target.classList.contains("circle-icon-div") ||
+        e.target.classList.contains("circle-icon"))
+    ) {
+      setIndex.targetIndex = e.target.dataset.circle;
+
+      clearActiveState();
+      handleIndexes();
+      addActiveState();
     }
   });
 }
 
 export function arrowCtrl() {
   activeSliderBox.currentActiveBox.addEventListener("pointerdown", (e) => {
-    console.log(e.target);
+    // console.log(e.target);
     if (e.target === getRightArrow.rightArrow) {
       console.log("right");
       slideRight();

@@ -438,6 +438,11 @@ h2 {
   background-color: transparent;
 }
 
+.circle-icon-div:focus-visible {
+  outline: 2px solid var(--dropdown-item-col);
+  border-radius: 0.5em;
+}
+
 .circle-icon-div--active {
   background-color: transparent;
 }

@@ -74,7 +74,19 @@ export let galleryImgs = {
   },
 };
 
-export const circleNav = document.querySelectorAll(".img-dots-container");
+// export const circleNav = document.querySelectorAll(".img-dots-container");
+
+export const circleNav = {
+  currentCircleNav: undefined,
+
+  get thisCircleNav() {
+    return this.currentCircleNav;
+  },
+
+  set thisCircleNav(getTheNav) {
+    this.currentCircleNav = getTheNav;
+  },
+};
 
 export let circleIconDivs = {
   circleDivs: [],
