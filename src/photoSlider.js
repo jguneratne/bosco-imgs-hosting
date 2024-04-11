@@ -112,6 +112,49 @@ export function arrowCtrl() {
   });
 }
 
+// // export function arrowCtrl() {
+// //   sliderBoxes.forEach((box) => {
+// //     if (box.dataset.name === shortPageName) {
+// //       console.log("DATASET MATCHES PAGENAME");
+// //       getRightArrow.rightArrowLocation = box.querySelector(
+// //         "[data-forward-arrow]"
+// //       );
+// //       console.log(getRightArrow.rightArrow);
+
+// //       getLeftArrow.leftArrowLocation = box.querySelector("[data-back-arrow]");
+// //       console.log(getLeftArrow.leftArrow);
+
+// //       // box.addEventListener("keydown", (e) => {
+// //       //   if (
+// //       //     (e.key === " " || e.key === "Enter") &&
+// //       //     e.target === getRightArrow.rightArrow
+// //       //   ) {
+// //       //     slideRight();
+// //       //   }
+
+// //       //   if (
+// //       //     (e.key === " " || e.key === "Enter") &&
+// //       //     e.target === getLeftArrow.leftArrow
+// //       //   ) {
+// //       //     slideLeft();
+// //       //   }
+// //       // });
+
+// //       box.addEventListener("pointerdown", (e) => {
+// //         console.log(e.target);
+// //         // if (e.target === getRightArrow.rightArrow) {
+// //         //   console.log("right");
+// //         //   slideRight();
+// //         // }
+// //         // if (e.target === getLeftArrow.leftArrow) {
+// //         //   console.log("left");
+// //         //   slideLeft();
+// //         // }
+// //       });
+// //     }
+// //   });
+// // }
+
 function handleIndexes() {
   if (setIndex.targetIndex < 0) {
     setIndex.targetIndex = galleryImgs.boxImgs.length - 1;
