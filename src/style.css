@@ -393,7 +393,8 @@ h2 {
 }
 
 .slider-box {
-  border: 1px solid var(--dark-font-col);
+  outline: 1px solid var(--dark-font-col);
+  border: 3px solid transparent;
   border-radius: 3em;
   background-color: var(--slider-box-col);
   min-height: 0.625rem;
@@ -405,6 +406,10 @@ h2 {
   grid-template-rows: min-content min-content;
   align-content: center;
   justify-items: center;
+}
+
+.slider-box:focus {
+  border: 3px solid var(--dark-hov-col);
 }
 
 .back-arrow {
@@ -450,10 +455,23 @@ h2 {
   width: min-content;
   justify-self: center;
   align-self: center;
+  border: 2px solid transparent;
+}
+
+.back-arrow:focus,
+.forward-arrow:focus {
+  border: 2px solid var(--dropdown-item-col);
+  border-radius: 0.5em;
 }
 
 .arrow {
   width: 5ch;
+  border: 2px solid transparent;
+}
+
+.arrow:focus {
+  border: 2px solid var(--dropdown-item-col);
+  border-radius: 0.5em;
 }
 
 .photo-box {

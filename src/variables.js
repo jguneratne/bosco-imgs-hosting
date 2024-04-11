@@ -35,7 +35,32 @@ export let getAnimationID = {
 };
 
 export const sliderBoxes = document.querySelectorAll(".slider-box");
+export const arrowDivs = document.querySelectorAll(".arrow-div");
 export const photoBoxes = document.querySelectorAll(".photo-box");
+
+export let activeSliderBox = {
+  activeBox: undefined,
+
+  get currentActiveBox() {
+    return this.activeBox;
+  },
+
+  set currentActiveBox(currentPageBox) {
+    this.activeBox = currentPageBox;
+  },
+};
+
+export let activePhotoBox = {
+  photoBox: undefined,
+
+  get currentActivePhotoBox() {
+    return this.photoBox;
+  },
+
+  set currentActivePhotoBox(currentPagePhotoBox) {
+    this.photoBox = currentPagePhotoBox;
+  },
+};
 
 export let galleryImgs = {
   boxImgs: [],
@@ -50,7 +75,6 @@ export let galleryImgs = {
 };
 
 export const circleNav = document.querySelectorAll(".img-dots-container");
-export const circleIconContainer = document.querySelectorAll(".img-dots");
 
 export let circleIconDivs = {
   circleDivs: [],

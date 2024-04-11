@@ -4,15 +4,13 @@ import { ctrlTabHighlight } from "./navStyles";
 
 import { galleriesClickMenu } from "./dropDown";
 
-console.log("photogallery");
+import { sliderBoxCtrl } from "./photoSlider";
 
-// document.addEventListener("DOMContentLoaded", () => {
-//   ctrlTabHighlight();
-//   galleriesClickMenu();
-// });
+console.log("photogallery");
 
 window.addEventListener("load", (e) => {
   console.log("The page is loaded");
   ctrlTabHighlight();
   galleriesClickMenu();
+  sliderBoxCtrl();
 });

@@ -15,13 +15,13 @@ export function galleriesClickMenu() {
       e.target.innerText.toLowerCase() === "galleries" &&
       !dropDownMenu.classList.contains("dropdown-content--active")
     ) {
-      addActiveState();
+      activateDropdown();
     } else if (
       (e.key === " " || e.key === "Enter") &&
       e.target.innerText.toLowerCase() === "galleries" &&
       dropDownMenu.classList.contains("dropdown-content--active")
     ) {
-      removeActiveState();
+      closeDropdown();
     }
   });
 
@@ -30,24 +30,24 @@ export function galleriesClickMenu() {
       e.target.innerText.toLowerCase() === "galleries" &&
       !dropDownMenu.classList.contains("dropdown-content--active")
     ) {
-      addActiveState();
+      activateDropdown();
     } else if (
       e.target === dropDownItems &&
       dropDownMenu.classList.contains("dropdown-content--active")
     ) {
       console.log(e.target);
-      removeActiveState();
+      closeDropdown();
     } else if (
       e.target.innerText.toLowerCase() === "galleries" &&
       dropDownMenu.classList.contains("dropdown-content--active")
     ) {
-      removeActiveState();
+      closeDropdown();
       changeActiveState();
     }
   });
 }
 
-function addActiveState() {
+function activateDropdown() {
   dropDownCarat.classList.add("gal-arrow--active");
   dropDownMenu.classList.add("dropdown-content--active");
   dropDownItems.forEach((item) => {
@@ -72,7 +72,7 @@ function changeActiveState() {
   });
 }
 
-function removeActiveState() {
+function closeDropdown() {
   menuBtnStyle.forEach((btn) => {
     btn.classList.remove("selected");
   });

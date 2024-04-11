@@ -1,17 +1,9 @@
 import {
   shortPageName,
   menuBtnStyle,
-  getAnimationID,
   dropDownDiv,
   dropDownItems,
-  sliderBoxes,
 } from "./variables";
-
-import {
-  sliderBoxCtrl,
-  resetSliderAnimation,
-  resetIndexes,
-} from "./photoSlider";
 
 export function ctrlTabHighlight() {
   menuBtnStyle.forEach((btn) => {
@@ -38,7 +30,6 @@ export function showCurrentNavLink() {
       shortPageName === "second-gallery"
     ) {
       showGalNavLink();
-      sliderBoxCtrl();
     }
   });
 }
@@ -54,15 +45,5 @@ function showGalNavLink() {
       });
       dropDownDiv.classList.add("selected");
     }
-
-    sliderBoxes.forEach((box) => {
-      if (
-        box.dataset.name === shortPageName &&
-        getAnimationID.animationID !== undefined
-      ) {
-        resetIndexes();
-        resetSliderAnimation();
-      }
-    });
   });
 }

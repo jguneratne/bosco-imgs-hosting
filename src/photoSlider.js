@@ -2,10 +2,10 @@ import {
   shortPageName,
   getAnimationID,
   sliderBoxes,
-  photoBoxes,
+  activeSliderBox,
+  activePhotoBox,
   galleryImgs,
   circleNav,
-  circleIconContainer,
   circleIconDivs,
   circleIcons,
   getRightArrow,
@@ -17,63 +17,70 @@ import {
 } from "./variables";
 
 export function sliderBoxCtrl() {
-  photoBoxes.forEach((box) => {
+  sliderBoxes.forEach((box) => {
     if (box.dataset.name === shortPageName) {
-      galleryImgs.boxImgsArray = Array.from(box.children);
+      console.log("DATASET MATCHES PAGENAME");
 
-      console.log(galleryImgs.boxImgs);
+      activeSliderBox.currentActiveBox = box;
+      // console.log(activeSliderBox.activeBox);
+
+      const thisSliderBox = activeSliderBox.currentActiveBox;
+      // console.log(thisSliderBox);
+
+      activePhotoBox.currentActivePhotoBox =
+        thisSliderBox.querySelector(".photo-box");
+      // console.log(activePhotoBox.photoBox);
+
+      galleryImgs.boxImgsArray = Array.from(activePhotoBox.photoBox.children);
+      // console.log(galleryImgs.boxImgs);
+
+      getRightArrow.rightArrowLocation = thisSliderBox.querySelector(
+        "[data-forward-arrow]"
+      );
+      // console.log(getRightArrow.rightArrow);
+
+      getLeftArrow.leftArrowLocation =
+        thisSliderBox.querySelector("[data-back-arrow]");
+      // console.log(getLeftArrow.leftArrow);
 
       slidePosition.currentSlidePosition =
         galleryImgs.boxImgs[setIndex.currentIndex];
-      console.log(slidePosition.currentSlidePosition);
-
+      // console.log(slidePosition.currentSlidePosition);
       slidePosition.currentSlidePosition.classList.add("picture--active");
-    }
-  });
 
-  circleIconContainer.forEach((container) => {
-    if (container.dataset.name === shortPageName) {
-      circleIconDivs.circleDivsArray = Array.from(container.children);
-      console.log(circleIconDivs.circleDivsArray);
+      circleIconDivs.circleDivsArray = Array.from(
+        thisSliderBox.getElementsByClassName("circle-icon-div")
+      );
+      // console.log(circleIconDivs.circleDivs);
 
       circleDivPosition.currentCircleDivPosition =
         circleIconDivs.circleDivs[setIndex.currentIndex];
-      console.log(circleDivPosition.currentCircleDivPosition);
-
+      // console.log(circleDivPosition.currentCircleDivPosition);
       circleIconDivs.circleDivs[setIndex.currentIndex].classList.add(
         "circle-icon-div--active"
       );
-    }
-  });
 
-  circleNav.forEach((nav) => {
-    if (nav.dataset.name === shortPageName) {
       circleIcons.circleIconsArray = Array.from(
-        nav.querySelectorAll(".circle-icon")
+        thisSliderBox.getElementsByClassName("circle-icon")
       );
-      console.log(circleIcons.circles);
+      // console.log(circleIcons.circles);
 
       circlePosition.currentCirclePosition =
         circleIcons.circles[setIndex.currentIndex];
-      console.log(circlePosition.currentCirclePosition);
-
+      // console.log(circlePosition.currentCirclePosition);
       circleIcons.circles[setIndex.currentIndex].classList.add(
         "circle-icon--active"
       );
+
+      sliderAnimation();
+      clickCircles();
+      arrowCtrl();
     }
   });
-
-  sliderAnimation();
-  clickCircles();
-  arrowCtrl();
 }
 
 export function sliderAnimation() {
   getAnimationID.animationIDValue = setInterval(slideRight, 3000);
-}
-
-export function resetSliderAnimation() {
-  clearInterval(getAnimationID.animationID);
 }
 
 export function clickCircles() {
@@ -81,7 +88,7 @@ export function clickCircles() {
     if (nav.dataset.name === shortPageName) {
       nav.addEventListener("pointerdown", (e) => {
         setIndex.targetIndex = e.target.dataset.circle;
-        console.log(setIndex.targetIndex);
+        // console.log(setIndex.targetIndex);
 
         clearActiveState();
         handleIndexes();
@@ -92,23 +99,15 @@ export function clickCircles() {
 }
 
 export function arrowCtrl() {
-  sliderBoxes.forEach((box) => {
-    if (box.dataset.name === shortPageName) {
-      console.log(true);
-      getRightArrow.rightArrowLocation = box.querySelector(
-        "[data-forward-arrow]"
-      );
-      getLeftArrow.leftArrowLocation = box.querySelector("[data-back-arrow]");
-
-      box.addEventListener("pointerdown", (e) => {
-        if (e.target === getRightArrow.rightArrow) {
-          slideRight();
-        }
-
-        if (e.target === getLeftArrow.leftArrow) {
-          slideLeft();
-        }
-      });
+  activeSliderBox.currentActiveBox.addEventListener("pointerdown", (e) => {
+    console.log(e.target);
+    if (e.target === getRightArrow.rightArrow) {
+      console.log("right");
+      slideRight();
+    }
+    if (e.target === getLeftArrow.leftArrow) {
+      console.log("left");
+      slideLeft();
     }
   });
 }
@@ -191,11 +190,6 @@ function handleIndexes() {
   }
 }
 
-export function resetIndexes() {
-  setIndex.targetIndex = 0;
-  clearActiveState();
-}
-
 function slideRight() {
   clearActiveState();
   setIndex.targetIndex++;
@@ -225,3 +219,12 @@ function addActiveState() {
   );
   circlePosition.currentCirclePosition.classList.add("circle-icon--active");
 }
+
+// export function resetSliderAnimation() {
+//   clearInterval(getAnimationID.animationID);
+// }
+
+// export function resetIndexes() {
+//   setIndex.targetIndex = 0;
+//   clearActiveState();
+// }
