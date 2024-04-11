@@ -458,19 +458,13 @@ h2 {
   border: 2px solid transparent;
 }
 
-.back-arrow:focus,
-.forward-arrow:focus {
-  border: 2px solid var(--dropdown-item-col);
-  border-radius: 0.5em;
-}
-
 .arrow {
   width: 5ch;
-  border: 2px solid transparent;
+  outline: 2px solid transparent;
 }
 
-.arrow:focus {
-  border: 2px solid var(--dropdown-item-col);
+.arrow:focus-visible {
+  outline: 2px solid var(--dropdown-item-col);
   border-radius: 0.5em;
 }
 
