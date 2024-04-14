@@ -109,7 +109,7 @@ export function clickCircles() {
     if (
       (e.key === " " || e.key === "Enter") &&
       (e.target.classList.contains("circle-icon-div") ||
-        e.target.classList.contains("circle-icon"))
+        e.target.classList.contains("circle-icon-div--active"))
     ) {
       setIndex.targetIndex = e.target.dataset.circle;
 
