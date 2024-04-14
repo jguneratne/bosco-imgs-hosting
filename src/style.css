@@ -408,7 +408,7 @@ h2 {
   justify-items: center;
 }
 
-.slider-box:focus {
+.slider-box:focus-visible {
   border: 3px solid var(--dark-hov-col);
 }
 
