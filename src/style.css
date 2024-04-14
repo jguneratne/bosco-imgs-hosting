@@ -146,12 +146,12 @@ li {
   text-decoration: var(--dark-font-col);
 }
 
-.menu-btn.selected li a:focus {
+.menu-btn.selected li a:focus-visible {
   outline: 3px solid var(--dark-hov-col);
   border-radius: 0.5em;
 }
 
-.menu-btn li a:focus {
+.menu-btn li a:focus-visible {
   outline: 3px solid #fff;
   border-radius: 0.5em;
 }
