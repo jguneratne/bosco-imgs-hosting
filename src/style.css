@@ -652,6 +652,13 @@ textarea:focus {
 
 .footer .logo-div a img {
   height: 3ch;
+  outline: 1.5px solid transparent;
+  border: 1px solid transparent;
+}
+
+.footer.logo-div a img:focus-visible {
+  outline: 1.5px solid var(--light-font-col);
+  border: 1px solid transparent;
 }
 
 /* Media Queries */
