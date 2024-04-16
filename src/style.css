@@ -387,12 +387,41 @@ h2 {
 /* Galleries */
 
 .gallery {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr min-content 1fr;
   min-height: 100%;
   align-items: center;
 }
 
+.animation-ctrl-div {
+  grid-area: 1 / 1 / 2 / 2;
+  min-height: 85%;
+
+  display: grid;
+  grid-template-rows: min-content 1fr;
+}
+
+.pause-btn,
+.play-btn {
+  grid-area: 1 / 1 / 2 / 2;
+  background-color: transparent;
+  border: none;
+  opacity: 70%;
+}
+
+.pause-btn:hover,
+.play-btn:hover {
+  cursor: pointer;
+  opacity: 100%;
+}
+
+.pause-icon,
+.play-icon {
+  width: 50%;
+}
+
 .slider-box {
+  grid-area: 1 / 2 / 2 / 3;
   outline: 1px solid var(--dark-font-col);
   border: 3px solid transparent;
   border-radius: 3em;
