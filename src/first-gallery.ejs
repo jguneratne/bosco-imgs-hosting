@@ -71,20 +71,25 @@
         <!-- FIRST GALLERY -->
         <section class="tab-content" id="first-gallery">
           <div class="gallery">
-            <div class="slider-box" data-name="first-gallery" tabindex="0">
+            <div
+              class="slider-box"
+              data-name="first-gallery"
+              tabindex="0"
+              role="region"
+              aria-label="wildlife gallery"
+            >
               <!-- <div class="slider-row-one"></div> -->
-              <div class="back-arrow arrow-div" data-name="first-gallery">
+              <button type="button" class="back-arrow" data-back-arrow>
                 <img
-                  tabindex="0"
                   class="arrow"
                   data-back-arrow
                   src="<%=require('../src/assets/imgs/reshot-icon-arrow-chevron-left-975UQXVKZF.svg') %>"
-                  alt="Back Arrow Icon"
+                  alt="Back Arrow"
                 />
-              </div>
+              </button>
 
               <div class="photo-box" data-name="first-gallery">
-                <picture>
+                <picture role="group" aria-label="Slide 1 of 6">
                   <!-- BUNNY -->
                   <source
                     media="(300px <= width <=699px) and (orientation: portrait)"
@@ -127,7 +132,7 @@
                   />
                 </picture>
 
-                <picture>
+                <picture role="group" aria-label="Slide 2 of 6">
                   <!-- BEE -->
                   <source
                     media="(300px <= width <= 699px) and (orientation: portrait)"
@@ -170,7 +175,7 @@
                   />
                 </picture>
 
-                <picture>
+                <picture role="group" aria-label="Slide 3 of 6">
                   <!-- BIRD -->
                   <source
                     media="(300px <= width <= 699px) and (orientation: portrait)"
@@ -213,7 +218,7 @@
                   />
                 </picture>
 
-                <picture>
+                <picture role="group" aria-label="Slide 4 of 6">
                   <!-- GRASSHOPPER -->
                   <source
                     media="(300px <= width <= 699px) and (orientation: portrait)"
@@ -256,7 +261,7 @@
                   />
                 </picture>
 
-                <picture>
+                <picture role="group" aria-label="Slide 5 of 6">
                   <!-- SEAGULL -->
                   <source
                     media="(300px <= width <= 699px) and (orientation: portrait)"
@@ -299,7 +304,7 @@
                   />
                 </picture>
 
-                <picture>
+                <picture role="group" aria-label="Slide 6 of 6">
                   <!-- CATERPILLAR -->
                   <source
                     media="(300px <= width <= 699px) and (orientation: portrait)"
@@ -345,95 +350,99 @@
 
               <div class="img-dots-container" data-name="first-gallery">
                 <div class="img-dots" data-name="first-gallery">
-                  <div
+                  <button
+                    type="button"
                     class="circle-icon-div"
-                    tabindex="0"
                     data-circle="0"
                     data-name="first-gallery"
+                    aria-label="Select first slide"
                   >
                     <div
                       class="circle-icon"
                       data-circle="0"
                       data-name="first-gallery"
                     ></div>
-                  </div>
+                  </button>
 
-                  <div
+                  <button
+                    type="button"
                     class="circle-icon-div"
-                    tabindex="0"
                     data-circle="1"
                     data-name="first-gallery"
+                    aria-label="Select second slide"
                   >
                     <div
                       class="circle-icon"
                       data-circle="1"
                       data-name="first-gallery"
                     ></div>
-                  </div>
+                  </button>
 
-                  <div
+                  <button
+                    type="button"
                     class="circle-icon-div"
-                    tabindex="0"
                     data-circle="2"
                     data-name="first-gallery"
+                    aria-label="Select third slide"
                   >
                     <div
                       class="circle-icon"
                       data-circle="2"
                       data-name="first-gallery"
                     ></div>
-                  </div>
+                  </button>
 
-                  <div
+                  <button
+                    type="button"
                     class="circle-icon-div"
-                    tabindex="0"
                     data-circle="3"
                     data-name="first-gallery"
+                    aria-label="Select fourth slide"
                   >
                     <div
                       class="circle-icon"
                       data-circle="3"
                       data-name="first-gallery"
                     ></div>
-                  </div>
+                  </button>
 
-                  <div
+                  <button
+                    type="button"
                     class="circle-icon-div"
-                    tabindex="0"
                     data-circle="4"
                     data-name="first-gallery"
+                    aria-label="Select fifth slide"
                   >
                     <div
                       class="circle-icon"
                       data-circle="4"
                       data-name="first-gallery"
                     ></div>
-                  </div>
+                  </button>
 
-                  <div
+                  <button
+                    type="button"
                     class="circle-icon-div"
-                    tabindex="0"
                     data-circle="5"
                     data-name="first-gallery"
+                    aria-label="Select sixth slide"
                   >
                     <div
                       class="circle-icon"
                       data-circle="5"
                       data-name="first-gallery"
                     ></div>
-                  </div>
+                  </button>
                 </div>
               </div>
 
-              <div class="forward-arrow arrow-div" data-name="first-gallery">
+              <button type="button" class="forward-arrow" data-forward-arrow>
                 <img
-                  tabindex="0"
                   class="arrow"
-                  data-forward-arrow
                   src="<%=require('../src/assets/imgs/reshot-icon-arrow-chevron-right-WDGHUKQ634.svg') %>"
-                  alt="Forward Arrow Icon"
+                  alt="Forward Arrow"
                 />
-              </div>
+              </button>
             </div>
           </div>
         </section>

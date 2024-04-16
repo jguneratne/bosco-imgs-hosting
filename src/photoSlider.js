@@ -135,7 +135,7 @@ export function arrowCtrl() {
 
   activeSliderBox.currentActiveBox.addEventListener("keydown", (e) => {
     if (
-      (e.key === " " || e.key === "Enter") &&
+      (e.key === " " || e.key === "Enter" || e.key === "ArrowRight") &&
       e.target === getRightArrow.rightArrow
     ) {
       slideRight();

@@ -429,13 +429,9 @@ h2 {
   flex-wrap: wrap;
 }
 
-.circle-icon {
-  width: 2ch;
-  height: 2ch;
-  margin: 2ch;
-  border-radius: 50%;
-  border: 1px solid var(--light-font-col);
-  background-color: transparent;
+.circle-icon-div {
+  background: transparent;
+  border: none;
 }
 
 .circle-icon-div:focus-visible {
@@ -444,6 +440,15 @@ h2 {
 }
 
 .circle-icon-div--active {
+  background-color: transparent;
+}
+
+.circle-icon {
+  width: 2ch;
+  height: 2ch;
+  margin: 2ch;
+  border-radius: 50%;
+  border: 1px solid var(--light-font-col);
   background-color: transparent;
 }
 
@@ -457,6 +462,7 @@ h2 {
 
 .back-arrow,
 .forward-arrow {
+  background-color: transparent;
   width: min-content;
   justify-self: center;
   align-self: center;
@@ -468,7 +474,8 @@ h2 {
   outline: 2px solid transparent;
 }
 
-.arrow:focus-visible {
+.back-arrow:focus-visible,
+.back-arrow:focus-visible {
   outline: 2px solid var(--dropdown-item-col);
   border-radius: 0.5em;
 }
