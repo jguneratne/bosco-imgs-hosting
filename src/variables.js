@@ -184,6 +184,18 @@ export const getRightArrow = {
   },
 };
 
+export const getRightArrowIcon = {
+  rightArrowIcon: undefined,
+
+  get rightIconLocation() {
+    return this.rightArrowIcon;
+  },
+
+  set rightIconLocation(newRightIcon) {
+    this.rightArrowIcon = newRightIcon;
+  },
+};
+
 export const getLeftArrow = {
   leftArrow: undefined,
 
@@ -193,6 +205,18 @@ export const getLeftArrow = {
 
   set leftArrowLocation(newLeftArrow) {
     this.leftArrow = newLeftArrow;
+  },
+};
+
+export const getLeftArrowIcon = {
+  leftArrowIcon: undefined,
+
+  get leftIconLocation() {
+    return this.leftArrowIcon;
+  },
+
+  set leftIconLocation(newLeftIcon) {
+    this.leftArrowIcon = newLeftIcon;
   },
 };
 

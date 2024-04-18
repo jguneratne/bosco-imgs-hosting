@@ -14,7 +14,9 @@ import {
   circleIconDivs,
   circleIcons,
   getRightArrow,
+  getRightArrowIcon,
   getLeftArrow,
+  getLeftArrowIcon,
   setIndex,
   slidePosition,
   circleDivPosition,
@@ -54,9 +56,16 @@ export function sliderBoxCtrl() {
       );
       // console.log(getRightArrow.rightArrow);
 
+      getRightArrowIcon.rightIconLocation = thisSliderBox.querySelector(
+        "[data-icon-forward]"
+      );
+
       getLeftArrow.leftArrowLocation =
         thisSliderBox.querySelector("[data-back-arrow]");
       // console.log(getLeftArrow.leftArrow);
+
+      getLeftArrowIcon.leftIconLocation =
+        thisSliderBox.querySelector("[data-icon-back]");
 
       slidePosition.currentSlidePosition =
         galleryImgs.boxImgs[setIndex.currentIndex];
@@ -184,12 +193,18 @@ export function clickCircles() {
 
 export function arrowCtrl() {
   activeSliderBox.currentActiveBox.addEventListener("pointerdown", (e) => {
-    // console.log(e.target);
-    if (e.target === getRightArrow.rightArrow) {
+    console.log(e.target);
+    if (
+      e.target === getRightArrow.rightArrow ||
+      e.target === getRightArrowIcon.rightArrowIcon
+    ) {
       console.log("right");
       slideRight();
     }
-    if (e.target === getLeftArrow.leftArrow) {
+    if (
+      e.target === getLeftArrow.leftArrow ||
+      e.target === getLeftArrowIcon.leftArrowIcon
+    ) {
       console.log("left");
       slideLeft();
     }
@@ -197,15 +212,17 @@ export function arrowCtrl() {
 
   activeSliderBox.currentActiveBox.addEventListener("keydown", (e) => {
     if (
-      (e.key === " " || e.key === "Enter" || e.key === "ArrowRight") &&
-      e.target === getRightArrow.rightArrow
+      ((e.key === " " || e.key === "Enter" || e.key === "ArrowRight") &&
+        e.target === getRightArrow.rightArrow) ||
+      e.target === getRightArrowIcon.rightArrowIcon
     ) {
       slideRight();
     }
 
     if (
       (e.key === " " || e.key === "Enter") &&
-      e.target === getLeftArrow.leftArrow
+      (e.target === getLeftArrow.leftArrow ||
+        e.target === getLeftArrowIcon.leftArrowIcon)
     ) {
       slideLeft();
     }

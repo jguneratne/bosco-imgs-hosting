@@ -509,7 +509,8 @@ h2 {
 .back-arrow,
 .forward-arrow {
   background-color: transparent;
-  width: min-content;
+  width: 80%;
+  padding: 1em 0;
   justify-self: center;
   align-self: center;
   border: 2px solid transparent;
