@@ -34,6 +34,66 @@ export let getAnimationID = {
   },
 };
 
+export let sliderAnimationCtrlDiv = {
+  animationCtrlDiv: undefined,
+
+  get currentAnimationCtrlDiv() {
+    return this.animationCtrlDiv;
+  },
+
+  set currentAnimationCtrlDiv(newAnimationCtrlDiv) {
+    this.animationCtrlDiv = newAnimationCtrlDiv;
+  },
+};
+
+export let sliderPauseBtn = {
+  pauseBtn: undefined,
+
+  get currentPauseBtn() {
+    return this.pauseBtn;
+  },
+
+  set currentPauseBtn(newPauseBtn) {
+    this.pauseBtn = newPauseBtn;
+  },
+};
+
+export let sliderPauseIcon = {
+  pauseIcon: undefined,
+
+  get currentPauseIcon() {
+    return this.pauseIcon;
+  },
+
+  set currentPauseIcon(newPauseIcon) {
+    this.pauseIcon = newPauseIcon;
+  },
+};
+
+export let sliderPlayBtn = {
+  playBtn: undefined,
+
+  get currentPlayBtn() {
+    return this.playBtn;
+  },
+
+  set currentPlayBtn(newPlayBtn) {
+    this.playBtn = newPlayBtn;
+  },
+};
+
+export let sliderPlayIcon = {
+  playIcon: undefined,
+
+  get currentPlayIcon() {
+    return this.playIcon;
+  },
+
+  set currentPlayIcon(newPlayIcon) {
+    this.playIcon = newPlayIcon;
+  },
+};
+
 export const sliderBoxes = document.querySelectorAll(".slider-box");
 export const arrowDivs = document.querySelectorAll(".arrow-div");
 export const photoBoxes = document.querySelectorAll(".photo-box");

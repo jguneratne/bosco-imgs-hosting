@@ -1,6 +1,11 @@
 import {
   shortPageName,
   getAnimationID,
+  sliderAnimationCtrlDiv,
+  sliderPauseBtn,
+  sliderPlayBtn,
+  sliderPauseIcon,
+  sliderPlayIcon,
   sliderBoxes,
   activeSliderBox,
   activePhotoBox,
@@ -23,6 +28,16 @@ export function sliderBoxCtrl() {
 
       activeSliderBox.currentActiveBox = box;
       // console.log(activeSliderBox.activeBox);
+
+      sliderAnimationCtrlDiv.currentAnimationCtrlDiv = document.querySelector(
+        ".animation-ctrl-div"
+      );
+
+      sliderPauseBtn.currentPauseBtn = document.querySelector(".pause-btn");
+      sliderPauseIcon.currentPauseIcon = document.querySelector(".pause-icon");
+
+      sliderPlayBtn.currentPlayBtn = document.querySelector(".play-btn");
+      sliderPlayIcon.currentPlayIcon = document.querySelector(".play-icon");
 
       const thisSliderBox = activeSliderBox.currentActiveBox;
       // console.log(thisSliderBox);
@@ -77,15 +92,62 @@ export function sliderBoxCtrl() {
         "circle-icon--active"
       );
 
-      sliderAnimation();
+      sliderAnimationOn();
       clickCircles();
       arrowCtrl();
     }
   });
 }
 
-export function sliderAnimation() {
+export function sliderAnimationCtrl() {
+  sliderAnimationCtrlDiv.animationCtrlDiv.addEventListener(
+    "pointerdown",
+    (e) => {
+      if (
+        e.target === sliderPauseBtn.currentPauseBtn ||
+        e.target === sliderPauseIcon.currentPauseIcon
+      ) {
+        sliderAnimationOff();
+      }
+
+      if (
+        e.target === sliderPlayBtn.currentPlayBtn ||
+        e.target === sliderPlayIcon.currentPlayIcon
+      ) {
+        sliderAnimationOn();
+      }
+    }
+  );
+
+  sliderAnimationCtrlDiv.animationCtrlDiv.addEventListener("keydown", (e) => {
+    if (
+      (e.key === " " || e.key === "Enter") &&
+      (e.target === sliderPauseBtn.currentPauseBtn ||
+        e.target === sliderPauseIcon.currentPauseIcon)
+    ) {
+      sliderAnimationOff();
+    }
+
+    if (
+      (e.key === " " || e.key === "Enter") &&
+      (e.target === sliderPlayBtn.currentPlayBtn ||
+        e.target === sliderPlayIcon.currentPlayIcon)
+    ) {
+      sliderAnimationOn();
+    }
+  });
+}
+
+function sliderAnimationOn() {
+  sliderPauseBtn.currentPauseBtn.classList.add("pause-btn--active");
+  sliderPlayBtn.currentPlayBtn.classList.remove("play-btn--active");
   getAnimationID.animationIDValue = setInterval(slideRight, 3000);
+}
+
+function sliderAnimationOff() {
+  sliderPauseBtn.currentPauseBtn.classList.remove("pause-btn--active");
+  sliderPlayBtn.currentPlayBtn.classList.add("play-btn--active");
+  clearInterval(getAnimationID.animationID);
 }
 
 export function clickCircles() {

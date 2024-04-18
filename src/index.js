@@ -4,7 +4,7 @@ import { ctrlTabHighlight } from "./navStyles";
 
 import { galleriesClickMenu } from "./dropDown";
 
-import { sliderBoxCtrl } from "./photoSlider";
+import { sliderBoxCtrl, sliderAnimationCtrl } from "./photoSlider";
 
 console.log("photogallery");
 
@@ -13,4 +13,5 @@ window.addEventListener("load", (e) => {
   ctrlTabHighlight();
   galleriesClickMenu();
   sliderBoxCtrl();
+  sliderAnimationCtrl();
 });

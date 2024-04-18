@@ -405,8 +405,22 @@ h2 {
 .play-btn {
   grid-area: 1 / 1 / 2 / 2;
   background-color: transparent;
-  border: none;
+  border: 1px solid transparent;
+  margin: 0 1em;
   opacity: 70%;
+  visibility: hidden;
+}
+
+.pause-btn--active,
+.play-btn--active {
+  visibility: visible;
+}
+
+.pause-btn--active:focus,
+.play-btn--active:focus {
+  border: 1px solid var(--dark-hov-col);
+  outline: 1px solid var(--dark-hov-col);
+  border-radius: 1em;
 }
 
 .pause-btn:hover,
@@ -415,9 +429,12 @@ h2 {
   opacity: 100%;
 }
 
-.pause-icon,
+.pause-icon {
+  width: 55%;
+}
+
 .play-icon {
-  width: 50%;
+  width: 65%;
 }
 
 .slider-box {
@@ -427,7 +444,6 @@ h2 {
   border-radius: 3em;
   background-color: var(--slider-box-col);
   min-height: 0.625rem;
-  max-width: 95%;
   margin: 5ch auto 5ch auto;
 
   display: grid;
