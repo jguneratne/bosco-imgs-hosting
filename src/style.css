@@ -556,6 +556,12 @@ h2 {
   transition: opacity 500ms linear;
   visibility: visible;
   opacity: 1;
+  border: 1px solid transparent;
+}
+
+.photo-box .picture--active:focus {
+  border: 1px solid var(--light-font-col);
+  outline: 1px solid var(--light-font-col);
 }
 
 /* Contact Form */

@@ -75,34 +75,34 @@
               <button
                 type="button"
                 class="pause-btn"
-                title="Pause Gallery Animation"
+                title="Press Enter or Space to Pause Gallery Animation"
               >
                 <img
                   class="pause-icon"
                   src="../src/assets/imgs/pause-button-icon.svg"
-                  alt="Pause Gallery Animation"
+                  alt="Press Enter or Space to Pause Gallery Animation"
                 />
               </button>
 
               <button
                 type="button"
                 class="play-btn"
-                title="Start Gallery Animation"
+                title="Press Enter or Space to Start Gallery Animation"
               >
                 <img
                   class="play-icon"
                   src="../src/assets/imgs/play-button-icon.svg"
                   title="Start Gallery Animation"
-                  alt="Start Gallery Animation"
+                  alt="Press Enter or Space to Start Gallery Animation"
                 />
               </button>
             </div>
 
-            <div
+            <section
               class="slider-box"
               data-name="first-gallery"
               tabindex="0"
-              role="region"
+              aria-roledescription="photo slider"
               aria-label="wildlife gallery"
             >
               <!-- <div class="slider-row-one"></div> -->
@@ -116,7 +116,12 @@
               </button>
 
               <div class="photo-box" data-name="first-gallery">
-                <picture role="group" aria-label="Slide 1 of 6">
+                <picture
+                  role="group"
+                  aria-roledescription="slide"
+                  aria-label="Slide 1 of 6"
+                  tabindex="0"
+                >
                   <!-- BUNNY -->
                   <source
                     media="(300px <= width <=699px) and (orientation: portrait)"
@@ -159,7 +164,12 @@
                   />
                 </picture>
 
-                <picture role="group" aria-label="Slide 2 of 6">
+                <picture
+                  role="group"
+                  aria-roledescription="slide"
+                  aria-label="Slide 2 of 6"
+                  tabindex="0"
+                >
                   <!-- BEE -->
                   <source
                     media="(300px <= width <= 699px) and (orientation: portrait)"
@@ -202,7 +212,12 @@
                   />
                 </picture>
 
-                <picture role="group" aria-label="Slide 3 of 6">
+                <picture
+                  role="group"
+                  aria-roledescription="slide"
+                  aria-label="Slide 3 of 6"
+                  tabindex="0"
+                >
                   <!-- BIRD -->
                   <source
                     media="(300px <= width <= 699px) and (orientation: portrait)"
@@ -245,7 +260,12 @@
                   />
                 </picture>
 
-                <picture role="group" aria-label="Slide 4 of 6">
+                <picture
+                  role="group"
+                  aria-roledescription="slide"
+                  aria-label="Slide 4 of 6"
+                  tabindex="0"
+                >
                   <!-- GRASSHOPPER -->
                   <source
                     media="(300px <= width <= 699px) and (orientation: portrait)"
@@ -288,7 +308,12 @@
                   />
                 </picture>
 
-                <picture role="group" aria-label="Slide 5 of 6">
+                <picture
+                  role="group"
+                  aria-roledescription="slide"
+                  aria-label="Slide 5 of 6"
+                  tabindex="0"
+                >
                   <!-- SEAGULL -->
                   <source
                     media="(300px <= width <= 699px) and (orientation: portrait)"
@@ -331,7 +356,12 @@
                   />
                 </picture>
 
-                <picture role="group" aria-label="Slide 6 of 6">
+                <picture
+                  role="group"
+                  aria-roledescription="slide"
+                  aria-label="Slide 6 of 6"
+                  tabindex="0"
+                >
                   <!-- CATERPILLAR -->
                   <source
                     media="(300px <= width <= 699px) and (orientation: portrait)"
@@ -375,6 +405,15 @@
                 </picture>
               </div>
 
+              <button type="button" class="forward-arrow" data-forward-arrow>
+                <img
+                  data-icon-forward
+                  class="arrow"
+                  src="<%=require('../src/assets/imgs/reshot-icon-arrow-chevron-right-WDGHUKQ634.svg') %>"
+                  alt="Forward Arrow"
+                />
+              </button>
+
               <div class="img-dots-container" data-name="first-gallery">
                 <div class="img-dots" data-name="first-gallery">
                   <button
@@ -382,7 +421,7 @@
                     class="circle-icon-div"
                     data-circle="0"
                     data-name="first-gallery"
-                    aria-label="Select first slide"
+                    aria-label="Select slide 1 of 6"
                   >
                     <div
                       class="circle-icon"
@@ -396,7 +435,7 @@
                     class="circle-icon-div"
                     data-circle="1"
                     data-name="first-gallery"
-                    aria-label="Select second slide"
+                    aria-label="Select slide 2 of 6"
                   >
                     <div
                       class="circle-icon"
@@ -410,7 +449,7 @@
                     class="circle-icon-div"
                     data-circle="2"
                     data-name="first-gallery"
-                    aria-label="Select third slide"
+                    aria-label="Select slide 3 of 6"
                   >
                     <div
                       class="circle-icon"
@@ -424,7 +463,7 @@
                     class="circle-icon-div"
                     data-circle="3"
                     data-name="first-gallery"
-                    aria-label="Select fourth slide"
+                    aria-label="Select slide 4 of 6"
                   >
                     <div
                       class="circle-icon"
@@ -438,7 +477,7 @@
                     class="circle-icon-div"
                     data-circle="4"
                     data-name="first-gallery"
-                    aria-label="Select fifth slide"
+                    aria-label="Select slide 5 of 6"
                   >
                     <div
                       class="circle-icon"
@@ -452,7 +491,7 @@
                     class="circle-icon-div"
                     data-circle="5"
                     data-name="first-gallery"
-                    aria-label="Select sixth slide"
+                    aria-label="Select slide 6 of 6"
                   >
                     <div
                       class="circle-icon"
@@ -462,16 +501,7 @@
                   </button>
                 </div>
               </div>
-
-              <button type="button" class="forward-arrow" data-forward-arrow>
-                <img
-                  data-icon-forward
-                  class="arrow"
-                  src="<%=require('../src/assets/imgs/reshot-icon-arrow-chevron-right-WDGHUKQ634.svg') %>"
-                  alt="Forward Arrow"
-                />
-              </button>
-            </div>
+            </section>
           </div>
         </section>
       </main>

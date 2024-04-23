@@ -75,33 +75,33 @@
               <button
                 type="button"
                 class="pause-btn"
-                title="Pause Gallery Animation"
+                title="Press Enter or Space to Pause Gallery Animation"
               >
                 <img
                   class="pause-icon"
                   src="../src/assets/imgs/pause-button-icon.svg"
-                  alt="Pause Gallery Animation"
+                  alt="Press Enter or Space to Pause Gallery Animation"
                 />
               </button>
 
               <button
                 type="button"
                 class="play-btn"
-                title="Start Gallery Animation"
+                title="Press Enter or Space to Start Gallery Animation"
               >
                 <img
                   class="play-icon"
                   src="../src/assets/imgs/play-button-icon.svg"
-                  alt="Start Gallery Animation"
+                  alt="Press Enter or Space to Start Gallery Animation"
                 />
               </button>
             </div>
 
-            <div
+            <section
               class="slider-box"
               data-name="second-gallery"
               tabindex="0"
-              role="region"
+              aria-roledescription="photo slider"
               aria-label="wildlife gallery"
             >
               <button type="button" class="back-arrow" data-back-arrow>
@@ -114,7 +114,12 @@
               </button>
 
               <div class="photo-box" data-name="second-gallery">
-                <picture role="group" aria-label="Slide 1 of 10">
+                <picture
+                  role="group"
+                  aria-roledescription="slide"
+                  aria-label="Slide 1 of 10"
+                  tabindex="0"
+                >
                   <!-- Groomsmen Getting Ready -->
                   <source
                     media="(300px <= width <=699px) and (orientation: portrait)"
@@ -157,7 +162,12 @@
                   />
                 </picture>
 
-                <picture role="group" aria-label="Slide 2 of 10">
+                <picture
+                  role="group"
+                  aria-roledescription="slide"
+                  aria-label="Slide 2 of 10"
+                  tabindex="0"
+                >
                   <!-- Bridal Party in Mirror -->
                   <source
                     media="(300px <= width <=699px) and (orientation: portrait)"
@@ -200,7 +210,12 @@
                   />
                 </picture>
 
-                <picture role="group" aria-label="Slide 3 of 10">
+                <picture
+                  role="group"
+                  aria-roledescription="slide"
+                  aria-label="Slide 3 of 10"
+                  tabindex="0"
+                >
                   <!-- Boy with face paint.  -->
                   <source
                     media="(300px <= width <=699px) and (orientation: portrait)"
@@ -243,7 +258,12 @@
                   />
                 </picture>
 
-                <picture role="group" aria-label="Slide 4 of 10">
+                <picture
+                  role="group"
+                  aria-roledescription="slide"
+                  aria-label="Slide 4 of 10"
+                  tabindex="0"
+                >
                   <!-- Wedding Hairdo -->
                   <source
                     media="(300px <= width <=699px) and (orientation: portrait)"
@@ -286,7 +306,12 @@
                   />
                 </picture>
 
-                <picture role="group" aria-label="Slide 5 of 10">
+                <picture
+                  role="group"
+                  aria-roledescription="slide"
+                  aria-label="Slide 5 of 10"
+                  tabindex="0"
+                >
                   <!-- Singapore Wedding -->
                   <source
                     media="(300px <= width <=699px) and (orientation: portrait)"
@@ -329,7 +354,12 @@
                   />
                 </picture>
 
-                <picture role="group" aria-label="Slide 6 of 10">
+                <picture
+                  role="group"
+                  aria-roledescription="slide"
+                  aria-label="Slide 6 of 10"
+                  tabindex="0"
+                >
                   <!-- Boy bowling -->
                   <source
                     media="(300px <= width <=699px) and (orientation: portrait)"
@@ -372,7 +402,12 @@
                   />
                 </picture>
 
-                <picture role="group" aria-label="Slide 7 of 10">
+                <picture
+                  role="group"
+                  aria-roledescription="slide"
+                  aria-label="Slide 7 of 10"
+                  tabindex="0"
+                >
                   <!-- Bride putting on shoes. -->
                   <source
                     media="(300px <= width <=699px) and (orientation: portrait)"
@@ -415,7 +450,12 @@
                   />
                 </picture>
 
-                <picture role="group" aria-label="Slide 8 of 10">
+                <picture
+                  role="group"
+                  aria-roledescription="slide"
+                  aria-label="Slide 8 of 10"
+                  tabindex="0"
+                >
                   <!-- Wedding Toast -->
                   <source
                     media="(300px <= width <=699px) and (orientation: portrait)"
@@ -458,7 +498,12 @@
                   />
                 </picture>
 
-                <picture role="group" aria-label="Slide 9 of 10">
+                <picture
+                  role="group"
+                  aria-roledescription="slide"
+                  aria-label="Slide 9 of 10"
+                  tabindex="0"
+                >
                   <!-- Girl Drawing -->
                   <source
                     media="(300px <= width <=699px) and (orientation: portrait)"
@@ -501,7 +546,12 @@
                   />
                 </picture>
 
-                <picture role="group" aria-label="Slide 10 of 10">
+                <picture
+                  role="group"
+                  aria-roledescription="slide"
+                  aria-label="Slide 10 of 10"
+                  tabindex="0"
+                >
                   <!-- Cake Cutting / Copule sitting for dinner -->
                   <source
                     media="(300px <= width <=699px) and (orientation: portrait)"
@@ -545,6 +595,15 @@
                 </picture>
               </div>
 
+              <button type="button" class="forward-arrow" data-forward-arrow>
+                <img
+                  data-icon-forward
+                  class="arrow"
+                  src="<%=require('../src/assets/imgs/reshot-icon-arrow-chevron-right-WDGHUKQ634.svg') %>"
+                  alt="Forward Arrow"
+                />
+              </button>
+
               <div class="img-dots-container" data-name="second-gallery">
                 <div class="img-dots" data-name="second-gallery">
                   <button
@@ -552,7 +611,7 @@
                     class="circle-icon-div"
                     data-circle="0"
                     data-name="second-gallery"
-                    aria-label="Select first slide"
+                    aria-label="Select slide 1 of 10"
                   >
                     <div
                       class="circle-icon"
@@ -566,7 +625,7 @@
                     class="circle-icon-div"
                     data-circle="1"
                     data-name="second-gallery"
-                    aria-label="Select second slide"
+                    aria-label="Select slide 2 of 10"
                   >
                     <div
                       class="circle-icon"
@@ -580,7 +639,7 @@
                     class="circle-icon-div"
                     data-circle="2"
                     data-name="second-gallery"
-                    aria-label="Select third slide"
+                    aria-label="Select slide 3 of 10"
                   >
                     <div
                       class="circle-icon"
@@ -594,7 +653,7 @@
                     class="circle-icon-div"
                     data-circle="3"
                     data-name="second-gallery"
-                    aria-label="Select fourth slide"
+                    aria-label="Select slide 4 of 10"
                   >
                     <div
                       class="circle-icon"
@@ -608,7 +667,7 @@
                     class="circle-icon-div"
                     data-circle="4"
                     data-name="second-gallery"
-                    aria-label="Select fifth slide"
+                    aria-label="Select slide 5 of 10"
                   >
                     <div
                       class="circle-icon"
@@ -622,7 +681,7 @@
                     class="circle-icon-div"
                     data-circle="5"
                     data-name="second-gallery"
-                    aria-label="Select sixth slide"
+                    aria-label="Select slide 6 of 10"
                   >
                     <div
                       class="circle-icon"
@@ -636,7 +695,7 @@
                     class="circle-icon-div"
                     data-circle="6"
                     data-name="second-gallery"
-                    aria-label="Select seventh slide"
+                    aria-label="Select slide 7 of 10"
                   >
                     <div
                       class="circle-icon"
@@ -650,7 +709,7 @@
                     class="circle-icon-div"
                     data-circle="7"
                     data-name="second-gallery"
-                    aria-label="Select eigth slide"
+                    aria-label="Select slide 8 of 10"
                   >
                     <div
                       class="circle-icon"
@@ -664,7 +723,7 @@
                     class="circle-icon-div"
                     data-circle="8"
                     data-name="second-gallery"
-                    aria-label="Select ninth slide"
+                    aria-label="Select slide 9 of 10"
                   >
                     <div
                       class="circle-icon"
@@ -678,7 +737,7 @@
                     class="circle-icon-div"
                     data-circle="9"
                     data-name="second-gallery"
-                    aria-label="Select tenth slide"
+                    aria-label="Select slide 10 of 10"
                   >
                     <div
                       class="circle-icon"
@@ -688,16 +747,7 @@
                   </button>
                 </div>
               </div>
-
-              <button type="button" class="forward-arrow" data-forward-arrow>
-                <img
-                  data-icon-forward
-                  class="arrow"
-                  src="<%=require('../src/assets/imgs/reshot-icon-arrow-chevron-right-WDGHUKQ634.svg') %>"
-                  alt="Forward Arrow"
-                />
-              </button>
-            </div>
+            </section>
           </div>
         </section>
       </main>

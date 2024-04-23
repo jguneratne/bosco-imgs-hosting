@@ -102,13 +102,17 @@ export function sliderBoxCtrl() {
       );
 
       sliderAnimationOn();
+      sliderAnimationCtrl();
       clickCircles();
       arrowCtrl();
+      clickPhoto();
+    } else {
+      return;
     }
   });
 }
 
-export function sliderAnimationCtrl() {
+function sliderAnimationCtrl() {
   sliderAnimationCtrlDiv.animationCtrlDiv.addEventListener(
     "pointerdown",
     (e) => {
@@ -145,6 +149,14 @@ export function sliderAnimationCtrl() {
       sliderAnimationOn();
     }
   });
+
+  activePhotoBox.photoBox.addEventListener("mouseover", () => {
+    sliderAnimationOff();
+  });
+
+  activePhotoBox.photoBox.addEventListener("mouseout", () => {
+    sliderAnimationOn();
+  });
 }
 
 function sliderAnimationOn() {
@@ -159,7 +171,7 @@ function sliderAnimationOff() {
   clearInterval(getAnimationID.animationID);
 }
 
-export function clickCircles() {
+function clickCircles() {
   circleNav.currentCircleNav.addEventListener("pointerdown", (e) => {
     console.log(e.target);
 
@@ -191,7 +203,7 @@ export function clickCircles() {
   });
 }
 
-export function arrowCtrl() {
+function arrowCtrl() {
   activeSliderBox.currentActiveBox.addEventListener("pointerdown", (e) => {
     console.log(e.target);
     if (
@@ -220,12 +232,18 @@ export function arrowCtrl() {
     }
 
     if (
-      (e.key === " " || e.key === "Enter") &&
+      (e.key === " " || e.key === "Enter" || e.key === "ArrowLeft") &&
       (e.target === getLeftArrow.leftArrow ||
         e.target === getLeftArrowIcon.leftArrowIcon)
     ) {
       slideLeft();
     }
+  });
+}
+
+function clickPhoto() {
+  activePhotoBox.photoBox.addEventListener("pointerdown", () => {
+    slideRight();
   });
 }
 
@@ -326,6 +344,10 @@ function clearActiveState() {
   circleDivPosition.currentCircleDivPosition.classList.remove(
     "circle-icon-div--active"
   );
+  circleDivPosition.currentCircleDivPosition.removeAttribute(
+    "aria-current",
+    "true"
+  );
   circlePosition.currentCirclePosition.classList.remove("circle-icon--active");
 }
 
@@ -334,14 +356,9 @@ function addActiveState() {
   circleDivPosition.currentCircleDivPosition.classList.add(
     "circle-icon-div--active"
   );
+  circleDivPosition.currentCircleDivPosition.setAttribute(
+    "aria-current",
+    "true"
+  );
   circlePosition.currentCirclePosition.classList.add("circle-icon--active");
 }
-
-// export function resetSliderAnimation() {
-//   clearInterval(getAnimationID.animationID);
-// }
-
-// export function resetIndexes() {
-//   setIndex.targetIndex = 0;
-//   clearActiveState();
-// }
