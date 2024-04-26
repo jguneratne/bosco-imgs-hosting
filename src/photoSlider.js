@@ -149,14 +149,6 @@ function sliderAnimationCtrl() {
       sliderAnimationOn();
     }
   });
-
-  activePhotoBox.photoBox.addEventListener("mouseover", () => {
-    sliderAnimationOff();
-  });
-
-  activePhotoBox.photoBox.addEventListener("mouseout", () => {
-    sliderAnimationOn();
-  });
 }
 
 function sliderAnimationOn() {
