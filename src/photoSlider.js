@@ -337,7 +337,7 @@ function clearActiveState() {
     "circle-icon-div--active"
   );
   circleDivPosition.currentCircleDivPosition.removeAttribute(
-    "aria-current",
+    "aria-disabled",
     "true"
   );
   circlePosition.currentCirclePosition.classList.remove("circle-icon--active");
@@ -349,8 +349,9 @@ function addActiveState() {
     "circle-icon-div--active"
   );
   circleDivPosition.currentCircleDivPosition.setAttribute(
-    "aria-current",
+    "aria-disabled",
     "true"
   );
+
   circlePosition.currentCirclePosition.classList.add("circle-icon--active");
 }

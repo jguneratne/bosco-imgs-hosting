@@ -11,7 +11,7 @@
       <header class="header">
         <nav>
           <ul class="menu-items" id="tabs">
-            <div class="menu-btn hov-style" data-name="home" title="Home">
+            <div class="menu-btn hov-style" data-name="home">
               <li>
                 <a href="../dist/index.html">Home</a>
               </li>
@@ -36,7 +36,6 @@
                 <li
                   class="dropdown-item wildlife"
                   style="--delay: 1"
-                  title="Wildlife"
                   data-name="first-gal"
                 >
                   <a href="../dist/first-gallery.html">Wildlife</a>
@@ -44,7 +43,6 @@
                 <li
                   class="dropdown-item events"
                   style="--delay: 2"
-                  title="Events"
                   data-name="second-gal"
                 >
                   <a href="../dist/second-gallery.html">Events</a>
@@ -52,13 +50,13 @@
               </ul>
             </div>
 
-            <div class="menu-btn hov-style" data-name="about" title="About">
+            <div class="menu-btn hov-style" data-name="about">
               <li>
                 <a href="../dist/about.html">About</a>
               </li>
             </div>
 
-            <div class="menu-btn hov-style" data-name="contact" title="Contact">
+            <div class="menu-btn hov-style" data-name="contact">
               <li>
                 <a href="../dist/contact.html">Contact</a>
               </li>
@@ -102,6 +100,7 @@
               class="slider-box"
               data-name="first-gallery"
               tabindex="0"
+              role="group"
               aria-roledescription="photo slider"
               aria-label="wildlife gallery"
             >
@@ -116,13 +115,12 @@
               </button>
 
               <div class="photo-box" data-name="first-gallery">
+                <!-- BUNNY -->
                 <picture
-                  role="group"
                   aria-roledescription="slide"
                   aria-labelledby="slide1"
                   tabindex="0"
                 >
-                  <!-- BUNNY -->
                   <source
                     media="(300px <= width <=699px) and (orientation: portrait)"
                     srcset="<%=require('../src/assets/imgs/first-gal/Guneratne_2023.06.28_bunny-vertical-320p.jpg') %>"
@@ -160,18 +158,17 @@
 
                   <img
                     src="<%=require('../src/assets/imgs/first-gal/Guneratne_2023.06.28_bunny-horizontal-900p.jpg') %>"
-                    alt="Select Slide 1 of 6: Bunny eating long grass."
+                    alt="Slide 1 of 6: Bunny eating long grass."
                     id="slide1"
                   />
                 </picture>
 
+                <!-- BEE -->
                 <picture
-                  role="group"
                   aria-roledescription="slide"
                   aria-labelledby="slide2"
                   tabindex="0"
                 >
-                  <!-- BEE -->
                   <source
                     media="(300px <= width <= 699px) and (orientation: portrait)"
                     srcset="<%=require('../src/assets/imgs/first-gal/Guneratne_2023.06.09_bee-vertical-320p.jpg') %>"
@@ -209,18 +206,17 @@
 
                   <img
                     src="<%=require('../src/assets/imgs/first-gal/Guneratne_2023.06.09_bee-horizontal-900p.jpg') %>"
-                    alt="Select Slide 2 of 6: Honeybee on a sage flower."
+                    alt="Slide 2 of 6: Honeybee on a sage flower."
                     id="slide2"
                   />
                 </picture>
 
+                <!-- BIRD -->
                 <picture
-                  role="group"
                   aria-roledescription="slide"
                   aria-labelledby="slide3"
                   tabindex="0"
                 >
-                  <!-- BIRD -->
                   <source
                     media="(300px <= width <= 699px) and (orientation: portrait)"
                     srcset="<%=require('../src/assets/imgs/first-gal/Guneratne_2023.06.29_bird-vertical-320p.jpg') %>"
@@ -258,18 +254,17 @@
 
                   <img
                     src="<%=require('../src/assets/imgs/first-gal/Guneratne_2023.06.29_bird-horizontal-900p.jpg') %>"
-                    alt="Select Slide 3 of 6: Bird on a tree branch"
+                    alt="Slide 3 of 6: Bird on a tree branch."
                     id="slide3"
                   />
                 </picture>
 
+                <!-- GRASSHOPPER -->
                 <picture
-                  role="group"
                   aria-roledescription="slide"
                   aria-labelledby="slide4"
                   tabindex="0"
                 >
-                  <!-- GRASSHOPPER -->
                   <source
                     media="(300px <= width <= 699px) and (orientation: portrait)"
                     srcset="<%=require('../src/assets/imgs/first-gal/Guneratne_2023.08.26_grasshopper-vertical-320p.jpg') %>"
@@ -307,18 +302,17 @@
 
                   <img
                     src="<%=require('../src/assets/imgs/first-gal/Guneratne_2023.08.26_grasshopper-horizontal-900p.jpg') %>"
-                    alt="Select Slide 4 of 6: Grasshopper on a leaf."
+                    alt="Slide 4 of 6: Grasshopper on a leaf."
                     id="slide4"
                   />
                 </picture>
 
+                <!-- SEAGULL -->
                 <picture
-                  role="group"
                   aria-roledescription="slide"
                   aria-labelledby="slide5"
                   tabindex="0"
                 >
-                  <!-- SEAGULL -->
                   <source
                     media="(300px <= width <= 699px) and (orientation: portrait)"
                     srcset="<%=require('../src/assets/imgs/first-gal/Guneratne_2023.08.20_seagull-vertical-320p.jpg') %>"
@@ -356,18 +350,17 @@
 
                   <img
                     src="<%=require('../src/assets/imgs/first-gal/Guneratne_2023.08.20_seagull-horizontal-900p.jpg') %>"
-                    alt="Select Slide 5 of 6: Seagull at the ocean."
+                    alt="Slide 5 of 6: Seagull at the ocean."
                     id="slide5"
                   />
                 </picture>
 
+                <!-- CATERPILLAR -->
                 <picture
-                  role="group"
                   aria-roledescription="slide"
                   aria-labelledby="slide6"
                   tabindex="0"
                 >
-                  <!-- CATERPILLAR -->
                   <source
                     media="(300px <= width <= 699px) and (orientation: portrait)"
                     srcset="<%=require('../src/assets/imgs/first-gal/Guneratne_2023.09.05_caterpillar-vertical-320p.jpg') %>"
@@ -405,7 +398,7 @@
 
                   <img
                     src="<%=require('../src/assets/imgs/first-gal/Guneratne_2023.09.05_caterpillar-horizontal-900p.jpg') %>"
-                    alt="Select Slide 6 of 6: Caterpillar on a dill plant."
+                    alt="Slide 6 of 6: Caterpillar on a dill plant."
                     id="slide6"
                   />
                 </picture>
@@ -427,7 +420,7 @@
                     class="circle-icon-div"
                     data-circle="0"
                     data-name="first-gallery"
-                    aria-labelledby="slide1"
+                    aria-label="Select Slide 1 of 6: Bunny eating long grass."
                   >
                     <div
                       class="circle-icon"
@@ -441,7 +434,7 @@
                     class="circle-icon-div"
                     data-circle="1"
                     data-name="first-gallery"
-                    aria-labelledby="slide2"
+                    aria-label="Select Slide 2 of 6: Honeybee on a sage flower."
                   >
                     <div
                       class="circle-icon"
@@ -455,7 +448,7 @@
                     class="circle-icon-div"
                     data-circle="2"
                     data-name="first-gallery"
-                    aria-labelledby="slide3"
+                    aria-label="Select Slide 3 of 6: Bird on a tree branch."
                   >
                     <div
                       class="circle-icon"
@@ -469,7 +462,7 @@
                     class="circle-icon-div"
                     data-circle="3"
                     data-name="first-gallery"
-                    aria-labelledby="slide4"
+                    aria-label="Select Slide 4 of 6: Grasshopper on a leaf."
                   >
                     <div
                       class="circle-icon"
@@ -483,7 +476,7 @@
                     class="circle-icon-div"
                     data-circle="4"
                     data-name="first-gallery"
-                    aria-labelledby="slide5"
+                    aria-label="Select Slide 5 of 6: Seagull at the ocean."
                   >
                     <div
                       class="circle-icon"
@@ -497,7 +490,7 @@
                     class="circle-icon-div"
                     data-circle="5"
                     data-name="first-gallery"
-                    aria-labelledby="slide6"
+                    aria-label="Select Slide 6 of 6: Caterpillar on a dill plant."
                   >
                     <div
                       class="circle-icon"
