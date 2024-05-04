@@ -1,3 +1,7 @@
+// Accessibility
+export const reduceMotion =
+  window.matchMedia("(prefers-reduced-motion: reduce)") === true;
+
 // Menu Variables
 export const currentPage = window.location.href;
 export const fullPageName = currentPage.substring(

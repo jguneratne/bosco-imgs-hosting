@@ -1,4 +1,5 @@
 import {
+  reduceMotion,
   shortPageName,
   getAnimationID,
   sliderAnimationCtrlDiv,
@@ -152,9 +153,13 @@ function sliderAnimationCtrl() {
 }
 
 function sliderAnimationOn() {
-  sliderPauseBtn.currentPauseBtn.classList.add("pause-btn--active");
-  sliderPlayBtn.currentPlayBtn.classList.remove("play-btn--active");
-  getAnimationID.animationIDValue = setInterval(slideRight, 3000);
+  if (!!reduceMotion) {
+    sliderPauseBtn.currentPauseBtn.classList.add("pause-btn--active");
+    sliderPlayBtn.currentPlayBtn.classList.remove("play-btn--active");
+    getAnimationID.animationIDValue = setInterval(slideRight, 3000);
+  } else {
+    sliderAnimationOff();
+  }
 }
 
 function sliderAnimationOff() {
