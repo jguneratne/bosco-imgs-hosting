@@ -102,7 +102,7 @@ export function sliderBoxCtrl() {
         "circle-icon--active"
       );
 
-      sliderAnimationOn();
+      animationAccessibility();
       sliderAnimationCtrl();
       clickCircles();
       arrowCtrl();
@@ -152,14 +152,22 @@ function sliderAnimationCtrl() {
   });
 }
 
-function sliderAnimationOn() {
-  if (!!reduceMotion) {
-    sliderPauseBtn.currentPauseBtn.classList.add("pause-btn--active");
-    sliderPlayBtn.currentPlayBtn.classList.remove("play-btn--active");
-    getAnimationID.animationIDValue = setInterval(slideRight, 3000);
-  } else {
+function animationAccessibility() {
+  console.log(reduceMotion);
+
+  if (reduceMotion) {
     sliderAnimationOff();
   }
+
+  if (!reduceMotion) {
+    sliderAnimationOn();
+  }
+}
+
+function sliderAnimationOn() {
+  sliderPauseBtn.currentPauseBtn.classList.add("pause-btn--active");
+  sliderPlayBtn.currentPlayBtn.classList.remove("play-btn--active");
+  getAnimationID.animationIDValue = setInterval(slideRight, 3000);
 }
 
 function sliderAnimationOff() {
