@@ -48,6 +48,7 @@ export function sliderBoxCtrl() {
       activePhotoBox.currentActivePhotoBox =
         thisSliderBox.querySelector(".photo-box");
       // console.log(activePhotoBox.photoBox);
+      activePhotoBox.photoBox.setAttribute("aria-live", "polite");
 
       galleryImgs.boxImgsArray = Array.from(activePhotoBox.photoBox.children);
       // console.log(galleryImgs.boxImgs);
@@ -106,7 +107,6 @@ export function sliderBoxCtrl() {
       sliderAnimationCtrl();
       clickCircles();
       arrowCtrl();
-      clickPhoto();
     } else {
       return;
     }
@@ -243,12 +243,6 @@ function arrowCtrl() {
     ) {
       slideLeft();
     }
-  });
-}
-
-function clickPhoto() {
-  activePhotoBox.photoBox.addEventListener("pointerdown", () => {
-    slideRight();
   });
 }
 

@@ -557,6 +557,7 @@ h2 {
   visibility: visible;
   opacity: 1;
   border: 1px solid transparent;
+  outline: 1px solid transparent;
 }
 
 .photo-box .picture--active:focus {
