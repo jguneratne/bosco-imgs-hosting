@@ -19,7 +19,7 @@ module.exports = {
   devtool: "inline-source-map",
   plugins: [
     new HtmlWebpackPlugin({
-      title: "Home: Photo Gallery",
+      title: "Home: Jenn Guneratne Photography",
       filename: "index.html",
       template: "src/template.ejs",
       inject: "body",
