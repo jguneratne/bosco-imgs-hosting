@@ -48,7 +48,6 @@ export function sliderBoxCtrl() {
       activePhotoBox.currentActivePhotoBox =
         thisSliderBox.querySelector(".photo-box");
       // console.log(activePhotoBox.photoBox);
-      activePhotoBox.photoBox.setAttribute("aria-live", "polite");
 
       galleryImgs.boxImgsArray = Array.from(activePhotoBox.photoBox.children);
       // console.log(galleryImgs.boxImgs);
@@ -167,12 +166,14 @@ function animationAccessibility() {
 function sliderAnimationOn() {
   sliderPauseBtn.currentPauseBtn.classList.add("pause-btn--active");
   sliderPlayBtn.currentPlayBtn.classList.remove("play-btn--active");
+  activePhotoBox.photoBox.setAttribute("aria-live", "off");
   getAnimationID.animationIDValue = setInterval(slideRight, 3000);
 }
 
 function sliderAnimationOff() {
   sliderPauseBtn.currentPauseBtn.classList.remove("pause-btn--active");
   sliderPlayBtn.currentPlayBtn.classList.add("play-btn--active");
+  activePhotoBox.photoBox.setAttribute("aria-live", "polite");
   clearInterval(getAnimationID.animationID);
 }
 
