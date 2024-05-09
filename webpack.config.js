@@ -19,14 +19,14 @@ module.exports = {
   devtool: "inline-source-map",
   plugins: [
     new HtmlWebpackPlugin({
-      title: "Home: Jenn Guneratne Photography",
+      title: "Jenn Guneratne Photography: Homepage",
       filename: "index.html",
       template: "src/template.ejs",
       inject: "body",
       scriptloading: ["module"],
     }),
     new HtmlWebpackPlugin({
-      title: "Galleries",
+      title: "Photo Galleries",
       filename: "galleries.html",
       template: "src/galleries.ejs",
       inject: "body",
@@ -47,14 +47,14 @@ module.exports = {
       scriptloading: ["module"],
     }),
     new HtmlWebpackPlugin({
-      title: "About",
+      title: "About: Jenn Guneratne Photography",
       filename: "about.html",
       template: "src/about.ejs",
       inject: "body",
       scriptloading: ["module"],
     }),
     new HtmlWebpackPlugin({
-      title: "Contact",
+      title: "Contact: Jenn Guneratne Photography",
       filename: "contact.html",
       template: "src/contact.ejs",
       inject: "body",

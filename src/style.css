@@ -141,17 +141,17 @@ li {
   cursor: pointer;
 }
 
-.menu-btn.selected li a {
+.menu-btn.selected a {
   color: var(--dark-font-col);
   text-decoration: var(--dark-font-col);
 }
 
-.menu-btn.selected li a:focus-visible {
+.menu-btn.selected a:focus-visible {
   outline: 3px solid var(--dark-hov-col);
   border-radius: 0.5em;
 }
 
-.menu-btn li a:focus-visible {
+.menu-btn a:focus-visible {
   outline: 3px solid #fff;
   border-radius: 0.5em;
 }

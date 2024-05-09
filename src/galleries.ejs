@@ -11,11 +11,9 @@
       <header class="header">
         <nav>
           <ul class="menu-items" id="tabs">
-            <div class="menu-btn hov-style" data-name="home">
-              <li>
-                <a href="../dist/index.html">Home</a>
-              </li>
-            </div>
+            <li class="menu-btn hov-style" data-name="index">
+              <a aria-label="Home Page" href="../dist/index.html">Home</a>
+            </li>
 
             <div
               class="dropdown-div menu-btn gal-hov dropdown-btn"
@@ -23,11 +21,9 @@
               title="Galleries"
             >
               <div class="gal-btn-div">
-                <ul>
-                  <li>
-                    <a href="#galleries">Galleries</a>
-                  </li>
-                </ul>
+                <li aria-label="Click to Open Submenu">
+                  <a href="#galleries">Galleries</a>
+                </li>
 
                 <div class="gal-arrow"></div>
               </div>
@@ -37,6 +33,7 @@
                   class="dropdown-item wildlife"
                   style="--delay: 1"
                   data-name="first-gal"
+                  aria-label="Click to Visit Gallery"
                 >
                   <a href="../dist/first-gallery.html">Wildlife</a>
                 </li>
@@ -44,23 +41,22 @@
                   class="dropdown-item events"
                   style="--delay: 2"
                   data-name="second-gal"
+                  aria-label="Click to Visit Gallery"
                 >
                   <a href="../dist/second-gallery.html">Events</a>
                 </li>
               </ul>
             </div>
 
-            <div class="menu-btn hov-style" data-name="about">
-              <li>
-                <a href="../dist/about.html">About</a>
-              </li>
-            </div>
+            <li class="menu-btn hov-style" data-name="about">
+              <a aria-label="About Page" href="../dist/about.html">About</a>
+            </li>
 
-            <div class="menu-btn hov-style" data-name="contact">
-              <li>
-                <a href="../dist/contact.html">Contact</a>
-              </li>
-            </div>
+            <li class="menu-btn hov-style" data-name="contact">
+              <a aria-label="Contact Page" href="../dist/contact.html"
+                >Contact</a
+              >
+            </li>
           </ul>
         </nav>
       </header>
