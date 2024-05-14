@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= htmlWebpackPlugin.options.title%></title>
+  </head>
+
+  <body>
+    <div class="container">
+      <header class="header">
+        <nav>
+          <ul class="menu-items" id="tabs">
+            <li class="menu-btn hov-style" data-name="index">
+              <a aria-label="Home Page" href="../dist/index.html">Home</a>
+            </li>
+
+            <div
+              class="dropdown-div menu-btn gal-hov dropdown-btn"
+              data-name="galleries"
+              title="Galleries"
+            >
+              <div class="gal-btn-div">
+                <li aria-label="Click to Open Submenu">
+                  <a href="#galleries">Galleries</a>
+                </li>
+
+                <div class="gal-arrow"></div>
+              </div>
+
+              <ul class="dropdown-content">
+                <li
+                  class="dropdown-item birds"
+                  style="--delay: 1"
+                  data-name="birds-gallery"
+                  aria-label="Click to Visit Gallery"
+                >
+                  <a href="../dist/birds-gallery.html">Birds</a>
+                </li>
+                <li
+                  class="dropdown-item insects"
+                  style="--delay: 2"
+                  data-name="insects-gallery"
+                  aria-label="Click to Visit Gallery"
+                >
+                  <a href="../dist/insects-gallery.html">Insects</a>
+                </li>
+                <li
+                  class="dropdown-item small-animals"
+                  style="--delay: 3"
+                  data-name="small-animals-gallery"
+                  aria-label="Click to Visit Gallery"
+                >
+                  <a href="../dist/small-animals-gallery.html">Small Animals</a>
+                </li>
+              </ul>
+            </div>
+
+            <li class="menu-btn hov-style" data-name="about">
+              <a aria-label="About Page" href="../dist/about.html">About</a>
+            </li>
+
+            <li class="menu-btn hov-style" data-name="contact">
+              <a aria-label="Contact Page" href="../dist/contact.html"
+                >Contact</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </header>
+
+      <main class="main">
+        <!-- SMALL ANIMALS GALLERY -->
+        <section class="tab-content" id="small-animals-gallery">
+          <div class="gallery">
+            <div class="animation-ctrl-div">
+              <button
+                type="button"
+                class="pause-btn"
+                title="Press Enter or Space to Pause Gallery Animation"
+              >
+                <img
+                  class="pause-icon"
+                  src="../src/assets/imgs/pause-button-icon.svg"
+                  alt="Press Enter or Space to Pause Gallery Animation"
+                />
+              </button>
+
+              <button
+                type="button"
+                class="play-btn"
+                title="Press Enter or Space to Start Gallery Animation"
+              >
+                <img
+                  class="play-icon"
+                  src="../src/assets/imgs/play-button-icon.svg"
+                  title="Start Gallery Animation"
+                  alt="Press Enter or Space to Start Gallery Animation"
+                />
+              </button>
+            </div>
+
+            <section
+              class="slider-box"
+              data-name="small-animals-gallery"
+              tabindex="0"
+              role="region"
+              aria-roledescription="photo slider"
+              aria-label="Small Animals Gallery"
+            >
+              <!-- <div class="slider-row-one"></div> -->
+              <button type="button" class="back-arrow" data-back-arrow>
+                <img
+                  data-icon-back
+                  class="arrow"
+                  src="<%=require('../src/assets/imgs/reshot-icon-arrow-chevron-left-975UQXVKZF.svg') %>"
+                  alt="Back Arrow"
+                />
+              </button>
+
+              <div class="photo-box" data-name="small-animals-gallery">
+                <!-- BUNNY EATING GRASS -->
+                <picture
+                  class="picture"
+                  aria-role="group"
+                  aria-roledescription="slide"
+                  aria-labelledby="slide1"
+                  tabindex="0"
+                >
+                  <source
+                    media="(300px <= width <=699px) and (orientation: portrait)"
+                    srcset="<%=require('../src/assets/imgs/small-animals-gal/Guneratne_2023.06.28_bunny_grass-vertical-320p.jpg') %>"
+                  />
+
+                  <source
+                    media="(700px <= width <= 799px) and (orientation: portrait)"
+                    srcset="<%=require('../src/assets/imgs/small-animals-gal/Guneratne_2023.06.28_bunny_grass-vertical-460p.jpg') %>"
+                  />
+
+                  <source
+                    media="(800px <= width <= 1020px) and (orientation: portrait)"
+                    srcset="<%=require('../src/assets/imgs/small-animals-gal/Guneratne_2023.06.28_bunny_grass-vertical-580p.jpg') %>"
+                  />
+
+                  <source
+                    media="(1021px <= width <= 1280px) and (orientation: portrait)"
+                    srcset="<%=require('../src/assets/imgs/small-animals-gal/Guneratne_2023.06.28_bunny_grass-vertical-700p.jpg') %>"
+                  />
+
+                  <source
+                    media="(640px <= width <= 959px) and (orientation: landscape)"
+                    srcset="<%=require('../src/assets/imgs/small-animals-gal/Guneratne_2023.06.28_bunny_grass-horizontal-280p.jpg') %>"
+                  />
+
+                  <source
+                    media="(960px <= width <= 1279px) and (orientation: landscape)"
+                    srcset="<%=require('../src/assets/imgs/small-animals-gal/Guneratne_2023.06.28_bunny_grass-horizontal-460p.jpg') %>"
+                  />
+
+                  <source
+                    media="(1280px <= width <= 1599px) and (orientation: landscape)"
+                    srcset="<%=require('../src/assets/imgs/small-animals-gal/Guneratne_2023.06.28_bunny_grass-horizontal-600p.jpg') %>"
+                  />
+
+                  <img
+                    src="<%=require('../src/assets/imgs/small-animals-gal/Guneratne_2023.06.28_bunny_grass-horizontal-900p.jpg') %>"
+                    alt="Slide 1 of 6: A rabbit eating long grass. The landscape view shows the side view of a rabbit, facing to the left of the frame with a long piece of grass in its mouth. The portrait view shows a rabbit standing on its hind legs reaching up to nibble on a piece of long grass above its head. The rabbit's back is to the viewer and its head is reaching up toward the top left corner of the frame."
+                    id="slide1"
+                  />
+                </picture>
+
+                <!-- SQUIRREL IN TREE -->
+                <picture
+                  class="picture"
+                  role="group"
+                  aria-roledescription="slide"
+                  aria-labelledby="slide2"
+                  tabindex="0"
+                >
+                  <source
+                    media="(300px <= width <= 699px) and (orientation: portrait)"
+                    srcset="<%=require('../src/assets/imgs/small-animals-gal/Guneratne_2024.05.03_tree-squirrel-verical-320p.jpg') %>"
+                  />
+
+                  <source
+                    media="(700px <= width <= 799px) and (orientation: portrait)"
+                    srcset="<%=require('../src/assets/imgs/small-animals-gal/Guneratne_2024.05.03_tree-squirrel-verical-460p.jpg') %>"
+                  />
+
+                  <source
+                    media="(800px <= width <= 1020px) and (orientation: portrait)"
+                    srcset="<%=require('../src/assets/imgs/small-animals-gal/Guneratne_2024.05.03_tree-squirrel-verical-580p.jpg') %>"
+                  />
+
+                  <source
+                    media="(1021px <= width <= 1280px) and (orientation: portrait)"
+                    srcset="<%=require('../src/assets/imgs/small-animals-gal/Guneratne_2024.05.03_tree-squirrel-verical-700p.jpg') %>"
+                  />
+
+                  <source
+                    media="(640px <= width <= 959px) and (orientation: landscape)"
+                    srcset="<%=require('../src/assets/imgs/small-animals-gal/Guneratne_2024.05.03_tree-squirrel-horizontal-280p.jpg') %>"
+                  />
+
+                  <source
+                    media="(960px <= width <= 1279px) and (orientation: landscape)"
+                    srcset="<%=require('../src/assets/imgs/small-animals-gal/Guneratne_2024.05.03_tree-squirrel-horizontal-460p.jpg') %>"
+                  />
+
+                  <source
+                    media="(1280px <= width <= 1599px) and (orientation: landscape)"
+                    srcset="<%=require('../src/assets/imgs/small-animals-gal/Guneratne_2024.05.03_tree-squirrel-horizontal-600p.jpg') %>"
+                  />
+
+                  <img
+                    src="<%=require('../src/assets/imgs/small-animals-gal/Guneratne_2024.05.03_tree-squirrel-horizontal-900p.jpg') %>"
+                    alt="Slide 2 of 6: A squirrel climbing a thin branch of a cherry tree that has young leaves and spring buds. The squirrel is partially hidden behind the leaves, holding onto one of them, with its face peering over the leaf at the camera."
+                    id="slide2"
+                  />
+                </picture>
+
+                <!-- BUNNY EAR GLOW -->
+                <picture
+                  class="picture"
+                  role="group"
+                  aria-roledescription="slide"
+                  aria-labelledby="slide3"
+                  tabindex="0"
+                >
+                  <source
+                    media="(300px <= width <= 699px) and (orientation: portrait)"
+                    srcset="<%=require('../src/assets/imgs/small-animals-gal/Guneratne_2023.07.30_bunny_glow-vertical-320p.jpg') %>"
+                  />
+
+                  <source
+                    media="(700px <= width <= 799px) and (orientation: portrait)"
+                    srcset="<%=require('../src/assets/imgs/small-animals-gal/Guneratne_2023.07.30_bunny_glow-vertical-460p.jpg') %>"
+                  />
+
+                  <source
+                    media="(800px <= width <= 1020px) and (orientation: portrait)"
+                    srcset="<%=require('../src/assets/imgs/small-animals-gal/Guneratne_2023.07.30_bunny_glow-vertical-580p.jpg') %>"
+                  />
+
+                  <source
+                    media="(1021px <= width <= 1280px) and (orientation: portrait)"
+                    srcset="<%=require('../src/assets/imgs/small-animals-gal/Guneratne_2023.07.30_bunny_glow-vertical-700p.jpg') %>"
+                  />
+
+                  <source
+                    media="(640px <= width <= 959px) and (orientation: landscape)"
+                    srcset="<%=require('../src/assets/imgs/small-animals-gal/Guneratne_2023.07.30_bunny_glow-horizontal-280p.jpg') %>"
+                  />
+
+                  <source
+                    media="(960px <= width <= 1279px) and (orientation: landscape)"
+                    srcset="<%=require('../src/assets/imgs/small-animals-gal/Guneratne_2023.07.30_bunny_glow-horizontal-460p.jpg') %>"
+                  />
+
+                  <source
+                    media="(1280px <= width <= 1599px) and (orientation: landscape)"
+                    srcset="<%=require('../src/assets/imgs/small-animals-gal/Guneratne_2023.07.30_bunny_glow-horizontal-600p.jpg') %>"
+                  />
+
+                  <img
+                    src="<%=require('../src/assets/imgs/small-animals-gal/Guneratne_2023.07.30_bunny_glow-horizontal-900p.jpg') %>"
+                    alt="Slide 3 of 6: A rabbit sitting in long grass staring straight ahead at the camera, with the glow of sunset hitting its left ear from behind, making it look almost translucent."
+                    id="slide3"
+                  />
+                </picture>
+
+                <!-- SKUNK -->
+                <picture
+                  class="picture"
+                  role="group"
+                  aria-roledescription="slide"
+                  aria-labelledby="slide4"
+                  tabindex="0"
+                >
+                  <source
+                    media="(300px <= width <= 699px) and (orientation: portrait)"
+                    srcset="<%=require('../src/assets/imgs/small-animals-gal/Guneratne_2023.08.22_skunk-vertical-320p.jpg') %>"
+                  />
+
+                  <source
+                    media="(700px <= width <= 799px) and (orientation: portrait)"
+                    srcset="<%=require('../src/assets/imgs/small-animals-gal/Guneratne_2023.08.22_skunk-vertical-460p.jpg') %>"
+                  />
+
+                  <source
+                    media="(800px <= width <= 1020px) and (orientation: portrait)"
+                    srcset="<%=require('../src/assets/imgs/small-animals-gal/Guneratne_2023.08.22_skunk-vertical-580p.jpg') %>"
+                  />
+
+                  <source
+                    media="(1021px <= width <= 1280px) and (orientation: portrait)"
+                    srcset="<%=require('../src/assets/imgs/small-animals-gal/Guneratne_2023.08.22_skunk-vertical-700p.jpg') %>"
+                  />
+
+                  <source
+                    media="(640px <= width <= 959px) and (orientation: landscape)"
+                    srcset="<%=require('../src/assets/imgs/small-animals-gal/Guneratne_2023.08.22_skunk-horizontal-280p.jpg') %>"
+                  />
+
+                  <source
+                    media="(960px <= width <= 1279px) and (orientation: landscape)"
+                    srcset="<%=require('../src/assets/imgs/small-animals-gal/Guneratne_2023.08.22_skunk-horizontal-460p.jpg') %>"
+                  />
+
+                  <source
+                    media="(1280px <= width <= 1599px) and (orientation: landscape)"
+                    srcset="<%=require('../src/assets/imgs/small-animals-gal/Guneratne_2023.08.22_skunk-horizontal-600p.jpg') %>"
+                  />
+
+                  <img
+                    src="<%=require('../src/assets/imgs/small-animals-gal/Guneratne_2023.08.22_skunk-horizontal-900p.jpg') %>"
+                    alt="Slide 4 of 6: A skunk walking toward the left of the frame with its bushy tail in the air, partially hidden by out-of-focus green branches, with a dead tree stump just behind it."
+                    id="slide4"
+                  />
+                </picture>
+
+                <!-- BUNNY CLOSEUP -->
+                <picture
+                  class="picture"
+                  role="group"
+                  aria-roledescription="slide"
+                  aria-labelledby="slide6"
+                  tabindex="0"
+                >
+                  <source
+                    media="(300px <= width <= 699px) and (orientation: portrait)"
+                    srcset="<%=require('../src/assets/imgs/small-animals-gal/Guneratne_2023.08.11_bunny_close-vertical-320p.jpg') %>"
+                  />
+
+                  <source
+                    media="(700px <= width <= 799px) and (orientation: portrait)"
+                    srcset="<%=require('../src/assets/imgs/small-animals-gal/Guneratne_2023.08.11_bunny_close-vertical-460p.jpg') %>"
+                  />
+
+                  <source
+                    media="(800px <= width <= 1020px) and (orientation: portrait)"
+                    srcset="<%=require('../src/assets/imgs/small-animals-gal/Guneratne_2023.08.11_bunny_close-vertical-580p.jpg') %>"
+                  />
+
+                  <source
+                    media="(1021px <= width <= 1280px) and (orientation: portrait)"
+                    srcset="<%=require('../src/assets/imgs/small-animals-gal/Guneratne_2023.08.11_bunny_close-vertical-700p.jpg') %>"
+                  />
+
+                  <source
+                    media="(640px <= width <= 959px) and (orientation: landscape)"
+                    srcset="<%=require('../src/assets/imgs/small-animals-gal/Guneratne_2023.08.11_bunny_close-horizontal-280p.jpg') %>"
+                  />
+
+                  <source
+                    media="(960px <= width <= 1279px) and (orientation: landscape)"
+                    srcset="<%=require('../src/assets/imgs/small-animals-gal/Guneratne_2023.08.11_bunny_close-horizontal-460p.jpg') %>"
+                  />
+
+                  <source
+                    media="(1280px <= width <= 1599px) and (orientation: landscape)"
+                    srcset="<%=require('../src/assets/imgs/small-animals-gal/Guneratne_2023.08.11_bunny_close-horizontal-600p.jpg') %>"
+                  />
+
+                  <img
+                    src="<%=require('../src/assets/imgs/small-animals-gal/Guneratne_2023.08.11_bunny_close-horizontal-900p.jpg') %>"
+                    alt="Slide 5 of 6: A closeup portrait of a rabbit that is sitting on the ground peering through long blades of grass, looking at the viewer, while also nibbling on the grass."
+                    id="slide6"
+                  />
+                </picture>
+
+                <!-- SQUIRREL WITH NUT -->
+                <picture
+                  class="picture"
+                  role="group"
+                  aria-roledescription="slide"
+                  aria-labelledby="slide5"
+                  tabindex="0"
+                >
+                  <source
+                    media="(300px <= width <= 699px) and (orientation: portrait)"
+                    srcset="<%=require('../src/assets/imgs/small-animals-gal/Guneratne_2023.11.19_squirrel_nut-vertical-320p.jpg') %>"
+                  />
+
+                  <source
+                    media="(700px <= width <= 799px) and (orientation: portrait)"
+                    srcset="<%=require('../src/assets/imgs/small-animals-gal/Guneratne_2023.11.19_squirrel_nut-vertical-460p.jpg') %>"
+                  />
+
+                  <source
+                    media="(800px <= width <= 1020px) and (orientation: portrait)"
+                    srcset="<%=require('../src/assets/imgs/small-animals-gal/Guneratne_2023.11.19_squirrel_nut-vertical-580p.jpg') %>"
+                  />
+
+                  <source
+                    media="(1021px <= width <= 1280px) and (orientation: portrait)"
+                    srcset="<%=require('../src/assets/imgs/small-animals-gal/Guneratne_2023.11.19_squirrel_nut-vertical-700p.jpg') %>"
+                  />
+
+                  <source
+                    media="(640px <= width <= 959px) and (orientation: landscape)"
+                    srcset="<%=require('../src/assets/imgs/small-animals-gal/Guneratne_2023.11.19_squirrel_nut-horizontal-280p.jpg') %>"
+                  />
+
+                  <source
+                    media="(960px <= width <= 1279px) and (orientation: landscape)"
+                    srcset="<%=require('../src/assets/imgs/small-animals-gal/Guneratne_2023.11.19_squirrel_nut-horizontal-460p.jpg') %>"
+                  />
+
+                  <source
+                    media="(1280px <= width <= 1599px) and (orientation: landscape)"
+                    srcset="<%=require('../src/assets/imgs/small-animals-gal/Guneratne_2023.11.19_squirrel_nut-horizontal-600p.jpg') %>"
+                  />
+
+                  <img
+                    src="<%=require('../src/assets/imgs/small-animals-gal/Guneratne_2023.11.19_squirrel_nut-horizontal-900p.jpg') %>"
+                    alt="Slide 6 of 6: A grey squirrel standing on its hind legs facing the right of the frame with its paws to its mouth, presumably eating a nut. The squirrel is on a pile of dead branches covered by drying yellow and orange autumn leaves."
+                    id="slide5"
+                  />
+                </picture>
+              </div>
+
+              <button type="button" class="forward-arrow" data-forward-arrow>
+                <img
+                  data-icon-forward
+                  class="arrow"
+                  src="<%=require('../src/assets/imgs/reshot-icon-arrow-chevron-right-WDGHUKQ634.svg') %>"
+                  alt="Forward Arrow"
+                />
+              </button>
+
+              <div class="img-dots-container" data-name="first-gallery">
+                <div class="img-dots" data-name="first-gallery">
+                  <button
+                    type="button"
+                    class="circle-icon-div"
+                    data-circle="0"
+                    data-name="first-gallery"
+                    aria-label="Select Slide 1 of 6."
+                  >
+                    <div
+                      class="circle-icon"
+                      data-circle="0"
+                      data-name="first-gallery"
+                    ></div>
+                  </button>
+
+                  <button
+                    type="button"
+                    class="circle-icon-div"
+                    data-circle="1"
+                    data-name="first-gallery"
+                    aria-label="Select Slide 2 of 6."
+                  >
+                    <div
+                      class="circle-icon"
+                      data-circle="1"
+                      data-name="first-gallery"
+                    ></div>
+                  </button>
+
+                  <button
+                    type="button"
+                    class="circle-icon-div"
+                    data-circle="2"
+                    data-name="first-gallery"
+                    aria-label="Select Slide 3 of 6."
+                  >
+                    <div
+                      class="circle-icon"
+                      data-circle="2"
+                      data-name="first-gallery"
+                    ></div>
+                  </button>
+
+                  <button
+                    type="button"
+                    class="circle-icon-div"
+                    data-circle="3"
+                    data-name="first-gallery"
+                    aria-label="Select Slide 4 of 6."
+                  >
+                    <div
+                      class="circle-icon"
+                      data-circle="3"
+                      data-name="first-gallery"
+                    ></div>
+                  </button>
+
+                  <button
+                    type="button"
+                    class="circle-icon-div"
+                    data-circle="4"
+                    data-name="first-gallery"
+                    aria-label="Select Slide 5 of 6."
+                  >
+                    <div
+                      class="circle-icon"
+                      data-circle="4"
+                      data-name="first-gallery"
+                    ></div>
+                  </button>
+
+                  <button
+                    type="button"
+                    class="circle-icon-div"
+                    data-circle="5"
+                    data-name="first-gallery"
+                    aria-label="Select Slide 6 of 6."
+                  >
+                    <div
+                      class="circle-icon"
+                      data-circle="5"
+                      data-name="first-gallery"
+                    ></div>
+                  </button>
+                </div>
+              </div>
+            </section>
+          </div>
+        </section>
+      </main>
+
+      <footer class="footer-div">
+        <div class="footer">
+          <div class="copyright-div">
+            <p class="my-copyright">Jenn Guneratne © 2024</p>
+          </div>
+
+          <div class="logo-div">
+            <a
+              href="https://github.com/jguneratne/photo-gallery"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                src="<%=require('../src/assets/imgs/github-mark-white.svg') %>"
+                alt="Octocat GitHub Logo"
+                class="github-logo"
+              />
+            </a>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

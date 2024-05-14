@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= htmlWebpackPlugin.options.title%></title>
+  </head>
+
+  <body>
+    <div class="container">
+      <header class="header">
+        <nav>
+          <ul class="menu-items" id="tabs">
+            <li class="menu-btn hov-style" data-name="index">
+              <a aria-label="Home Page" href="../dist/index.html">Home</a>
+            </li>
+
+            <div
+              class="dropdown-div menu-btn gal-hov dropdown-btn"
+              data-name="galleries"
+              title="Galleries"
+            >
+              <div class="gal-btn-div">
+                <li aria-label="Click to Open Submenu">
+                  <a href="#galleries">Galleries</a>
+                </li>
+
+                <div class="gal-arrow"></div>
+              </div>
+
+              <ul class="dropdown-content">
+                <li
+                  class="dropdown-item birds"
+                  style="--delay: 1"
+                  data-name="birds-gallery"
+                  aria-label="Click to Visit Gallery"
+                >
+                  <a href="../dist/birds-gallery.html">Birds</a>
+                </li>
+                <li
+                  class="dropdown-item insects"
+                  style="--delay: 2"
+                  data-name="insects-gallery"
+                  aria-label="Click to Visit Gallery"
+                >
+                  <a href="../dist/insects-gallery.html">Insects</a>
+                </li>
+                <li
+                  class="dropdown-item small-animals"
+                  style="--delay: 3"
+                  data-name="small-animals-gallery"
+                  aria-label="Click to Visit Gallery"
+                >
+                  <a href="../dist/small-animals-gallery.html">Small Animals</a>
+                </li>
+              </ul>
+            </div>
+
+            <li class="menu-btn hov-style" data-name="about">
+              <a aria-label="About Page" href="../dist/about.html">About</a>
+            </li>
+
+            <li class="menu-btn hov-style" data-name="contact">
+              <a aria-label="Contact Page" href="../dist/contact.html"
+                >Contact</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </header>
+
+      <main class="main">
+        <!-- BIRDS GALLERY -->
+        <section class="tab-content" id="birds-gallery">
+          <div class="gallery">
+            <div class="animation-ctrl-div">
+              <button
+                type="button"
+                class="pause-btn"
+                title="Press Enter or Space to Pause Gallery Animation"
+              >
+                <img
+                  class="pause-icon"
+                  src="../src/assets/imgs/pause-button-icon.svg"
+                  alt="Press Enter or Space to Pause Gallery Animation"
+                />
+              </button>
+
+              <button
+                type="button"
+                class="play-btn"
+                title="Press Enter or Space to Start Gallery Animation"
+              >
+                <img
+                  class="play-icon"
+                  src="../src/assets/imgs/play-button-icon.svg"
+                  title="Start Gallery Animation"
+                  alt="Press Enter or Space to Start Gallery Animation"
+                />
+              </button>
+            </div>
+
+            <section
+              class="slider-box"
+              data-name="birds-gallery"
+              tabindex="0"
+              role="region"
+              aria-roledescription="photo slider"
+              aria-label="Birds Gallery"
+            >
+              <!-- <div class="slider-row-one"></div> -->
+              <button type="button" class="back-arrow" data-back-arrow>
+                <img
+                  data-icon-back
+                  class="arrow"
+                  src="<%=require('../src/assets/imgs/reshot-icon-arrow-chevron-left-975UQXVKZF.svg') %>"
+                  alt="Back Arrow"
+                />
+              </button>
+
+              <div class="photo-box" data-name="birds-gallery">
+                <!-- SPARROW AT SUNRISE -->
+                <picture
+                  class="picture"
+                  aria-role="group"
+                  aria-roledescription="slide"
+                  aria-labelledby="slide1"
+                  tabindex="0"
+                >
+                  <source
+                    media="(300px <= width <=699px) and (orientation: portrait)"
+                    srcset="<%=require('../src/assets/imgs/birds-gal/Guneratne_2024.04.27_sparrow-vertical-320p.jpg') %>"
+                  />
+
+                  <source
+                    media="(700px <= width <= 799px) and (orientation: portrait)"
+                    srcset="<%=require('../src/assets/imgs/birds-gal/Guneratne_2024.04.27_sparrow-vertical-460p.jpg') %>"
+                  />
+
+                  <source
+                    media="(800px <= width <= 1020px) and (orientation: portrait)"
+                    srcset="<%=require('../src/assets/imgs/birds-gal/Guneratne_2024.04.27_sparrow-vertical-580p.jpg') %>"
+                  />
+
+                  <source
+                    media="(1021px <= width <= 1280px) and (orientation: portrait)"
+                    srcset="<%=require('../src/assets/imgs/birds-gal/Guneratne_2024.04.27_sparrow-vertical-700p.jpg') %>"
+                  />
+
+                  <source
+                    media="(640px <= width <= 959px) and (orientation: landscape)"
+                    srcset="<%=require('../src/assets/imgs/birds-gal/Guneratne_2024.04.27_sparrow-horizontal-280p.jpg') %>"
+                  />
+
+                  <source
+                    media="(960px <= width <= 1279px) and (orientation: landscape)"
+                    srcset="<%=require('../src/assets/imgs/birds-gal/Guneratne_2024.04.27_sparrow-horizontal-460p.jpg') %>"
+                  />
+
+                  <source
+                    media="(1280px <= width <= 1599px) and (orientation: landscape)"
+                    srcset="<%=require('../src/assets/imgs/birds-gal/Guneratne_2024.04.27_sparrow-horizontal-600p.jpg') %>"
+                  />
+
+                  <img
+                    src="<%=require('../src/assets/imgs/birds-gal/Guneratne_2024.04.27_sparrow-horizontal-900p.jpg') %>"
+                    alt="Slide 1 of 7: A sparrow sitting in a tree with early spring buds and leaves, with the golden light of sunrise shining into the left side of the frame."
+                    id="slide1"
+                  />
+                </picture>
+
+                <!-- EASTERN KINGBIRD IN A TREE -->
+                <picture
+                  class="picture"
+                  role="group"
+                  aria-roledescription="slide"
+                  aria-labelledby="slide2"
+                  tabindex="0"
+                >
+                  <source
+                    media="(300px <= width <= 699px) and (orientation: portrait)"
+                    srcset="<%=require('../src/assets/imgs/birds-gal/Guneratne_2023.06.29_kingbird-vertical-320p.jpg') %>"
+                  />
+
+                  <source
+                    media="(700px <= width <= 799px) and (orientation: portrait)"
+                    srcset="<%=require('../src/assets/imgs/birds-gal/Guneratne_2023.06.29_kingbird-vertical-460p.jpg') %>"
+                  />
+
+                  <source
+                    media="(800px <= width <= 1020px) and (orientation: portrait)"
+                    srcset="<%=require('../src/assets/imgs/birds-gal/Guneratne_2023.06.29_kingbird-vertical-580p.jpg') %>"
+                  />
+
+                  <source
+                    media="(1021px <= width <= 1280px) and (orientation: portrait)"
+                    srcset="<%=require('../src/assets/imgs/birds-gal/Guneratne_2023.06.29_kingbird-vertical-700p.jpg') %>"
+                  />
+
+                  <source
+                    media="(640px <= width <= 959px) and (orientation: landscape)"
+                    srcset="<%=require('../src/assets/imgs/birds-gal/Guneratne_2023.06.29_kingbird-horizontal-280p.jpg') %>"
+                  />
+
+                  <source
+                    media="(960px <= width <= 1279px) and (orientation: landscape)"
+                    srcset="<%=require('../src/assets/imgs/birds-gal/Guneratne_2023.06.29_kingbird-horizontal-460p.jpg') %>"
+                  />
+
+                  <source
+                    media="(1280px <= width <= 1599px) and (orientation: landscape)"
+                    srcset="<%=require('../src/assets/imgs/birds-gal/Guneratne_2023.06.29_kingbird-horizontal-600p.jpg') %>"
+                  />
+
+                  <img
+                    src="<%=require('../src/assets/imgs/birds-gal/Guneratne_2023.06.29_kingbird-horizontal-900p.jpg') %>"
+                    alt="Slide 2 of 7: An Eastern Kingbird in a tree. The landscape view shows the bird from behind as it looks to the left. The bird is perched on a tree branch against a blue sky with tree branches filling the frame from the sides. The portrait view shows the bird from the front as it glances down at the camera, with a similar background and branches."
+                    id="slide2"
+                  />
+                </picture>
+
+                <!-- CARDINAL -->
+                <picture
+                  class="picture"
+                  role="group"
+                  aria-roledescription="slide"
+                  aria-labelledby="slide3"
+                  tabindex="0"
+                >
+                  <source
+                    media="(300px <= width <= 699px) and (orientation: portrait)"
+                    srcset="<%=require('../src/assets/imgs/birds-gal/Guneratne_2024.01.19_cardinal-vertical-320p.jpg') %>"
+                  />
+
+                  <source
+                    media="(700px <= width <= 799px) and (orientation: portrait)"
+                    srcset="<%=require('../src/assets/imgs/birds-gal/Guneratne_2024.01.19_cardinal-vertical-460p.jpg') %>"
+                  />
+
+                  <source
+                    media="(800px <= width <= 1020px) and (orientation: portrait)"
+                    srcset="<%=require('../src/assets/imgs/birds-gal/Guneratne_2024.01.19_cardinal-vertical-580p.jpg') %>"
+                  />
+
+                  <source
+                    media="(1021px <= width <= 1280px) and (orientation: portrait)"
+                    srcset="<%=require('../src/assets/imgs/birds-gal/Guneratne_2024.01.19_cardinal-vertical-700p.jpg') %>"
+                  />
+
+                  <source
+                    media="(640px <= width <= 959px) and (orientation: landscape)"
+                    srcset="<%=require('../src/assets/imgs/birds-gal/Guneratne_2024.01.19_cardinal-horizontal-280p.jpg') %>"
+                  />
+
+                  <source
+                    media="(960px <= width <= 1279px) and (orientation: landscape)"
+                    srcset="<%=require('../src/assets/imgs/birds-gal/Guneratne_2024.01.19_cardinal-horizontal-460p.jpg') %>"
+                  />
+
+                  <source
+                    media="(1280px <= width <= 1599px) and (orientation: landscape)"
+                    srcset="<%=require('../src/assets/imgs/birds-gal/Guneratne_2024.01.19_cardinal-horizontal-600p.jpg') %>"
+                  />
+
+                  <img
+                    src="<%=require('../src/assets/imgs/birds-gal/Guneratne_2024.01.19_cardinal-horizontal-900p.jpg') %>"
+                    alt="Slide 3 of 7: A bright red male cardinal perched on top of a rhododendron branch, looking with a confused expression at the camera."
+                    id="slide3"
+                  />
+                </picture>
+
+                <!-- SEAGULL -->
+                <picture
+                  class="picture"
+                  role="group"
+                  aria-roledescription="slide"
+                  aria-labelledby="slide4"
+                  tabindex="0"
+                >
+                  <source
+                    media="(300px <= width <= 699px) and (orientation: portrait)"
+                    srcset="<%=require('../src/assets/imgs/birds-gal/Guneratne_2023.08.20_seagull-vertical-320p.jpg') %>"
+                  />
+
+                  <source
+                    media="(700px <= width <= 799px) and (orientation: portrait)"
+                    srcset="<%=require('../src/assets/imgs/birds-gal/Guneratne_2023.06.29_kingbird-vertical-460p.jpg') %>"
+                  />
+
+                  <source
+                    media="(800px <= width <= 1020px) and (orientation: portrait)"
+                    srcset="<%=require('../src/assets/imgs/birds-gal/Guneratne_2023.08.20_seagull-vertical-580p.jpg') %>"
+                  />
+
+                  <source
+                    media="(1021px <= width <= 1280px) and (orientation: portrait)"
+                    srcset="<%=require('../src/assets/imgs/birds-gal/Guneratne_2023.08.20_seagull-vertical-700p.jpg') %>"
+                  />
+
+                  <source
+                    media="(640px <= width <= 959px) and (orientation: landscape)"
+                    srcset="<%=require('../src/assets/imgs/birds-gal/Guneratne_2023.08.20_seagull-horizontal-280p.jpg') %>"
+                  />
+
+                  <source
+                    media="(960px <= width <= 1279px) and (orientation: landscape)"
+                    srcset="<%=require('../src/assets/imgs/birds-gal/Guneratne_2023.08.20_seagull-horizontal-460p.jpg') %>"
+                  />
+
+                  <source
+                    media="(1280px <= width <= 1599px) and (orientation: landscape)"
+                    srcset="<%=require('../src/assets/imgs/birds-gal/Guneratne_2023.08.20_seagull-horizontal-600p.jpg') %>"
+                  />
+
+                  <img
+                    src="<%=require('../src/assets/imgs/birds-gal/Guneratne_2023.08.20_seagull-horizontal-900p.jpg') %>"
+                    alt="Slide 4 of 7: A seagull at the ocean. The landscape view shows a seagull taking to flight above an ocean wave. The portrait view shows the sideview of a seagull standing on the sand in front of the water, looking to the right of the frame."
+                    id="slide4"
+                  />
+                </picture>
+
+                <!-- SPARROW IN A CHERRY TREE -->
+                <picture
+                  class="picture"
+                  role="group"
+                  aria-roledescription="slide"
+                  aria-labelledby="slide5"
+                  tabindex="0"
+                >
+                  <source
+                    media="(300px <= width <= 699px) and (orientation: portrait)"
+                    srcset="<%=require('../src/assets/imgs/birds-gal/Guneratne_2024.05.01_sparrow-cherry-vertical-320p.jpg') %>"
+                  />
+
+                  <source
+                    media="(700px <= width <= 799px) and (orientation: portrait)"
+                    srcset="<%=require('../src/assets/imgs/birds-gal/Guneratne_2024.05.01_sparrow-cherry-vertical-460p.jpg') %>"
+                  />
+
+                  <source
+                    media="(800px <= width <= 1020px) and (orientation: portrait)"
+                    srcset="<%=require('../src/assets/imgs/birds-gal/Guneratne_2024.05.01_sparrow-cherry-vertical-580p.jpg') %>"
+                  />
+
+                  <source
+                    media="(1021px <= width <= 1280px) and (orientation: portrait)"
+                    srcset="<%=require('../src/assets/imgs/birds-gal/Guneratne_2024.05.01_sparrow-cherry-vertical-700p.jpg') %>"
+                  />
+
+                  <source
+                    media="(640px <= width <= 959px) and (orientation: landscape)"
+                    srcset="<%=require('../src/assets/imgs/birds-gal/Guneratne_2024.05.01_sparrow-cherry-horizontal-280p.jpg') %>"
+                  />
+
+                  <source
+                    media="(960px <= width <= 1279px) and (orientation: landscape)"
+                    srcset="<%=require('../src/assets/imgs/birds-gal/Guneratne_2024.05.01_sparrow-cherry-horizontal-460p.jpg') %>"
+                  />
+
+                  <source
+                    media="(1280px <= width <= 1599px) and (orientation: landscape)"
+                    srcset="<%=require('../src/assets/imgs/birds-gal/Guneratne_2024.05.01_sparrow-cherry-horizontal-600p.jpg') %>"
+                  />
+
+                  <img
+                    src="<%=require('../src/assets/imgs/birds-gal/Guneratne_2024.05.01_sparrow-cherry-horizontal-900p.jpg') %>"
+                    alt="Slide 5 of 7: A sparrow sitting in a tree with early spring buds and leaves, with the golden color of sunrise spilling into the left side of the frame."
+                    id="slide5"
+                  />
+                </picture>
+
+                <!-- HOUSE FINCH -->
+                <picture
+                  class="picture"
+                  role="group"
+                  aria-roledescription="slide"
+                  aria-labelledby="slide6"
+                  tabindex="0"
+                >
+                  <source
+                    media="(300px <= width <= 699px) and (orientation: portrait)"
+                    srcset="<%=require('../src/assets/imgs/birds-gal/Guneratne_2024.05.08_house-finch-vertical-320p.jpg') %>"
+                  />
+
+                  <source
+                    media="(700px <= width <= 799px) and (orientation: portrait)"
+                    srcset="<%=require('../src/assets/imgs/birds-gal/Guneratne_2024.05.08_house-finch-vertical-460p.jpg') %>"
+                  />
+
+                  <source
+                    media="(800px <= width <= 1020px) and (orientation: portrait)"
+                    srcset="<%=require('../src/assets/imgs/birds-gal/Guneratne_2024.05.08_house-finch-vertical-580p.jpg') %>"
+                  />
+
+                  <source
+                    media="(1021px <= width <= 1280px) and (orientation: portrait)"
+                    srcset="<%=require('../src/assets/imgs/birds-gal/Guneratne_2024.05.08_house-finch-vertical-700p.jpg') %>"
+                  />
+
+                  <source
+                    media="(640px <= width <= 959px) and (orientation: landscape)"
+                    srcset="<%=require('../src/assets/imgs/birds-gal/Guneratne_2024.05.08_house-finch-horizontal-280p.jpg') %>"
+                  />
+
+                  <source
+                    media="(960px <= width <= 1279px) and (orientation: landscape)"
+                    srcset="<%=require('../src/assets/imgs/birds-gal/Guneratne_2024.05.08_house-finch-horizontal-460p.jpg') %>"
+                  />
+
+                  <source
+                    media="(1280px <= width <= 1599px) and (orientation: landscape)"
+                    srcset="<%=require('../src/assets/imgs/birds-gal/Guneratne_2024.05.08_house-finch-horizontal-600p.jpg') %>"
+                  />
+
+                  <img
+                    src="<%=require('../src/assets/imgs/birds-gal/Guneratne_2024.05.08_house-finch-horizontal-900p.jpg') %>"
+                    alt="Slide 6 of 7: A house finch looking at the camera from its perch on the branch of a cherry tree with sparse spring leaves just beginning to emerge. The sky is overcast and mostly white behind the bird."
+                    id="slide6"
+                  />
+                </picture>
+
+                <!-- GILDED FLICKER -->
+                <picture
+                  class="picture"
+                  role="group"
+                  aria-roledescription="slide"
+                  aria-labelledby="slide6"
+                  tabindex="0"
+                >
+                  <source
+                    media="(300px <= width <= 699px) and (orientation: portrait)"
+                    srcset="<%=require('../src/assets/imgs/birds-gal/Guneratne_2023.11.04_gilded_flicker-vertical-320p.jpg') %>"
+                  />
+
+                  <source
+                    media="(700px <= width <= 799px) and (orientation: portrait)"
+                    srcset="<%=require('../src/assets/imgs/birds-gal/Guneratne_2023.11.04_gilded_flicker-vertical-460p.jpg') %>"
+                  />
+
+                  <source
+                    media="(800px <= width <= 1020px) and (orientation: portrait)"
+                    srcset="<%=require('../src/assets/imgs/birds-gal/Guneratne_2023.11.04_gilded_flicker-vertical-580p.jpg') %>"
+                  />
+
+                  <source
+                    media="(1021px <= width <= 1280px) and (orientation: portrait)"
+                    srcset="<%=require('../src/assets/imgs/birds-gal/Guneratne_2023.11.04_gilded_flicker-vertical-700p.jpg') %>"
+                  />
+
+                  <source
+                    media="(640px <= width <= 959px) and (orientation: landscape)"
+                    srcset="<%=require('../src/assets/imgs/birds-gal/Guneratne_2023.11.04_gilded_flicker-horizontal-280p.jpg') %>"
+                  />
+
+                  <source
+                    media="(960px <= width <= 1279px) and (orientation: landscape)"
+                    srcset="<%=require('../src/assets/imgs/birds-gal/Guneratne_2023.11.04_gilded_flicker-horizontal-460p.jpg') %>"
+                  />
+
+                  <source
+                    media="(1280px <= width <= 1599px) and (orientation: landscape)"
+                    srcset="<%=require('../src/assets/imgs/birds-gal/Guneratne_2023.11.04_gilded_flicker-horizontal-600p.jpg') %>"
+                  />
+
+                  <img
+                    src="<%=require('../src/assets/imgs/birds-gal/Guneratne_2023.11.04_gilded_flicker-horizontal-900p.jpg') %>"
+                    alt="Slide 7 of 7: A tree trunk fills the left half of the frame, with the head of a gilded flicker with yellow and orange coloring poking its head out from behind with its back parallel to the ground and face staring straight up at the sky. There are small branches with small green leaves and red berries above and below the bird."
+                    id="slide6"
+                  />
+                </picture>
+              </div>
+
+              <button type="button" class="forward-arrow" data-forward-arrow>
+                <img
+                  data-icon-forward
+                  class="arrow"
+                  src="<%=require('../src/assets/imgs/reshot-icon-arrow-chevron-right-WDGHUKQ634.svg') %>"
+                  alt="Forward Arrow"
+                />
+              </button>
+
+              <div class="img-dots-container" data-name="first-gallery">
+                <div class="img-dots" data-name="first-gallery">
+                  <button
+                    type="button"
+                    class="circle-icon-div"
+                    data-circle="0"
+                    data-name="first-gallery"
+                    aria-label="Select Slide 1 of 7."
+                  >
+                    <div
+                      class="circle-icon"
+                      data-circle="0"
+                      data-name="first-gallery"
+                    ></div>
+                  </button>
+
+                  <button
+                    type="button"
+                    class="circle-icon-div"
+                    data-circle="1"
+                    data-name="first-gallery"
+                    aria-label="Select Slide 2 of 7."
+                  >
+                    <div
+                      class="circle-icon"
+                      data-circle="1"
+                      data-name="first-gallery"
+                    ></div>
+                  </button>
+
+                  <button
+                    type="button"
+                    class="circle-icon-div"
+                    data-circle="2"
+                    data-name="first-gallery"
+                    aria-label="Select Slide 3 of 7."
+                  >
+                    <div
+                      class="circle-icon"
+                      data-circle="2"
+                      data-name="first-gallery"
+                    ></div>
+                  </button>
+
+                  <button
+                    type="button"
+                    class="circle-icon-div"
+                    data-circle="3"
+                    data-name="first-gallery"
+                    aria-label="Select Slide 4 of 7."
+                  >
+                    <div
+                      class="circle-icon"
+                      data-circle="3"
+                      data-name="first-gallery"
+                    ></div>
+                  </button>
+
+                  <button
+                    type="button"
+                    class="circle-icon-div"
+                    data-circle="4"
+                    data-name="first-gallery"
+                    aria-label="Select Slide 5 of 7."
+                  >
+                    <div
+                      class="circle-icon"
+                      data-circle="4"
+                      data-name="first-gallery"
+                    ></div>
+                  </button>
+
+                  <button
+                    type="button"
+                    class="circle-icon-div"
+                    data-circle="5"
+                    data-name="first-gallery"
+                    aria-label="Select Slide 6 of 7."
+                  >
+                    <div
+                      class="circle-icon"
+                      data-circle="5"
+                      data-name="first-gallery"
+                    ></div>
+                  </button>
+
+                  <button
+                    type="button"
+                    class="circle-icon-div"
+                    data-circle="5"
+                    data-name="first-gallery"
+                    aria-label="Select Slide 7 of 7."
+                  >
+                    <div
+                      class="circle-icon"
+                      data-circle="5"
+                      data-name="first-gallery"
+                    ></div>
+                  </button>
+                </div>
+              </div>
+            </section>
+          </div>
+        </section>
+      </main>
+
+      <footer class="footer-div">
+        <div class="footer">
+          <div class="copyright-div">
+            <p class="my-copyright">Jenn Guneratne © 2024</p>
+          </div>
+
+          <div class="logo-div">
+            <a
+              href="https://github.com/jguneratne/photo-gallery"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                src="<%=require('../src/assets/imgs/github-mark-white.svg') %>"
+                alt="Octocat GitHub Logo"
+                class="github-logo"
+              />
+            </a>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
