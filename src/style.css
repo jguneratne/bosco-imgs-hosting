@@ -630,6 +630,11 @@ textarea:focus {
   border: 2px solid var(--dark-hov-col);
 }
 
+::placeholder {
+  color: var(--dark-font-col);
+  opacity: 1;
+}
+
 .send-contact {
   padding: 0.5em 2em 0.5em 2em;
   margin: 1.5em 0 1.5em 0;
