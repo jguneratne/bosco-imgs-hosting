@@ -541,6 +541,7 @@ h2 {
   transition: visibility 0s 500ms, opacity 500ms linear;
   visibility: hidden;
   opacity: 0;
+  pointer-events: none;
 
   display: flex;
   flex-grow: 1;
