@@ -12,6 +12,7 @@
   --dark-font-col: #34515e;
   --dark-hov-col: #18262c;
   --light-font-col: #e0ffff;
+  --error-color: #a42e03;
 }
 
 body {
@@ -573,7 +574,9 @@ h2 {
 }
 
 .required-text {
-  padding-bottom: 2em;
+  padding: 0.5em 0 3em 0;
+  font-size: 1.2rem;
+  color: var(--dark-font-col);
 }
 
 fieldset {
@@ -600,7 +603,7 @@ label {
 }
 
 .input-box {
-  padding-bottom: 1.5em;
+  padding-bottom: 0.5em;
 }
 
 .input-box-msg {
@@ -630,9 +633,27 @@ textarea:focus {
   border: 2px solid var(--dark-hov-col);
 }
 
+.firstName--invalid,
+.lastName--invalid,
+.emailField--invalid,
+.messageField--invalid {
+  border: 2px solid var(--error-color);
+}
+
 ::placeholder {
   color: var(--dark-font-col);
   opacity: 1;
+}
+
+.firstNameError,
+.lastNameError,
+.emailError,
+.messageError {
+  text-align: right;
+  font-weight: bold;
+  color: var(--error-color);
+  padding-bottom: 1.5em;
+  visibility: hidden;
 }
 
 .send-contact {

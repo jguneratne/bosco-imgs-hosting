@@ -10,6 +10,7 @@ module.exports = {
     "./src/variables.js",
     "./src/dropDown.js",
     "./src/navStyles.js",
+    "./src/form-validation.js",
   ],
   output: {
     filename: "bundle.js",

@@ -75,32 +75,62 @@
       <main class="main">
         <!-- CONTACT -->
         <section class="tab-content contact-tab" id="contact">
-          <form action="#" method="POST">
-            <fieldset>
-              <h1 class="contact-header">Get In Touch!</h1>
-              <p class="required-text">
-                Required fields are followed by
-                <span aria-label="required">*</span>
-              </p>
+          <div class="form-instructions">
+            <h1
+              id="contact-header"
+              class="contact-header"
+              aria-label="Get In Touch!"
+            >
+              Get In Touch!
+            </h1>
+            <h2
+              id="required-text"
+              class="required-text"
+              aria-label="Required fields are followed by an asterisk"
+            >
+              Required fields are followed by *
+            </h2>
+          </div>
 
-              <label for="name">
+          <form action="#" method="POST" novalidate>
+            <fieldset>
+              <label for="first-name">
                 <div class="input-type">
-                  Name: <span aria-label="required">*</span>
+                  First Name: <span aria-label="required field">*</span>
                 </div>
                 <div class="input-box">
                   <input
-                    id="name"
+                    id="first-name"
                     type="text"
-                    name="name"
+                    name="first-name"
                     placeholder="This form is not yet active."
                     required
+                    minlength="1"
                   />
                 </div>
+                <span class="firstNameError" aria-live="polite"></span>
+              </label>
+
+              <label for="last-name">
+                <div class="input-type">
+                  Last Name: <span aria-label="required field">*</span>
+                </div>
+                <div class="input-box">
+                  <input
+                    id="last-name"
+                    type="text"
+                    name="last-name"
+                    placeholder="This form is not yet active."
+                    required
+                    minlength="1"
+                  />
+                </div>
+                <span class="lastNameError" aria-live="polite"></span>
               </label>
 
               <label for="email">
                 <div class="input-type">
-                  Email: <span aria-label="required">*</span>
+                  Email: <span aria-label="required field">*</span>
                 </div>
                 <div class="input-box">
                   <input
@@ -109,13 +139,15 @@
                     name="email"
                     placeholder="youremail@email.com"
                     required
+                    minlength="5"
                   />
                 </div>
+                <span class="emailError" aria-live="polite"></span>
               </label>
 
               <label for="message">
                 <div class="input-type">
-                  Message: <span aria-label="required">*</span>
+                  Message: <span aria-label="required field">*</span>
                 </div>
                 <div class="input-box">
                   <textarea
@@ -124,12 +156,17 @@
                     rows="15"
                     cols="50"
                     placeholder="This form is not yet active."
+                    type="text"
                     required
+                    minlength="10"
                   ></textarea>
                 </div>
+                <span class="messageError" aria-live="polite"
+                  >You must write a message to submit this form.</span
+                >
               </label>
 
-              <button class="send-contact" type="button">Submit</button>
+              <button class="send-contact" type="submit">Submit</button>
             </fieldset>
           </form>
         </section>

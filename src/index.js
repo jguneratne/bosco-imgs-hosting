@@ -6,6 +6,8 @@ import { galleriesClickMenu } from "./dropDown";
 
 import { sliderBoxCtrl } from "./photoSlider";
 
+import { validateFormFields } from "./form-validation";
+
 console.log("photogallery");
 
 window.addEventListener("load", (e) => {
@@ -13,4 +15,5 @@ window.addEventListener("load", (e) => {
   ctrlTabHighlight();
   galleriesClickMenu();
   sliderBoxCtrl();
+  validateFormFields();
 });

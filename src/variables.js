@@ -1,3 +1,14 @@
+// Contact Form Validation
+export const form = document.querySelector("form");
+export const firstName = document.getElementById("first-name");
+export const firstNameError = document.querySelector(".firstNameError");
+export const lastName = document.getElementById("last-name");
+export const lastNameError = document.querySelector(".lastNameError");
+export const email = document.getElementById("email");
+export const emailError = document.querySelector(".emailError");
+export const message = document.getElementById("message");
+export const messageError = document.querySelector(".messageError");
+
 // Accessibility
 export const reduceMotion =
   window.matchMedia("(prefers-reduced-motion: reduce)") === true ||
