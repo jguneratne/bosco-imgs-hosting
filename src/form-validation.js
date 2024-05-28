@@ -8,6 +8,7 @@ import {
   emailError,
   message,
   messageError,
+  submitError,
 } from "./variables";
 
 export function validateFormFields() {
@@ -36,10 +37,14 @@ function showFirstNameError() {
   if (firstName.validity.valueMissing) {
     firstNameError.textContent = "You need to enter your first name.";
     firstNameError.style.visibility = "visible";
+    firstNameError.setAttribute("aria-labelledby", "firstNameError");
+    firstNameError.focus();
     firstName.classList.add("firstName--invalid");
   } else if (firstName.validity.typeMismatch) {
     firstNameError.textContent = "Entered value needs to be a name.";
     firstNameError.style.visibility = "visible";
+    firstNameError.setAttribute("aria-labelledby", "firstNameError");
+    firstNameError.focus();
     firstName.classList.add("firstName--invalid");
   }
 }
@@ -62,10 +67,14 @@ function showLastNameError() {
   if (lastName.validity.valueMissing) {
     lastNameError.textContent = "You need to enter your last name.";
     lastNameError.style.visibility = "visible";
+    lastNameError.setAttribute("aria-labelledby", "lastNameError");
+    lastNameError.focus();
     lastName.classList.add("lastName--invalid");
   } else if (lastName.validity.typeMismatch) {
     lastNameError.textContent = "Entered value needs to be a name.";
     lastNameError.style.visibility = "visible";
+    lastNameError.setAttribute("aria-labelledby", "lastNameError");
+    lastNameError.focus();
     lastName.classList.add("lastName--invalid");
   }
 }
@@ -89,17 +98,21 @@ function showEmailError() {
     emailError.textContent =
       "Email address must be in standard format: your-email@email.com.";
     emailError.style.visibility = "visible";
+    emailError.setAttribute("aria-labelledby", "emailError");
+    emailError.focus();
     email.classList.add("emailField--invalid");
   } else if (email.validity.typeMismatch) {
     emailError.textContent =
       "Email address must be in standard format: your-email@email.com.";
     emailError.style.visibility = "visible";
-    emailError.style.visibility = "visible";
+    emailError.setAttribute("aria-labelledby", "emailError");
+    emailError.focus();
     email.classList.add("emailField--invalid");
   } else if (email.validity.tooShort) {
     emailError.textContent = `Email should be at least ${email.minLength} characters; you entered ${email.value.length}.`;
     emailError.style.visibility = "visible";
-    emailError.style.visibility = "visible";
+    emailError.setAttribute("aria-labelledby", "emailError");
+    emailError.focus();
     email.classList.add("emailField--invalid");
   }
 }
@@ -119,10 +132,11 @@ function validateMessageInput() {
 }
 
 function showMessageError() {
-  if (email.validity.valueMissing) {
+  if (message.validity.valueMissing) {
     messageError.textContent = "You must enter a message to submit this form.";
     messageError.style.visibility = "visible";
-    emailError.style.visibility = "visible";
+    messageError.setAttribute("aria-labelledby", "messageError");
+    messageError.focus();
     message.classList.add("messageField--invalid");
   } else if (email.validity.typeMismatch) {
     messageError.textContent = "You must enter a message to submit this form.";
@@ -130,6 +144,8 @@ function showMessageError() {
   } else if (email.validity.tooShort) {
     messageError.textContent = `Message should be at least ${message.minLength} characters; you entered ${message.value.length}.`;
     messageError.style.visibility = "visible";
+    messageError.setAttribute("aria-labelledby", "messageError");
+    messageError.focus();
     message.classList.add("messageField--invalid");
   }
 }
@@ -144,11 +160,18 @@ function validateOnSubmit() {
       !email.validity.valid ||
       !message.validity.valid
     ) {
-      showFirstNameError();
-      showLastNameError();
-      showEmailError();
-      showMessageError();
       e.preventDefault();
+      // showFirstNameError();
+      // showLastNameError();
+      // showEmailError();
+      // showMessageError();
+
+      submitError.textContent =
+        "This form cannot be submitted with errors. Please review all text fields";
+      submitError.style.visibility = "visible";
+      submitError.setAttribute("aria-labelledby", "submitError");
+      submitError.focus();
+      submit.classList.add("submitField--invalid");
     }
   });
 }

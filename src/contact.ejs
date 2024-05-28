@@ -83,20 +83,17 @@
             >
               Get In Touch!
             </h1>
-            <h2
-              id="required-text"
-              class="required-text"
-              aria-label="Required fields are followed by an asterisk"
-            >
+            <p id="required-text" class="required-text">
               Required fields are followed by *
-            </h2>
+            </p>
           </div>
 
-          <form action="#" method="POST" novalidate>
+          <form action="#" method="POST" id="contact" novalidate>
             <fieldset>
               <label for="first-name">
                 <div class="input-type">
-                  First Name: <span aria-label="required field">*</span>
+                  First Name:
+                  <span aria-hidden="true">*</span>
                 </div>
                 <div class="input-box">
                   <input
@@ -108,12 +105,17 @@
                     minlength="1"
                   />
                 </div>
-                <span class="firstNameError" aria-live="polite"></span>
+                <span
+                  id="firstNameError"
+                  class="firstNameError"
+                  role="alert"
+                  tabindex="0"
+                ></span>
               </label>
 
               <label for="last-name">
                 <div class="input-type">
-                  Last Name: <span aria-label="required field">*</span>
+                  Last Name: <span aria-hidden="true">*</span>
                 </div>
                 <div class="input-box">
                   <input
@@ -125,12 +127,17 @@
                     minlength="1"
                   />
                 </div>
-                <span class="lastNameError" aria-live="polite"></span>
+                <span
+                  id="lastNameError"
+                  class="lastNameError"
+                  role="alert"
+                  tabindex="0"
+                ></span>
               </label>
 
               <label for="email">
                 <div class="input-type">
-                  Email: <span aria-label="required field">*</span>
+                  Email: <span aria-hidden="true">*</span>
                 </div>
                 <div class="input-box">
                   <input
@@ -142,12 +149,17 @@
                     minlength="5"
                   />
                 </div>
-                <span class="emailError" aria-live="polite"></span>
+                <span
+                  id="emailError"
+                  class="emailError"
+                  role="alert"
+                  tabindex="0"
+                ></span>
               </label>
 
               <label for="message">
                 <div class="input-type">
-                  Message: <span aria-label="required field">*</span>
+                  Message: <span aria-hidden="true">*</span>
                 </div>
                 <div class="input-box">
                   <textarea
@@ -161,12 +173,21 @@
                     minlength="10"
                   ></textarea>
                 </div>
-                <span class="messageError" aria-live="polite"
-                  >You must write a message to submit this form.</span
-                >
+                <span
+                  id="messageError"
+                  class="messageError"
+                  role="alert"
+                  tabindex="0"
+                ></span>
               </label>
 
               <button class="send-contact" type="submit">Submit</button>
+              <span
+                id="submitError"
+                class="submitError"
+                role="alert"
+                tabindex="0"
+              ></span>
             </fieldset>
           </form>
         </section>

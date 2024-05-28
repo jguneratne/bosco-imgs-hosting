@@ -648,12 +648,25 @@ textarea:focus {
 .firstNameError,
 .lastNameError,
 .emailError,
-.messageError {
+.messageError,
+.submitError {
   text-align: right;
   font-weight: bold;
   color: var(--error-color);
   padding-bottom: 1.5em;
   visibility: hidden;
+}
+
+.firstNameError:focus,
+.lastNameError:focus,
+.emailError:focus,
+.messageError:focus,
+.submitError:focus {
+  border: none;
+  outline: none;
+  text-decoration: underline;
+  text-decoration-thickness: 0.2 rem;
+  color: var(--error-color);
 }
 
 .send-contact {
