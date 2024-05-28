@@ -665,7 +665,6 @@ textarea:focus {
   border: none;
   outline: none;
   text-decoration: underline;
-  text-decoration-thickness: 0.2 rem;
   color: var(--error-color);
 }
 
