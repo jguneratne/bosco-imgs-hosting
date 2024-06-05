@@ -12,7 +12,12 @@
         <nav>
           <ul class="menu-items" id="tabs">
             <li class="menu-btn hov-style" data-name="index">
-              <a aria-label="Home Page" href="../dist/index.html">Home</a>
+              <a
+                aria-label="Home Page"
+                aria-current="page"
+                href="../dist/index.html"
+                >Home</a
+              >
             </li>
 
             <div
@@ -30,20 +35,28 @@
 
               <ul class="dropdown-content">
                 <li
-                  class="dropdown-item wildlife"
+                  class="dropdown-item birds"
                   style="--delay: 1"
-                  data-name="first-gal"
+                  data-name="birds-gallery"
                   aria-label="Click to Visit Gallery"
                 >
-                  <a href="../dist/first-gallery.html">Wildlife</a>
+                  <a href="../dist/birds-gallery.html">Birds</a>
                 </li>
                 <li
-                  class="dropdown-item events"
+                  class="dropdown-item insects"
                   style="--delay: 2"
-                  data-name="second-gal"
+                  data-name="insects-gallery"
                   aria-label="Click to Visit Gallery"
                 >
-                  <a href="../dist/second-gallery.html">Events</a>
+                  <a href="../dist/insects-gallery.html">Insects</a>
+                </li>
+                <li
+                  class="dropdown-item small-animals"
+                  style="--delay: 3"
+                  data-name="small-animals-gallery"
+                  aria-label="Click to Visit Gallery"
+                >
+                  <a href="../dist/small-animals-gallery.html">Small Animals</a>
                 </li>
               </ul>
             </div>
@@ -67,32 +80,50 @@
           <div class="galleries">
             <div class="thumbnails" role="region">
               <a
-                href="../dist/first-gallery.html"
+                href="../dist/birds-gallery.html"
                 class="thumbnail-link"
-                aria-label="Click to visit wildlife gallery."
+                aria-label="Click to visit the birds image gallery."
               >
                 <div class="thumbnail-box">
                   <img
                     class="thumbnail-img"
-                    src="../src/assets/imgs/thumbnails/Guneratne_2023.06.28_wildlife-gal-thumb.jpg"
-                    alt="Image of bunny eating long grass."
+                    src="../src/assets/imgs/thumbnails/Guneratne_2023.06.27_birds-gal-thumb.jpg"
+                    alt="A bright red male cardinal on the right of the frame perched on a stick gazing toward the left of the frame, with an out-of-focus green background."
                   />
-                  <p class="gal-title">Wildlife</p>
+                  <p class="gal-title">Birds Gallery</p>
                 </div>
               </a>
 
               <a
-                href="../dist/second-gallery.html"
+                href="../dist/insects-gallery.html"
                 class="thumbnail-link"
-                aria-label="Click to visit events gallery."
+                aria-label="Click to visit the insects image gallery."
               >
                 <div class="thumbnail-box">
                   <img
                     class="thumbnail-img"
-                    src="../src/assets/imgs/thumbnails/Guneratne_2014.09.13_events-gal-thumb.jpg"
-                    alt="Image of members of a wedding party enjoying lunch outdoors."
+                    src="../src/assets/imgs/thumbnails/Guneratne_2023.09.05_insects-gal-thumb.jpg"
+                    alt="A close up of a swallowtail butterfly caterpillar, which
+                  is green with black stripes, and yellow dots on every other
+                  stripe. It is crawling along the branch of a dill plant,
+                  feeding on the flower at the end."
                   />
-                  <p class="gal-title">Events</p>
+                  <p class="gal-title">Insects Gallery</p>
+                </div>
+              </a>
+
+              <a
+                href="../dist/small-animals-gallery.html"
+                class="thumbnail-link"
+                aria-label="Click to visit the small animals image gallery."
+              >
+                <div class="thumbnail-box">
+                  <img
+                    class="thumbnail-img"
+                    src="../src/assets/imgs/thumbnails/Guneratne_2023.08.11_sm-anim-gal-thumb.jpg"
+                    alt="A closeup portrait of a rabbit that is sitting on the ground peering through long blades of grass, looking at the viewer, while also nibbling on the grass."
+                  />
+                  <p class="gal-title">Small Animals Gallery</p>
                 </div>
               </a>
             </div>
