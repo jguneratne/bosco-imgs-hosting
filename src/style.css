@@ -8,6 +8,7 @@
   --main-col: #fffbeb;
   --head-foot-col: #004055;
   --dropdown-item-col: #ebdbbc;
+  --logo-background: rgba(112, 128, 144, 0.6);
   --slider-box-col: #708090;
   --dark-font-col: #34515e;
   --dark-hov-col: #18262c;
@@ -277,10 +278,10 @@ h2 {
   background-size: cover;
 
   display: flex;
+  align-items: center;
 }
 
-.home-box,
-.logo-box {
+.home-box {
   min-height: 100%;
   width: 100%;
   display: flex;
@@ -289,20 +290,18 @@ h2 {
 }
 
 .logo-box {
-  align-items: flex-end;
-  justify-content: flex-start;
+  background-color: var(--logo-background);
+  width: 100%;
+  max-width: 100%;
+  margin: 1.5rem 0 1.5rem 3rem;
+  padding: 1rem;
+  border-radius: 1rem;
+  max-height: min-content;
 }
 
 .logo {
-  max-width: 90%;
-  border: 3px solid transparent;
-  border-radius: 1em;
-}
-
-.logo:focus {
-  border: 3px solid var(--main-col);
-  border-radius: 1em;
-  outline: none;
+  max-width: 85%;
+  margin: auto;
 }
 
 .home-box a:focus {
@@ -770,9 +769,8 @@ textarea:focus {
   }
 
   .logo-box {
-    align-items: flex-start;
-    justify-content: center;
-    margin-top: 2ch;
+    width: 95%;
+    margin: auto 1rem auto 1rem;
   }
 
   .cta-btn {
@@ -957,11 +955,6 @@ textarea:focus {
     gap: 6ch;
   }
 
-  .logo-box {
-    justify-content: center;
-    margin-bottom: 1ch;
-  }
-
   .galleries {
     grid-template-columns: 1fr 80% 1fr;
   }
@@ -1017,11 +1010,6 @@ textarea:focus {
     flex-direction: column;
     justify-content: center;
     gap: 10ch;
-  }
-
-  .logo-box {
-    justify-content: center;
-    margin-bottom: 10ch;
   }
 
   .cta-btn {
@@ -1093,6 +1081,10 @@ textarea:focus {
   .home-box {
     flex-direction: row;
     gap: 2ch;
+  }
+
+  .logo-box {
+    margin: 1.5rem 0 1.5rem 1.5rem;
   }
 
   .cta-btn {
