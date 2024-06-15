@@ -43,9 +43,11 @@ export function checkPageOrientation() {
         galleryMain.querySelector(".gal-landscape");
 
       if (windowHeight < windowWidth) {
+        clearInterval(getAnimationID.animationID);
         insertLandscapeGal(galleryMain);
         sliderBoxCtrl();
       } else {
+        clearInterval(getAnimationID.animationID);
         insertPortraitGal(galleryMain);
         sliderBoxCtrl();
       }
@@ -54,9 +56,11 @@ export function checkPageOrientation() {
 
       landscape.addEventListener("change", (e) => {
         if (e.matches) {
+          clearInterval(getAnimationID.animationID);
           insertLandscapeGal(galleryMain);
           sliderBoxCtrl();
         } else {
+          clearInterval(getAnimationID.animationID);
           insertPortraitGal(galleryMain);
           sliderBoxCtrl();
         }
