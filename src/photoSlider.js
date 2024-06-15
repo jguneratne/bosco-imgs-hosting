@@ -1,4 +1,10 @@
 import {
+  windowHeight,
+  windowWidth,
+  getPortraitGal,
+  getLandscapeGal,
+  galleryMainDivs,
+  getMainDiv,
   reduceMotion,
   shortPageName,
   getAnimationID,
@@ -7,7 +13,6 @@ import {
   sliderPlayBtn,
   sliderPauseIcon,
   sliderPlayIcon,
-  sliderBoxes,
   activeSliderBox,
   activePhotoBox,
   galleryImgs,
@@ -24,92 +29,137 @@ import {
   circlePosition,
 } from "./variables";
 
-export function sliderBoxCtrl() {
-  sliderBoxes.forEach((box) => {
-    if (box.dataset.name === shortPageName) {
-      console.log("DATASET MATCHES PAGENAME");
+export function checkPageOrientation() {
+  galleryMainDivs.forEach((div) => {
+    if (div.dataset.name === shortPageName) {
+      getMainDiv.mainDivLocale = document.querySelector(".main");
+      // console.log(getMainDiv.mainDiv);
+      let galleryMain = getMainDiv.mainDiv;
 
-      activeSliderBox.currentActiveBox = box;
-      // console.log(activeSliderBox.activeBox);
+      getPortraitGal.portraitGalLocale =
+        galleryMain.querySelector(".gal-portrait");
 
-      sliderAnimationCtrlDiv.currentAnimationCtrlDiv = document.querySelector(
-        ".animation-ctrl-div"
-      );
+      getLandscapeGal.landscapeGalLocale =
+        galleryMain.querySelector(".gal-landscape");
 
-      sliderPauseBtn.currentPauseBtn = document.querySelector(".pause-btn");
-      sliderPauseIcon.currentPauseIcon = document.querySelector(".pause-icon");
+      if (windowHeight < windowWidth) {
+        insertLandscapeGal(galleryMain);
+        sliderBoxCtrl();
+      } else {
+        insertPortraitGal(galleryMain);
+        sliderBoxCtrl();
+      }
 
-      sliderPlayBtn.currentPlayBtn = document.querySelector(".play-btn");
-      sliderPlayIcon.currentPlayIcon = document.querySelector(".play-icon");
+      const landscape = window.matchMedia("(orientation: landscape)");
 
-      const thisSliderBox = activeSliderBox.currentActiveBox;
-      // console.log(thisSliderBox);
-
-      activePhotoBox.currentActivePhotoBox =
-        thisSliderBox.querySelector(".photo-box");
-      // console.log(activePhotoBox.photoBox);
-
-      galleryImgs.boxImgsArray = Array.from(activePhotoBox.photoBox.children);
-      // console.log(galleryImgs.boxImgs);
-
-      getRightArrow.rightArrowLocation = thisSliderBox.querySelector(
-        "[data-forward-arrow]"
-      );
-      // console.log(getRightArrow.rightArrow);
-
-      getRightArrowIcon.rightIconLocation = thisSliderBox.querySelector(
-        "[data-icon-forward]"
-      );
-
-      getLeftArrow.leftArrowLocation =
-        thisSliderBox.querySelector("[data-back-arrow]");
-      // console.log(getLeftArrow.leftArrow);
-
-      getLeftArrowIcon.leftIconLocation =
-        thisSliderBox.querySelector("[data-icon-back]");
-
-      slidePosition.currentSlidePosition =
-        galleryImgs.boxImgs[setIndex.currentIndex];
-      // console.log(slidePosition.currentSlidePosition);
-      slidePosition.currentSlidePosition.classList.add("picture--active");
-
-      circleNav.thisCircleNav = thisSliderBox.querySelector(
-        ".img-dots-container"
-      );
-      // console.log(circleNav.currentCircleNav);
-
-      circleIconDivs.circleDivsArray = Array.from(
-        thisSliderBox.getElementsByClassName("circle-icon-div")
-      );
-      // console.log(circleIconDivs.circleDivs);
-
-      circleDivPosition.currentCircleDivPosition =
-        circleIconDivs.circleDivs[setIndex.currentIndex];
-      // console.log(circleDivPosition.currentCircleDivPosition);
-      circleIconDivs.circleDivs[setIndex.currentIndex].classList.add(
-        "circle-icon-div--active"
-      );
-
-      circleIcons.circleIconsArray = Array.from(
-        thisSliderBox.getElementsByClassName("circle-icon")
-      );
-      // console.log(circleIcons.circles);
-
-      circlePosition.currentCirclePosition =
-        circleIcons.circles[setIndex.currentIndex];
-      // console.log(circlePosition.currentCirclePosition);
-      circleIcons.circles[setIndex.currentIndex].classList.add(
-        "circle-icon--active"
-      );
-
-      animationAccessibility();
-      sliderAnimationCtrl();
-      clickCircles();
-      arrowCtrl();
-    } else {
-      return;
+      landscape.addEventListener("change", (e) => {
+        if (e.matches) {
+          insertLandscapeGal(galleryMain);
+          sliderBoxCtrl();
+        } else {
+          insertPortraitGal(galleryMain);
+          sliderBoxCtrl();
+        }
+      });
     }
   });
+}
+
+function insertPortraitGal(galleryMain) {
+  galleryMain.replaceChildren();
+  galleryMain.appendChild(getPortraitGal.galPortraitView);
+  console.log("Birds Gallery Portrait Mode");
+}
+
+function insertLandscapeGal(galleryMain) {
+  galleryMain.replaceChildren();
+  galleryMain.appendChild(getLandscapeGal.galLandscapeView);
+  console.log("Birds Gallery Landscape Mode");
+}
+
+export function sliderBoxCtrl() {
+  const currentGallery = getMainDiv.mainDiv.querySelector(".gallery");
+  //  console.log(currentGallery);
+
+  activeSliderBox.currentActiveBox =
+    currentGallery.querySelector(".slider-box");
+  // console.log(activeSliderBox.activeBox);
+
+  sliderAnimationCtrlDiv.currentAnimationCtrlDiv =
+    getMainDiv.mainDiv.querySelector(".animation-ctrl-div");
+  // console.log(sliderAnimationCtrlDiv.animationCtrlDiv);
+
+  sliderPauseBtn.currentPauseBtn =
+    getMainDiv.mainDiv.querySelector(".pause-btn");
+  sliderPauseIcon.currentPauseIcon =
+    getMainDiv.mainDiv.querySelector(".pause-icon");
+
+  sliderPlayBtn.currentPlayBtn = getMainDiv.mainDiv.querySelector(".play-btn");
+  sliderPlayIcon.currentPlayIcon =
+    getMainDiv.mainDiv.querySelector(".play-icon");
+
+  const thisSliderBox = activeSliderBox.activeBox;
+  // console.log(thisSliderBox);
+
+  activePhotoBox.currentActivePhotoBox =
+    thisSliderBox.querySelector(".photo-box");
+  // console.log(activePhotoBox.photoBox);
+
+  galleryImgs.boxImgsArray = Array.from(activePhotoBox.photoBox.children);
+  // console.log(galleryImgs.boxImgs);
+
+  getRightArrow.rightArrowLocation = thisSliderBox.querySelector(
+    "[data-forward-arrow]"
+  );
+  // console.log(getRightArrow.rightArrow);
+
+  getRightArrowIcon.rightIconLocation = thisSliderBox.querySelector(
+    "[data-icon-forward]"
+  );
+
+  getLeftArrow.leftArrowLocation =
+    thisSliderBox.querySelector("[data-back-arrow]");
+  // console.log(getLeftArrow.leftArrow);
+
+  getLeftArrowIcon.leftIconLocation =
+    thisSliderBox.querySelector("[data-icon-back]");
+
+  slidePosition.currentSlidePosition =
+    galleryImgs.boxImgs[setIndex.currentIndex];
+  // console.log(slidePosition.currentSlidePosition);
+  slidePosition.currentSlidePosition.classList.add("picture--active");
+
+  circleNav.thisCircleNav = thisSliderBox.querySelector(".img-dots-container");
+  // console.log(circleNav.currentCircleNav);
+
+  circleIconDivs.circleDivsArray = Array.from(
+    thisSliderBox.getElementsByClassName("circle-icon-div")
+  );
+  // console.log(circleIconDivs.circleDivs);
+
+  circleDivPosition.currentCircleDivPosition =
+    circleIconDivs.circleDivs[setIndex.currentIndex];
+  // console.log(circleDivPosition.currentCircleDivPosition);
+  circleIconDivs.circleDivs[setIndex.currentIndex].classList.add(
+    "circle-icon-div--active"
+  );
+
+  circleIcons.circleIconsArray = Array.from(
+    thisSliderBox.getElementsByClassName("circle-icon")
+  );
+  // console.log(circleIcons.circles);
+
+  circlePosition.currentCirclePosition =
+    circleIcons.circles[setIndex.currentIndex];
+  // console.log(circlePosition.currentCirclePosition);
+  circleIcons.circles[setIndex.currentIndex].classList.add(
+    "circle-icon--active"
+  );
+
+  animationAccessibility();
+  sliderAnimationCtrl();
+  clickCircles();
+  arrowCtrl();
 }
 
 function sliderAnimationCtrl() {
@@ -211,7 +261,7 @@ function clickCircles() {
 
 function arrowCtrl() {
   activeSliderBox.currentActiveBox.addEventListener("pointerdown", (e) => {
-    console.log(e.target);
+    // console.log(e.target);
     if (
       e.target === getRightArrow.rightArrow ||
       e.target === getRightArrowIcon.rightArrowIcon

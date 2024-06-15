@@ -23,8 +23,6 @@ export const fullPageName = currentPage.substring(
 export const indexOfExtension = fullPageName.indexOf(".");
 export const shortPageName = fullPageName.substring(0, indexOfExtension);
 
-export const mainElement = document.querySelector(".main");
-
 // Drop Down
 export const dropDownDiv = document.querySelector(".dropdown-div");
 export const dropDownCarat = document.querySelector(".gal-arrow");
@@ -38,7 +36,48 @@ export const dropDownItems = Array.from(
   document.querySelectorAll(".dropdown-item")
 );
 
-// // Photo Gallery
+// Window Dimensions
+export const windowHeight = window.innerHeight;
+export const windowWidth = window.innerWidth;
+
+// Photo Gallery
+
+export let getMainDiv = {
+  mainDiv: undefined,
+
+  get mainDivLocale() {
+    return this.mainDiv;
+  },
+
+  set mainDivLocale(newMainDivLocale) {
+    this.mainDiv = newMainDivLocale;
+  },
+};
+
+export let getPortraitGal = {
+  galPortraitView: undefined,
+
+  get portraitGalLocale() {
+    return this.galPortraitView;
+  },
+
+  set portraitGalLocale(newPortraitGalLocale) {
+    this.galPortraitView = newPortraitGalLocale;
+  },
+};
+
+export let getLandscapeGal = {
+  galLandscapeView: undefined,
+
+  get landscapeGalLocale() {
+    return this.galLandscapeView;
+  },
+
+  set landscapeGalLocale(newLandscapeGalLocale) {
+    this.galLandscapeView = newLandscapeGalLocale;
+  },
+};
+
 export let getAnimationID = {
   animationID: undefined,
 
@@ -111,7 +150,7 @@ export let sliderPlayIcon = {
   },
 };
 
-export const sliderBoxes = document.querySelectorAll(".slider-box");
+export const galleryMainDivs = document.querySelectorAll(".gal-main");
 export const arrowDivs = document.querySelectorAll(".arrow-div");
 export const photoBoxes = document.querySelectorAll(".photo-box");
 

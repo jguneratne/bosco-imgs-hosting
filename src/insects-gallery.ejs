@@ -69,9 +69,9 @@
         </nav>
       </header>
 
-      <main class="main">
+      <main class="main gal-main" data-name="insects-gallery">
         <!-- INSECTS GALLERY -->
-        <section class="tab-content" id="insects-gallery">
+        <section class="tab-content gal-portrait" id="insects-gallery">
           <div class="gallery">
             <div class="animation-ctrl-div">
               <button
@@ -102,7 +102,6 @@
 
             <section
               class="slider-box"
-              data-name="insects-gallery"
               tabindex="0"
               role="region"
               aria-roledescription="photo slider"
@@ -118,7 +117,7 @@
                 />
               </button>
 
-              <div class="photo-box" data-name="insects-gallery">
+              <div class="photo-box">
                 <!-- BEE ON SAGE FLOWER -->
                 <picture
                   class="picture"
@@ -142,29 +141,9 @@
                     srcset="<%=require('../src/assets/imgs/insects-gal/Guneratne_2023.06.09_bee-vertical-580p.jpg') %>"
                   />
 
-                  <source
-                    media="(1021px <= width <= 1280px) and (orientation: portrait)"
-                    srcset="<%=require('../src/assets/imgs/insects-gal/Guneratne_2023.06.09_bee-vertical-700p.jpg') %>"
-                  />
-
-                  <source
-                    media="(640px <= width <= 959px) and (orientation: landscape)"
-                    srcset="<%=require('../src/assets/imgs/insects-gal/Guneratne_2023.06.09_bee-horizontal-280p.jpg') %>"
-                  />
-
-                  <source
-                    media="(960px <= width <= 1279px) and (orientation: landscape)"
-                    srcset="<%=require('../src/assets/imgs/insects-gal/Guneratne_2023.06.09_bee-horizontal-460p.jpg') %>"
-                  />
-
-                  <source
-                    media="(1280px <= width <= 1599px) and (orientation: landscape)"
-                    srcset="<%=require('../src/assets/imgs/insects-gal/Guneratne_2023.06.09_bee-horizontal-600p.jpg') %>"
-                  />
-
                   <img
-                    src="<%=require('../src/assets/imgs/insects-gal/Guneratne_2023.06.09_bee-horizontal-900p.jpg') %>"
-                    alt="Slide 1 of 6: A bee on a purple sage flower. The landscape view shows the bee hovering in front of the flower with its head inside of it. The portrait view shows the bee sitting on the flower with its arms over its head, as if about to thrust its arms forward onto the flower."
+                    src="<%=require('../src/assets/imgs/insects-gal/Guneratne_2023.06.09_bee-vertical-700p.jpg') %>"
+                    alt="Slide 1 of 6: A bee sitting on a purple sage flower with its arms over its head, as if about to thrust its arms forward onto the flower."
                     id="slide1"
                   />
                 </picture>
@@ -192,29 +171,9 @@
                     srcset="<%=require('../src/assets/imgs/insects-gal/Guneratne_2023.09.05_caterpillar-vertical-580p.jpg') %>"
                   />
 
-                  <source
-                    media="(1021px <= width <= 1280px) and (orientation: portrait)"
-                    srcset="<%=require('../src/assets/imgs/insects-gal/Guneratne_2023.09.05_caterpillar-vertical-700p.jpg') %>"
-                  />
-
-                  <source
-                    media="(640px <= width <= 959px) and (orientation: landscape)"
-                    srcset="<%=require('../src/assets/imgs/insects-gal/Guneratne_2023.09.05_caterpillar-horizontal-280p.jpg') %>"
-                  />
-
-                  <source
-                    media="(960px <= width <= 1279px) and (orientation: landscape)"
-                    srcset="<%=require('../src/assets/imgs/insects-gal/Guneratne_2023.09.05_caterpillar-horizontal-460p.jpg') %>"
-                  />
-
-                  <source
-                    media="(1280px <= width <= 1599px) and (orientation: landscape)"
-                    srcset="<%=require('../src/assets/imgs/insects-gal/Guneratne_2023.09.05_caterpillar-horizontal-600p.jpg') %>"
-                  />
-
                   <img
-                    src="<%=require('../src/assets/imgs/insects-gal/Guneratne_2023.09.05_caterpillar-horizontal-900p.jpg') %>"
-                    alt="Slide 2 of 6: A close up of a swallowtail butterfly caterpillar, which is green with black stripes, and yellow dots on every other stripe. The landscape view shows a caterpillar on the branch of a dill plant, feeding on the flower at the end. The portrait view shows a caterpillar crawling vertically up a fennel stalk."
+                    src="<%=require('../src/assets/imgs/insects-gal/Guneratne_2023.09.05_caterpillar-vertical-700p.jpg') %>"
+                    alt="Slide 2 of 6: A close up of a swallowtail butterfly caterpillar crawling vertically up a fennel stalk. The caterpillar is green with black stripes and yellow dots on every other stripe."
                     id="slide2"
                   />
                 </picture>
@@ -242,11 +201,289 @@
                     srcset="<%=require('../src/assets/imgs/insects-gal/Guneratne_2023.08.02_dragonfly-vertical-580p.jpg') %>"
                   />
 
+                  <img
+                    src="<%=require('../src/assets/imgs/insects-gal/Guneratne_2023.08.02_dragonfly-vertical-700p.jpg') %>"
+                    alt="Slide 3 of 6: An eastern amberwing dragonfly sits on the branch of a cotoneaster plant, facing right in the frame and glancing toward the camera."
+                    id="slide3"
+                  />
+                </picture>
+
+                <!-- ANT -->
+                <picture
+                  class="picture"
+                  role="group"
+                  aria-roledescription="slide"
+                  aria-labelledby="slide4"
+                  tabindex="0"
+                >
                   <source
-                    media="(1021px <= width <= 1280px) and (orientation: portrait)"
-                    srcset="<%=require('../src/assets/imgs/insects-gal/Guneratne_2023.08.02_dragonfly-vertical-700p.jpg') %>"
+                    media="(300px <= width <= 699px) and (orientation: portrait)"
+                    srcset="<%=require('../src/assets/imgs/insects-gal/Guneratne_2023.06.09_ant_leaf-vertical-320p.jpg') %>"
                   />
 
+                  <source
+                    media="(700px <= width <= 799px) and (orientation: portrait)"
+                    srcset="<%=require('../src/assets/imgs/insects-gal/Guneratne_2023.06.09_ant_leaf-vertical-460p.jpg') %>"
+                  />
+
+                  <source
+                    media="(800px <= width <= 1020px) and (orientation: portrait)"
+                    srcset="<%=require('../src/assets/imgs/insects-gal/Guneratne_2023.06.09_ant_leaf-vertical-580p.jpg') %>"
+                  />
+
+                  <img
+                    src="<%=require('../src/assets/imgs/insects-gal/Guneratne_2023.06.09_ant_leaf-vertical-700p.jpg') %>"
+                    alt="Slide 4 of 6: A black ant crawls towad the left side of a large green leaf with serrated edges that is pointing vertically toward the top of the frame. The majority of the frame is filled with light and dark green leaves from the same plant."
+                    id="slide4"
+                  />
+                </picture>
+
+                <!-- BUTTERFLY -->
+                <picture
+                  class="picture"
+                  role="group"
+                  aria-roledescription="slide"
+                  aria-labelledby="slide5"
+                  tabindex="0"
+                >
+                  <source
+                    media="(300px <= width <= 699px) and (orientation: portrait)"
+                    srcset="<%=require('../src/assets/imgs/insects-gal/Guneratne_2023.08.09_butterfly-vertical-320p.jpg') %>"
+                  />
+
+                  <source
+                    media="(700px <= width <= 799px) and (orientation: portrait)"
+                    srcset="<%=require('../src/assets/imgs/insects-gal/Guneratne_2023.08.09_butterfly-vertical-460p.jpg') %>"
+                  />
+
+                  <source
+                    media="(800px <= width <= 1020px) and (orientation: portrait)"
+                    srcset="<%=require('../src/assets/imgs/insects-gal/Guneratne_2023.08.09_butterfly-vertical-580p.jpg') %>"
+                  />
+
+                  <img
+                    src="<%=require('../src/assets/imgs/insects-gal/Guneratne_2023.08.09_butterfly-vertical-700p.jpg') %>"
+                    alt="Slide 5 of 6: A bright yellow eastern tiger swallowtail butterfly with black stripes sits on top of a purple thistle flower."
+                    id="slide5"
+                  />
+                </picture>
+
+                <!-- GRASSHOPPER -->
+                <picture
+                  class="picture"
+                  role="group"
+                  aria-roledescription="slide"
+                  aria-labelledby="slide6"
+                  tabindex="0"
+                >
+                  <source
+                    media="(300px <= width <= 699px) and (orientation: portrait)"
+                    srcset="<%=require('../src/assets/imgs/insects-gal/Guneratne_2023.08.26_grasshopper-vertical-320p.jpg') %>"
+                  />
+
+                  <source
+                    media="(700px <= width <= 799px) and (orientation: portrait)"
+                    srcset="<%=require('../src/assets/imgs/insects-gal/Guneratne_2023.08.26_grasshopper-vertical-460p.jpg') %>"
+                  />
+
+                  <source
+                    media="(800px <= width <= 1020px) and (orientation: portrait)"
+                    srcset="<%=require('../src/assets/imgs/insects-gal/Guneratne_2023.08.26_grasshopper-vertical-580p.jpg') %>"
+                  />
+
+                  <img
+                    src="<%=require('../src/assets/imgs/insects-gal/Guneratne_2023.08.26_grasshopper-vertical-700p.jpg') %>"
+                    alt="Slide 6 of 6: A closeup of a grasshopper sitting on a serrated leaf facing upward toward the right at a diagonal angle in the frame."
+                    id="slide6"
+                  />
+                </picture>
+              </div>
+
+              <button type="button" class="forward-arrow" data-forward-arrow>
+                <img
+                  data-icon-forward
+                  class="arrow"
+                  src="<%=require('../src/assets/imgs/reshot-icon-arrow-chevron-right-WDGHUKQ634.svg') %>"
+                  alt="Forward Arrow"
+                />
+              </button>
+
+              <div class="img-dots-container">
+                <div class="img-dots">
+                  <button
+                    type="button"
+                    class="circle-icon-div"
+                    data-circle="0"
+                    aria-label="Select Slide 1 of 6."
+                  >
+                    <div class="circle-icon" data-circle="0"></div>
+                  </button>
+
+                  <button
+                    type="button"
+                    class="circle-icon-div"
+                    data-circle="1"
+                    aria-label="Select Slide 2 of 6."
+                  >
+                    <div class="circle-icon" data-circle="1"></div>
+                  </button>
+
+                  <button
+                    type="button"
+                    class="circle-icon-div"
+                    data-circle="2"
+                    aria-label="Select Slide 3 of 6."
+                  >
+                    <div class="circle-icon" data-circle="2"></div>
+                  </button>
+
+                  <button
+                    type="button"
+                    class="circle-icon-div"
+                    data-circle="3"
+                    aria-label="Select Slide 4 of 6."
+                  >
+                    <div class="circle-icon" data-circle="3"></div>
+                  </button>
+
+                  <button
+                    type="button"
+                    class="circle-icon-div"
+                    data-circle="4"
+                    aria-label="Select Slide 5 of 6."
+                  >
+                    <div class="circle-icon" data-circle="4"></div>
+                  </button>
+
+                  <button
+                    type="button"
+                    class="circle-icon-div"
+                    data-circle="5"
+                    aria-label="Select Slide 6 of 6."
+                  >
+                    <div class="circle-icon" data-circle="5"></div>
+                  </button>
+                </div>
+              </div>
+            </section>
+          </div>
+        </section>
+
+        <section class="tab-content gal-landscape" id="insects-gallery">
+          <div class="gallery">
+            <div class="animation-ctrl-div">
+              <button
+                type="button"
+                class="pause-btn"
+                title="Press Enter or Space to Pause Gallery Animation"
+              >
+                <img
+                  class="pause-icon"
+                  src="../src/assets/imgs/pause-button-icon.svg"
+                  alt="Press Enter or Space to Pause Gallery Animation"
+                />
+              </button>
+
+              <button
+                type="button"
+                class="play-btn"
+                title="Press Enter or Space to Start Gallery Animation"
+              >
+                <img
+                  class="play-icon"
+                  src="../src/assets/imgs/play-button-icon.svg"
+                  title="Start Gallery Animation"
+                  alt="Press Enter or Space to Start Gallery Animation"
+                />
+              </button>
+            </div>
+
+            <section
+              class="slider-box"
+              tabindex="0"
+              role="region"
+              aria-roledescription="photo slider"
+              aria-label="Insects Gallery"
+            >
+              <!-- <div class="slider-row-one"></div> -->
+              <button type="button" class="back-arrow" data-back-arrow>
+                <img
+                  data-icon-back
+                  class="arrow"
+                  src="<%=require('../src/assets/imgs/reshot-icon-arrow-chevron-left-975UQXVKZF.svg') %>"
+                  alt="Back Arrow"
+                />
+              </button>
+
+              <div class="photo-box">
+                <!-- BEE ON SAGE FLOWER -->
+                <picture
+                  class="picture"
+                  aria-role="group"
+                  aria-roledescription="slide"
+                  aria-labelledby="slide1"
+                  tabindex="0"
+                >
+                  <source
+                    media="(640px <= width <= 959px) and (orientation: landscape)"
+                    srcset="<%=require('../src/assets/imgs/insects-gal/Guneratne_2023.06.09_bee-horizontal-280p.jpg') %>"
+                  />
+
+                  <source
+                    media="(960px <= width <= 1279px) and (orientation: landscape)"
+                    srcset="<%=require('../src/assets/imgs/insects-gal/Guneratne_2023.06.09_bee-horizontal-460p.jpg') %>"
+                  />
+
+                  <source
+                    media="(1280px <= width <= 1599px) and (orientation: landscape)"
+                    srcset="<%=require('../src/assets/imgs/insects-gal/Guneratne_2023.06.09_bee-horizontal-600p.jpg') %>"
+                  />
+
+                  <img
+                    src="<%=require('../src/assets/imgs/insects-gal/Guneratne_2023.06.09_bee-horizontal-900p.jpg') %>"
+                    alt="Slide 1 of 6: A bee hovering in flight in front of a purple sage flower with its head looking inside of it."
+                    id="slide1"
+                  />
+                </picture>
+
+                <!-- CATERPILLAR -->
+                <picture
+                  class="picture"
+                  role="group"
+                  aria-roledescription="slide"
+                  aria-labelledby="slide2"
+                  tabindex="0"
+                >
+                  <source
+                    media="(640px <= width <= 959px) and (orientation: landscape)"
+                    srcset="<%=require('../src/assets/imgs/insects-gal/Guneratne_2023.09.05_caterpillar-horizontal-280p.jpg') %>"
+                  />
+
+                  <source
+                    media="(960px <= width <= 1279px) and (orientation: landscape)"
+                    srcset="<%=require('../src/assets/imgs/insects-gal/Guneratne_2023.09.05_caterpillar-horizontal-460p.jpg') %>"
+                  />
+
+                  <source
+                    media="(1280px <= width <= 1599px) and (orientation: landscape)"
+                    srcset="<%=require('../src/assets/imgs/insects-gal/Guneratne_2023.09.05_caterpillar-horizontal-600p.jpg') %>"
+                  />
+
+                  <img
+                    src="<%=require('../src/assets/imgs/insects-gal/Guneratne_2023.09.05_caterpillar-horizontal-900p.jpg') %>"
+                    alt="Slide 2 of 6: A close up of a swallowtail butterfly caterpillar on the branch of a dill plant, feeding on the flower at the end. The caterpillar is green with black stripes and yellow dots on every other stripe."
+                    id="slide2"
+                  />
+                </picture>
+
+                <!-- DRAGONFLY -->
+                <picture
+                  class="picture"
+                  role="group"
+                  aria-roledescription="slide"
+                  aria-labelledby="slide3"
+                  tabindex="0"
+                >
                   <source
                     media="(640px <= width <= 959px) and (orientation: landscape)"
                     srcset="<%=require('../src/assets/imgs/insects-gal/Guneratne_2023.08.02_dragonfly-horizontal-280p.jpg') %>"
@@ -278,26 +515,6 @@
                   tabindex="0"
                 >
                   <source
-                    media="(300px <= width <= 699px) and (orientation: portrait)"
-                    srcset="<%=require('../src/assets/imgs/insects-gal/Guneratne_2023.06.09_ant_leaf-vertical-320p.jpg') %>"
-                  />
-
-                  <source
-                    media="(700px <= width <= 799px) and (orientation: portrait)"
-                    srcset="<%=require('../src/assets/imgs/insects-gal/Guneratne_2023.06.09_ant_leaf-vertical-460p.jpg') %>"
-                  />
-
-                  <source
-                    media="(800px <= width <= 1020px) and (orientation: portrait)"
-                    srcset="<%=require('../src/assets/imgs/insects-gal/Guneratne_2023.06.09_ant_leaf-vertical-580p.jpg') %>"
-                  />
-
-                  <source
-                    media="(1021px <= width <= 1280px) and (orientation: portrait)"
-                    srcset="<%=require('../src/assets/imgs/insects-gal/Guneratne_2023.06.09_ant_leaf-vertical-700p.jpg') %>"
-                  />
-
-                  <source
                     media="(640px <= width <= 959px) and (orientation: landscape)"
                     srcset="<%=require('../src/assets/imgs/insects-gal/Guneratne_2023.06.09_ant_leaf-horizontal-280p.jpg') %>"
                   />
@@ -327,26 +544,6 @@
                   aria-labelledby="slide5"
                   tabindex="0"
                 >
-                  <source
-                    media="(300px <= width <= 699px) and (orientation: portrait)"
-                    srcset="<%=require('../src/assets/imgs/insects-gal/Guneratne_2023.08.09_butterfly-vertical-320p.jpg') %>"
-                  />
-
-                  <source
-                    media="(700px <= width <= 799px) and (orientation: portrait)"
-                    srcset="<%=require('../src/assets/imgs/insects-gal/Guneratne_2023.08.09_butterfly-vertical-460p.jpg') %>"
-                  />
-
-                  <source
-                    media="(800px <= width <= 1020px) and (orientation: portrait)"
-                    srcset="<%=require('../src/assets/imgs/insects-gal/Guneratne_2023.08.09_butterfly-vertical-580p.jpg') %>"
-                  />
-
-                  <source
-                    media="(1021px <= width <= 1280px) and (orientation: portrait)"
-                    srcset="<%=require('../src/assets/imgs/insects-gal/Guneratne_2023.08.09_butterfly-vertical-700p.jpg') %>"
-                  />
-
                   <source
                     media="(640px <= width <= 959px) and (orientation: landscape)"
                     srcset="<%=require('../src/assets/imgs/insects-gal/Guneratne_2023.08.09_butterfly-horizontal-280p.jpg') %>"
@@ -378,26 +575,6 @@
                   tabindex="0"
                 >
                   <source
-                    media="(300px <= width <= 699px) and (orientation: portrait)"
-                    srcset="<%=require('../src/assets/imgs/insects-gal/Guneratne_2023.08.26_grasshopper-vertical-320p.jpg') %>"
-                  />
-
-                  <source
-                    media="(700px <= width <= 799px) and (orientation: portrait)"
-                    srcset="<%=require('../src/assets/imgs/insects-gal/Guneratne_2023.08.26_grasshopper-vertical-460p.jpg') %>"
-                  />
-
-                  <source
-                    media="(800px <= width <= 1020px) and (orientation: portrait)"
-                    srcset="<%=require('../src/assets/imgs/insects-gal/Guneratne_2023.08.26_grasshopper-vertical-580p.jpg') %>"
-                  />
-
-                  <source
-                    media="(1021px <= width <= 1280px) and (orientation: portrait)"
-                    srcset="<%=require('../src/assets/imgs/insects-gal/Guneratne_2023.08.26_grasshopper-vertical-700p.jpg') %>"
-                  />
-
-                  <source
                     media="(640px <= width <= 959px) and (orientation: landscape)"
                     srcset="<%=require('../src/assets/imgs/insects-gal/Guneratne_2023.08.26_grasshopper-horizontal-280p.jpg') %>"
                   />
@@ -414,7 +591,7 @@
 
                   <img
                     src="<%=require('../src/assets/imgs/insects-gal/Guneratne_2023.08.26_grasshopper-horizontal-900p.jpg') %>"
-                    alt="Slide 6 of 6: A closeup of a grasshopper sitting on a serrated leaf. The landscape view shows the grasshopper sitting parallel to the long edge of the frame, facing right. The portrait view shows the grasshopper facing upward toward the right at a diagonal angle in the frame."
+                    alt="Slide 6 of 6: A closeup of a grasshopper sitting on a serrated leaf parallel to the long edge of the frame, facing right."
                     id="slide6"
                   />
                 </picture>
@@ -429,90 +606,60 @@
                 />
               </button>
 
-              <div class="img-dots-container" data-name="first-gallery">
-                <div class="img-dots" data-name="first-gallery">
+              <div class="img-dots-container">
+                <div class="img-dots">
                   <button
                     type="button"
                     class="circle-icon-div"
                     data-circle="0"
-                    data-name="first-gallery"
                     aria-label="Select Slide 1 of 6."
                   >
-                    <div
-                      class="circle-icon"
-                      data-circle="0"
-                      data-name="first-gallery"
-                    ></div>
+                    <div class="circle-icon" data-circle="0"></div>
                   </button>
 
                   <button
                     type="button"
                     class="circle-icon-div"
                     data-circle="1"
-                    data-name="first-gallery"
                     aria-label="Select Slide 2 of 6."
                   >
-                    <div
-                      class="circle-icon"
-                      data-circle="1"
-                      data-name="first-gallery"
-                    ></div>
+                    <div class="circle-icon" data-circle="1"></div>
                   </button>
 
                   <button
                     type="button"
                     class="circle-icon-div"
                     data-circle="2"
-                    data-name="first-gallery"
                     aria-label="Select Slide 3 of 6."
                   >
-                    <div
-                      class="circle-icon"
-                      data-circle="2"
-                      data-name="first-gallery"
-                    ></div>
+                    <div class="circle-icon" data-circle="2"></div>
                   </button>
 
                   <button
                     type="button"
                     class="circle-icon-div"
                     data-circle="3"
-                    data-name="first-gallery"
                     aria-label="Select Slide 4 of 6."
                   >
-                    <div
-                      class="circle-icon"
-                      data-circle="3"
-                      data-name="first-gallery"
-                    ></div>
+                    <div class="circle-icon" data-circle="3"></div>
                   </button>
 
                   <button
                     type="button"
                     class="circle-icon-div"
                     data-circle="4"
-                    data-name="first-gallery"
                     aria-label="Select Slide 5 of 6."
                   >
-                    <div
-                      class="circle-icon"
-                      data-circle="4"
-                      data-name="first-gallery"
-                    ></div>
+                    <div class="circle-icon" data-circle="4"></div>
                   </button>
 
                   <button
                     type="button"
                     class="circle-icon-div"
                     data-circle="5"
-                    data-name="first-gallery"
                     aria-label="Select Slide 6 of 6."
                   >
-                    <div
-                      class="circle-icon"
-                      data-circle="5"
-                      data-name="first-gallery"
-                    ></div>
+                    <div class="circle-icon" data-circle="5"></div>
                   </button>
                 </div>
               </div>

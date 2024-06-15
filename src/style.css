@@ -811,11 +811,13 @@ textarea:focus {
     margin: 0 auto;
   }
 
+  .pause-icon,
   .pause-icon {
     width: 10rem;
     margin: 0 1em;
   }
 
+  .play-icon,
   .play-icon {
     width: 12rem;
   }
