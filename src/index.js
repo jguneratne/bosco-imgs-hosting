@@ -4,7 +4,7 @@ import { ctrlTabHighlight } from "./navStyles";
 
 import { galleriesClickMenu } from "./dropDown";
 
-import { checkPageOrientation } from "./photoSlider";
+import { gallerySetup } from "./photoSlider";
 
 // import { validateFormFields } from "./form-validation";
 
@@ -14,6 +14,6 @@ window.addEventListener("load", (e) => {
   console.log("The page is loaded");
   ctrlTabHighlight();
   galleriesClickMenu();
-  checkPageOrientation();
+  gallerySetup();
   // validateFormFields();
 });

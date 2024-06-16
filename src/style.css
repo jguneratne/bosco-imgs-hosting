@@ -445,6 +445,7 @@ h2 {
   border-radius: 3em;
   background-color: var(--slider-box-col);
   min-height: 0.625rem;
+  max-width: min-content;
   margin: 0 auto 5ch auto;
 
   display: grid;

@@ -29,7 +29,7 @@ import {
   circlePosition,
 } from "./variables";
 
-export function checkPageOrientation() {
+export function gallerySetup() {
   galleryMainDivs.forEach((div) => {
     if (div.dataset.name === shortPageName) {
       getMainDiv.mainDivLocale = document.querySelector(".main");
@@ -43,39 +43,45 @@ export function checkPageOrientation() {
         galleryMain.querySelector(".gal-landscape");
 
       if (windowHeight < windowWidth) {
-        clearInterval(getAnimationID.animationID);
         insertLandscapeGal(galleryMain);
         sliderBoxCtrl();
       } else {
-        clearInterval(getAnimationID.animationID);
         insertPortraitGal(galleryMain);
         sliderBoxCtrl();
       }
 
-      const landscape = window.matchMedia("(orientation: landscape)");
+      checkPageOrientation(galleryMain);
+    }
+  });
+}
 
-      landscape.addEventListener("change", (e) => {
-        if (e.matches) {
-          clearInterval(getAnimationID.animationID);
-          insertLandscapeGal(galleryMain);
-          sliderBoxCtrl();
-        } else {
-          clearInterval(getAnimationID.animationID);
-          insertPortraitGal(galleryMain);
-          sliderBoxCtrl();
-        }
-      });
+function checkPageOrientation(galleryMain) {
+  const landscape = window.matchMedia("(orientation: landscape)");
+
+  landscape.addEventListener("change", (e) => {
+    if (e.matches) {
+      clearActiveState();
+      resetIndexes();
+      insertLandscapeGal(galleryMain);
+      sliderBoxCtrl();
+    } else {
+      clearActiveState();
+      resetIndexes();
+      insertPortraitGal(galleryMain);
+      sliderBoxCtrl();
     }
   });
 }
 
 function insertPortraitGal(galleryMain) {
+  clearInterval(getAnimationID.animationID);
   galleryMain.replaceChildren();
   galleryMain.appendChild(getPortraitGal.galPortraitView);
   console.log("Birds Gallery Portrait Mode");
 }
 
 function insertLandscapeGal(galleryMain) {
+  clearInterval(getAnimationID.animationID);
   galleryMain.replaceChildren();
   galleryMain.appendChild(getLandscapeGal.galLandscapeView);
   console.log("Birds Gallery Landscape Mode");
@@ -416,4 +422,14 @@ function addActiveState() {
   );
 
   circlePosition.currentCirclePosition.classList.add("circle-icon--active");
+}
+
+function resetIndexes() {
+  setIndex.targetIndex = 0;
+  slidePosition.currentSlide = galleryImgs[setIndex.currentIndex];
+  slidePosition.nextSlide = galleryImgs[setIndex.currentIndex + 1];
+  slidePosition.prevSlide = galleryImgs[setIndex.currentIndex - 1];
+  circlePosition.currentCircle = circleIcons[setIndex.currentIndex];
+  circlePosition.nextCircle = circleIcons[setIndex.currentIndex + 1];
+  circlePosition.prevCircle = circleIcons[setIndex.currentIndex - 1];
 }
