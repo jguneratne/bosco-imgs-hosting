@@ -43,10 +43,14 @@ export function gallerySetup() {
         galleryMain.querySelector(".gal-landscape");
 
       if (windowHeight < windowWidth) {
-        insertLandscapeGal(galleryMain);
+        galleryMain.replaceChildren();
+        galleryMain.appendChild(getLandscapeGal.galLandscapeView);
+        console.log("Birds Gallery Portrait Mode");
         sliderBoxCtrl();
       } else {
-        insertPortraitGal(galleryMain);
+        galleryMain.replaceChildren();
+        galleryMain.appendChild(getPortraitGal.galPortraitView);
+        console.log("Birds Gallery Portrait Mode");
         sliderBoxCtrl();
       }
 
