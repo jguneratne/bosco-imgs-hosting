@@ -45,7 +45,7 @@ export function gallerySetup() {
       if (windowHeight < windowWidth) {
         galleryMain.replaceChildren();
         galleryMain.appendChild(getLandscapeGal.galLandscapeView);
-        console.log("Birds Gallery Portrait Mode");
+        console.log("Birds Gallery Landscape Mode");
         sliderBoxCtrl();
       } else {
         galleryMain.replaceChildren();
@@ -60,15 +60,17 @@ export function gallerySetup() {
 }
 
 function checkPageOrientation(galleryMain) {
-  const landscape = window.matchMedia("(orientation: landscape)");
+  screen.orientation.addEventListener("change", (e) => {
+    const displayOrientation = screen.orientation.type;
 
-  landscape.addEventListener("change", (e) => {
-    if (e.matches) {
+    if (displayOrientation === "landscape-primary") {
+      console.log("This is the landscape view.");
       clearActiveState();
       resetIndexes();
       insertLandscapeGal(galleryMain);
       sliderBoxCtrl();
-    } else {
+    } else if (displayOrientation === "portrait-primary") {
+      console.log("This is the portrait view");
       clearActiveState();
       resetIndexes();
       insertPortraitGal(galleryMain);
