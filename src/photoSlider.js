@@ -60,17 +60,18 @@ export function gallerySetup() {
 }
 
 function checkPageOrientation(galleryMain) {
-  screen.orientation.addEventListener("change", (e) => {
-    const displayOrientation = screen.orientation.type;
+  const landscape = window.matchMedia("(orientation: landscape)");
+  console.log(landscape);
 
-    if (displayOrientation === "landscape-primary") {
-      console.log("This is the landscape view.");
+  landscape.addEventListener("change", (e) => {
+    if (e.matches) {
+      console.log(landscape);
       clearActiveState();
       resetIndexes();
       insertLandscapeGal(galleryMain);
       sliderBoxCtrl();
-    } else if (displayOrientation === "portrait-primary") {
-      console.log("This is the portrait view");
+    } else {
+      console.log(landscape);
       clearActiveState();
       resetIndexes();
       insertPortraitGal(galleryMain);
