@@ -703,20 +703,30 @@ textarea:focus {
 
 .about-text-box {
   display: flex;
-  justify-content: flex-end;
-  align-items: flex-start;
-}
+  flex-direction: column;
 
-.about-text {
-  max-width: 50%;
-  margin: auto 0;
+  max-width: 70%;
+  height: min-content;
+  margin: auto;
   padding: 2.5em 2em;
-  font-size: 2ch;
   text-align: left;
   color: var(--light-font-col);
   border-radius: 1em;
   background-color: var(--slider-box-col);
   opacity: 80%;
+}
+
+.bosco-entry {
+  font-size: 1.8ch;
+  margin-bottom: 2rem;
+}
+
+.definition {
+  margin-bottom: 0.4rem;
+}
+
+.about-text {
+  font-size: 2.3ch;
 }
 
 /* Footer */
@@ -830,12 +840,16 @@ textarea:focus {
   }
 
   .about-text-box {
-    justify-content: center;
+    max-width: 80%;
+    margin: 3ch auto 0 auto;
+  }
+
+  .bosco-entry {
+    font-size: 3.2ch;
   }
 
   .about-text {
-    max-width: 70%;
-    font-size: 3.2ch;
+    font-size: 3.7ch;
   }
 }
 
@@ -875,11 +889,6 @@ textarea:focus {
 
   .about {
     background-image: url(../src/assets/imgs/about-page/Guneratne_2023.10.01_about-vertical-400p.jpg);
-  }
-
-  .about-text {
-    max-width: 85%;
-    font-size: 2.5ch;
   }
 }
 
@@ -938,12 +947,16 @@ textarea:focus {
   }
 
   .about-text-box {
-    justify-content: center;
+    max-width: 80%;
+    margin: 3ch auto 0 auto;
+  }
+
+  .bosco-entry {
+    font-size: 3.5ch;
   }
 
   .about-text {
-    max-width: 70%;
-    font-size: 3ch;
+    font-size: 3.5ch;
   }
 }
 
@@ -966,9 +979,16 @@ textarea:focus {
     background-image: url(../src/assets/imgs/about-page/Guneratne_2023.10.01_about-horizontal-1200p.jpg);
   }
 
+  .about-text-box {
+    max-width: 80%;
+  }
+
+  .bosco-entry {
+    font-size: 2ch;
+  }
+
   .about-text {
-    max-width: 70%;
-    font-size: 2.2ch;
+    font-size: 2.5ch;
   }
 }
 
@@ -994,13 +1014,16 @@ textarea:focus {
   }
 
   .about-text-box {
-    padding: 1em 0;
+    margin: 3ch auto;
+    max-width: 90%;
+  }
+
+  .bosco-entry {
+    font-size: 1.8ch;
   }
 
   .about-text {
-    min-width: 65%;
-    max-width: 75%;
-    font-size: 1.7ch;
+    font-size: 2ch;
   }
 }
 
@@ -1046,9 +1069,16 @@ textarea:focus {
     background-image: url(../src/assets/imgs/about-page/Guneratne_2023.10.01_about-horizontal-1600p.jpg);
   }
 
-  .about-text {
-    max-width: 70%;
+  .about-text-box {
+    max-width: 80%;
+  }
+
+  .bosco-entry {
     font-size: 3ch;
+  }
+
+  .about-text {
+    font-size: 3.5ch;
   }
 }
 
@@ -1075,8 +1105,17 @@ textarea:focus {
     border-radius: 1.5ch;
   }
 
+  .about-text-box {
+    max-width: 90%;
+    margin: 3ch auto 0 auto;
+  }
+
+  .bosco-entry {
+    font-size: 3ch;
+  }
+
   .about-text {
-    margin: 2em 0 0 0;
+    font-size: 3.5ch;
   }
 }
 
@@ -1102,11 +1141,6 @@ textarea:focus {
   .play-icon {
     width: 4.5rem;
   }
-
-  .about-text {
-    max-width: 75%;
-    font-size: 1ch;
-  }
 }
 
 @media (max-width: 450px) {
@@ -1124,18 +1158,5 @@ textarea:focus {
     font-size: 2ch;
     padding: 2rem 3rem;
     border-radius: 1.5ch;
-  }
-}
-
-@media (max-width: 450px) and (orientation: portrait) {
-  .about-text {
-    font-size: 1.7ch;
-  }
-}
-
-@media (max-width: 400px) and (orientation: portrait) {
-  .about-text {
-    margin: 3em 0 0 0;
-    font-size: 1.3ch;
   }
 }
