@@ -701,13 +701,13 @@ textarea:focus {
   grid-template-columns: repeat(2, 1fr);
 }
 
-.about-text-box {
+.about-text-div {
   display: flex;
   flex-direction: column;
 
   max-width: 70%;
   height: min-content;
-  margin: auto;
+  margin: 3ch auto;
   padding: 2.5em 2em;
   text-align: left;
   color: var(--light-font-col);
@@ -725,8 +725,18 @@ textarea:focus {
   margin-bottom: 0.4rem;
 }
 
-.about-text {
+.about-box {
   font-size: 2.3ch;
+  display: flex;
+  flex-direction: column;
+
+  height: min-content;
+  background-color: var(--slider-box-col);
+  opacity: 80%;
+}
+
+.about-text:not(.last-para) {
+  margin-bottom: 1.2rem;
 }
 
 /* Footer */
@@ -839,7 +849,7 @@ textarea:focus {
     grid-template-rows: repeat(2, 1fr);
   }
 
-  .about-text-box {
+  .about-text-div {
     max-width: 80%;
     margin: 3ch auto 0 auto;
   }
@@ -848,7 +858,7 @@ textarea:focus {
     font-size: 3.2ch;
   }
 
-  .about-text {
+  .about-box {
     font-size: 3.7ch;
   }
 }
@@ -946,7 +956,7 @@ textarea:focus {
     grid-template-rows: repeat(2, 1fr);
   }
 
-  .about-text-box {
+  .about-text-div {
     max-width: 80%;
     margin: 3ch auto 0 auto;
   }
@@ -955,7 +965,7 @@ textarea:focus {
     font-size: 3.5ch;
   }
 
-  .about-text {
+  .about-box {
     font-size: 3.5ch;
   }
 }
@@ -979,7 +989,7 @@ textarea:focus {
     background-image: url(../src/assets/imgs/about-page/Guneratne_2023.10.01_about-horizontal-1200p.jpg);
   }
 
-  .about-text-box {
+  .about-text-div {
     max-width: 80%;
   }
 
@@ -987,7 +997,7 @@ textarea:focus {
     font-size: 2ch;
   }
 
-  .about-text {
+  .about-box {
     font-size: 2.5ch;
   }
 }
@@ -1013,16 +1023,16 @@ textarea:focus {
     background-image: url(../src/assets/imgs/about-page/Guneratne_2023.10.01_about-horizontal-800p.jpg);
   }
 
-  .about-text-box {
-    margin: 3ch auto;
-    max-width: 90%;
+  .about-text-div {
+    margin: 3ch 0 3ch 2ch;
+    max-width: 100%;
   }
 
   .bosco-entry {
     font-size: 1.8ch;
   }
 
-  .about-text {
+  .about-box {
     font-size: 2ch;
   }
 }
@@ -1069,7 +1079,7 @@ textarea:focus {
     background-image: url(../src/assets/imgs/about-page/Guneratne_2023.10.01_about-horizontal-1600p.jpg);
   }
 
-  .about-text-box {
+  .about-text-div {
     max-width: 80%;
   }
 
@@ -1077,7 +1087,7 @@ textarea:focus {
     font-size: 3ch;
   }
 
-  .about-text {
+  .about-box {
     font-size: 3.5ch;
   }
 }
@@ -1105,7 +1115,7 @@ textarea:focus {
     border-radius: 1.5ch;
   }
 
-  .about-text-box {
+  .about-text-div {
     max-width: 90%;
     margin: 3ch auto 0 auto;
   }
@@ -1114,7 +1124,7 @@ textarea:focus {
     font-size: 3ch;
   }
 
-  .about-text {
+  .about-box {
     font-size: 3.5ch;
   }
 }
