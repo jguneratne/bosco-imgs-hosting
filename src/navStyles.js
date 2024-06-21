@@ -7,7 +7,8 @@ import {
 
 export function ctrlTabHighlight() {
   menuBtnStyle.forEach((btn) => {
-    if (btn.dataset.name === "index") {
+    if (btn.dataset.name === shortPageName) {
+      console.log(btn.dataset.name);
       menuBtnStyle.forEach((btn) => {
         btn.classList.remove("selected");
       });
@@ -26,8 +27,9 @@ export function showCurrentNavLink() {
       });
       btn.classList.add("selected");
     } else if (
-      shortPageName === "first-gallery" ||
-      shortPageName === "second-gallery"
+      shortPageName === "birds-gallery" ||
+      shortPageName === "insects-gallery" ||
+      shortPageName === "small-animals-gallery"
     ) {
       showGalNavLink();
     }
@@ -37,8 +39,9 @@ export function showCurrentNavLink() {
 function showGalNavLink() {
   dropDownItems.forEach((item) => {
     if (
-      item.dataset.name === "first-gal" ||
-      item.dataset.name === "second-gal"
+      item.dataset.name === "birds-gallery" ||
+      item.dataset.name === "insects-gallery" ||
+      item.dataset.name === "small-animals-gallery"
     ) {
       menuBtnStyle.forEach((btn) => {
         btn.classList.remove("selected");
