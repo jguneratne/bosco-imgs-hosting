@@ -793,14 +793,19 @@ textarea:focus {
 /* Media Queries */
 
 @media (max-width: 1200px) and (orientation: portrait) {
+  .header {
+    justify-content: center;
+    padding: 1.2em 0 0 0;
+  }
+
   .home {
     background-image: url(../src/assets/imgs/home-imgs/Guneratne_2024.06.09_home-vertical-800p.jpg);
     display: grid;
   }
 
   .logo-box {
-    width: 95%;
-    margin: auto 1rem auto 1rem;
+    width: 90%;
+    margin: auto;
   }
 
   .cta-btn {
@@ -873,6 +878,53 @@ textarea:focus {
 }
 
 @media (max-width: 800px) and (orientation: portrait) {
+  .menu-items {
+    max-width: min-content;
+    gap: 0.4em;
+  }
+
+  .menu-btn,
+  .menu-btn a {
+    width: 13ch;
+    padding: 0.4ch;
+  }
+
+  .gals-link {
+    margin-left: -0.8ch;
+  }
+
+  .dropdown-btn {
+    width: 13ch;
+  }
+
+  .gal-arrow {
+    margin-left: -2ch;
+  }
+
+  .dropdown-content--active li:first-child a {
+    margin-top: -1.5ch;
+    padding: 0.5ch 0;
+  }
+
+  .dropdown-content--active li a {
+    padding: 0.5ch 0;
+    max-width: 10ch;
+  }
+
+  .dropdown-content--active li.dropdown-item--active {
+    max-width: min-content;
+    outline: 0.2ch solid var(--slider-box-col);
+  }
+
+  .dropdown-content--active li.dropdown-item--active:hover {
+    outline: 0.2ch solid var(--head-foot-col);
+  }
+
+  .dropdown-content--active li.dropdown-item--active:focus {
+    border: 0.2ch solid var(--head-foot-col);
+    outline: 0.2ch solid var(--head-foot-col);
+  }
+
   .home {
     background-image: url(../src/assets/imgs/home-imgs/Guneratne_2024.06.09_home-vertical-870p.jpg);
     display: grid;
@@ -912,6 +964,10 @@ textarea:focus {
 }
 
 @media (min-width: 1201px) and (orientation: portrait) {
+  .header {
+    justify-content: center;
+  }
+
   .home {
     background-image: url(../src/assets/imgs/home-imgs/Guneratne_2024.06.09_home-vertical-1200p.jpg);
     display: grid;
@@ -1012,6 +1068,58 @@ textarea:focus {
 }
 
 @media (max-width: 962px) and (orientation: landscape) {
+  .header {
+    padding-right: 1em;
+    padding-top: 1em;
+  }
+
+  .menu-items {
+    max-width: min-content;
+    gap: 0.6em;
+  }
+
+  .menu-btn,
+  .menu-btn a {
+    width: 13ch;
+    padding: 0.4ch;
+  }
+
+  .gals-link {
+    margin-left: -0.8ch;
+  }
+
+  .dropdown-btn {
+    width: 13ch;
+  }
+
+  .gal-arrow {
+    margin-left: -2ch;
+  }
+
+  .dropdown-content--active li:first-child a {
+    margin-top: -1.5ch;
+    padding: 0.5ch 0;
+  }
+
+  .dropdown-content--active li a {
+    padding: 0.5ch 0;
+    max-width: 10ch;
+  }
+
+  .dropdown-content--active li.dropdown-item--active {
+    max-width: min-content;
+    outline: 0.2ch solid var(--slider-box-col);
+  }
+
+  .dropdown-content--active li.dropdown-item--active:hover {
+    outline: 0.2ch solid var(--head-foot-col);
+  }
+
+  .dropdown-content--active li.dropdown-item--active:focus {
+    border: 0.2ch solid var(--head-foot-col);
+    outline: 0.2ch solid var(--head-foot-col);
+  }
+
   .home {
     background-image: url(../src/assets/imgs/home-imgs/Guneratne_2024.06.09_home-horizontal-800p.jpg);
   }
@@ -1109,6 +1217,12 @@ textarea:focus {
 }
 
 @media (max-width: 640px) and (orientation: portrait) {
+  .menu-items {
+    max-width: min-content;
+    margin: 0 0.5ch;
+    gap: 0.4em;
+  }
+
   .pause-icon {
     width: 5rem;
     margin: 0 1em;
