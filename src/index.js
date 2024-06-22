@@ -6,7 +6,7 @@ import { galleriesClickMenu } from "./dropDown";
 
 import { gallerySetup } from "./photoSlider";
 
-// import { validateFormFields } from "./form-validation";
+import { validateFormFields } from "./form-validation";
 
 console.log("photogallery");
 
@@ -15,5 +15,5 @@ window.addEventListener("load", (e) => {
   ctrlTabHighlight();
   galleriesClickMenu();
   gallerySetup();
-  // validateFormFields();
+  validateFormFields();
 });
