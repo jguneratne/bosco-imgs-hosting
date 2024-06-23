@@ -1,5 +1,9 @@
 // Contact Form Validation
+export const formDisabledText = document.querySelector(".form-disabled");
 export const form = document.querySelector("#contact");
+export const formFieldset = document.querySelector("fieldset");
+export const inputFields = document.querySelectorAll("input");
+export const textArea = document.querySelector("textarea");
 export const firstName = document.getElementById("first-name");
 export const firstNameError = document.querySelector(".firstNameError");
 export const lastName = document.getElementById("last-name");
@@ -8,6 +12,7 @@ export const email = document.getElementById("email");
 export const emailError = document.querySelector(".emailError");
 export const message = document.getElementById("message");
 export const messageError = document.querySelector(".messageError");
+export const submitBtn = document.querySelector(".send-contact");
 export const submitError = document.querySelector(".submitError");
 
 // Accessibility

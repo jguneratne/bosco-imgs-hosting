@@ -585,9 +585,21 @@ h2 {
 }
 
 .required-text {
-  padding: 0.5em 0 3em 0;
+  padding: 0.5em 0;
   font-size: 1.2rem;
   color: var(--dark-font-col);
+}
+
+.form-disabled {
+  font-size: 1.2rem;
+  color: var(--error-color);
+  text-decoration: underline;
+
+  display: none;
+}
+
+form {
+  padding-top: 3em;
 }
 
 fieldset {
@@ -652,7 +664,8 @@ textarea:focus {
   border: 2px solid var(--error-color);
 }
 
-::placeholder {
+input::placeholder,
+textarea::placeholder {
   color: var(--dark-font-col);
   opacity: 1;
 }

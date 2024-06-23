@@ -1,5 +1,9 @@
 import {
+  formDisabledText,
   form,
+  formFieldset,
+  inputFields,
+  textArea,
   firstName,
   firstNameError,
   lastName,
@@ -8,12 +12,26 @@ import {
   emailError,
   message,
   messageError,
+  submitBtn,
   submitError,
   shortPageName,
 } from "./variables";
 
 export function validateFormFields() {
-  if (shortPageName === "contact") {
+  if (shortPageName === "contact" && formFieldset.disabled) {
+    formDisabledText.style.display = "initial";
+
+    inputFields.forEach((field) => {
+      field.style.backgroundColor = "#edf0f0";
+      field.style.pointerEvents = "none";
+    });
+
+    textArea.style.backgroundColor = "#edf0f0";
+    textArea.style.pointerEvents = "none";
+
+    submitBtn.style.backgroundColor = "#edf0f0";
+    submitBtn.style.pointerEvents = "none";
+  } else if (shortPageName === "contact" && !formFieldset.disabled) {
     validateFirstNameInput();
     validateLastNameInput();
     validateEmailInput();
