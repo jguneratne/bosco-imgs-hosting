@@ -12,13 +12,15 @@ export function galleriesClickMenu() {
   navigation.addEventListener("keydown", (e) => {
     if (
       (e.key === " " || e.key === "Enter") &&
-      e.target.innerText.toLowerCase() === "galleries" &&
+      (e.target.innerText.toLowerCase() === "galleries" ||
+        e.target === dropDownCarat) &&
       !dropDownMenu.classList.contains("dropdown-content--active")
     ) {
       activateDropdown();
     } else if (
       (e.key === " " || e.key === "Enter") &&
-      e.target.innerText.toLowerCase() === "galleries" &&
+      (e.target.innerText.toLowerCase() === "galleries" ||
+        e.target === dropDownCarat) &&
       dropDownMenu.classList.contains("dropdown-content--active")
     ) {
       closeDropdown();
@@ -27,18 +29,20 @@ export function galleriesClickMenu() {
 
   navigation.addEventListener("pointerdown", (e) => {
     if (
-      e.target.innerText.toLowerCase() === "galleries" &&
+      (e.target.innerText.toLowerCase() === "galleries" ||
+        e.target === dropDownCarat) &&
       !dropDownMenu.classList.contains("dropdown-content--active")
     ) {
       activateDropdown();
     } else if (
-      e.target === dropDownItems &&
+      (e.target === dropDownItems || e.target === dropDownCarat) &&
       dropDownMenu.classList.contains("dropdown-content--active")
     ) {
       console.log(e.target);
       closeDropdown();
     } else if (
-      e.target.innerText.toLowerCase() === "galleries" &&
+      (e.target.innerText.toLowerCase() === "galleries" ||
+        e.target === dropDownCarat) &&
       dropDownMenu.classList.contains("dropdown-content--active")
     ) {
       closeDropdown();
