@@ -1306,3 +1306,13 @@ textarea::placeholder {
     width: 45ch;
   }
 }
+
+@media (prefers-reduced-motion) {
+  .gal-arrow {
+    transition: none;
+  }
+
+  .dropdown-content--active li.dropdown-item--active {
+    -webkit-animation: none;
+  }
+}
