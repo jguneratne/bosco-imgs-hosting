@@ -4,7 +4,6 @@ import {
   getPortraitGal,
   getLandscapeGal,
   galleryMainDivs,
-  getMainDiv,
   reduceMotion,
   shortPageName,
   getAnimationID,

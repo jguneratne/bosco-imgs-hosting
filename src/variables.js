@@ -47,18 +47,6 @@ export const windowWidth = window.innerWidth;
 
 // Photo Gallery
 
-export let getMainDiv = {
-  mainDiv: undefined,
-
-  get mainDivLocale() {
-    return this.mainDiv;
-  },
-
-  set mainDivLocale(newMainDivLocale) {
-    this.mainDiv = newMainDivLocale;
-  },
-};
-
 export let getPortraitGal = {
   galPortraitView: undefined,
 
