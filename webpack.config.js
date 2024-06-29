@@ -1,108 +1,100 @@
 const path = require("path");
-const HtmlWebpackPlugin = require("html-webpack-plugin");
+const HtmlBundlerPlugin = require("html-bundler-webpack-plugin");
 
 module.exports = {
   stats: { children: true },
   mode: "development",
-  entry: [
-    "./src/index.js",
-    "./src/photoSlider.js",
-    "./src/variables.js",
-    "./src/dropDown.js",
-    "./src/navStyles.js",
-    "./src/form-validation.js",
-  ],
   output: {
-    filename: "bundle.js",
-    path: path.resolve(__dirname, "dist"),
+    path: path.join(__dirname, "dist/"),
     clean: true,
   },
-  devtool: "inline-source-map",
+  resolve: {
+    alias: {
+      "@scripts": path.join(__dirname, "src/js"),
+      "@styles": path.join(__dirname, "src/css"),
+      "@images": path.join(__dirname, "src/images"),
+    },
+  },
+
   plugins: [
-    new HtmlWebpackPlugin({
-      title: "Bosco Images Wildlife Photography: Homepage",
-      filename: "index.html",
-      template: "src/template.ejs",
-      inject: "body",
-      scriptLoading: "module",
-    }),
-    new HtmlWebpackPlugin({
-      title: "Bosco Images Wildlife Photography: Photo Galleries",
-      filename: "galleries.html",
-      template: "src/galleries.ejs",
-      inject: "body",
-      scriptLoading: "module",
-    }),
-    new HtmlWebpackPlugin({
-      title: "Bosco Images Wildlife Photography: Birds Gallery",
-      filename: "birds-gallery.html",
-      template: "src/birds-gallery.ejs",
-      inject: "body",
-      scriptLoading: "module",
-    }),
-    new HtmlWebpackPlugin({
-      title: "Bosco Images Wildlife Photography: Insects Gallery",
-      filename: "insects-gallery.html",
-      template: "src/insects-gallery.ejs",
-      inject: "body",
-      scriptLoading: "module",
-    }),
-    new HtmlWebpackPlugin({
-      title: "Jenn Guneratne Photography: Small Animals Gallery",
-      filename: "small-animals-gallery.html",
-      template: "src/small-animals-gallery.ejs",
-      inject: "body",
-      scriptLoading: "module",
-    }),
-    new HtmlWebpackPlugin({
-      title: "About: Bosco Images Wildlife Photography",
-      filename: "about.html",
-      template: "src/about.ejs",
-      inject: "body",
-      scriptLoading: "module",
-    }),
-    new HtmlWebpackPlugin({
-      title: "Contact: Bosco Images Wildlife Photography",
-      filename: "contact.html",
-      template: "src/contact.ejs",
-      inject: "body",
-      scriptLoading: "module",
+    new HtmlBundlerPlugin({
+      entry: [
+        {
+          import: "./src/pages/template.ejs", // template file
+          filename: "index.html", // => dist/index.html
+          data: { title: "Bosco Images Wildlife Photography: Homepage" }, // pass variables into template
+        },
+        {
+          import: "./src/pages/galleries.ejs",
+          filename: "galleries.html",
+          data: { title: "Bosco Images Wildlife Photography: Photo Galleries" },
+        },
+        {
+          import: "./src/pages/birds-gallery.ejs",
+          filename: "birds-gallery.html",
+          data: { title: "Bosco Images Wildlife Photography: Birds Gallery" },
+        },
+        {
+          import: "./src/pages/insects-gallery.ejs",
+          filename: "insects-gallery.html",
+          data: { title: "Bosco Images Wildlife Photography: Insects Gallery" },
+        },
+        {
+          import: "./src/pages/small-animals-gallery.ejs",
+          filename: "small-animals-gallery.html",
+          data: {
+            title: "Bosco Images Wildlife Photography: Small Animals Gallery",
+          },
+        },
+        {
+          import: "./src/pages/about.ejs",
+          filename: "about.html",
+          data: { title: "About: Bosco Images Wildlife Photography" },
+        },
+        {
+          import: "./src/pages/contact.ejs",
+          filename: "contact.html",
+          data: { title: "Contact: Bosco Images Wildlife Photography" },
+        },
+      ],
+      js: {
+        // output filename for JS
+        filename: "js/[name].[contenthash:8].js",
+      },
+      css: {
+        // output filename for CSS
+        filename: "css/[name].[contenthash:8].css",
+      },
+      preprocessor: "ejs",
     }),
   ],
+
+  devtool: "inline-source-map",
 
   module: {
     rules: [
       {
-        test: /\.css$/i,
-        use: ["style-loader", "css-loader"],
+        test: /\.(css|sass|scss)$/,
+        use: ["css-loader", "sass-loader"],
       },
       {
-        test: /\.(png|svg|jpg|jpeg|gif)$/i,
+        test: /\.(png|jpe?g|ico|svg)$/,
         type: "asset/resource",
         generator: {
-          filename: "./assets/[name]-[hash][ext]",
+          filename: "assets/img/[name].[hash:8][ext]",
         },
       },
-      {
-        test: /\.(woff|woff2|eot|ttf|otf)$/i,
-        type: "asset/resource",
-      },
-      {
-        test: /\.html$/i,
-        use: [
-          {
-            loader: "html-loader",
-            options: {
-              root: path.resolve(__dirname, "src"),
-            },
-          },
-        ],
-      },
-      {
-        test: /\.js$/,
-        enforce: "pre",
-        use: ["source-map-loader"],
-      },
     ],
+  },
+
+  //enable HMR with live reload
+  devServer: {
+    static: path.resolve(__dirname, "dist"),
+    watchFiles: {
+      paths: ["src/**/*.*"],
+      options: {
+        usePolling: true,
+      },
+    },
   },
 };
