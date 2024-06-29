@@ -1,3 +1,4 @@
+const webpack = require("webpack");
 const path = require("path");
 const HtmlBundlerPlugin = require("html-bundler-webpack-plugin");
 
@@ -16,7 +17,14 @@ module.exports = {
     },
   },
 
+  devtool: false,
+
   plugins: [
+    new webpack.SourceMapDevToolPlugin({
+      filename: "[file].map[query]",
+      exclude: ["vendor.js"],
+    }),
+
     new HtmlBundlerPlugin({
       entry: [
         {
@@ -69,19 +77,24 @@ module.exports = {
     }),
   ],
 
-  devtool: "inline-source-map",
-
   module: {
     rules: [
       {
         test: /\.(css|sass|scss)$/,
-        use: ["css-loader", "sass-loader"],
+        use: [
+          {
+            loader: "css-loader",
+            options: {
+              import: false, // disable @import at-rules handling
+            },
+          },
+        ],
       },
       {
         test: /\.(png|jpe?g|ico|svg)$/,
         type: "asset/resource",
         generator: {
-          filename: "assets/img/[name].[hash:8][ext]",
+          filename: "assets/imgs/[name].[hash:8][ext]",
         },
       },
     ],
