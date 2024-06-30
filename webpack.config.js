@@ -1,6 +1,12 @@
-const webpack = require("webpack");
 const path = require("path");
 const HtmlBundlerPlugin = require("html-bundler-webpack-plugin");
+const ejs = require("ejs");
+
+// create EJS config
+const ejsConfig = {
+  root: process.cwd(), // define root template path when using `include()`
+  async: true, // optional, async rendering
+};
 
 module.exports = {
   stats: { children: true },
@@ -17,14 +23,9 @@ module.exports = {
     },
   },
 
-  devtool: false,
+  devtool: "inline-source-map",
 
   plugins: [
-    new webpack.SourceMapDevToolPlugin({
-      filename: "[file].map[query]",
-      exclude: ["vendor.js"],
-    }),
-
     new HtmlBundlerPlugin({
       entry: [
         {
@@ -45,7 +46,9 @@ module.exports = {
         {
           import: "./src/pages/insects-gallery.ejs",
           filename: "insects-gallery.html",
-          data: { title: "Bosco Images Wildlife Photography: Insects Gallery" },
+          data: {
+            title: "Bosco Images Wildlife Photography: Insects Gallery",
+          },
         },
         {
           import: "./src/pages/small-animals-gallery.ejs",
@@ -79,6 +82,14 @@ module.exports = {
 
   module: {
     rules: [
+      {
+        test: /\.(html|ejs)$/,
+        loader: HtmlBundlerPlugin.loader,
+        options: {
+          preprocessor: (template, { data }) =>
+            ejs.render(template, data, ejsConfig), // <= use EJS compiler
+        },
+      },
       {
         test: /\.(css|sass|scss)$/,
         use: [
