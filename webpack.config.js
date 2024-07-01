@@ -29,9 +29,11 @@ module.exports = {
     new HtmlBundlerPlugin({
       entry: [
         {
-          import: "./src/pages/template.ejs", // template file
+          import: ["./src/pages/template.ejs", "./src/pages/parts/footer.ejs"], // template file
           filename: "index.html", // => dist/index.html
-          data: { title: "Bosco Images Wildlife Photography: Homepage" }, // pass variables into template
+          data: {
+            title: "Bosco Images Wildlife Photography: Homepage",
+          }, // pass variables into template
         },
         {
           import: "./src/pages/galleries.ejs",
@@ -76,6 +78,7 @@ module.exports = {
         // output filename for CSS
         filename: "css/[name].[contenthash:8].css",
       },
+
       preprocessor: "ejs",
     }),
   ],
@@ -85,10 +88,6 @@ module.exports = {
       {
         test: /\.(html|ejs)$/,
         loader: HtmlBundlerPlugin.loader,
-        options: {
-          preprocessor: (template, { data }) =>
-            ejs.render(template, data, ejsConfig), // <= use EJS compiler
-        },
       },
       {
         test: /\.(css|sass|scss)$/,
@@ -105,7 +104,25 @@ module.exports = {
         test: /\.(png|jpe?g|ico|svg)$/,
         type: "asset/resource",
         generator: {
-          filename: "assets/imgs/[name].[hash:8][ext]",
+          filename: ({ filename }) => {
+            // Keep directory structure for images in dist folder
+            const srcPath =
+              "src/assets/imgs" ||
+              "src/assets/imgs/about-page" ||
+              "src/assets/imgs/birds-gal" ||
+              "src/assets/imgs/home-imgs" ||
+              "src/assets/imgs/insects-gal" ||
+              "src/assets/imgs/small-animals-gal" ||
+              "src/assets/imgs/thumbnails";
+            const regExp = new RegExp(
+              `[\\\\/]?(?:${path.normalize(srcPath)}|node_modules)[\\\\/](.+?)$`
+            );
+            const assetPath = path.dirname(
+              regExp.exec(filename)[1].replace("@", "").replace(/\\/g, "/")
+            );
+
+            return `images/${assetPath}/[name].[hash:8][ext]`;
+          },
         },
       },
     ],
