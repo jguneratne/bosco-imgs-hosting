@@ -10,70 +10,11 @@
 
   <body>
     <div class="container">
-      <header class="header header-border">
-        <nav>
-          <ul class="menu-items" id="tabs">
-            <li class="menu-btn hov-style" data-name="index">
-              <a aria-label="Home Page" href="../dist/index.html">Home</a>
-            </li>
+      <%- include('header.ejs') %>
 
-            <div
-              class="dropdown-div menu-btn gal-hov dropdown-btn"
-              data-name="galleries"
-              title="Galleries"
-            >
-              <div class="gal-btn-div">
-                <li aria-label="Click to Open Submenu">
-                  <a class="gals-link" href="#galleries">Galleries</a>
-                </li>
-
-                <div class="gal-arrow"></div>
-              </div>
-
-              <ul class="dropdown-content">
-                <li
-                  class="dropdown-item birds"
-                  style="--delay: 1"
-                  data-name="birds-gallery"
-                  aria-label="Click to Visit Gallery"
-                >
-                  <a href="../dist/birds-gallery.html">Birds</a>
-                </li>
-                <li
-                  class="dropdown-item insects"
-                  style="--delay: 2"
-                  data-name="insects-gallery"
-                  aria-label="Click to Visit Gallery"
-                >
-                  <a href="../dist/insects-gallery.html">Insects</a>
-                </li>
-                <li
-                  class="dropdown-item small-animals"
-                  style="--delay: 3"
-                  data-name="small-animals-gallery"
-                  aria-label="Click to Visit Gallery"
-                >
-                  <a href="../dist/small-animals-gallery.html">Small Animals</a>
-                </li>
-              </ul>
-            </div>
-
-            <li class="menu-btn hov-style" data-name="about">
-              <a aria-label="About Page" href="../dist/about.html">About</a>
-            </li>
-
-            <li class="menu-btn hov-style" data-name="contact">
-              <a aria-label="Contact Page" href="../dist/contact.html"
-                >Contact</a
-              >
-            </li>
-          </ul>
-        </nav>
-      </header>
-
-      <main class="main gal-main" data-name="birds-gallery">
-        <!-- BIRDS GALLERY -->
-        <section class="tab-content gal-portrait" id="birds-gallery">
+      <main class="main gal-main" data-name="small-animals-gallery">
+        <!-- SMALL ANIMALS GALLERY -->
+        <section class="tab-content gal-portrait" id="small-animals-gallery">
           <div class="gallery portrait-gallery">
             <div class="animation-ctrl-div portrait-animation-ctrl-div">
               <button
@@ -107,7 +48,7 @@
               tabindex="0"
               role="region"
               aria-roledescription="photo slider"
-              aria-label="Birds Gallery"
+              aria-label="Small Animals Gallery"
             >
               <!-- <div class="slider-row-one"></div> -->
               <button type="button" class="back-arrow" data-back-arrow>
@@ -120,7 +61,7 @@
               </button>
 
               <div class="photo-box portrait-photo-box">
-                <!-- RED WINGED BLACKBIRD -->
+                <!-- BUNNY EATING GRASS -->
                 <picture
                   class="picture"
                   aria-role="group"
@@ -131,32 +72,32 @@
                   <source
                     media="(min-width: 300px) and (max-width: 699px) and (orientation: portrait)"
                     srcset="
-                      ../assets/imgs/birds-gal/Guneratne_2024.06.03_red-wing-vertical-320p.jpg
+                      ../assets/imgs/small-animals-gal/Guneratne_2023.06.28_bunny_grass-vertical-320p.jpg
                     "
                   />
 
                   <source
                     media="(min-width: 700px) and (max-width: 799px) and (orientation: portrait)"
                     srcset="
-                      ../assets/imgs/birds-gal/Guneratne_2024.06.03_red-wing-vertical-460p.jpg
+                      ../assets/imgs/small-animals-gal/Guneratne_2023.06.28_bunny_grass-vertical-460p.jpg
                     "
                   />
 
                   <source
                     media="(min-width: 800px) and (max-width: 1020px) and (orientation: portrait)"
                     srcset="
-                      ../assets/imgs/birds-gal/Guneratne_2024.06.03_red-wing-vertical-580p.jpg
+                      ../assets/imgs/small-animals-gal/Guneratne_2023.06.28_bunny_grass-vertical-580p.jpg
                     "
                   />
 
                   <img
-                    src="../assets/imgs/birds-gal/Guneratne_2024.06.03_red-wing-vertical-700p.jpg"
-                    alt="Slide 1 of 8: A red winged blackbird perched on a vertical reed by the water, about three-quarters up in the center of the frame, facing right. The light blue color of the water provides a backdrop to the bird, and green vegetation forms a vignette around the edges of the frame."
+                    src="../assets/imgs/small-animals-gal/Guneratne_2023.06.28_bunny_grass-vertical-700p.jpg"
+                    alt="Slide 1 of 9: A rabbit standing on its hind legs reaching up to nibble on a piece of long grass above its head. The rabbit's back is to the viewer and its head is reaching up toward the top left corner of the frame."
                     id="slide1"
                   />
                 </picture>
 
-                <!-- EASTERN KINGBIRD IN A TREE -->
+                <!-- SQUIRREL IN TREE -->
                 <picture
                   class="picture"
                   role="group"
@@ -167,32 +108,33 @@
                   <source
                     media="(min-width: 300px) and (max-width: 699px) and (orientation: portrait)"
                     srcset="
-                      ../assets/imgs/birds-gal/Guneratne_2023.06.29_kingbird-vertical-320p.jpg
+                      ../assets/imgs/small-animals-gal/Guneratne_2024.05.03_tree-squirrel-verical-320p.jpg
                     "
                   />
 
                   <source
                     media="(min-width: 700px) and (max-width: 799px) and (orientation: portrait)"
                     srcset="
-                      ../assets/imgs/birds-gal/Guneratne_2023.06.29_kingbird-vertical-460p.jpg
+                      ../assets/imgs/small-animals-gal/Guneratne_2024.05.03_tree-squirrel-verical-460p.jpg
                     "
                   />
 
                   <source
                     media="(min-width: 800px) and (max-width: 1020px) and (orientation: portrait)"
                     srcset="
-                      ../assets/imgs/birds-gal/Guneratne_2023.06.29_kingbird-vertical-580p.jpg
+                      ../assets/imgs/small-animals-gal/Guneratne_2024.05.03_tree-squirrel-verical-580p.jpg
                     "
                   />
 
                   <img
-                    src="../assets/imgs/birds-gal/Guneratne_2023.06.29_kingbird-vertical-700p.jpg"
-                    alt="Slide 2 of 8: An Eastern Kingbird in a tree shown from the front as it glances down at the camera, perched on a tree branch against a blue sky with tree branches filling the frame from the sides."
+                    src="../assets/imgs/small-animals-gal/Guneratne_2024.05.03_tree-squirrel-verical-700p.jpg"
+                    alt="Slide 2 of 9: A squirrel climbing a thin branch of a cherry tree that has young leaves and spring buds. The squirrel is partially hidden behind the leaves, holding onto one of them, with its face peering over the leaf at the camera."
                     id="slide2"
                   />
                 </picture>
 
-                <!-- CARDINAL -->
+                <!-- CHIPMUNK EATING -->
+
                 <picture
                   class="picture"
                   role="group"
@@ -203,33 +145,32 @@
                   <source
                     media="(min-width: 300px) and (max-width: 699px) and (orientation: portrait)"
                     srcset="
-                      ../assets/imgs/birds-gal/Guneratne_2024.01.19_cardinal-vertical-320p.jpg
+                      ../assets/imgs/small-animals-gal/Guneratne_2024.05.24_chipmunk-eating-vertical-320p.jpg
                     "
                   />
 
                   <source
                     media="(min-width: 700px) and (max-width: 799px) and (orientation: portrait)"
                     srcset="
-                      ../assets/imgs/birds-gal/Guneratne_2024.01.19_cardinal-vertical-460p.jpg
+                      ../assets/imgs/small-animals-gal/Guneratne_2024.05.24_chipmunk-eating-vertical-460p.jpg
                     "
                   />
 
                   <source
                     media="(min-width: 800px) and (max-width: 1020px) and (orientation: portrait)"
                     srcset="
-                      ../assets/imgs/birds-gal/Guneratne_2024.01.19_cardinal-vertical-580p.jpg
+                      ../assets/imgs/small-animals-gal/Guneratne_2024.05.24_chipmunk-eating-vertical-580p.jpg
                     "
                   />
 
                   <img
-                    src="../assets/imgs/birds-gal/Guneratne_2024.01.19_cardinal-vertical-700p.jpg"
-                    alt="Slide 3 of 8: A bright red male cardinal perched on top of a rhododendron branch, looking with a confused expression at the camera."
+                    src="../assets/imgs/small-animals-gal/Guneratne_2024.05.24_chipmunk-eating-vertical-700p.jpg"
+                    alt="Slide 3 of 9: A chipmunk in the center of the frame, facing left, standing on its hind legs with its hands up to its mouth as it eats something. There are white stones on the ground in front of the chipmunk and the broun ground of the woods is out of focus behind it."
                     id="slide3"
                   />
                 </picture>
 
-                <!-- KINGBIRD DIVING -->
-
+                <!-- BUNNY EAR GLOW -->
                 <picture
                   class="picture"
                   role="group"
@@ -240,32 +181,32 @@
                   <source
                     media="(min-width: 300px) and (max-width: 699px) and (orientation: portrait)"
                     srcset="
-                      ../assets/imgs/birds-gal/Guneratne_2024.06.07_kingbird-dive-vertical-320p.jpg
+                      ../assets/imgs/small-animals-gal/Guneratne_2023.07.30_bunny_glow-vertical-320p.jpg
                     "
                   />
 
                   <source
                     media="(min-width: 700px) and (max-width: 799px) and (orientation: portrait)"
                     srcset="
-                      ../assets/imgs/birds-gal/Guneratne_2024.06.07_kingbird-dive-vertical-460p.jpg
+                      ../assets/imgs/small-animals-gal/Guneratne_2023.07.30_bunny_glow-vertical-460p.jpg
                     "
                   />
 
                   <source
                     media="(min-width: 800px) and (max-width: 1020px) and (orientation: portrait)"
                     srcset="
-                      ../assets/imgs/birds-gal/Guneratne_2024.06.07_kingbird-dive-vertical-580p.jpg
+                      ../assets/imgs/small-animals-gal/Guneratne_2023.07.30_bunny_glow-vertical-580p.jpg
                     "
                   />
 
                   <img
-                    src="../assets/imgs/birds-gal/Guneratne_2024.06.07_kingbird-dive-vertical-700p.jpg"
-                    alt="Slide 4 of 8: An Eastern Kingbird in midair, diving down toward the water to catch an insect."
+                    src="../assets/imgs/small-animals-gal/Guneratne_2023.07.30_bunny_glow-vertical-700p.jpg"
+                    alt="Slide 4 of 9: A rabbit sitting in long grass staring straight ahead at the camera, with the glow of sunset hitting its left ear from behind, making it look almost translucent."
                     id="slide4"
                   />
                 </picture>
 
-                <!-- ROBIN -->
+                <!-- SKUNK -->
                 <picture
                   class="picture"
                   role="group"
@@ -276,32 +217,32 @@
                   <source
                     media="(min-width: 300px) and (max-width: 699px) and (orientation: portrait)"
                     srcset="
-                      ../assets/imgs/birds-gal/Guneratne_2024.05.12_robin-vertical-320p.jpg
+                      ../assets/imgs/small-animals-gal/Guneratne_2023.08.22_skunk-vertical-320p.jpg
                     "
                   />
 
                   <source
                     media="(min-width: 700px) and (max-width: 799px) and (orientation: portrait)"
                     srcset="
-                      ../assets/imgs/birds-gal/Guneratne_2024.05.12_robin-vertical-460p.jpg
+                      ../assets/imgs/small-animals-gal/Guneratne_2023.08.22_skunk-vertical-460p.jpg
                     "
                   />
 
                   <source
                     media="(min-width: 800px) and (max-width: 1020px) and (orientation: portrait)"
                     srcset="
-                      ../assets/imgs/birds-gal/Guneratne_2024.05.12_robin-vertical-580p.jpg
+                      ../assets/imgs/small-animals-gal/Guneratne_2023.08.22_skunk-vertical-580p.jpg
                     "
                   />
 
                   <img
-                    src="../assets/imgs/birds-gal/Guneratne_2024.05.12_robin-vertical-700p.jpg"
-                    alt="Slide 5 of 8: A robin sits perched on a dead tree branch with its orange chest puffed forward and head facing upward toward the sky. It's yellow beak is slightly open as it sings into the air."
+                    src="../assets/imgs/small-animals-gal/Guneratne_2023.08.22_skunk-vertical-700p.jpg"
+                    alt="Slide 5 of 9: A skunk walking toward the left of the frame with its bushy tail in the air, partially hidden by out-of-focus green branches, with a dead tree stump just behind it."
                     id="slide5"
                   />
                 </picture>
 
-                <!-- SPARROW IN A CHERRY TREE -->
+                <!-- CHIPMUNK IN PIPE -->
                 <picture
                   class="picture"
                   role="group"
@@ -312,32 +253,32 @@
                   <source
                     media="(min-width: 300px) and (max-width: 699px) and (orientation: portrait)"
                     srcset="
-                      ../assets/imgs/birds-gal/Guneratne_2024.05.01_sparrow-cherry-vertical-320p.jpg
+                      ../assets/imgs/small-animals-gal/Guneratne_2024.06.19_chipmunk-pipe-vertical-320p.jpg
                     "
                   />
 
                   <source
                     media="(min-width: 700px) and (max-width: 799px) and (orientation: portrait)"
                     srcset="
-                      ../assets/imgs/birds-gal/Guneratne_2024.05.01_sparrow-cherry-vertical-460p.jpg
+                      ../assets/imgs/small-animals-gal/Guneratne_2024.06.19_chipmunk-pipe-vertical-460p.jpg
                     "
                   />
 
                   <source
                     media="(min-width: 800px) and (max-width: 1020px) and (orientation: portrait)"
                     srcset="
-                      ../assets/imgs/birds-gal/Guneratne_2024.05.01_sparrow-cherry-vertical-580p.jpg
+                      ../assets/imgs/small-animals-gal/Guneratne_2024.06.19_chipmunk-pipe-vertical-580p.jpg
                     "
                   />
 
                   <img
-                    src="../assets/imgs/birds-gal/Guneratne_2024.05.01_sparrow-cherry-vertical-700p.jpg"
-                    alt="Slide 6 of 8: Slide 6 of 8: A chipping sparrow sitting on the branch of a cherry tree. The branch the bird is perched on has few leaves, with abundant leaves filling the frame horizontally along the top and bottom of the image."
+                    src="../assets/imgs/small-animals-gal/Guneratne_2024.06.19_chipmunk-pipe-vertical-700p.jpg"
+                    alt="Slide 6 of 9: An old, black drainpipe slightly protrudes from the ground in the center of the frame against a white wall. There is a chipmunk inside of the pipe with its paws holding the side and lifting its head out of the pipe, facing slightly toward the left side of the frame while gazing at the camera."
                     id="slide6"
                   />
                 </picture>
 
-                <!-- HOUSE FINCH -->
+                <!-- BUNNY HIDING -->
                 <picture
                   class="picture"
                   role="group"
@@ -348,32 +289,32 @@
                   <source
                     media="(min-width: 300px) and (max-width: 699px) and (orientation: portrait)"
                     srcset="
-                      ../assets/imgs/birds-gal/Guneratne_2024.05.08_house-finch-vertical-320p.jpg
+                      ../assets/imgs/small-animals-gal/Guneratne_2023.08.11_bunny_hiding-vertical-320p.jpg
                     "
                   />
 
                   <source
                     media="(min-width: 700px) and (max-width: 799px) and (orientation: portrait)"
                     srcset="
-                      ../assets/imgs/birds-gal/Guneratne_2024.05.08_house-finch-vertical-460p.jpg
+                      ../assets/imgs/small-animals-gal/Guneratne_2023.08.11_bunny_hiding-vertical-460p.jpg
                     "
                   />
 
                   <source
                     media="(min-width: 800px) and (max-width: 1020px) and (orientation: portrait)"
                     srcset="
-                      ../assets/imgs/birds-gal/Guneratne_2024.05.08_house-finch-vertical-580p.jpg
+                      ../assets/imgs/small-animals-gal/Guneratne_2023.08.11_bunny_hiding-vertical-580p.jpg
                     "
                   />
 
                   <img
-                    src="../assets/imgs/birds-gal/Guneratne_2024.05.08_house-finch-vertical-700p.jpg"
-                    alt="Slide 7 of 8: A house finch looking at the camera from its perch on the branch of a cherry tree with sparse spring leaves just beginning to emerge. The sky is overcast and mostly white behind the bird."
+                    src="../assets/imgs/small-animals-gal/Guneratne_2023.08.11_bunny_hiding-vertical-700p.jpg"
+                    alt="Slide 7 of 9: A rabbit standing up, hiding in long grass as it gazes at the camera and chews on several long pieces of dried grass that are hanging out of its mouth."
                     id="slide7"
                   />
                 </picture>
 
-                <!-- GILDED FLICKER -->
+                <!-- SQUIRREL SITTING ON CEDAR TRUNK -->
                 <picture
                   class="picture"
                   role="group"
@@ -384,28 +325,65 @@
                   <source
                     media="(min-width: 300px) and (max-width: 699px) and (orientation: portrait)"
                     srcset="
-                      ../assets/imgs/birds-gal/Guneratne_2023.11.04_gilded_flicker-vertical-320p.jpg
+                      ../assets/imgs/small-animals-gal/Guneratne_2024.05.25_squirrel-cedar-vertical-320p.jpg
                     "
                   />
 
                   <source
                     media="(min-width: 700px) and (max-width: 799px) and (orientation: portrait)"
                     srcset="
-                      ../assets/imgs/birds-gal/Guneratne_2023.11.04_gilded_flicker-vertical-460p.jpg
+                      ../assets/imgs/small-animals-gal/Guneratne_2024.05.25_squirrel-cedar-vertical-460p.jpg
                     "
                   />
 
                   <source
                     media="(min-width: 800px) and (max-width: 1020px) and (orientation: portrait)"
                     srcset="
-                      ../assets/imgs/birds-gal/Guneratne_2023.11.04_gilded_flicker-vertical-580p.jpg
+                      ../assets/imgs/small-animals-gal/Guneratne_2024.05.25_squirrel-cedar-vertical-580p.jpg
                     "
                   />
 
                   <img
-                    src="../assets/imgs/birds-gal/Guneratne_2023.11.04_gilded_flicker-vertical-700p.jpg"
-                    alt="Slide 8 of 8: A tree trunk fills the left half of the frame, with the head of a gilded flicker with yellow and orange coloring poking its head out from behind with its back parallel to the ground and face staring straight up at the sky. There are small branches with small green leaves and red berries above and below the bird."
+                    src="../assets/imgs/small-animals-gal/Guneratne_2024.05.25_squirrel-cedar-vertical-700p.jpg"
+                    alt="Slide 8 of 9: A grey squirrel sitting on top of a hollowed out old trunk of a cedar tree, angled toward the front left of the frame and looking cautiously at the camera."
                     id="slide8"
+                  />
+                </picture>
+
+                <!-- CHIPMUNK AMONGST THE GREENS -->
+
+                <picture
+                  class="picture"
+                  role="group"
+                  aria-roledescription="slide"
+                  aria-labelledby="slide9"
+                  tabindex="0"
+                >
+                  <source
+                    media="(min-width: 640px) and (max-width: 959px) and (orientation: landscape)"
+                    srcset="
+                      ../assets/imgs/small-animals-gal/Guneratne_2024.06.25_chipmunk-greens-vertical-320p.jpg
+                    "
+                  />
+
+                  <source
+                    media="(min-width: 960px) and (max-width: 1279px) and (orientation: landscape)"
+                    srcset="
+                      ../assets/imgs/small-animals-gal/Guneratne_2024.06.25_chipmunk-greens-vertical-460p.jpg
+                    "
+                  />
+
+                  <source
+                    media="(min-width: 1280px) and (max-width: 1599px) and (orientation: landscape)"
+                    srcset="
+                      ../assets/imgs/small-animals-gal/Guneratne_2024.06.25_chipmunk-greens-vertical-580p.jpg
+                    "
+                  />
+
+                  <img
+                    src="../assets/imgs/small-animals-gal/Guneratne_2024.06.25_chipmunk-greens-vertical-700p.jpg"
+                    alt="Slide 9 of 9: A small chipmunk sits in the center of the frams on its hind legs, holding its front paws close to its body. The chipmunk is angled toward the front-left of the frame, looking coyly at the camera out of the corder of its eye, and is surrounded by leafy green weeds."
+                    id="slide9"
                   />
                 </picture>
               </div>
@@ -425,7 +403,7 @@
                     type="button"
                     class="circle-icon-div"
                     data-circle="0"
-                    aria-label="Select Slide 1 of 8."
+                    aria-label="Select Slide 1 of 9."
                   >
                     <div class="circle-icon" data-circle="0"></div>
                   </button>
@@ -434,7 +412,7 @@
                     type="button"
                     class="circle-icon-div"
                     data-circle="1"
-                    aria-label="Select Slide 2 of 8."
+                    aria-label="Select Slide 2 of 9."
                   >
                     <div class="circle-icon" data-circle="1"></div>
                   </button>
@@ -443,7 +421,7 @@
                     type="button"
                     class="circle-icon-div"
                     data-circle="2"
-                    aria-label="Select Slide 3 of 8."
+                    aria-label="Select Slide 3 of 9."
                   >
                     <div class="circle-icon" data-circle="2"></div>
                   </button>
@@ -452,7 +430,7 @@
                     type="button"
                     class="circle-icon-div"
                     data-circle="3"
-                    aria-label="Select Slide 4 of 8."
+                    aria-label="Select Slide 4 of 9."
                   >
                     <div class="circle-icon" data-circle="3"></div>
                   </button>
@@ -461,7 +439,7 @@
                     type="button"
                     class="circle-icon-div"
                     data-circle="4"
-                    aria-label="Select Slide 5 of 8."
+                    aria-label="Select Slide 5 of 9."
                   >
                     <div class="circle-icon" data-circle="4"></div>
                   </button>
@@ -470,7 +448,7 @@
                     type="button"
                     class="circle-icon-div"
                     data-circle="5"
-                    aria-label="Select Slide 6 of 8."
+                    aria-label="Select Slide 6 of 9."
                   >
                     <div class="circle-icon" data-circle="5"></div>
                   </button>
@@ -479,7 +457,7 @@
                     type="button"
                     class="circle-icon-div"
                     data-circle="6"
-                    aria-label="Select Slide 7 of 8."
+                    aria-label="Select Slide 7 of 9."
                   >
                     <div class="circle-icon" data-circle="6"></div>
                   </button>
@@ -488,9 +466,18 @@
                     type="button"
                     class="circle-icon-div"
                     data-circle="7"
-                    aria-label="Select Slide 8 of 8."
+                    aria-label="Select Slide 8 of 9."
                   >
                     <div class="circle-icon" data-circle="7"></div>
+                  </button>
+
+                  <button
+                    type="button"
+                    class="circle-icon-div"
+                    data-circle="8"
+                    aria-label="Select Slide 9 of 9."
+                  >
+                    <div class="circle-icon" data-circle="8"></div>
                   </button>
                 </div>
               </div>
@@ -498,7 +485,7 @@
           </div>
         </section>
 
-        <section class="tab-content gal-landscape" id="birds-gallery">
+        <section class="tab-content gal-landscape" id="small-animals-gallery">
           <div class="gallery landscape-gallery">
             <div class="animation-ctrl-div landscape-animation-ctrl-div">
               <button
@@ -507,7 +494,7 @@
                 title="Press Enter or Space to Pause Gallery Animation"
               >
                 <img
-                  class="pause-icon landscape-pause-icon"
+                  class="pause-icon landscape-pause-btn"
                   src="../assets/imgs/pause-button-icon.svg"
                   alt="Press Enter or Space to Pause Gallery Animation"
                 />
@@ -532,7 +519,7 @@
               tabindex="0"
               role="region"
               aria-roledescription="photo slider"
-              aria-label="Birds Gallery"
+              aria-label="Small Animals Gallery"
             >
               <!-- <div class="slider-row-one"></div> -->
               <button type="button" class="back-arrow" data-back-arrow>
@@ -545,7 +532,7 @@
               </button>
 
               <div class="photo-box landscape-photo-box">
-                <!-- SPARROW AT SUNRISE -->
+                <!-- BUNNY EATING GRASS -->
                 <picture
                   class="picture"
                   aria-role="group"
@@ -556,32 +543,32 @@
                   <source
                     media="(min-width: 640px) and (max-width: 959px) and (orientation: landscape)"
                     srcset="
-                      ../assets/imgs/birds-gal/Guneratne_2024.04.27_sparrow-horizontal-280p.jpg
+                      ../assets/imgs/small-animals-gal/Guneratne_2023.06.28_bunny_grass-horizontal-280p.jpg
                     "
                   />
 
                   <source
                     media="(min-width: 960px) and (max-width: 1279px) and (orientation: landscape)"
                     srcset="
-                      ../assets/imgs/birds-gal/Guneratne_2024.04.27_sparrow-horizontal-460p.jpg
+                      ../assets/imgs/small-animals-gal/Guneratne_2023.06.28_bunny_grass-horizontal-460p.jpg
                     "
                   />
 
                   <source
                     media="(min-width: 1280px) and (max-width: 1599px) and (orientation: landscape)"
                     srcset="
-                      ../assets/imgs/birds-gal/Guneratne_2024.04.27_sparrow-horizontal-600p.jpg
+                      ../assets/imgs/small-animals-gal/Guneratne_2023.06.28_bunny_grass-horizontal-600p.jpg
                     "
                   />
 
                   <img
-                    src="../assets/imgs/birds-gal/Guneratne_2024.04.27_sparrow-horizontal-900p.jpg"
-                    alt="Slide 1 of 8: A sparrow sitting in a tree with early spring buds and leaves, with the golden light of sunrise shining into the left side of the frame."
+                    src="../assets/imgs/small-animals-gal/Guneratne_2023.06.28_bunny_grass-horizontal-900p.jpg"
+                    alt="Slide 1 of 9: The side view of a rabbit, facing to the left of the frame with a long piece of grass in its mouth."
                     id="slide1"
                   />
                 </picture>
 
-                <!-- EASTERN KINGBIRD IN A TREE -->
+                <!-- SQUIRREL IN TREE -->
                 <picture
                   class="picture"
                   role="group"
@@ -592,32 +579,33 @@
                   <source
                     media="(min-width: 640px) and (max-width: 959px) and (orientation: landscape)"
                     srcset="
-                      ../assets/imgs/birds-gal/Guneratne_2023.06.29_kingbird-horizontal-280p.jpg
+                      ../assets/imgs/small-animals-gal/Guneratne_2024.05.03_tree-squirrel-horizontal-280p.jpg
                     "
                   />
 
                   <source
                     media="(min-width: 960px) and (max-width: 1279px) and (orientation: landscape)"
                     srcset="
-                      ../assets/imgs/birds-gal/Guneratne_2023.06.29_kingbird-horizontal-460p.jpg
+                      ../assets/imgs/small-animals-gal/Guneratne_2024.05.03_tree-squirrel-horizontal-460p.jpg
                     "
                   />
 
                   <source
                     media="(min-width: 1280px) and (max-width: 1599px) and (orientation: landscape)"
                     srcset="
-                      ../assets/imgs/birds-gal/Guneratne_2023.06.29_kingbird-horizontal-600p.jpg
+                      ../assets/imgs/small-animals-gal/Guneratne_2024.05.03_tree-squirrel-horizontal-600p.jpg
                     "
                   />
 
                   <img
-                    src="../assets/imgs/birds-gal/Guneratne_2023.06.29_kingbird-horizontal-900p.jpg"
-                    alt="Slide 2 of 8: An Eastern Kingbird in a tree shown from behind as it looks to the left. The bird is perched on a tree branch against a blue sky with tree branches filling the frame from the sides."
+                    src="../assets/imgs/small-animals-gal/Guneratne_2024.05.03_tree-squirrel-horizontal-900p.jpg"
+                    alt="Slide 2 of 9: A squirrel climbing a thin branch of a cherry tree that has young leaves and spring buds. The squirrel is partially hidden behind the leaves, holding onto one of them, with its face peering over the leaf at the camera."
                     id="slide2"
                   />
                 </picture>
 
-                <!-- CARDINAL -->
+                <!-- CHIPMUNK EATING -->
+
                 <picture
                   class="picture"
                   role="group"
@@ -628,32 +616,32 @@
                   <source
                     media="(min-width: 640px) and (max-width: 959px) and (orientation: landscape)"
                     srcset="
-                      ../assets/imgs/birds-gal/Guneratne_2023.06.27_cardinal-horizontal-280p.jpg
+                      ../assets/imgs/small-animals-gal/Guneratne_2024.05.24_chipmunk-eating-horizontal-280p.jpg
                     "
                   />
 
                   <source
                     media="(min-width: 960px) and (max-width: 1279px) and (orientation: landscape)"
                     srcset="
-                      ../assets/imgs/birds-gal/Guneratne_2023.06.27_cardinal-horizontal-460p.jpg
+                      ../assets/imgs/small-animals-gal/Guneratne_2024.05.24_chipmunk-eating-horizontal-460p.jpg
                     "
                   />
 
                   <source
                     media="(min-width: 1280px) and (max-width: 1599px) and (orientation: landscape)"
                     srcset="
-                      ../assets/imgs/birds-gal/Guneratne_2023.06.27_cardinal-horizontal-600p.jpg
+                      ../assets/imgs/small-animals-gal/Guneratne_2024.05.24_chipmunk-eating-horizontal-600p.jpg
                     "
                   />
 
                   <img
-                    src="../assets/imgs/birds-gal/Guneratne_2023.06.27_cardinal-horizontal-900p.jpg"
-                    alt="Slide 3 of 8: A bright red male cardinal on the right of the frame perched on a stick gazing toward the left of the frame, with an out-of-focus green background."
+                    src="../assets/imgs/small-animals-gal/Guneratne_2024.05.24_chipmunk-eating-horizontal-900p.jpg"
+                    alt="Slide 3 of 9: A chipmunk in the center of the frame, facing left, standing on its hind legs with its hands up to its mouth as it eats something. There are white stones on the ground in front of the chipmunk and the broun ground of the woods is out of focus behind it."
                     id="slide3"
                   />
                 </picture>
 
-                <!-- KINGBIRD DIVING -->
+                <!-- BUNNY EAR GLOW -->
                 <picture
                   class="picture"
                   role="group"
@@ -664,32 +652,32 @@
                   <source
                     media="(min-width: 640px) and (max-width: 959px) and (orientation: landscape)"
                     srcset="
-                      ../assets/imgs/birds-gal/Guneratne_2024.06.07_kingbird-dive-horizontal-280p.jpg
+                      ../assets/imgs/small-animals-gal/Guneratne_2023.07.30_bunny_glow-horizontal-280p.jpg
                     "
                   />
 
                   <source
                     media="(min-width: 960px) and (max-width: 1279px) and (orientation: landscape)"
                     srcset="
-                      ../assets/imgs/birds-gal/Guneratne_2024.06.07_kingbird-dive-horizontal-460p.jpg
+                      ../assets/imgs/small-animals-gal/Guneratne_2023.07.30_bunny_glow-horizontal-460p.jpg
                     "
                   />
 
                   <source
                     media="(min-width: 1280px) and (max-width: 1599px) and (orientation: landscape)"
                     srcset="
-                      ../assets/imgs/birds-gal/Guneratne_2024.06.07_kingbird-dive-horizontal-600p.jpg
+                      ../assets/imgs/small-animals-gal/Guneratne_2023.07.30_bunny_glow-horizontal-600p.jpg
                     "
                   />
 
                   <img
-                    src="../assets/imgs/birds-gal/Guneratne_2024.06.07_kingbird-dive-horizontal-900p.jpg"
-                    alt="Slide 4 of 8: An Eastern Kingbird in midair, diving down toward the water to catch an insect."
+                    src="../assets/imgs/small-animals-gal/Guneratne_2023.07.30_bunny_glow-horizontal-900p.jpg"
+                    alt="Slide 4 of 9: A rabbit sitting in long grass staring straight ahead at the camera, with the glow of sunset hitting its left ear from behind, making it look almost translucent."
                     id="slide4"
                   />
                 </picture>
 
-                <!-- ROBIN -->
+                <!-- SKUNK -->
                 <picture
                   class="picture"
                   role="group"
@@ -700,32 +688,32 @@
                   <source
                     media="(min-width: 640px) and (max-width: 959px) and (orientation: landscape)"
                     srcset="
-                      ../assets/imgs/birds-gal/Guneratne_2024.05.12_robin-horizontal-280p.jpg
+                      ../assets/imgs/small-animals-gal/Guneratne_2023.08.22_skunk-horizontal-280p.jpg
                     "
                   />
 
                   <source
                     media="(min-width: 960px) and (max-width: 1279px) and (orientation: landscape)"
                     srcset="
-                      ../assets/imgs/birds-gal/Guneratne_2024.05.12_robin-horizontal-460p.jpg
+                      ../assets/imgs/small-animals-gal/Guneratne_2023.08.22_skunk-horizontal-460p.jpg
                     "
                   />
 
                   <source
                     media="(min-width: 1280px) and (max-width: 1599px) and (orientation: landscape)"
                     srcset="
-                      ../assets/imgs/birds-gal/Guneratne_2024.05.12_robin-horizontal-600p.jpg
+                      ../assets/imgs/small-animals-gal/Guneratne_2023.08.22_skunk-horizontal-600p.jpg
                     "
                   />
 
                   <img
-                    src="../assets/imgs/birds-gal/Guneratne_2024.05.12_robin-horizontal-900p.jpg"
-                    alt="Slide 5 of 8: A robin sits perched on a dead tree branch with its orange chest puffed forward and head facing upward toward the sky. It's yellow beak is slightly open as it sings into the air."
+                    src="../assets/imgs/small-animals-gal/Guneratne_2023.08.22_skunk-horizontal-900p.jpg"
+                    alt="Slide 5 of 9: A skunk walking toward the left of the frame with its bushy tail in the air, partially hidden by out-of-focus green branches, with a dead tree stump just behind it."
                     id="slide5"
                   />
                 </picture>
 
-                <!-- SPARROW IN A CHERRY TREE -->
+                <!-- CHIPMUNK IN PIPE -->
                 <picture
                   class="picture"
                   role="group"
@@ -736,32 +724,32 @@
                   <source
                     media="(min-width: 640px) and (max-width: 959px) and (orientation: landscape)"
                     srcset="
-                      ../assets/imgs/birds-gal/Guneratne_2024.05.01_sparrow-cherry-horizontal-280p.jpg
+                      ../assets/imgs/small-animals-gal/Guneratne_2024.06.14_chipmunk-pipe-horizontal-280p.jpg
                     "
                   />
 
                   <source
                     media="(min-width: 960px) and (max-width: 1279px) and (orientation: landscape)"
                     srcset="
-                      ../assets/imgs/birds-gal/Guneratne_2024.05.01_sparrow-cherry-horizontal-460p.jpg
+                      ../assets/imgs/small-animals-gal/Guneratne_2024.06.14_chipmunk-pipe-horizontal-460p.jpg
                     "
                   />
 
                   <source
                     media="(min-width: 1280px) and (max-width: 1599px) and (orientation: landscape)"
                     srcset="
-                      ../assets/imgs/birds-gal/Guneratne_2024.05.01_sparrow-cherry-horizontal-600p.jpg
+                      ../assets/imgs/small-animals-gal/Guneratne_2024.06.14_chipmunk-pipe-horizontal-600p.jpg
                     "
                   />
 
                   <img
-                    src="../assets/imgs/birds-gal/Guneratne_2024.05.01_sparrow-cherry-horizontal-900p.jpg"
-                    alt="Slide 6 of 8: A chipping sparrow sitting on the branch of a cherry tree. The branch the bird is perched on has few leaves, with abundant leaves filling the frame horizontally along the top and bottom of the image."
-                    id="slide5"
+                    src="../assets/imgs/small-animals-gal/Guneratne_2024.06.14_chipmunk-pipe-horizontal-900p.jpg"
+                    alt="Slide 6 of 9: An old, black drainpipe slightly protrudes from the ground in the center of the frame against a white wall. There is a chipmunk poking its head out of the pipe, facing toward the left side of the frame."
+                    id="slide6"
                   />
                 </picture>
 
-                <!-- HOUSE FINCH -->
+                <!-- BUNNY CLOSEUP -->
                 <picture
                   class="picture"
                   role="group"
@@ -772,32 +760,32 @@
                   <source
                     media="(min-width: 640px) and (max-width: 959px) and (orientation: landscape)"
                     srcset="
-                      ../assets/imgs/birds-gal/Guneratne_2024.05.08_house-finch-horizontal-280p.jpg
+                      ../assets/imgs/small-animals-gal/Guneratne_2023.08.11_bunny_close-horizontal-280p.jpg
                     "
                   />
 
                   <source
                     media="(min-width: 960px) and (max-width: 1279px) and (orientation: landscape)"
                     srcset="
-                      ../assets/imgs/birds-gal/Guneratne_2024.05.08_house-finch-horizontal-460p.jpg
+                      ../assets/imgs/small-animals-gal/Guneratne_2023.08.11_bunny_close-horizontal-460p.jpg
                     "
                   />
 
                   <source
                     media="(min-width: 1280px) and (max-width: 1599px) and (orientation: landscape)"
                     srcset="
-                      ../assets/imgs/birds-gal/Guneratne_2024.05.08_house-finch-horizontal-600p.jpg
+                      ../assets/imgs/small-animals-gal/Guneratne_2023.08.11_bunny_close-horizontal-600p.jpg
                     "
                   />
 
                   <img
-                    src="../assets/imgs/birds-gal/Guneratne_2024.05.08_house-finch-horizontal-900p.jpg"
-                    alt="Slide 7 of 8: A house finch looking at the camera from its perch on the branch of a cherry tree with sparse spring leaves just beginning to emerge. The sky is overcast and mostly white behind the bird."
+                    src="../assets/imgs/small-animals-gal/Guneratne_2023.08.11_bunny_close-horizontal-900p.jpg"
+                    alt="Slide 7 of 9: A closeup portrait of a rabbit that is sitting on the ground peering through long blades of grass, looking at the viewer, while also nibbling on the grass."
                     id="slide7"
                   />
                 </picture>
 
-                <!-- GILDED FLICKER -->
+                <!-- SQUIRREL IN WOODS ON TRUNK -->
                 <picture
                   class="picture"
                   role="group"
@@ -808,28 +796,65 @@
                   <source
                     media="(min-width: 640px) and (max-width: 959px) and (orientation: landscape)"
                     srcset="
-                      ../assets/imgs/birds-gal/Guneratne_2023.11.04_gilded_flicker-horizontal-280p.jpg
+                      ../assets/imgs/small-animals-gal/Guneratne_2023.11.04_squirrel-woods-horiztontal-280p.jpg
                     "
                   />
 
                   <source
                     media="(min-width: 960px) and (max-width: 1279px) and (orientation: landscape)"
                     srcset="
-                      ../assets/imgs/birds-gal/Guneratne_2023.11.04_gilded_flicker-horizontal-460p.jpg
+                      ../assets/imgs/small-animals-gal/Guneratne_2023.11.04_squirrel-woods-horiztontal-460p.jpg
                     "
                   />
 
                   <source
                     media="(min-width: 1280px) and (max-width: 1599px) and (orientation: landscape)"
                     srcset="
-                      ../assets/imgs/birds-gal/Guneratne_2023.11.04_gilded_flicker-horizontal-600p.jpg
+                      ../assets/imgs/small-animals-gal/Guneratne_2023.11.04_squirrel-woods-horiztontal-600p.jpg
                     "
                   />
 
                   <img
-                    src="../assets/imgs/birds-gal/Guneratne_2023.11.04_gilded_flicker-horizontal-900p.jpg"
-                    alt="Slide 8 of 8: A tree trunk fills the left half of the frame, with the head of a gilded flicker with yellow and orange coloring poking its head out from behind with its back parallel to the ground and face staring straight up at the sky. There are small branches with small green leaves and red berries above and below the bird."
+                    src="../assets/imgs/small-animals-gal/Guneratne_2023.11.04_squirrel-woods-horiztontal-900p.jpg"
+                    alt="Slide 8 of 9: A grey squirrel in a wooded area, sitting on a felled dead tree trunk, facing toward the left in the frame with its left paw lifted and looking alert at the camera."
                     id="slide8"
+                  />
+                </picture>
+
+                <!-- CHIPMUNK AMONGST THE GREENS -->
+
+                <picture
+                  class="picture"
+                  role="group"
+                  aria-roledescription="slide"
+                  aria-labelledby="slide9"
+                  tabindex="0"
+                >
+                  <source
+                    media="(min-width: 640px) and (max-width: 959px) and (orientation: landscape)"
+                    srcset="
+                      ../assets/imgs/small-animals-gal/Guneratne_2024.06.25_chipmunk-greens-horizontal-280p.jpg
+                    "
+                  />
+
+                  <source
+                    media="(min-width: 960px) and (max-width: 1279px) and (orientation: landscape)"
+                    srcset="
+                      ../assets/imgs/small-animals-gal/Guneratne_2024.06.25_chipmunk-greens-horizontal-460p.jpg
+                    "
+                  />
+
+                  <source
+                    media="(min-width: 1280px) and (max-width: 1599px) and (orientation: landscape)"
+                    srcset="
+                      ../assets/imgs/small-animals-gal/Guneratne_2024.06.25_chipmunk-greens-horizontal-600p.jpg
+                    "
+                  />
+
+                  <img
+                    src="../assets/imgs/small-animals-gal/Guneratne_2024.06.25_chipmunk-greens-horizontal-900p.jpg"
+                    alt="Slide 9 of 9: A small chipmunk sits in the center of the frams on its hind legs, holding its front paws close to its body. The chipmunk is angled toward the front-left of the frame, looking coyly at the camera out of the corder of its eye, and is surrounded by leafy green weeds."
+                    id="slide9"
                   />
                 </picture>
               </div>
@@ -849,7 +874,7 @@
                     type="button"
                     class="circle-icon-div"
                     data-circle="0"
-                    aria-label="Select Slide 1 of 8."
+                    aria-label="Select Slide 1 of 9."
                   >
                     <div class="circle-icon" data-circle="0"></div>
                   </button>
@@ -858,7 +883,7 @@
                     type="button"
                     class="circle-icon-div"
                     data-circle="1"
-                    aria-label="Select Slide 2 of 8."
+                    aria-label="Select Slide 2 of 9."
                   >
                     <div class="circle-icon" data-circle="1"></div>
                   </button>
@@ -867,7 +892,7 @@
                     type="button"
                     class="circle-icon-div"
                     data-circle="2"
-                    aria-label="Select Slide 3 of 8."
+                    aria-label="Select Slide 3 of 9."
                   >
                     <div class="circle-icon" data-circle="2"></div>
                   </button>
@@ -876,7 +901,7 @@
                     type="button"
                     class="circle-icon-div"
                     data-circle="3"
-                    aria-label="Select Slide 4 of 8."
+                    aria-label="Select Slide 4 of 9."
                   >
                     <div class="circle-icon" data-circle="3"></div>
                   </button>
@@ -885,7 +910,7 @@
                     type="button"
                     class="circle-icon-div"
                     data-circle="4"
-                    aria-label="Select Slide 5 of 8."
+                    aria-label="Select Slide 5 of 9."
                   >
                     <div class="circle-icon" data-circle="4"></div>
                   </button>
@@ -894,7 +919,7 @@
                     type="button"
                     class="circle-icon-div"
                     data-circle="5"
-                    aria-label="Select Slide 6 of 8."
+                    aria-label="Select Slide 6 of 9."
                   >
                     <div class="circle-icon" data-circle="5"></div>
                   </button>
@@ -903,7 +928,7 @@
                     type="button"
                     class="circle-icon-div"
                     data-circle="6"
-                    aria-label="Select Slide 7 of 8."
+                    aria-label="Select Slide 7 of 9."
                   >
                     <div class="circle-icon" data-circle="6"></div>
                   </button>
@@ -912,9 +937,18 @@
                     type="button"
                     class="circle-icon-div"
                     data-circle="7"
-                    aria-label="Select Slide 8 of 8."
+                    aria-label="Select Slide 8 of 9."
                   >
                     <div class="circle-icon" data-circle="7"></div>
+                  </button>
+
+                  <button
+                    type="button"
+                    class="circle-icon-div"
+                    data-circle="8"
+                    aria-label="Select Slide 9 of 9."
+                  >
+                    <div class="circle-icon" data-circle="8"></div>
                   </button>
                 </div>
               </div>
