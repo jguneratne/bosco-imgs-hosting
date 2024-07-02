@@ -1,12 +1,5 @@
 const path = require("path");
 const HtmlBundlerPlugin = require("html-bundler-webpack-plugin");
-const ejs = require("ejs");
-
-// create EJS config
-const ejsConfig = {
-  root: process.cwd(), // define root template path when using `include()`
-  async: true, // optional, async rendering
-};
 
 module.exports = {
   stats: { children: true },
@@ -23,13 +16,13 @@ module.exports = {
     },
   },
 
-  devtool: "inline-source-map",
+  devtool: "source-map",
 
   plugins: [
     new HtmlBundlerPlugin({
       entry: [
         {
-          import: ["./src/views/template.ejs"], // template file
+          import: "./src/views/template.ejs", // template file
           filename: "index.html", // => dist/index.html
           data: {
             title: "Bosco Images Wildlife Photography: Homepage",
@@ -95,10 +88,6 @@ module.exports = {
 
   module: {
     rules: [
-      {
-        test: /\.(html|ejs)$/,
-        loader: HtmlBundlerPlugin.loader,
-      },
       {
         test: /\.(css|sass|scss)$/,
         use: [
