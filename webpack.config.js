@@ -86,8 +86,8 @@ module.exports = {
         root: path.join(__dirname, "src/views"), // defaults process.cwd()
         // defaults [], an array of paths to use when resolving includes with relative paths
         views: [
-          "src/views/partials", // relative path
-          path.join(__dirname, "src/views/partials"), // absolute path
+          "src/partials", // relative path
+          path.join(__dirname, "src/partials"), // absolute path
         ],
       },
     }),
