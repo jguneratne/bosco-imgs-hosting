@@ -3,74 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title><%= htmlWebpackPlugin.options.title%></title>
+    <title><%= title %></title>
+    <link href="../style.css" rel="stylesheet" />
+    <script src="../index.js" defer="defer"></script>
   </head>
 
   <body>
     <div class="container">
-      <header class="header header-border">
-        <nav>
-          <ul class="menu-items" id="tabs">
-            <li class="menu-btn hov-style" data-name="index">
-              <a aria-label="Home Page" href="../dist/index.html">Home</a>
-            </li>
-
-            <div
-              class="dropdown-div menu-btn gal-hov dropdown-btn"
-              data-name="galleries"
-              title="Galleries"
-            >
-              <div class="gal-btn-div">
-                <li aria-label="Click to Open Submenu">
-                  <a class="gals-link" href="#galleries">Galleries</a>
-                </li>
-
-                <div class="gal-arrow"></div>
-              </div>
-
-              <ul class="dropdown-content">
-                <li
-                  class="dropdown-item birds"
-                  style="--delay: 1"
-                  data-name="birds-gallery"
-                  aria-label="Click to Visit Gallery"
-                >
-                  <a href="../dist/birds-gallery.html">Birds</a>
-                </li>
-                <li
-                  class="dropdown-item insects"
-                  style="--delay: 2"
-                  data-name="insects-gallery"
-                  aria-label="Click to Visit Gallery"
-                >
-                  <a href="../dist/insects-gallery.html">Insects</a>
-                </li>
-                <li
-                  class="dropdown-item small-animals"
-                  style="--delay: 3"
-                  data-name="small-animals-gallery"
-                  aria-label="Click to Visit Gallery"
-                >
-                  <a href="../dist/small-animals-gallery.html">Small Animals</a>
-                </li>
-              </ul>
-            </div>
-
-            <li class="menu-btn hov-style" data-name="about">
-              <a aria-label="About Page" href="../dist/about.html">About</a>
-            </li>
-
-            <li class="menu-btn hov-style" data-name="contact">
-              <a
-                aria-label="Contact Page"
-                aria-current="page"
-                href="../dist/contact.html"
-                >Contact</a
-              >
-            </li>
-          </ul>
-        </nav>
-      </header>
+      <%- include('header.ejs') %>
 
       <main class="main main-two">
         <!-- CONTACT -->
@@ -194,27 +134,7 @@
         </section>
       </main>
 
-      <footer class="footer-div">
-        <div class="footer">
-          <div class="copyright-div">
-            <p class="my-copyright">Jenn Guneratne © 2024</p>
-          </div>
-
-          <div class="logo-div">
-            <a
-              href="https://github.com/jguneratne/photo-gallery"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <img
-                src="<%=require('../src/assets/imgs/github-mark.svg') %>"
-                alt="Octocat GitHub Logo: Click to visit GitHub repo for this site."
-                class="github-logo"
-              />
-            </a>
-          </div>
-        </div>
-      </footer>
+      <%- include('footer.ejs') %>
     </div>
   </body>
 </html>

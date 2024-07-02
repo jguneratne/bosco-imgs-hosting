@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= title %></title>
+    <link href="../style.css" rel="stylesheet" />
+    <script src="../index.js" defer="defer"></script>
+  </head>
+
+  <body>
+    <div class="container">
+      <%- include('header.ejs') %>
+
+      <main class="main">
+        <!-- ABOUT -->
+        <section class="tab-content" id="about">
+          <div class="about">
+            <div class="about-text-div">
+              <div class="bosco-entry">
+                <p class="definition" aria-label="dictionary entry">
+                  <strong>bosco</strong> - noun [masculine] - wood, forest
+                </p>
+                <p
+                  class="definition"
+                  aria-label="dictionary example phrase, Italian to English translation"
+                >
+                  <em>gli animali del bosco:</em> forest animals
+                </p>
+                <p class="definition" aria-label="dictionary entry attribution">
+                  dictionary.cambridge.org - Italian to English Dictionary, June
+                  2024
+                </p>
+              </div>
+              <div class="about-box" aria-label="about text: 2 paragraphs">
+                <p class="about-text">
+                  Hi! I'm Jenn Guneratne, the New England-based photographer
+                  behind Bosco Images Wildlife Photography. I studied digital
+                  photography in the early 2010s, but wildlife photography
+                  didn't find me until more than a decade later. The journey
+                  began at the edge of the woods in my local area, capturing
+                  small animals, birds and insects.
+                </p>
+                <p class="about-text">
+                  I spend a lot of spare time during the warmer months outside,
+                  either working in my garden, or walking with my cat on his
+                  harness around the house. This allows for a lot of time to
+                  observe the wildlife that lives nearby, and a few of my
+                  current favorite shots can be attributed to my cat lazing in
+                  one place, allowing me time to quietly capture the nearby
+                  wildlife.
+                </p>
+                <p class="last-para">
+                  Each gallery here displays photos according to the orientation
+                  of your device: either landscape or portrait view. If you
+                  enjoy what you see, you can rotate the screen to see more.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <%- include('footer.ejs') %>
+    </div>
+  </body>
+</html>

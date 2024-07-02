@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= title %></title>
+    <link href="../style.css" rel="stylesheet" />
+    <script src="../index.js" defer="defer"></script>
+  </head>
+
+  <body>
+    <div class="container">
+      <%- include('header.ejs') %>
+
+      <main class="main">
+        <!-- HOME -->
+        <section class="tab-content" id="home">
+          <div class="home">
+            <div class="logo-box">
+              <img
+                class="logo"
+                src="../assets/imgs/bosco_images_logo-white.svg"
+                alt="Bosco Images Wildlife Photography Logo"
+              />
+            </div>
+
+            <div class="home-box">
+              <a
+                href="../dist/galleries.html"
+                aria-label="Photo Galleries"
+                class="cta-btn"
+                ><p>GALLERIES</p>
+              </a>
+
+              <a
+                href="../dist/contact.html"
+                aria-label="Contact Page"
+                class="cta-btn"
+                ><p>CONTACT</p>
+              </a>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <%- include('footer.ejs') %>
+    </div>
+  </body>
+</html>
