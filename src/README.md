@@ -2,4 +2,4 @@ Bosco Images Wildlife Photography: website began as a way to complete The Odin P
 
 Start: September 12th, 2023
 
-Publish Date: June 26th, 2024
+Publish Date: July 4th, 2024
