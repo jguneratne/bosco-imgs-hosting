@@ -2,7 +2,9 @@ import {
   windowHeight,
   windowWidth,
   getPortraitGal,
+  getPortraitSliderBox,
   getLandscapeGal,
+  getLandscapeSliderBox,
   galleryMainDivs,
   reduceMotion,
   shortPageName,
@@ -38,8 +40,16 @@ export function gallerySetup() {
       getPortraitGal.portraitGalLocale =
         document.querySelector(".gal-portrait");
 
+      getPortraitSliderBox.portraitSliderLocale = document.querySelector(
+        ".portrait-slider-box"
+      );
+
       getLandscapeGal.landscapeGalLocale =
         document.querySelector(".gal-landscape");
+
+      getLandscapeSliderBox.landscapeSliderLocale = document.querySelector(
+        ".landscape-slider-box"
+      );
 
       if (windowHeight < windowWidth) {
         console.log("landscape");

@@ -71,6 +71,30 @@ export let getLandscapeGal = {
   },
 };
 
+export let getPortraitSliderBox = {
+  portraitSliderBox: undefined,
+
+  get portraitSliderLocale() {
+    return this.portraitSliderBox;
+  },
+
+  set portraitSliderLocale(newPortraitSliderLocale) {
+    this.portraitSliderBox = newPortraitSliderLocale;
+  },
+};
+
+export let getLandscapeSliderBox = {
+  landscapelSiderBox: undefined,
+
+  get landscapeSliderLocale() {
+    return this.landscapeSliderBox;
+  },
+
+  set landscapeSliderLocale(newLandscapeSliderLocale) {
+    this.landscapeSliderBox = newLandscapeSliderLocale;
+  },
+};
+
 export let getAnimationID = {
   animationID: undefined,
 
