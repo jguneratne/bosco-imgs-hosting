@@ -33,10 +33,6 @@ import {
 export function gallerySetup() {
   galleryMainDivs.forEach((div) => {
     if (div.dataset.name === shortPageName) {
-      // getMainDiv.mainDivLocale = document.querySelector(".main");
-      // // console.log(getMainDiv.mainDiv);
-      // let galleryMain = getMainDiv.mainDiv;
-
       getPortraitGal.portraitGalLocale =
         document.querySelector(".gal-portrait");
 
