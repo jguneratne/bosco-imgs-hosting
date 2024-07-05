@@ -84,7 +84,7 @@ export let getPortraitSliderBox = {
 };
 
 export let getLandscapeSliderBox = {
-  landscapelSiderBox: undefined,
+  landscapeSliderBox: undefined,
 
   get landscapeSliderLocale() {
     return this.landscapeSliderBox;

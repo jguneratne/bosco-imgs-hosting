@@ -87,14 +87,18 @@ function checkPageOrientation() {
 
 function setupPortraitGal() {
   getLandscapeGal.galLandscapeView.hidden = true;
+  getLandscapeSliderBox.landscapeSliderBox.hidden = true;
   getPortraitGal.galPortraitView.hidden = false;
+  getPortraitSliderBox.portraitSliderBox.hidden = false;
   portraitSliderBoxCtrl();
   console.log("Gallery Portrait Mode");
 }
 
 function setupLandscapeGal() {
   getLandscapeGal.galLandscapeView.hidden = false;
+  getLandscapeSliderBox.landscapeSliderBox.hidden = false;
   getPortraitGal.galPortraitView.hidden = true;
+  getPortraitSliderBox.portraitSliderBox.hidden = true;
   landscapeSliderBoxCtrl();
   console.log("Gallery Landscape Mode");
 }
