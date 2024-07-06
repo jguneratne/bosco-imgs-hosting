@@ -8,7 +8,7 @@ import { validateFormFields } from "./form-validation";
 
 console.log("photogallery");
 
-window.addEventListener("load", (e) => {
+document.addEventListener("DOMContentLoaded", (e) => {
   console.log("The page is loaded");
   ctrlTabHighlight();
   galleriesClickMenu();
