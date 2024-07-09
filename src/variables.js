@@ -1,25 +1,3 @@
-// Contact Form Validation
-export const formDisabledText = document.querySelector(".form-disabled");
-export const form = document.querySelector("#contact");
-export const formFieldset = document.querySelector("fieldset");
-export const inputFields = document.querySelectorAll("input");
-export const textArea = document.querySelector("textarea");
-export const firstName = document.getElementById("first-name");
-export const firstNameError = document.querySelector(".firstNameError");
-export const lastName = document.getElementById("last-name");
-export const lastNameError = document.querySelector(".lastNameError");
-export const email = document.getElementById("email");
-export const emailError = document.querySelector(".emailError");
-export const message = document.getElementById("message");
-export const messageError = document.querySelector(".messageError");
-export const submitBtn = document.querySelector(".send-contact");
-export const submitError = document.querySelector(".submitError");
-
-// Accessibility
-export const reduceMotion =
-  window.matchMedia("(prefers-reduced-motion: reduce)") === true ||
-  window.matchMedia(`(prefers-reduced-motion: reduce)`).matches === true;
-
 // Menu Variables
 export const currentPage = window.location.href;
 export const fullPageName = currentPage.substring(
@@ -40,6 +18,30 @@ export const menuBtnStyle = Array.from(document.querySelectorAll(".menu-btn"));
 export const dropDownItems = Array.from(
   document.querySelectorAll(".dropdown-item")
 );
+
+// Accessibility
+export const reduceMotion =
+  window.matchMedia("(prefers-reduced-motion: reduce)") === true ||
+  window.matchMedia(`(prefers-reduced-motion: reduce)`).matches === true;
+
+export const menuLinks = document.querySelectorAll(".menu-link");
+
+// Contact Form Validation
+export const formDisabledText = document.querySelector(".form-disabled");
+export const form = document.querySelector("#contact");
+export const formFieldset = document.querySelector("fieldset");
+export const inputFields = document.querySelectorAll("input");
+export const textArea = document.querySelector("textarea");
+export const firstName = document.getElementById("first-name");
+export const firstNameError = document.querySelector(".firstNameError");
+export const lastName = document.getElementById("last-name");
+export const lastNameError = document.querySelector(".lastNameError");
+export const email = document.getElementById("email");
+export const emailError = document.querySelector(".emailError");
+export const message = document.getElementById("message");
+export const messageError = document.querySelector(".messageError");
+export const submitBtn = document.querySelector(".send-contact");
+export const submitError = document.querySelector(".submitError");
 
 // Window Dimensions
 export const windowHeight = window.innerHeight;

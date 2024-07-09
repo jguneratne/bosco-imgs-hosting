@@ -1,6 +1,7 @@
 import {
   shortPageName,
   menuBtnStyle,
+  menuLinks,
   dropDownDiv,
   dropDownItems,
 } from "./variables";
@@ -30,6 +31,20 @@ function showGalNavLink() {
         btn.classList.remove("selected");
       });
       dropDownDiv.classList.add("selected");
+    }
+  });
+}
+
+export function addAriaCurrent() {
+  console.log(menuLinks);
+  menuLinks.forEach((link) => {
+    if (link.dataset.name === shortPageName) {
+      console.log(link.dataset.name);
+      menuLinks.forEach((link) => {
+        link.removeAttribute("aria-current", "page");
+      });
+
+      link.setAttribute("aria-current", "page");
     }
   });
 }

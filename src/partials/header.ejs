@@ -1,11 +1,12 @@
 <header class="header">
   <nav>
-    <ul role="menubar" class="menu-items" id="tabs">
+    <ul role="none" class="menu-items" id="tabs">
       <li role="none" class="menu-btn hov-style" data-name="index">
         <a
           role="menuitem"
           aria-label="Home Page"
-          aria-current="page"
+          class="menu-link"
+          data-name="index"
           href="index.html"
           >Home</a
         >
@@ -20,7 +21,8 @@
         <a
           role="menuitem"
           aria-label="Galleries: Click to Open Submenu"
-          class="gals-link"
+          class="menu-link gals-link"
+          data-name="galleries"
           href="#galleries"
           >Galleries <span class="gal-arrow"></span
         ></a>
@@ -68,11 +70,23 @@
       </li>
 
       <li role="none" class="menu-btn hov-style" data-name="about">
-        <a role="menuitem" aria-label="About Page" href="about.html">About</a>
+        <a
+          role="menuitem"
+          aria-label="About Page"
+          class="menu-link"
+          data-name="about"
+          href="about.html"
+          >About</a
+        >
       </li>
 
       <li role="none" class="menu-btn hov-style" data-name="contact">
-        <a role="menuitem" aria-label="Contact Page" href="contact.html"
+        <a
+          role="menuitem"
+          aria-label="Contact Page"
+          class="menu-link"
+          data-name="contact"
+          href="contact.html"
           >Contact</a
         >
       </li>
