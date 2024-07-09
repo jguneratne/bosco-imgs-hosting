@@ -14,23 +14,6 @@ export function ctrlTabHighlight() {
       });
       btn.classList.add("selected");
     } else {
-      showCurrentNavLink();
-    }
-  });
-}
-
-export function showCurrentNavLink() {
-  menuBtnStyle.forEach((btn) => {
-    if (shortPageName === btn.dataset.name) {
-      menuBtnStyle.forEach((btn) => {
-        btn.classList.remove("selected");
-      });
-      btn.classList.add("selected");
-    } else if (
-      shortPageName === "birds-gallery" ||
-      shortPageName === "insects-gallery" ||
-      shortPageName === "small-animals-gallery"
-    ) {
       showGalNavLink();
     }
   });
