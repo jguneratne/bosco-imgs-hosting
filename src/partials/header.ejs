@@ -11,51 +11,61 @@
         >
       </li>
 
-      <div
+      <li
+        role="none"
         class="dropdown-div menu-btn gal-hov dropdown-btn"
         data-name="galleries"
         title="Galleries"
       >
-        <div class="gal-btn-div">
-          <li aria-label="Click to Open Submenu">
-            <a class="gals-link" href="#galleries">Galleries</a>
-          </li>
-
-          <div class="gal-arrow"></div>
-        </div>
-
+        <a
+          role="menuitem"
+          aria-label="Galleries: Click to Open Submenu"
+          class="gals-link"
+          href="#galleries"
+          >Galleries <span class="gal-arrow"></span
+        ></a>
         <ul role="menu" class="dropdown-content">
           <li
             role="none"
             class="dropdown-item birds"
             style="--delay: 1"
             data-name="birds-gallery"
-            aria-label="Click to Visit Gallery"
           >
-            <a role="menuitem" href="birds-gallery.html">Birds</a>
+            <a
+              role="menuitem"
+              aria-label="Birds Gallery"
+              href="birds-gallery.html"
+              >Birds</a
+            >
           </li>
           <li
             role="none"
             class="dropdown-item insects"
             style="--delay: 2"
             data-name="insects-gallery"
-            aria-label="Click to Visit Gallery"
           >
-            <a role="menuitem" href="insects-gallery.html">Insects</a>
+            <a
+              role="menuitem"
+              aria-label="Insects Gallery"
+              href="insects-gallery.html"
+              >Insects</a
+            >
           </li>
           <li
             role="none"
             class="dropdown-item small-animals"
             style="--delay: 3"
             data-name="small-animals-gallery"
-            aria-label="Click to Visit Gallery"
           >
-            <a role="menuitem" href="small-animals-gallery.html"
+            <a
+              role="menuitem"
+              aria-label="Small Animals Gallery"
+              href="small-animals-gallery.html"
               >Small Animals</a
             >
           </li>
         </ul>
-      </div>
+      </li>
 
       <li role="none" class="menu-btn hov-style" data-name="about">
         <a role="menuitem" aria-label="About Page" href="about.html">About</a>
