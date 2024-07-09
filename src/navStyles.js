@@ -14,7 +14,11 @@ export function ctrlTabHighlight() {
         btn.classList.remove("selected");
       });
       btn.classList.add("selected");
-    } else {
+    } else if (
+      shortPageName === "birds-gallery" ||
+      shortPageName === "insects-gallery" ||
+      shortPageName === "small-animals-gallery"
+    ) {
       showGalNavLink();
     }
   });
