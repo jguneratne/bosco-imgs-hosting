@@ -6,6 +6,7 @@ import {
   dropDownMenu,
   dropDownItems,
   shortPageName,
+  dropDownDiv,
 } from "./variables";
 
 export function galleriesClickMenu() {
@@ -72,6 +73,8 @@ function changeActiveState() {
     if (btn.dataset.name === shortPageName) {
       btn.classList.add("selected");
       console.log(currentPage);
+    } else if (btn.dataset.name !== shortPageName) {
+      dropDownDiv.classList.add("selected");
     }
   });
 }
