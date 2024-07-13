@@ -1,4 +1,8 @@
 // Menu Variables
+export const navigation = document.querySelector("nav");
+export const menuIconDiv = document.querySelector(".menu-icon-div");
+export const menuIcon = document.querySelector(".menu-icon");
+export const menuBar = document.querySelector(".menu-items");
 export const currentPage = window.location.href;
 export const fullPageName = currentPage.substring(
   currentPage.lastIndexOf("/") + 1
@@ -10,7 +14,6 @@ export const shortPageName = fullPageName.substring(0, indexOfExtension);
 export const dropDownDiv = document.querySelector(".dropdown-div");
 export const dropDownCarat = document.querySelector(".gal-arrow");
 export const dropDownMenu = document.querySelector(".dropdown-content");
-export const navigation = document.querySelector("nav");
 
 // Nav Styles
 export const menuChildrenDiv = document.querySelector(".menu-items");

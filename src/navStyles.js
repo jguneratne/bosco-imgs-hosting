@@ -1,10 +1,31 @@
 import {
+  menuBar,
+  menuIconDiv,
+  menuIcon,
   shortPageName,
   menuBtnStyle,
   menuLinks,
   dropDownDiv,
   dropDownItems,
 } from "./variables";
+
+export function ctrlMenuVisibility() {
+  menuIconDiv.addEventListener("pointerdown", (e) => {
+    if (
+      (e.target === menuIconDiv || e.target === menuIcon) &&
+      !menuBar.classList.contains("active")
+    ) {
+      menuBar.classList.add("active");
+      menuIcon.style.width = "1.5ch";
+    } else if (
+      menuBar.classList.contains("active") &&
+      (e.target === menuIconDiv || e.target === menuIcon)
+    ) {
+      menuBar.classList.remove("active");
+      menuIcon.style.width = "3ch";
+    }
+  });
+}
 
 export function ctrlTabHighlight() {
   menuBtnStyle.forEach((btn) => {
