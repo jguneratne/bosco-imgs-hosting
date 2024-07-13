@@ -73,7 +73,12 @@ function changeActiveState() {
     if (btn.dataset.name === shortPageName) {
       btn.classList.add("selected");
       console.log(currentPage);
-    } else if (btn.dataset.name !== shortPageName) {
+    } else if (
+      btn.dataset.name !== shortPageName &&
+      (shortPageName === "birds-gallery" ||
+        shortPageName === "insects-gallery" ||
+        shortPageName === "small-animals-gallery")
+    ) {
       dropDownDiv.classList.add("selected");
     }
   });
