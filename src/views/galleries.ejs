@@ -10,67 +10,63 @@
   </head>
 
   <body>
-    <div class="container">
-      <%- include('header.ejs') %>
-
+    <div class="scroll-wrapper">
       <main class="main">
+        <%- include('header.ejs') %>
         <!-- GALLERIES -->
-        <section class="tab-content" id="galleries">
-          <div class="galleries">
-            <div class="thumbnails" role="region">
-              <a
-                href="../dist/birds-gallery.html"
-                class="thumbnail-link"
-                aria-label="Click to visit the birds image gallery."
-              >
-                <div class="thumbnail-box">
-                  <img
-                    class="thumbnail-img"
-                    src="../assets/imgs/thumbnails/Guneratne_2023.06.27_birds-gal-thumb.jpg"
-                    alt="A bright red male cardinal on the right of the frame perched on a stick gazing toward the left of the frame, with an out-of-focus green background."
-                  />
-                  <p class="gal-title">Birds Gallery</p>
-                </div>
-              </a>
+        <section class="section" id="galleries">
+          <div class="thumbnails" role="region">
+            <a
+              href="../dist/birds-gallery.html"
+              class="thumbnail-link"
+              aria-label="Click to visit the birds image gallery."
+            >
+              <div class="thumbnail-box">
+                <img
+                  class="thumbnail-img"
+                  src="../assets/imgs/thumbnails/Guneratne_2023.06.27_birds-gal-thumb.jpg"
+                  alt="A bright red male cardinal on the right of the frame perched on a stick gazing toward the left of the frame, with an out-of-focus green background."
+                />
+                <p class="gal-title">Birds Gallery</p>
+              </div>
+            </a>
 
-              <a
-                href="../dist/insects-gallery.html"
-                class="thumbnail-link"
-                aria-label="Click to visit the insects image gallery."
-              >
-                <div class="thumbnail-box">
-                  <img
-                    class="thumbnail-img"
-                    src="../assets/imgs/thumbnails/Guneratne_2023.09.05_insects-gal-thumb.jpg"
-                    alt="A close up of a swallowtail butterfly caterpillar, which
+            <a
+              href="../dist/insects-gallery.html"
+              class="thumbnail-link"
+              aria-label="Click to visit the insects image gallery."
+            >
+              <div class="thumbnail-box">
+                <img
+                  class="thumbnail-img"
+                  src="../assets/imgs/thumbnails/Guneratne_2023.09.05_insects-gal-thumb.jpg"
+                  alt="A close up of a swallowtail butterfly caterpillar, which
                   is green with black stripes, and yellow dots on every other
                   stripe. It is crawling along the branch of a dill plant,
                   feeding on the flower at the end."
-                  />
-                  <p class="gal-title">Insects Gallery</p>
-                </div>
-              </a>
+                />
+                <p class="gal-title">Insects Gallery</p>
+              </div>
+            </a>
 
-              <a
-                href="../dist/small-animals-gallery.html"
-                class="thumbnail-link"
-                aria-label="Click to visit the small animals image gallery."
-              >
-                <div class="thumbnail-box">
-                  <img
-                    class="thumbnail-img"
-                    src="../assets/imgs/thumbnails/Guneratne_2024.06.19_sm-anim-gal-thumb.jpg"
-                    alt="An old black drain pipe protrudes from the ground in the center of the frame, revealing the top of a chipmunk's head peeking up toward the right."
-                  />
-                  <p class="gal-title">Small Animals Gallery</p>
-                </div>
-              </a>
-            </div>
+            <a
+              href="../dist/small-animals-gallery.html"
+              class="thumbnail-link"
+              aria-label="Click to visit the small animals image gallery."
+            >
+              <div class="thumbnail-box">
+                <img
+                  class="thumbnail-img"
+                  src="../assets/imgs/thumbnails/Guneratne_2024.06.19_sm-anim-gal-thumb.jpg"
+                  alt="An old black drain pipe protrudes from the ground in the center of the frame, revealing the top of a chipmunk's head peeking up toward the right."
+                />
+                <p class="gal-title">Small Animals Gallery</p>
+              </div>
+            </a>
           </div>
         </section>
+        <%- include('footer.ejs') %>
       </main>
-
-      <%- include('footer.ejs') %>
     </div>
   </body>
 </html>

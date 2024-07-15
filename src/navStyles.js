@@ -2,6 +2,8 @@ import {
   menuBar,
   menuIconDiv,
   menuIcon,
+  menuIconWidth,
+  newMenuIconWidth,
   shortPageName,
   menuBtnStyle,
   menuLinks,
@@ -16,13 +18,13 @@ export function ctrlMenuVisibility() {
       !menuBar.classList.contains("active")
     ) {
       menuBar.classList.add("active");
-      menuIcon.style.width = "1.5ch";
+      menuIcon.style.width = newMenuIconWidth + "px";
     } else if (
       menuBar.classList.contains("active") &&
       (e.target === menuIconDiv || e.target === menuIcon)
     ) {
       menuBar.classList.remove("active");
-      menuIcon.style.width = "3ch";
+      menuIcon.style.width = menuIconWidth + "px";
     }
   });
 }

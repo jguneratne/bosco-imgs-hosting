@@ -10,39 +10,13 @@
   </head>
 
   <body>
-    <div class="container">
-      <%- include('header.ejs') %>
-
+    <div class="scroll-wrapper">
       <main class="main gal-main" data-name="birds-gallery">
+        <%- include('header.ejs') %>
         <!-- BIRDS GALLERY -->
-        <section class="tab-content gal-portrait" id="birds-gallery" hidden>
+        <section class="section gal-portrait" id="birds-gallery" hidden>
           <div class="gallery portrait-gallery">
-            <div class="animation-ctrl-div portrait-animation-ctrl-div">
-              <button
-                type="button"
-                class="pause-btn portrait-pause-btn"
-                title="Press Enter or Space to Pause Gallery Animation"
-              >
-                <img
-                  class="pause-icon portrait-pause-icon"
-                  src="../assets/imgs/pause-button-icon.svg"
-                  alt="Press Enter or Space to Pause Gallery Animation"
-                />
-              </button>
-
-              <button
-                type="button"
-                class="play-btn portrait-play-btn"
-                title="Press Enter or Space to Start Gallery Animation"
-              >
-                <img
-                  class="play-icon portrait-play-icon"
-                  src="../assets/imgs/play-button-icon.svg"
-                  title="Start Gallery Animation"
-                  alt="Press Enter or Space to Start Gallery Animation"
-                />
-              </button>
-            </div>
+            <%- include ('portrait-animation-ctrl.ejs') %>
 
             <div
               class="slider-box portrait-slider-box"
@@ -52,279 +26,280 @@
               aria-label="Birds Gallery"
               hidden
             >
-              <!-- <div class="slider-row-one"></div> -->
-              <button type="button" class="back-arrow" data-back-arrow>
-                <img
-                  data-icon-back
-                  class="arrow"
-                  src="../assets/imgs/reshot-icon-arrow-chevron-left-975UQXVKZF.svg"
-                  alt="Back Arrow"
-                />
-              </button>
-
-              <div class="photo-box portrait-photo-box">
-                <!-- RED WINGED BLACKBIRD -->
-                <picture
-                  class="picture"
-                  aria-role="group"
-                  aria-roledescription="slide"
-                  aria-labelledby="slide1"
-                  tabindex="0"
-                >
-                  <source
-                    media="(min-width: 300px) and (max-width: 699px) and (orientation: portrait)"
-                    srcset="
-                      ../assets/imgs/birds-gal/Guneratne_2024.06.03_red-wing-vertical-320p.jpg
-                    "
-                  />
-
-                  <source
-                    media="(min-width: 700px) and (max-width: 799px) and (orientation: portrait)"
-                    srcset="
-                      ../assets/imgs/birds-gal/Guneratne_2024.06.03_red-wing-vertical-460p.jpg
-                    "
-                  />
-
-                  <source
-                    media="(min-width: 800px) and (max-width: 1020px) and (orientation: portrait)"
-                    srcset="
-                      ../assets/imgs/birds-gal/Guneratne_2024.06.03_red-wing-vertical-580p.jpg
-                    "
-                  />
-
+              <div class="img-display-container">
+                <button type="button" class="back-arrow" data-back-arrow>
                   <img
-                    src="../assets/imgs/birds-gal/Guneratne_2024.06.03_red-wing-vertical-700p.jpg"
-                    alt="Slide 1 of 7: A red winged blackbird perched on a vertical reed by the water, about three-quarters up in the center of the frame, facing right. The light blue color of the water provides a backdrop to the bird, and green vegetation forms a vignette around the edges of the frame."
-                    id="slide1"
+                    data-icon-back
+                    class="arrow"
+                    src="../assets/imgs/icons/reshot-icon-arrow-chevron-left-975UQXVKZF.svg"
+                    alt="Back Arrow"
                   />
-                </picture>
+                </button>
 
-                <!-- CARDINAL -->
-                <picture
-                  class="picture"
-                  role="group"
-                  aria-roledescription="slide"
-                  aria-labelledby="slide2"
-                  tabindex="0"
-                >
-                  <source
-                    media="(min-width: 300px) and (max-width: 699px) and (orientation: portrait)"
-                    srcset="
-                      ../assets/imgs/birds-gal/Guneratne_2024.01.19_cardinal-vertical-320p.jpg
-                    "
-                  />
+                <div class="photo-box portrait-photo-box">
+                  <!-- RED WINGED BLACKBIRD -->
+                  <picture
+                    class="picture"
+                    aria-role="group"
+                    aria-roledescription="slide"
+                    aria-labelledby="slide1"
+                    tabindex="0"
+                  >
+                    <source
+                      media="(min-width: 300px) and (max-width: 699px) and (orientation: portrait)"
+                      srcset="
+                        ../assets/imgs/birds-gal/Guneratne_2024.06.03_red-wing-vertical-320p.jpg
+                      "
+                    />
 
-                  <source
-                    media="(min-width: 700px) and (max-width: 799px) and (orientation: portrait)"
-                    srcset="
-                      ../assets/imgs/birds-gal/Guneratne_2024.01.19_cardinal-vertical-460p.jpg
-                    "
-                  />
+                    <source
+                      media="(min-width: 700px) and (max-width: 799px) and (orientation: portrait)"
+                      srcset="
+                        ../assets/imgs/birds-gal/Guneratne_2024.06.03_red-wing-vertical-460p.jpg
+                      "
+                    />
 
-                  <source
-                    media="(min-width: 800px) and (max-width: 1020px) and (orientation: portrait)"
-                    srcset="
-                      ../assets/imgs/birds-gal/Guneratne_2024.01.19_cardinal-vertical-580p.jpg
-                    "
-                  />
+                    <source
+                      media="(min-width: 800px) and (max-width: 1020px) and (orientation: portrait)"
+                      srcset="
+                        ../assets/imgs/birds-gal/Guneratne_2024.06.03_red-wing-vertical-580p.jpg
+                      "
+                    />
 
+                    <img
+                      src="../assets/imgs/birds-gal/Guneratne_2024.06.03_red-wing-vertical-700p.jpg"
+                      alt="Slide 1 of 7: A red winged blackbird perched on a vertical reed by the water, about three-quarters up in the center of the frame, facing right. The light blue color of the water provides a backdrop to the bird, and green vegetation forms a vignette around the edges of the frame."
+                      id="slide1"
+                    />
+                  </picture>
+
+                  <!-- CARDINAL -->
+                  <picture
+                    class="picture"
+                    role="group"
+                    aria-roledescription="slide"
+                    aria-labelledby="slide2"
+                    tabindex="0"
+                  >
+                    <source
+                      media="(min-width: 300px) and (max-width: 699px) and (orientation: portrait)"
+                      srcset="
+                        ../assets/imgs/birds-gal/Guneratne_2024.01.19_cardinal-vertical-320p.jpg
+                      "
+                    />
+
+                    <source
+                      media="(min-width: 700px) and (max-width: 799px) and (orientation: portrait)"
+                      srcset="
+                        ../assets/imgs/birds-gal/Guneratne_2024.01.19_cardinal-vertical-460p.jpg
+                      "
+                    />
+
+                    <source
+                      media="(min-width: 800px) and (max-width: 1020px) and (orientation: portrait)"
+                      srcset="
+                        ../assets/imgs/birds-gal/Guneratne_2024.01.19_cardinal-vertical-580p.jpg
+                      "
+                    />
+
+                    <img
+                      src="../assets/imgs/birds-gal/Guneratne_2024.01.19_cardinal-vertical-700p.jpg"
+                      alt="Slide 2 of 7: A bright red male cardinal perched on top of a rhododendron branch, looking with a confused expression at the viewer."
+                      id="slide2"
+                    />
+                  </picture>
+
+                  <!-- FEMALE HOUSE FINCH PERCH -->
+
+                  <picture
+                    class="picture"
+                    role="group"
+                    aria-roledescription="slide"
+                    aria-labelledby="slide3"
+                    tabindex="0"
+                  >
+                    <source
+                      media="(min-width: 300px) and (max-width: 699px) and (orientation: portrait)"
+                      srcset="
+                        ../assets/imgs/birds-gal/Guneratne_2024.07.02_house-finch-perch-vertical-320p.jpg
+                      "
+                    />
+
+                    <source
+                      media="(min-width: 700px) and (max-width: 799px) and (orientation: portrait)"
+                      srcset="
+                        ../assets/imgs/birds-gal/Guneratne_2024.07.02_house-finch-perch-vertical-460p.jpg
+                      "
+                    />
+
+                    <source
+                      media="(min-width: 800px) and (max-width: 1020px) and (orientation: portrait)"
+                      srcset="
+                        ../assets/imgs/birds-gal/Guneratne_2024.07.02_house-finch-perch-vertical-580p.jpg
+                      "
+                    />
+
+                    <img
+                      src="../assets/imgs/birds-gal/Guneratne_2024.07.02_house-finch-perch-vertical-700p.jpg"
+                      alt="Slide 3 of 7: A wooden perch stands vertically near the center of the frame with a female house finch perched at the top facing toward the left of the frame. The bird is lit with the golden glow of sunset against a dark green background."
+                      id="slide3"
+                    />
+                  </picture>
+
+                  <!-- FEEDER SQUABBLES -->
+                  <picture
+                    class="picture"
+                    role="group"
+                    aria-roledescription="slide"
+                    aria-labelledby="slide4"
+                    tabindex="0"
+                  >
+                    <source
+                      media="(min-width: 300px) and (max-width: 699px) and (orientation: portrait)"
+                      srcset="
+                        ../assets/imgs/birds-gal/Guneratne_2024.05.30_squabble-vertical-320p.jpg
+                      "
+                    />
+
+                    <source
+                      media="(min-width: 700px) and (max-width: 799px) and (orientation: portrait)"
+                      srcset="
+                        ../assets/imgs/birds-gal/Guneratne_2024.05.30_squabble-vertical-460p.jpg
+                      "
+                    />
+
+                    <source
+                      media="(min-width: 800px) and (max-width: 1020px) and (orientation: portrait)"
+                      srcset="
+                        ../assets/imgs/birds-gal/Guneratne_2024.05.30_squabble-vertical-580p.jpg
+                      "
+                    />
+
+                    <img
+                      src="../assets/imgs/birds-gal/Guneratne_2024.05.30_squabble-vertical-700p.jpg"
+                      alt="Slide 4 of 7: A green bird feeder on top of a black pole with a cone-shaped squirrel baffle beneath the feeder is in the center of the frame. On it are two birds squabbling over who gets to sit at the feeder. A cardinal is perched on the feeder, thrusting its head toward the right with an open beak in the direction of a house finch that is trying to land on the feeder. The finch is clinging onto the right side of the feeder and has its wings spread out behind it as it comes in for a landing."
+                      id="slide4"
+                    />
+                  </picture>
+
+                  <!-- SPARROW FLYING -->
+                  <picture
+                    class="picture"
+                    role="group"
+                    aria-roledescription="slide"
+                    aria-labelledby="slide5"
+                    tabindex="0"
+                  >
+                    <source
+                      media="(min-width: 300px) and (max-width: 699px) and (orientation: portrait)"
+                      srcset="
+                        ../assets/imgs/birds-gal/Guneratne_2024.05.29_sparrow-flying-vertical-320p.jpg
+                      "
+                    />
+
+                    <source
+                      media="(min-width: 700px) and (max-width: 799px) and (orientation: portrait)"
+                      srcset="
+                        ../assets/imgs/birds-gal/Guneratne_2024.05.29_sparrow-flying-vertical-460p.jpg
+                      "
+                    />
+
+                    <source
+                      media="(min-width: 800px) and (max-width: 1020px) and (orientation: portrait)"
+                      srcset="
+                        ../assets/imgs/birds-gal/Guneratne_2024.05.29_sparrow-flying-vertical-580p.jpg
+                      "
+                    />
+
+                    <img
+                      src="../assets/imgs/birds-gal/Guneratne_2024.05.29_sparrow-flying-vertical-700p.jpg"
+                      alt="Slide 5 of 7: The frame is mostly sparse with the exception of a sparrow in the center of the frame flying upwards. Its body is facing toward the viewer with its wings pointed downward and feet tucked into its belly, and its head facing slightly upward toward the left."
+                      id="slide5"
+                    />
+                  </picture>
+
+                  <!-- MALE HOUSE FINCH CHERRY -->
+                  <picture
+                    class="picture"
+                    role="group"
+                    aria-roledescription="slide"
+                    aria-labelledby="slide6"
+                    tabindex="0"
+                  >
+                    <source
+                      media="(min-width: 300px) and (max-width: 699px) and (orientation: portrait)"
+                      srcset="
+                        ../assets/imgs/birds-gal/Guneratne_2024.05.08_house-finch-vertical-320p.jpg
+                      "
+                    />
+
+                    <source
+                      media="(min-width: 700px) and (max-width: 799px) and (orientation: portrait)"
+                      srcset="
+                        ../assets/imgs/birds-gal/Guneratne_2024.05.08_house-finch-vertical-460p.jpg
+                      "
+                    />
+
+                    <source
+                      media="(min-width: 800px) and (max-width: 1020px) and (orientation: portrait)"
+                      srcset="
+                        ../assets/imgs/birds-gal/Guneratne_2024.05.08_house-finch-vertical-580p.jpg
+                      "
+                    />
+
+                    <img
+                      src="../assets/imgs/birds-gal/Guneratne_2024.05.08_house-finch-vertical-700p.jpg"
+                      alt="Slide 6 of 7: A male house finch looking at the viewer from its perch on the branch of a cherry tree with sparse spring leaves just beginning to emerge. The sky is overcast and mostly white behind the bird."
+                      id="slide6"
+                    />
+                  </picture>
+
+                  <!-- SPARROW ON A BRANCH -->
+                  <picture
+                    class="picture"
+                    role="group"
+                    aria-roledescription="slide"
+                    aria-labelledby="slide7"
+                    tabindex="0"
+                  >
+                    <source
+                      media="(min-width: 300px) and (max-width: 699px) and (orientation: portrait)"
+                      srcset="
+                        ../assets/imgs/birds-gal/Guneratne_2023.08.11_sparrow-branch-vertical-320p.jpg
+                      "
+                    />
+
+                    <source
+                      media="(min-width: 700px) and (max-width: 799px) and (orientation: portrait)"
+                      srcset="
+                        ../assets/imgs/birds-gal/Guneratne_2023.08.11_sparrow-branch-vertical-460p.jpg
+                      "
+                    />
+
+                    <source
+                      media="(min-width: 800px) and (max-width: 1020px) and (orientation: portrait)"
+                      srcset="
+                        ../assets/imgs/birds-gal/Guneratne_2023.08.11_sparrow-branch-vertical-580p.jpg
+                      "
+                    />
+
+                    <img
+                      src="../assets/imgs/birds-gal/Guneratne_2023.08.11_sparrow-branch-vertical-700p.jpg"
+                      alt="Slide 7 of 7: A tree branch runs diagonally through the frame from top right to bottom left, with a sparrow perched on the center of the branch facing right. The golden light of sunset is illuminating the bird against a dark green background."
+                      id="slide7"
+                    />
+                  </picture>
+                </div>
+
+                <button type="button" class="forward-arrow" data-forward-arrow>
                   <img
-                    src="../assets/imgs/birds-gal/Guneratne_2024.01.19_cardinal-vertical-700p.jpg"
-                    alt="Slide 2 of 7: A bright red male cardinal perched on top of a rhododendron branch, looking with a confused expression at the viewer."
-                    id="slide2"
+                    data-icon-forward
+                    class="arrow"
+                    src="../assets/imgs/icons/reshot-icon-arrow-chevron-right-WDGHUKQ634.svg"
+                    alt="Forward Arrow"
                   />
-                </picture>
-
-                <!-- FEMALE HOUSE FINCH PERCH -->
-
-                <picture
-                  class="picture"
-                  role="group"
-                  aria-roledescription="slide"
-                  aria-labelledby="slide3"
-                  tabindex="0"
-                >
-                  <source
-                    media="(min-width: 300px) and (max-width: 699px) and (orientation: portrait)"
-                    srcset="
-                      ../assets/imgs/birds-gal/Guneratne_2024.07.02_house-finch-perch-vertical-320p.jpg
-                    "
-                  />
-
-                  <source
-                    media="(min-width: 700px) and (max-width: 799px) and (orientation: portrait)"
-                    srcset="
-                      ../assets/imgs/birds-gal/Guneratne_2024.07.02_house-finch-perch-vertical-460p.jpg
-                    "
-                  />
-
-                  <source
-                    media="(min-width: 800px) and (max-width: 1020px) and (orientation: portrait)"
-                    srcset="
-                      ../assets/imgs/birds-gal/Guneratne_2024.07.02_house-finch-perch-vertical-580p.jpg
-                    "
-                  />
-
-                  <img
-                    src="../assets/imgs/birds-gal/Guneratne_2024.07.02_house-finch-perch-vertical-700p.jpg"
-                    alt="Slide 3 of 7: A wooden perch stands vertically near the center of the frame with a female house finch perched at the top facing toward the left of the frame. The bird is lit with the golden glow of sunset against a dark green background."
-                    id="slide3"
-                  />
-                </picture>
-
-                <!-- FEEDER SQUABBLES -->
-                <picture
-                  class="picture"
-                  role="group"
-                  aria-roledescription="slide"
-                  aria-labelledby="slide4"
-                  tabindex="0"
-                >
-                  <source
-                    media="(min-width: 300px) and (max-width: 699px) and (orientation: portrait)"
-                    srcset="
-                      ../assets/imgs/birds-gal/Guneratne_2024.05.30_squabble-vertical-320p.jpg
-                    "
-                  />
-
-                  <source
-                    media="(min-width: 700px) and (max-width: 799px) and (orientation: portrait)"
-                    srcset="
-                      ../assets/imgs/birds-gal/Guneratne_2024.05.30_squabble-vertical-460p.jpg
-                    "
-                  />
-
-                  <source
-                    media="(min-width: 800px) and (max-width: 1020px) and (orientation: portrait)"
-                    srcset="
-                      ../assets/imgs/birds-gal/Guneratne_2024.05.30_squabble-vertical-580p.jpg
-                    "
-                  />
-
-                  <img
-                    src="../assets/imgs/birds-gal/Guneratne_2024.05.30_squabble-vertical-700p.jpg"
-                    alt="Slide 4 of 7: A green bird feeder on top of a black pole with a cone-shaped squirrel baffle beneath the feeder is in the center of the frame. On it are two birds squabbling over who gets to sit at the feeder. A cardinal is perched on the feeder, thrusting its head toward the right with an open beak in the direction of a house finch that is trying to land on the feeder. The finch is clinging onto the right side of the feeder and has its wings spread out behind it as it comes in for a landing."
-                    id="slide4"
-                  />
-                </picture>
-
-                <!-- SPARROW FLYING -->
-                <picture
-                  class="picture"
-                  role="group"
-                  aria-roledescription="slide"
-                  aria-labelledby="slide5"
-                  tabindex="0"
-                >
-                  <source
-                    media="(min-width: 300px) and (max-width: 699px) and (orientation: portrait)"
-                    srcset="
-                      ../assets/imgs/birds-gal/Guneratne_2024.05.29_sparrow-flying-vertical-320p.jpg
-                    "
-                  />
-
-                  <source
-                    media="(min-width: 700px) and (max-width: 799px) and (orientation: portrait)"
-                    srcset="
-                      ../assets/imgs/birds-gal/Guneratne_2024.05.29_sparrow-flying-vertical-460p.jpg
-                    "
-                  />
-
-                  <source
-                    media="(min-width: 800px) and (max-width: 1020px) and (orientation: portrait)"
-                    srcset="
-                      ../assets/imgs/birds-gal/Guneratne_2024.05.29_sparrow-flying-vertical-580p.jpg
-                    "
-                  />
-
-                  <img
-                    src="../assets/imgs/birds-gal/Guneratne_2024.05.29_sparrow-flying-vertical-700p.jpg"
-                    alt="Slide 5 of 7: The frame is mostly sparse with the exception of a sparrow in the center of the frame flying upwards. Its body is facing toward the viewer with its wings pointed downward and feet tucked into its belly, and its head facing slightly upward toward the left."
-                    id="slide5"
-                  />
-                </picture>
-
-                <!-- MALE HOUSE FINCH CHERRY -->
-                <picture
-                  class="picture"
-                  role="group"
-                  aria-roledescription="slide"
-                  aria-labelledby="slide6"
-                  tabindex="0"
-                >
-                  <source
-                    media="(min-width: 300px) and (max-width: 699px) and (orientation: portrait)"
-                    srcset="
-                      ../assets/imgs/birds-gal/Guneratne_2024.05.08_house-finch-vertical-320p.jpg
-                    "
-                  />
-
-                  <source
-                    media="(min-width: 700px) and (max-width: 799px) and (orientation: portrait)"
-                    srcset="
-                      ../assets/imgs/birds-gal/Guneratne_2024.05.08_house-finch-vertical-460p.jpg
-                    "
-                  />
-
-                  <source
-                    media="(min-width: 800px) and (max-width: 1020px) and (orientation: portrait)"
-                    srcset="
-                      ../assets/imgs/birds-gal/Guneratne_2024.05.08_house-finch-vertical-580p.jpg
-                    "
-                  />
-
-                  <img
-                    src="../assets/imgs/birds-gal/Guneratne_2024.05.08_house-finch-vertical-700p.jpg"
-                    alt="Slide 6 of 7: A male house finch looking at the viewer from its perch on the branch of a cherry tree with sparse spring leaves just beginning to emerge. The sky is overcast and mostly white behind the bird."
-                    id="slide6"
-                  />
-                </picture>
-
-                <!-- SPARROW ON A BRANCH -->
-                <picture
-                  class="picture"
-                  role="group"
-                  aria-roledescription="slide"
-                  aria-labelledby="slide7"
-                  tabindex="0"
-                >
-                  <source
-                    media="(min-width: 300px) and (max-width: 699px) and (orientation: portrait)"
-                    srcset="
-                      ../assets/imgs/birds-gal/Guneratne_2023.08.11_sparrow-branch-vertical-320p.jpg
-                    "
-                  />
-
-                  <source
-                    media="(min-width: 700px) and (max-width: 799px) and (orientation: portrait)"
-                    srcset="
-                      ../assets/imgs/birds-gal/Guneratne_2023.08.11_sparrow-branch-vertical-460p.jpg
-                    "
-                  />
-
-                  <source
-                    media="(min-width: 800px) and (max-width: 1020px) and (orientation: portrait)"
-                    srcset="
-                      ../assets/imgs/birds-gal/Guneratne_2023.08.11_sparrow-branch-vertical-580p.jpg
-                    "
-                  />
-
-                  <img
-                    src="../assets/imgs/birds-gal/Guneratne_2023.08.11_sparrow-branch-vertical-700p.jpg"
-                    alt="Slide 7 of 7: A tree branch runs diagonally through the frame from top right to bottom left, with a sparrow perched on the center of the branch facing right. The golden light of sunset is illuminating the bird against a dark green background."
-                    id="slide7"
-                  />
-                </picture>
+                </button>
               </div>
-
-              <button type="button" class="forward-arrow" data-forward-arrow>
-                <img
-                  data-icon-forward
-                  class="arrow"
-                  src="../assets/imgs/reshot-icon-arrow-chevron-right-WDGHUKQ634.svg"
-                  alt="Forward Arrow"
-                />
-              </button>
 
               <div class="img-dots-container">
                 <div class="img-dots">
@@ -396,35 +371,9 @@
           </div>
         </section>
 
-        <section class="tab-content gal-landscape" id="birds-gallery" hidden>
+        <section class="section gal-landscape" id="birds-gallery" hidden>
           <div class="gallery landscape-gallery">
-            <div class="animation-ctrl-div landscape-animation-ctrl-div">
-              <button
-                type="button"
-                class="pause-btn landscape-pause-btn"
-                title="Press Enter or Space to Pause Gallery Animation"
-              >
-                <img
-                  class="pause-icon landscape-pause-icon"
-                  src="../assets/imgs/pause-button-icon.svg"
-                  alt="Press Enter or Space to Pause Gallery Animation"
-                />
-              </button>
-
-              <button
-                type="button"
-                class="play-btn landscape-play-btn"
-                title="Press Enter or Space to Start Gallery Animation"
-              >
-                <img
-                  class="play-icon landscape-play-icon"
-                  src="../assets/imgs/play-button-icon.svg"
-                  title="Start Gallery Animation"
-                  alt="Press Enter or Space to Start Gallery Animation"
-                />
-              </button>
-            </div>
-
+            <%- include ('landscape-animation-ctrl.ejs') %>
             <div
               class="slider-box landscape-slider-box"
               tabindex="0"
@@ -433,278 +382,279 @@
               aria-label="Birds Gallery"
               hidden
             >
-              <!-- <div class="slider-row-one"></div> -->
-              <button type="button" class="back-arrow" data-back-arrow>
-                <img
-                  data-icon-back
-                  class="arrow"
-                  src="../assets/imgs/reshot-icon-arrow-chevron-left-975UQXVKZF.svg"
-                  alt="Back Arrow"
-                />
-              </button>
-
-              <div class="photo-box landscape-photo-box">
-                <!-- SPARROW AT SUNRISE -->
-                <picture
-                  class="picture"
-                  aria-role="group"
-                  aria-roledescription="slide"
-                  aria-labelledby="slide1"
-                  tabindex="0"
-                >
-                  <source
-                    media="(min-width: 640px) and (max-width: 959px) and (orientation: landscape)"
-                    srcset="
-                      ../assets/imgs/birds-gal/Guneratne_2024.04.27_sparrow-horizontal-280p.jpg
-                    "
-                  />
-
-                  <source
-                    media="(min-width: 960px) and (max-width: 1279px) and (orientation: landscape)"
-                    srcset="
-                      ../assets/imgs/birds-gal/Guneratne_2024.04.27_sparrow-horizontal-460p.jpg
-                    "
-                  />
-
-                  <source
-                    media="(min-width: 1280px) and (max-width: 1599px) and (orientation: landscape)"
-                    srcset="
-                      ../assets/imgs/birds-gal/Guneratne_2024.04.27_sparrow-horizontal-600p.jpg
-                    "
-                  />
-
+              <div class="img-display-container">
+                <button type="button" class="back-arrow" data-back-arrow>
                   <img
-                    src="../assets/imgs/birds-gal/Guneratne_2024.04.27_sparrow-horizontal-900p.jpg"
-                    alt="Slide 1 of 7: A sparrow sitting in a tree with early spring buds and leaves, with the golden light of sunrise shining into the left side of the frame."
-                    id="slide1"
+                    data-icon-back
+                    class="arrow"
+                    src="../assets/imgs/icons/reshot-icon-arrow-chevron-left-975UQXVKZF.svg"
+                    alt="Back Arrow"
                   />
-                </picture>
+                </button>
 
-                <!-- EASTERN KINGBIRD IN A TREE -->
-                <picture
-                  class="picture"
-                  role="group"
-                  aria-roledescription="slide"
-                  aria-labelledby="slide2"
-                  tabindex="0"
-                >
-                  <source
-                    media="(min-width: 640px) and (max-width: 959px) and (orientation: landscape)"
-                    srcset="
-                      ../assets/imgs/birds-gal/Guneratne_2023.06.29_kingbird-horizontal-280p.jpg
-                    "
-                  />
+                <div class="photo-box landscape-photo-box">
+                  <!-- SPARROW AT SUNRISE -->
+                  <picture
+                    class="picture"
+                    aria-role="group"
+                    aria-roledescription="slide"
+                    aria-labelledby="slide1"
+                    tabindex="0"
+                  >
+                    <source
+                      media="(min-width: 640px) and (max-width: 959px) and (orientation: landscape)"
+                      srcset="
+                        ../assets/imgs/birds-gal/Guneratne_2024.04.27_sparrow-horizontal-280p.jpg
+                      "
+                    />
 
-                  <source
-                    media="(min-width: 960px) and (max-width: 1279px) and (orientation: landscape)"
-                    srcset="
-                      ../assets/imgs/birds-gal/Guneratne_2023.06.29_kingbird-horizontal-460p.jpg
-                    "
-                  />
+                    <source
+                      media="(min-width: 960px) and (max-width: 1279px) and (orientation: landscape)"
+                      srcset="
+                        ../assets/imgs/birds-gal/Guneratne_2024.04.27_sparrow-horizontal-460p.jpg
+                      "
+                    />
 
-                  <source
-                    media="(min-width: 1280px) and (max-width: 1599px) and (orientation: landscape)"
-                    srcset="
-                      ../assets/imgs/birds-gal/Guneratne_2023.06.29_kingbird-horizontal-600p.jpg
-                    "
-                  />
+                    <source
+                      media="(min-width: 1280px) and (max-width: 1599px) and (orientation: landscape)"
+                      srcset="
+                        ../assets/imgs/birds-gal/Guneratne_2024.04.27_sparrow-horizontal-600p.jpg
+                      "
+                    />
 
+                    <img
+                      src="../assets/imgs/birds-gal/Guneratne_2024.04.27_sparrow-horizontal-900p.jpg"
+                      alt="Slide 1 of 7: A sparrow sitting in a tree with early spring buds and leaves, with the golden light of sunrise shining into the left side of the frame."
+                      id="slide1"
+                    />
+                  </picture>
+
+                  <!-- EASTERN KINGBIRD IN A TREE -->
+                  <picture
+                    class="picture"
+                    role="group"
+                    aria-roledescription="slide"
+                    aria-labelledby="slide2"
+                    tabindex="0"
+                  >
+                    <source
+                      media="(min-width: 640px) and (max-width: 959px) and (orientation: landscape)"
+                      srcset="
+                        ../assets/imgs/birds-gal/Guneratne_2023.06.29_kingbird-horizontal-280p.jpg
+                      "
+                    />
+
+                    <source
+                      media="(min-width: 960px) and (max-width: 1279px) and (orientation: landscape)"
+                      srcset="
+                        ../assets/imgs/birds-gal/Guneratne_2023.06.29_kingbird-horizontal-460p.jpg
+                      "
+                    />
+
+                    <source
+                      media="(min-width: 1280px) and (max-width: 1599px) and (orientation: landscape)"
+                      srcset="
+                        ../assets/imgs/birds-gal/Guneratne_2023.06.29_kingbird-horizontal-600p.jpg
+                      "
+                    />
+
+                    <img
+                      src="../assets/imgs/birds-gal/Guneratne_2023.06.29_kingbird-horizontal-900p.jpg"
+                      alt="Slide 2 of 7: An Eastern Kingbird in a tree shown from behind as it looks to the left. The bird is perched on a tree branch against a blue sky with tree branches filling the frame from the sides."
+                      id="slide2"
+                    />
+                  </picture>
+
+                  <!-- CARDINAL -->
+                  <picture
+                    class="picture"
+                    role="group"
+                    aria-roledescription="slide"
+                    aria-labelledby="slide3"
+                    tabindex="0"
+                  >
+                    <source
+                      media="(min-width: 640px) and (max-width: 959px) and (orientation: landscape)"
+                      srcset="
+                        ../assets/imgs/birds-gal/Guneratne_2023.06.27_cardinal-horizontal-280p.jpg
+                      "
+                    />
+
+                    <source
+                      media="(min-width: 960px) and (max-width: 1279px) and (orientation: landscape)"
+                      srcset="
+                        ../assets/imgs/birds-gal/Guneratne_2023.06.27_cardinal-horizontal-460p.jpg
+                      "
+                    />
+
+                    <source
+                      media="(min-width: 1280px) and (max-width: 1599px) and (orientation: landscape)"
+                      srcset="
+                        ../assets/imgs/birds-gal/Guneratne_2023.06.27_cardinal-horizontal-600p.jpg
+                      "
+                    />
+
+                    <img
+                      src="../assets/imgs/birds-gal/Guneratne_2023.06.27_cardinal-horizontal-900p.jpg"
+                      alt="Slide 3 of 7: A bright red male cardinal on the right of the frame perched on a stick gazing toward the left of the frame, with an out-of-focus green background."
+                      id="slide3"
+                    />
+                  </picture>
+
+                  <!-- KINGBIRD DIVING -->
+                  <picture
+                    class="picture"
+                    role="group"
+                    aria-roledescription="slide"
+                    aria-labelledby="slide4"
+                    tabindex="0"
+                  >
+                    <source
+                      media="(min-width: 640px) and (max-width: 959px) and (orientation: landscape)"
+                      srcset="
+                        ../assets/imgs/birds-gal/Guneratne_2024.06.07_kingbird-dive-horizontal-280p.jpg
+                      "
+                    />
+
+                    <source
+                      media="(min-width: 960px) and (max-width: 1279px) and (orientation: landscape)"
+                      srcset="
+                        ../assets/imgs/birds-gal/Guneratne_2024.06.07_kingbird-dive-horizontal-460p.jpg
+                      "
+                    />
+
+                    <source
+                      media="(min-width: 1280px) and (max-width: 1599px) and (orientation: landscape)"
+                      srcset="
+                        ../assets/imgs/birds-gal/Guneratne_2024.06.07_kingbird-dive-horizontal-600p.jpg
+                      "
+                    />
+
+                    <img
+                      src="../assets/imgs/birds-gal/Guneratne_2024.06.07_kingbird-dive-horizontal-900p.jpg"
+                      alt="Slide 4 of 7: An Eastern Kingbird in midair, diving down toward the water to catch an insect."
+                      id="slide4"
+                    />
+                  </picture>
+
+                  <!-- ROBIN -->
+                  <picture
+                    class="picture"
+                    role="group"
+                    aria-roledescription="slide"
+                    aria-labelledby="slide5"
+                    tabindex="0"
+                  >
+                    <source
+                      media="(min-width: 640px) and (max-width: 959px) and (orientation: landscape)"
+                      srcset="
+                        ../assets/imgs/birds-gal/Guneratne_2024.05.12_robin-horizontal-280p.jpg
+                      "
+                    />
+
+                    <source
+                      media="(min-width: 960px) and (max-width: 1279px) and (orientation: landscape)"
+                      srcset="
+                        ../assets/imgs/birds-gal/Guneratne_2024.05.12_robin-horizontal-460p.jpg
+                      "
+                    />
+
+                    <source
+                      media="(min-width: 1280px) and (max-width: 1599px) and (orientation: landscape)"
+                      srcset="
+                        ../assets/imgs/birds-gal/Guneratne_2024.05.12_robin-horizontal-600p.jpg
+                      "
+                    />
+
+                    <img
+                      src="../assets/imgs/birds-gal/Guneratne_2024.05.12_robin-horizontal-900p.jpg"
+                      alt="Slide 5 of 7: A robin sits perched on a dead tree branch with its orange chest puffed forward and head facing upward toward the sky. It's yellow beak is slightly open as it sings into the air."
+                      id="slide5"
+                    />
+                  </picture>
+
+                  <!-- SPARROW IN A CHERRY TREE -->
+                  <picture
+                    class="picture"
+                    role="group"
+                    aria-roledescription="slide"
+                    aria-labelledby="slide6"
+                    tabindex="0"
+                  >
+                    <source
+                      media="(min-width: 640px) and (max-width: 959px) and (orientation: landscape)"
+                      srcset="
+                        ../assets/imgs/birds-gal/Guneratne_2024.05.01_sparrow-cherry-horizontal-280p.jpg
+                      "
+                    />
+
+                    <source
+                      media="(min-width: 960px) and (max-width: 1279px) and (orientation: landscape)"
+                      srcset="
+                        ../assets/imgs/birds-gal/Guneratne_2024.05.01_sparrow-cherry-horizontal-460p.jpg
+                      "
+                    />
+
+                    <source
+                      media="(min-width: 1280px) and (max-width: 1599px) and (orientation: landscape)"
+                      srcset="
+                        ../assets/imgs/birds-gal/Guneratne_2024.05.01_sparrow-cherry-horizontal-600p.jpg
+                      "
+                    />
+
+                    <img
+                      src="../assets/imgs/birds-gal/Guneratne_2024.05.01_sparrow-cherry-horizontal-900p.jpg"
+                      alt="Slide 6 of 7: A chipping sparrow sitting on the branch of a cherry tree. The branch the bird is perched on has few leaves, with abundant leaves filling the frame horizontally along the top and bottom of the image."
+                      id="slide6"
+                    />
+                  </picture>
+
+                  <!-- FEMALE HOUSE FINCH ON RADISH PLANT -->
+                  <picture
+                    class="picture"
+                    role="group"
+                    aria-roledescription="slide"
+                    aria-labelledby="slide7"
+                    tabindex="0"
+                  >
+                    <source
+                      media="(min-width: 640px) and (max-width: 959px) and (orientation: landscape)"
+                      srcset="
+                        ../assets/imgs/birds-gal/Guneratne_2024.07.02_house-finch-radish-horizontal-280p.jpg
+                      "
+                    />
+
+                    <source
+                      media="(min-width: 960px) and (max-width: 1279px) and (orientation: landscape)"
+                      srcset="
+                        ../assets/imgs/birds-gal/Guneratne_2024.07.02_house-finch-radish-horizontal-460p.jpg
+                      "
+                    />
+
+                    <source
+                      media="(min-width: 1280px) and (max-width: 1599px) and (orientation: landscape)"
+                      srcset="
+                        ../assets/imgs/birds-gal/Guneratne_2024.07.02_house-finch-radish-horizontal-600p.jpg
+                      "
+                    />
+
+                    <img
+                      src="../assets/imgs/birds-gal/Guneratne_2024.07.02_house-finch-radish-horizontal-900p.jpg"
+                      alt="Slide 7 of 7: A female house finch sitting in the center of the frame facing slightly to the left is perched on the branch of an overgrown radish plant, where it enjoys eating the radish seeds."
+                      id="slide7"
+                    />
+                  </picture>
+                </div>
+
+                <button type="button" class="forward-arrow" data-forward-arrow>
                   <img
-                    src="../assets/imgs/birds-gal/Guneratne_2023.06.29_kingbird-horizontal-900p.jpg"
-                    alt="Slide 2 of 7: An Eastern Kingbird in a tree shown from behind as it looks to the left. The bird is perched on a tree branch against a blue sky with tree branches filling the frame from the sides."
-                    id="slide2"
+                    data-icon-forward
+                    class="arrow"
+                    src="../assets/imgs/icons/reshot-icon-arrow-chevron-right-WDGHUKQ634.svg"
+                    alt="Forward Arrow"
                   />
-                </picture>
-
-                <!-- CARDINAL -->
-                <picture
-                  class="picture"
-                  role="group"
-                  aria-roledescription="slide"
-                  aria-labelledby="slide3"
-                  tabindex="0"
-                >
-                  <source
-                    media="(min-width: 640px) and (max-width: 959px) and (orientation: landscape)"
-                    srcset="
-                      ../assets/imgs/birds-gal/Guneratne_2023.06.27_cardinal-horizontal-280p.jpg
-                    "
-                  />
-
-                  <source
-                    media="(min-width: 960px) and (max-width: 1279px) and (orientation: landscape)"
-                    srcset="
-                      ../assets/imgs/birds-gal/Guneratne_2023.06.27_cardinal-horizontal-460p.jpg
-                    "
-                  />
-
-                  <source
-                    media="(min-width: 1280px) and (max-width: 1599px) and (orientation: landscape)"
-                    srcset="
-                      ../assets/imgs/birds-gal/Guneratne_2023.06.27_cardinal-horizontal-600p.jpg
-                    "
-                  />
-
-                  <img
-                    src="../assets/imgs/birds-gal/Guneratne_2023.06.27_cardinal-horizontal-900p.jpg"
-                    alt="Slide 3 of 7: A bright red male cardinal on the right of the frame perched on a stick gazing toward the left of the frame, with an out-of-focus green background."
-                    id="slide3"
-                  />
-                </picture>
-
-                <!-- KINGBIRD DIVING -->
-                <picture
-                  class="picture"
-                  role="group"
-                  aria-roledescription="slide"
-                  aria-labelledby="slide4"
-                  tabindex="0"
-                >
-                  <source
-                    media="(min-width: 640px) and (max-width: 959px) and (orientation: landscape)"
-                    srcset="
-                      ../assets/imgs/birds-gal/Guneratne_2024.06.07_kingbird-dive-horizontal-280p.jpg
-                    "
-                  />
-
-                  <source
-                    media="(min-width: 960px) and (max-width: 1279px) and (orientation: landscape)"
-                    srcset="
-                      ../assets/imgs/birds-gal/Guneratne_2024.06.07_kingbird-dive-horizontal-460p.jpg
-                    "
-                  />
-
-                  <source
-                    media="(min-width: 1280px) and (max-width: 1599px) and (orientation: landscape)"
-                    srcset="
-                      ../assets/imgs/birds-gal/Guneratne_2024.06.07_kingbird-dive-horizontal-600p.jpg
-                    "
-                  />
-
-                  <img
-                    src="../assets/imgs/birds-gal/Guneratne_2024.06.07_kingbird-dive-horizontal-900p.jpg"
-                    alt="Slide 4 of 7: An Eastern Kingbird in midair, diving down toward the water to catch an insect."
-                    id="slide4"
-                  />
-                </picture>
-
-                <!-- ROBIN -->
-                <picture
-                  class="picture"
-                  role="group"
-                  aria-roledescription="slide"
-                  aria-labelledby="slide5"
-                  tabindex="0"
-                >
-                  <source
-                    media="(min-width: 640px) and (max-width: 959px) and (orientation: landscape)"
-                    srcset="
-                      ../assets/imgs/birds-gal/Guneratne_2024.05.12_robin-horizontal-280p.jpg
-                    "
-                  />
-
-                  <source
-                    media="(min-width: 960px) and (max-width: 1279px) and (orientation: landscape)"
-                    srcset="
-                      ../assets/imgs/birds-gal/Guneratne_2024.05.12_robin-horizontal-460p.jpg
-                    "
-                  />
-
-                  <source
-                    media="(min-width: 1280px) and (max-width: 1599px) and (orientation: landscape)"
-                    srcset="
-                      ../assets/imgs/birds-gal/Guneratne_2024.05.12_robin-horizontal-600p.jpg
-                    "
-                  />
-
-                  <img
-                    src="../assets/imgs/birds-gal/Guneratne_2024.05.12_robin-horizontal-900p.jpg"
-                    alt="Slide 5 of 7: A robin sits perched on a dead tree branch with its orange chest puffed forward and head facing upward toward the sky. It's yellow beak is slightly open as it sings into the air."
-                    id="slide5"
-                  />
-                </picture>
-
-                <!-- SPARROW IN A CHERRY TREE -->
-                <picture
-                  class="picture"
-                  role="group"
-                  aria-roledescription="slide"
-                  aria-labelledby="slide6"
-                  tabindex="0"
-                >
-                  <source
-                    media="(min-width: 640px) and (max-width: 959px) and (orientation: landscape)"
-                    srcset="
-                      ../assets/imgs/birds-gal/Guneratne_2024.05.01_sparrow-cherry-horizontal-280p.jpg
-                    "
-                  />
-
-                  <source
-                    media="(min-width: 960px) and (max-width: 1279px) and (orientation: landscape)"
-                    srcset="
-                      ../assets/imgs/birds-gal/Guneratne_2024.05.01_sparrow-cherry-horizontal-460p.jpg
-                    "
-                  />
-
-                  <source
-                    media="(min-width: 1280px) and (max-width: 1599px) and (orientation: landscape)"
-                    srcset="
-                      ../assets/imgs/birds-gal/Guneratne_2024.05.01_sparrow-cherry-horizontal-600p.jpg
-                    "
-                  />
-
-                  <img
-                    src="../assets/imgs/birds-gal/Guneratne_2024.05.01_sparrow-cherry-horizontal-900p.jpg"
-                    alt="Slide 6 of 7: A chipping sparrow sitting on the branch of a cherry tree. The branch the bird is perched on has few leaves, with abundant leaves filling the frame horizontally along the top and bottom of the image."
-                    id="slide6"
-                  />
-                </picture>
-
-                <!-- FEMALE HOUSE FINCH ON RADISH PLANT -->
-                <picture
-                  class="picture"
-                  role="group"
-                  aria-roledescription="slide"
-                  aria-labelledby="slide7"
-                  tabindex="0"
-                >
-                  <source
-                    media="(min-width: 640px) and (max-width: 959px) and (orientation: landscape)"
-                    srcset="
-                      ../assets/imgs/birds-gal/Guneratne_2024.07.02_house-finch-radish-horizontal-280p.jpg
-                    "
-                  />
-
-                  <source
-                    media="(min-width: 960px) and (max-width: 1279px) and (orientation: landscape)"
-                    srcset="
-                      ../assets/imgs/birds-gal/Guneratne_2024.07.02_house-finch-radish-horizontal-460p.jpg
-                    "
-                  />
-
-                  <source
-                    media="(min-width: 1280px) and (max-width: 1599px) and (orientation: landscape)"
-                    srcset="
-                      ../assets/imgs/birds-gal/Guneratne_2024.07.02_house-finch-radish-horizontal-600p.jpg
-                    "
-                  />
-
-                  <img
-                    src="../assets/imgs/birds-gal/Guneratne_2024.07.02_house-finch-radish-horizontal-900p.jpg"
-                    alt="Slide 7 of 7: A female house finch sitting in the center of the frame facing slightly to the left is perched on the branch of an overgrown radish plant, where it enjoys eating the radish seeds."
-                    id="slide7"
-                  />
-                </picture>
+                </button>
               </div>
-
-              <button type="button" class="forward-arrow" data-forward-arrow>
-                <img
-                  data-icon-forward
-                  class="arrow"
-                  src="../assets/imgs/reshot-icon-arrow-chevron-right-WDGHUKQ634.svg"
-                  alt="Forward Arrow"
-                />
-              </button>
 
               <div class="img-dots-container">
                 <div class="img-dots">
@@ -775,9 +725,8 @@
             </div>
           </div>
         </section>
+        <%- include('footer.ejs') %>
       </main>
-
-      <%- include('footer.ejs') %>
     </div>
   </body>
 </html>

@@ -2,6 +2,8 @@
 export const navigation = document.querySelector("nav");
 export const menuIconDiv = document.querySelector(".menu-icon-div");
 export const menuIcon = document.querySelector(".menu-icon");
+export const menuIconWidth = menuIcon.offsetWidth;
+export const newMenuIconWidth = menuIconWidth / 2;
 export const menuBar = document.querySelector(".menu-items");
 export const currentPage = window.location.href;
 export const fullPageName = currentPage.substring(

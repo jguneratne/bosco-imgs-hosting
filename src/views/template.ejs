@@ -5,40 +5,42 @@
     <meta name="viewport" content="width=device-width" />
     <!-- Removed initial-scale and max-width from content attribute to fix zooming problems on mobile -->
     <title><%= title %></title>
-    <link href="../style2.css" rel="stylesheet" />
+    <link href="../style.css" rel="stylesheet" />
     <script src="../index.js" defer="defer"></script>
   </head>
 
   <body>
-    <main class="main">
-      <%- include('header.ejs') %>
-      <!-- HOME -->
-      <section class="section" id="home">
-        <!-- <div class="home">
-          <div class="logo-box">
-            <img
-              class="logo"
-              src="../assets/imgs/bosco_images_logo-white.svg"
-              alt="Bosco Images Wildlife Photography Logo"
-            />
+    <div class="scroll-wrapper">
+      <main class="main">
+        <%- include('header.ejs') %>
+        <!-- HOME -->
+        <section class="section" id="home">
+          <div class="home">
+            <div class="logo-box">
+              <img
+                class="logo"
+                src="../assets/imgs/icons/bosco_images_logo-white.svg"
+                alt="Bosco Images Wildlife Photography Logo"
+              />
+            </div>
+
+            <div class="home-box">
+              <a
+                href="galleries.html"
+                aria-label="Photo Galleries"
+                class="cta-btn"
+                ><p>GALLERIES</p>
+              </a>
+
+              <a href="contact.html" aria-label="Contact Page" class="cta-btn"
+                ><p>CONTACT</p>
+              </a>
+            </div>
           </div>
+        </section>
 
-          <div class="home-box">
-            <a
-              href="galleries.html"
-              aria-label="Photo Galleries"
-              class="cta-btn"
-              ><p>GALLERIES</p>
-            </a>
-
-            <a href="contact.html" aria-label="Contact Page" class="cta-btn"
-              ><p>CONTACT</p>
-            </a>
-          </div>
-        </div> -->
-      </section>
-
-      <%- include('footer.ejs') %>
-    </main>
+        <%- include('footer.ejs') %>
+      </main>
+    </div>
   </body>
 </html>

@@ -10,39 +10,13 @@
   </head>
 
   <body>
-    <div class="container">
-      <%- include('header.ejs') %>
-
+    <div class="scroll-wrapper">
       <main class="main gal-main" data-name="insects-gallery">
+        <%- include('header.ejs') %>
         <!-- INSECTS GALLERY -->
-        <section class="tab-content gal-portrait" id="insects-gallery" hidden>
+        <section class="section gal-portrait" id="insects-gallery" hidden>
           <div class="gallery portrait-gallery">
-            <div class="animation-ctrl-div portrait-animation-ctrl-div">
-              <button
-                type="button"
-                class="pause-btn portrait-pause-btn"
-                title="Press Enter or Space to Pause Gallery Animation"
-              >
-                <img
-                  class="pause-icon portrait-pause-icon"
-                  src="../assets/imgs/pause-button-icon.svg"
-                  alt="Press Enter or Space to Pause Gallery Animation"
-                />
-              </button>
-
-              <button
-                type="button"
-                class="play-btn portrait-play-btn"
-                title="Press Enter or Space to Start Gallery Animation"
-              >
-                <img
-                  class="play-icon portrait-play-icon"
-                  src="../assets/imgs/play-button-icon.svg"
-                  title="Start Gallery Animation"
-                  alt="Press Enter or Space to Start Gallery Animation"
-                />
-              </button>
-            </div>
+            <%- include ('portrait-animation-ctrl.ejs') %>
 
             <div
               class="slider-box portrait-slider-box"
@@ -52,242 +26,243 @@
               aria-label="Insects Gallery"
               hidden
             >
-              <!-- <div class="slider-row-one"></div> -->
-              <button type="button" class="back-arrow" data-back-arrow>
-                <img
-                  data-icon-back
-                  class="arrow"
-                  src="../assets/imgs/reshot-icon-arrow-chevron-left-975UQXVKZF.svg"
-                  alt="Back Arrow"
-                />
-              </button>
-
-              <div class="photo-box portrait-photo-box">
-                <!-- BEE ON SAGE FLOWER -->
-                <picture
-                  class="picture"
-                  aria-role="group"
-                  aria-roledescription="slide"
-                  aria-labelledby="slide1"
-                  tabindex="0"
-                >
-                  <source
-                    media="(min-width: 300px) and (max-width: 699px) and (orientation: portrait)"
-                    srcset="
-                      ../assets/imgs/insects-gal/Guneratne_2023.06.09_bee-vertical-320p.jpg
-                    "
-                  />
-
-                  <source
-                    media="(min-width: 700px) and (max-width: 799px) and (orientation: portrait)"
-                    srcset="
-                      ../assets/imgs/insects-gal/Guneratne_2023.06.09_bee-vertical-460p.jpg
-                    "
-                  />
-
-                  <source
-                    media="(min-width: 800px) and (max-width: 1020px) and (orientation: portrait)"
-                    srcset="
-                      ../assets/imgs/insects-gal/Guneratne_2023.06.09_bee-vertical-580p.jpg
-                    "
-                  />
-
+              <div class="img-display-container">
+                <button type="button" class="back-arrow" data-back-arrow>
                   <img
-                    src="../assets/imgs/insects-gal/Guneratne_2023.06.09_bee-vertical-700p.jpg"
-                    alt="Slide 1 of 6: A bee sitting on a purple sage flower with its arms over its head, as if about to thrust its arms forward into the flower."
-                    id="slide1"
+                    data-icon-back
+                    class="arrow"
+                    src="../assets/imgs/icons/reshot-icon-arrow-chevron-left-975UQXVKZF.svg"
+                    alt="Back Arrow"
                   />
-                </picture>
+                </button>
 
-                <!-- CATERPILLAR -->
-                <picture
-                  class="picture"
-                  role="group"
-                  aria-roledescription="slide"
-                  aria-labelledby="slide2"
-                  tabindex="0"
-                >
-                  <source
-                    media="(min-width: 300px) and (max-width: 699px) and (orientation: portrait)"
-                    srcset="
-                      ../assets/imgs/insects-gal/Guneratne_2023.09.05_caterpillar-vertical-320p.jpg
-                    "
-                  />
+                <div class="photo-box portrait-photo-box">
+                  <!-- BEE ON SAGE FLOWER -->
+                  <picture
+                    class="picture"
+                    aria-role="group"
+                    aria-roledescription="slide"
+                    aria-labelledby="slide1"
+                    tabindex="0"
+                  >
+                    <source
+                      media="(min-width: 300px) and (max-width: 699px) and (orientation: portrait)"
+                      srcset="
+                        ../assets/imgs/insects-gal/Guneratne_2023.06.09_bee-vertical-320p.jpg
+                      "
+                    />
 
-                  <source
-                    media="(min-width: 700px) and (max-width: 799px) and (orientation: portrait)"
-                    srcset="
-                      ../assets/imgs/insects-gal/Guneratne_2023.09.05_caterpillar-vertical-460p.jpg
-                    "
-                  />
+                    <source
+                      media="(min-width: 700px) and (max-width: 799px) and (orientation: portrait)"
+                      srcset="
+                        ../assets/imgs/insects-gal/Guneratne_2023.06.09_bee-vertical-460p.jpg
+                      "
+                    />
 
-                  <source
-                    media="(min-width: 800px) and (max-width: 1020px) and (orientation: portrait)"
-                    srcset="
-                      ../assets/imgs/insects-gal/Guneratne_2023.09.05_caterpillar-vertical-580p.jpg
-                    "
-                  />
+                    <source
+                      media="(min-width: 800px) and (max-width: 1020px) and (orientation: portrait)"
+                      srcset="
+                        ../assets/imgs/insects-gal/Guneratne_2023.06.09_bee-vertical-580p.jpg
+                      "
+                    />
 
+                    <img
+                      src="../assets/imgs/insects-gal/Guneratne_2023.06.09_bee-vertical-700p.jpg"
+                      alt="Slide 1 of 6: A bee sitting on a purple sage flower with its arms over its head, as if about to thrust its arms forward into the flower."
+                      id="slide1"
+                    />
+                  </picture>
+
+                  <!-- CATERPILLAR -->
+                  <picture
+                    class="picture"
+                    role="group"
+                    aria-roledescription="slide"
+                    aria-labelledby="slide2"
+                    tabindex="0"
+                  >
+                    <source
+                      media="(min-width: 300px) and (max-width: 699px) and (orientation: portrait)"
+                      srcset="
+                        ../assets/imgs/insects-gal/Guneratne_2023.09.05_caterpillar-vertical-320p.jpg
+                      "
+                    />
+
+                    <source
+                      media="(min-width: 700px) and (max-width: 799px) and (orientation: portrait)"
+                      srcset="
+                        ../assets/imgs/insects-gal/Guneratne_2023.09.05_caterpillar-vertical-460p.jpg
+                      "
+                    />
+
+                    <source
+                      media="(min-width: 800px) and (max-width: 1020px) and (orientation: portrait)"
+                      srcset="
+                        ../assets/imgs/insects-gal/Guneratne_2023.09.05_caterpillar-vertical-580p.jpg
+                      "
+                    />
+
+                    <img
+                      src="../assets/imgs/insects-gal/Guneratne_2023.09.05_caterpillar-vertical-700p.jpg"
+                      alt="Slide 2 of 6: A close up of a swallowtail butterfly caterpillar crawling vertically up a fennel stalk. The caterpillar is green with black stripes and yellow dots on every other stripe."
+                      id="slide2"
+                    />
+                  </picture>
+
+                  <!-- DRAGONFLY -->
+                  <picture
+                    class="picture"
+                    role="group"
+                    aria-roledescription="slide"
+                    aria-labelledby="slide3"
+                    tabindex="0"
+                  >
+                    <source
+                      media="(min-width: 300px) and (max-width: 699px) and (orientation: portrait)"
+                      srcset="
+                        ../assets/imgs/insects-gal/Guneratne_2023.08.02_dragonfly-vertical-320p.jpg
+                      "
+                    />
+
+                    <source
+                      media="(min-width: 700px) and (max-width: 799px) and (orientation: portrait)"
+                      srcset="
+                        ../assets/imgs/insects-gal/Guneratne_2023.08.02_dragonfly-vertical-460p.jpg
+                      "
+                    />
+
+                    <source
+                      media="(min-width: 800px) and (max-width: 1020px) and (orientation: portrait)"
+                      srcset="
+                        ../assets/imgs/insects-gal/Guneratne_2023.08.02_dragonfly-vertical-580p.jpg
+                      "
+                    />
+
+                    <img
+                      src="../assets/imgs/insects-gal/Guneratne_2023.08.02_dragonfly-vertical-700p.jpg"
+                      alt="Slide 3 of 6: An eastern amberwing dragonfly sits on the branch of a cotoneaster plant, facing right in the frame and glancing toward the viewer."
+                      id="slide3"
+                    />
+                  </picture>
+
+                  <!-- ANT -->
+                  <picture
+                    class="picture"
+                    role="group"
+                    aria-roledescription="slide"
+                    aria-labelledby="slide4"
+                    tabindex="0"
+                  >
+                    <source
+                      media="(min-width: 300px) and (max-width: 699px) and (orientation: portrait)"
+                      srcset="
+                        ../assets/imgs/insects-gal/Guneratne_2023.06.09_ant_leaf-vertical-320p.jpg
+                      "
+                    />
+
+                    <source
+                      media="(min-width: 700px) and (max-width: 799px) and (orientation: portrait)"
+                      srcset="
+                        ../assets/imgs/insects-gal/Guneratne_2023.06.09_ant_leaf-vertical-460p.jpg
+                      "
+                    />
+
+                    <source
+                      media="(min-width: 800px) and (max-width: 1020px) and (orientation: portrait)"
+                      srcset="
+                        ../assets/imgs/insects-gal/Guneratne_2023.06.09_ant_leaf-vertical-580p.jpg
+                      "
+                    />
+
+                    <img
+                      src="../assets/imgs/insects-gal/Guneratne_2023.06.09_ant_leaf-vertical-700p.jpg"
+                      alt="Slide 4 of 6: A black ant crawls toward the left side of a large green leaf with serrated edges that is pointing vertically toward the top of the frame. The majority of the frame is filled with light and dark green serrated leaves from the plant."
+                      id="slide4"
+                    />
+                  </picture>
+
+                  <!-- BUTTERFLY -->
+                  <picture
+                    class="picture"
+                    role="group"
+                    aria-roledescription="slide"
+                    aria-labelledby="slide5"
+                    tabindex="0"
+                  >
+                    <source
+                      media="(min-width: 300px) and (max-width: 699px) and (orientation: portrait)"
+                      srcset="
+                        ../assets/imgs/insects-gal/Guneratne_2023.08.09_butterfly-vertical-320p.jpg
+                      "
+                    />
+
+                    <source
+                      media="(min-width: 700px) and (max-width: 799px) and (orientation: portrait)"
+                      srcset="
+                        ../assets/imgs/insects-gal/Guneratne_2023.08.09_butterfly-vertical-460p.jpg
+                      "
+                    />
+
+                    <source
+                      media="(min-width: 800px) and (max-width: 1020px) and (orientation: portrait)"
+                      srcset="
+                        ../assets/imgs/insects-gal/Guneratne_2023.08.09_butterfly-vertical-580p.jpg
+                      "
+                    />
+
+                    <img
+                      src="../assets/imgs/insects-gal/Guneratne_2023.08.09_butterfly-vertical-700p.jpg"
+                      alt="Slide 5 of 6: A bright yellow eastern tiger swallowtail butterfly with black stripes sits on top of a purple thistle flower."
+                      id="slide5"
+                    />
+                  </picture>
+
+                  <!-- GRASSHOPPER -->
+                  <picture
+                    class="picture"
+                    role="group"
+                    aria-roledescription="slide"
+                    aria-labelledby="slide6"
+                    tabindex="0"
+                  >
+                    <source
+                      media="(min-width: 300px) and (max-width: 699px) and (orientation: portrait)"
+                      srcset="
+                        ../assets/imgs/insects-gal/Guneratne_2023.08.26_grasshopper-vertical-320p.jpg
+                      "
+                    />
+
+                    <source
+                      media="(min-width: 700px) and (max-width: 799px) and (orientation: portrait)"
+                      srcset="
+                        ../assets/imgs/insects-gal/Guneratne_2023.08.26_grasshopper-vertical-460p.jpg
+                      "
+                    />
+
+                    <source
+                      media="(min-width: 800px) and (max-width: 1020px) and (orientation: portrait)"
+                      srcset="
+                        ../assets/imgs/insects-gal/Guneratne_2023.08.26_grasshopper-vertical-580p.jpg
+                      "
+                    />
+
+                    <img
+                      src="../assets/imgs/insects-gal/Guneratne_2023.08.26_grasshopper-vertical-700p.jpg"
+                      alt="Slide 6 of 6: A closeup of a grasshopper sitting on a serrated leaf facing upward toward the right at a diagonal angle in the frame."
+                      id="slide6"
+                    />
+                  </picture>
+                </div>
+
+                <button type="button" class="forward-arrow" data-forward-arrow>
                   <img
-                    src="../assets/imgs/insects-gal/Guneratne_2023.09.05_caterpillar-vertical-700p.jpg"
-                    alt="Slide 2 of 6: A close up of a swallowtail butterfly caterpillar crawling vertically up a fennel stalk. The caterpillar is green with black stripes and yellow dots on every other stripe."
-                    id="slide2"
+                    data-icon-forward
+                    class="arrow"
+                    src="../assets/imgs/icons/reshot-icon-arrow-chevron-right-WDGHUKQ634.svg"
+                    alt="Forward Arrow"
                   />
-                </picture>
-
-                <!-- DRAGONFLY -->
-                <picture
-                  class="picture"
-                  role="group"
-                  aria-roledescription="slide"
-                  aria-labelledby="slide3"
-                  tabindex="0"
-                >
-                  <source
-                    media="(min-width: 300px) and (max-width: 699px) and (orientation: portrait)"
-                    srcset="
-                      ../assets/imgs/insects-gal/Guneratne_2023.08.02_dragonfly-vertical-320p.jpg
-                    "
-                  />
-
-                  <source
-                    media="(min-width: 700px) and (max-width: 799px) and (orientation: portrait)"
-                    srcset="
-                      ../assets/imgs/insects-gal/Guneratne_2023.08.02_dragonfly-vertical-460p.jpg
-                    "
-                  />
-
-                  <source
-                    media="(min-width: 800px) and (max-width: 1020px) and (orientation: portrait)"
-                    srcset="
-                      ../assets/imgs/insects-gal/Guneratne_2023.08.02_dragonfly-vertical-580p.jpg
-                    "
-                  />
-
-                  <img
-                    src="../assets/imgs/insects-gal/Guneratne_2023.08.02_dragonfly-vertical-700p.jpg"
-                    alt="Slide 3 of 6: An eastern amberwing dragonfly sits on the branch of a cotoneaster plant, facing right in the frame and glancing toward the viewer."
-                    id="slide3"
-                  />
-                </picture>
-
-                <!-- ANT -->
-                <picture
-                  class="picture"
-                  role="group"
-                  aria-roledescription="slide"
-                  aria-labelledby="slide4"
-                  tabindex="0"
-                >
-                  <source
-                    media="(min-width: 300px) and (max-width: 699px) and (orientation: portrait)"
-                    srcset="
-                      ../assets/imgs/insects-gal/Guneratne_2023.06.09_ant_leaf-vertical-320p.jpg
-                    "
-                  />
-
-                  <source
-                    media="(min-width: 700px) and (max-width: 799px) and (orientation: portrait)"
-                    srcset="
-                      ../assets/imgs/insects-gal/Guneratne_2023.06.09_ant_leaf-vertical-460p.jpg
-                    "
-                  />
-
-                  <source
-                    media="(min-width: 800px) and (max-width: 1020px) and (orientation: portrait)"
-                    srcset="
-                      ../assets/imgs/insects-gal/Guneratne_2023.06.09_ant_leaf-vertical-580p.jpg
-                    "
-                  />
-
-                  <img
-                    src="../assets/imgs/insects-gal/Guneratne_2023.06.09_ant_leaf-vertical-700p.jpg"
-                    alt="Slide 4 of 6: A black ant crawls toward the left side of a large green leaf with serrated edges that is pointing vertically toward the top of the frame. The majority of the frame is filled with light and dark green serrated leaves from the plant."
-                    id="slide4"
-                  />
-                </picture>
-
-                <!-- BUTTERFLY -->
-                <picture
-                  class="picture"
-                  role="group"
-                  aria-roledescription="slide"
-                  aria-labelledby="slide5"
-                  tabindex="0"
-                >
-                  <source
-                    media="(min-width: 300px) and (max-width: 699px) and (orientation: portrait)"
-                    srcset="
-                      ../assets/imgs/insects-gal/Guneratne_2023.08.09_butterfly-vertical-320p.jpg
-                    "
-                  />
-
-                  <source
-                    media="(min-width: 700px) and (max-width: 799px) and (orientation: portrait)"
-                    srcset="
-                      ../assets/imgs/insects-gal/Guneratne_2023.08.09_butterfly-vertical-460p.jpg
-                    "
-                  />
-
-                  <source
-                    media="(min-width: 800px) and (max-width: 1020px) and (orientation: portrait)"
-                    srcset="
-                      ../assets/imgs/insects-gal/Guneratne_2023.08.09_butterfly-vertical-580p.jpg
-                    "
-                  />
-
-                  <img
-                    src="../assets/imgs/insects-gal/Guneratne_2023.08.09_butterfly-vertical-700p.jpg"
-                    alt="Slide 5 of 6: A bright yellow eastern tiger swallowtail butterfly with black stripes sits on top of a purple thistle flower."
-                    id="slide5"
-                  />
-                </picture>
-
-                <!-- GRASSHOPPER -->
-                <picture
-                  class="picture"
-                  role="group"
-                  aria-roledescription="slide"
-                  aria-labelledby="slide6"
-                  tabindex="0"
-                >
-                  <source
-                    media="(min-width: 300px) and (max-width: 699px) and (orientation: portrait)"
-                    srcset="
-                      ../assets/imgs/insects-gal/Guneratne_2023.08.26_grasshopper-vertical-320p.jpg
-                    "
-                  />
-
-                  <source
-                    media="(min-width: 700px) and (max-width: 799px) and (orientation: portrait)"
-                    srcset="
-                      ../assets/imgs/insects-gal/Guneratne_2023.08.26_grasshopper-vertical-460p.jpg
-                    "
-                  />
-
-                  <source
-                    media="(min-width: 800px) and (max-width: 1020px) and (orientation: portrait)"
-                    srcset="
-                      ../assets/imgs/insects-gal/Guneratne_2023.08.26_grasshopper-vertical-580p.jpg
-                    "
-                  />
-
-                  <img
-                    src="../assets/imgs/insects-gal/Guneratne_2023.08.26_grasshopper-vertical-700p.jpg"
-                    alt="Slide 6 of 6: A closeup of a grasshopper sitting on a serrated leaf facing upward toward the right at a diagonal angle in the frame."
-                    id="slide6"
-                  />
-                </picture>
+                </button>
               </div>
-
-              <button type="button" class="forward-arrow" data-forward-arrow>
-                <img
-                  data-icon-forward
-                  class="arrow"
-                  src="../assets/imgs/reshot-icon-arrow-chevron-right-WDGHUKQ634.svg"
-                  alt="Forward Arrow"
-                />
-              </button>
 
               <div class="img-dots-container">
                 <div class="img-dots">
@@ -350,34 +325,9 @@
           </div>
         </section>
 
-        <section class="tab-content gal-landscape" id="insects-gallery" hidden>
+        <section class="section gal-landscape" id="insects-gallery" hidden>
           <div class="gallery landscape-gallery">
-            <div class="animation-ctrl-div landscape-animation-ctrl-div">
-              <button
-                type="button"
-                class="pause-btn landscape-pause-btn"
-                title="Press Enter or Space to Pause Gallery Animation"
-              >
-                <img
-                  class="pause-icon landscape-pause-icon"
-                  src="../assets/imgs/pause-button-icon.svg"
-                  alt="Press Enter or Space to Pause Gallery Animation"
-                />
-              </button>
-
-              <button
-                type="button"
-                class="play-btn landscape-play-btn"
-                title="Press Enter or Space to Start Gallery Animation"
-              >
-                <img
-                  class="play-icon landscape-play-icon"
-                  src="../assets/imgs/play-button-icon.svg"
-                  title="Start Gallery Animation"
-                  alt="Press Enter or Space to Start Gallery Animation"
-                />
-              </button>
-            </div>
+            <%- include ('landscape-animation-ctrl.ejs') %>
 
             <div
               class="slider-box landscape-slider-box"
@@ -387,242 +337,243 @@
               aria-label="Insects Gallery"
               hidden
             >
-              <!-- <div class="slider-row-one"></div> -->
-              <button type="button" class="back-arrow" data-back-arrow>
-                <img
-                  data-icon-back
-                  class="arrow"
-                  src="../assets/imgs/reshot-icon-arrow-chevron-left-975UQXVKZF.svg"
-                  alt="Back Arrow"
-                />
-              </button>
-
-              <div class="photo-box landscape-photo-box">
-                <!-- BEE ON SAGE FLOWER -->
-                <picture
-                  class="picture"
-                  aria-role="group"
-                  aria-roledescription="slide"
-                  aria-labelledby="slide1"
-                  tabindex="0"
-                >
-                  <source
-                    media="(min-width: 640px) and (max-width: 959px) and (orientation: landscape)"
-                    srcset="
-                      ../assets/imgs/insects-gal/Guneratne_2023.06.09_bee-horizontal-280p.jpg
-                    "
-                  />
-
-                  <source
-                    media="(min-width: 960px) and (max-width: 1279px) and (orientation: landscape)"
-                    srcset="
-                      ../assets/imgs/insects-gal/Guneratne_2023.06.09_bee-horizontal-460p.jpg
-                    "
-                  />
-
-                  <source
-                    media="(min-width: 1280px) and (max-width: 1599px) and (orientation: landscape)"
-                    srcset="
-                      ../assets/imgs/insects-gal/Guneratne_2023.06.09_bee-horizontal-600p.jpg
-                    "
-                  />
-
+              <div class="img-display-container">
+                <button type="button" class="back-arrow" data-back-arrow>
                   <img
-                    src="../assets/imgs/insects-gal/Guneratne_2023.06.09_bee-horizontal-900p.jpg"
-                    alt="Slide 1 of 6: A bee hovering in flight in front of a purple sage flower with its head looking inside of it."
-                    id="slide1"
+                    data-icon-back
+                    class="arrow"
+                    src="../assets/imgs/icons/reshot-icon-arrow-chevron-left-975UQXVKZF.svg"
+                    alt="Back Arrow"
                   />
-                </picture>
+                </button>
 
-                <!-- CATERPILLAR -->
-                <picture
-                  class="picture"
-                  role="group"
-                  aria-roledescription="slide"
-                  aria-labelledby="slide2"
-                  tabindex="0"
-                >
-                  <source
-                    media="(min-width: 640px) and (max-width: 959px) and (orientation: landscape)"
-                    srcset="
-                      ../assets/imgs/insects-gal/Guneratne_2023.09.05_caterpillar-horizontal-280p.jpg
-                    "
-                  />
+                <div class="photo-box landscape-photo-box">
+                  <!-- BEE ON SAGE FLOWER -->
+                  <picture
+                    class="picture"
+                    aria-role="group"
+                    aria-roledescription="slide"
+                    aria-labelledby="slide1"
+                    tabindex="0"
+                  >
+                    <source
+                      media="(min-width: 640px) and (max-width: 959px) and (orientation: landscape)"
+                      srcset="
+                        ../assets/imgs/insects-gal/Guneratne_2023.06.09_bee-horizontal-280p.jpg
+                      "
+                    />
 
-                  <source
-                    media="(min-width: 960px) and (max-width: 1279px) and (orientation: landscape)"
-                    srcset="
-                      ../assets/imgs/insects-gal/Guneratne_2023.09.05_caterpillar-horizontal-460p.jpg
-                    "
-                  />
+                    <source
+                      media="(min-width: 960px) and (max-width: 1279px) and (orientation: landscape)"
+                      srcset="
+                        ../assets/imgs/insects-gal/Guneratne_2023.06.09_bee-horizontal-460p.jpg
+                      "
+                    />
 
-                  <source
-                    media="(min-width: 1280px) and (max-width: 1599px) and (orientation: landscape)"
-                    srcset="
-                      ../assets/imgs/insects-gal/Guneratne_2023.09.05_caterpillar-horizontal-600p.jpg
-                    "
-                  />
+                    <source
+                      media="(min-width: 1280px) and (max-width: 1599px) and (orientation: landscape)"
+                      srcset="
+                        ../assets/imgs/insects-gal/Guneratne_2023.06.09_bee-horizontal-600p.jpg
+                      "
+                    />
 
+                    <img
+                      src="../assets/imgs/insects-gal/Guneratne_2023.06.09_bee-horizontal-900p.jpg"
+                      alt="Slide 1 of 6: A bee hovering in flight in front of a purple sage flower with its head looking inside of it."
+                      id="slide1"
+                    />
+                  </picture>
+
+                  <!-- CATERPILLAR -->
+                  <picture
+                    class="picture"
+                    role="group"
+                    aria-roledescription="slide"
+                    aria-labelledby="slide2"
+                    tabindex="0"
+                  >
+                    <source
+                      media="(min-width: 640px) and (max-width: 959px) and (orientation: landscape)"
+                      srcset="
+                        ../assets/imgs/insects-gal/Guneratne_2023.09.05_caterpillar-horizontal-280p.jpg
+                      "
+                    />
+
+                    <source
+                      media="(min-width: 960px) and (max-width: 1279px) and (orientation: landscape)"
+                      srcset="
+                        ../assets/imgs/insects-gal/Guneratne_2023.09.05_caterpillar-horizontal-460p.jpg
+                      "
+                    />
+
+                    <source
+                      media="(min-width: 1280px) and (max-width: 1599px) and (orientation: landscape)"
+                      srcset="
+                        ../assets/imgs/insects-gal/Guneratne_2023.09.05_caterpillar-horizontal-600p.jpg
+                      "
+                    />
+
+                    <img
+                      src="../assets/imgs/insects-gal/Guneratne_2023.09.05_caterpillar-horizontal-900p.jpg"
+                      alt="Slide 2 of 6: A close up of a swallowtail butterfly caterpillar on the horizontal branch of a dill plant, feeding on the flower at the end. The caterpillar is green with black stripes and yellow dots on every other stripe."
+                      id="slide2"
+                    />
+                  </picture>
+
+                  <!-- DRAGONFLY -->
+                  <picture
+                    class="picture"
+                    role="group"
+                    aria-roledescription="slide"
+                    aria-labelledby="slide3"
+                    tabindex="0"
+                  >
+                    <source
+                      media="(min-width: 640px) and (max-width: 959px) and (orientation: landscape)"
+                      srcset="
+                        ../assets/imgs/insects-gal/Guneratne_2023.08.02_dragonfly-horizontal-280p.jpg
+                      "
+                    />
+
+                    <source
+                      media="(min-width: 960px) and (max-width: 1279px) and (orientation: landscape)"
+                      srcset="
+                        ../assets/imgs/insects-gal/Guneratne_2023.08.02_dragonfly-horizontal-460p.jpg
+                      "
+                    />
+
+                    <source
+                      media="(min-width: 1280px) and (max-width: 1599px) and (orientation: landscape)"
+                      srcset="
+                        ../assets/imgs/insects-gal/Guneratne_2023.08.02_dragonfly-horizontal-600p.jpg
+                      "
+                    />
+
+                    <img
+                      src="../assets/imgs/insects-gal/Guneratne_2023.08.02_dragonfly-horizontal-900p.jpg"
+                      alt="Slide 3 of 6: An eastern amberwing dragonfly sits on the branch of a cotoneaster plant, facing right in the frame and glancing toward the viewer."
+                      id="slide3"
+                    />
+                  </picture>
+
+                  <!-- BEE ON ASTER FLOWER -->
+                  <picture
+                    class="picture"
+                    role="group"
+                    aria-roledescription="slide"
+                    aria-labelledby="slide4"
+                    tabindex="0"
+                  >
+                    <source
+                      media="(min-width: 640px) and (max-width: 959px) and (orientation: landscape)"
+                      srcset="
+                        ../assets/imgs/insects-gal/Guneratne_2023.10.01_aster-bee-horizontal-280p.jpg
+                      "
+                    />
+
+                    <source
+                      media="(min-width: 960px) and (max-width: 1279px) and (orientation: landscape)"
+                      srcset="
+                        ../assets/imgs/insects-gal/Guneratne_2023.10.01_aster-bee-horizontal-460p.jpg
+                      "
+                    />
+
+                    <source
+                      media="(min-width: 1280px) and (max-width: 1599px) and (orientation: landscape)"
+                      srcset="
+                        ../assets/imgs/insects-gal/Guneratne_2023.10.01_aster-bee-horizontal-600p.jpg
+                      "
+                    />
+
+                    <img
+                      src="../assets/imgs/insects-gal/Guneratne_2023.10.01_aster-bee-horizontal-900p.jpg"
+                      alt="Slide 4 of 6: A branch of small aster flowers enters the frame from the left, which are mostly out of focus. At the end of the branch, about 3/4 of the way toward the right of the frame, a bumble bee sits on a flower. The bee is facing toward the viewer with its head down toward the flower. The yellow fuzz on the bee's back is clearly visible with its wings pointing up toward the sky."
+                      id="slide4"
+                    />
+                  </picture>
+
+                  <!-- BUTTERFLY -->
+                  <picture
+                    class="picture"
+                    role="group"
+                    aria-roledescription="slide"
+                    aria-labelledby="slide5"
+                    tabindex="0"
+                  >
+                    <source
+                      media="(min-width: 640px) and (max-width: 959px) and (orientation: landscape)"
+                      srcset="
+                        ../assets/imgs/insects-gal/Guneratne_2023.08.09_butterfly-horizontal-280p.jpg
+                      "
+                    />
+
+                    <source
+                      media="(min-width: 960px) and (max-width: 1279px) and (orientation: landscape)"
+                      srcset="
+                        ../assets/imgs/insects-gal/Guneratne_2023.08.09_butterfly-horizontal-460p.jpg
+                      "
+                    />
+
+                    <source
+                      media="(min-width: 1280px) and (max-width: 1599px) and (orientation: landscape)"
+                      srcset="
+                        ../assets/imgs/insects-gal/Guneratne_2023.08.09_butterfly-horizontal-600p.jpg
+                      "
+                    />
+
+                    <img
+                      src="../assets/imgs/insects-gal/Guneratne_2023.08.09_butterfly-horizontal-900p.jpg"
+                      alt="Slide 5 of 6: A bright yellow eastern tiger swallowtail butterfly with black stripes sits on top of a purple thistle flower."
+                      id="slide5"
+                    />
+                  </picture>
+
+                  <!-- GRASSHOPPER -->
+                  <picture
+                    class="picture"
+                    role="group"
+                    aria-roledescription="slide"
+                    aria-labelledby="slide6"
+                    tabindex="0"
+                  >
+                    <source
+                      media="(min-width: 640px) and (max-width: 959px) and (orientation: landscape)"
+                      srcset="
+                        ../assets/imgs/insects-gal/Guneratne_2023.08.26_grasshopper-horizontal-280p.jpg
+                      "
+                    />
+
+                    <source
+                      media="(min-width: 960px) and (max-width: 1279px) and (orientation: landscape)"
+                      srcset="
+                        ../assets/imgs/insects-gal/Guneratne_2023.08.26_grasshopper-horizontal-460p.jpg
+                      "
+                    />
+
+                    <source
+                      media="(min-width: 1280px) and (max-width: 1599px) and (orientation: landscape)"
+                      srcset="
+                        ../assets/imgs/insects-gal/Guneratne_2023.08.26_grasshopper-horizontal-600p.jpg
+                      "
+                    />
+
+                    <img
+                      src="../assets/imgs/insects-gal/Guneratne_2023.08.26_grasshopper-horizontal-900p.jpg"
+                      alt="Slide 6 of 6: A closeup of a grasshopper sitting on a serrated leaf parallel to the long edge of the frame, facing right."
+                      id="slide6"
+                    />
+                  </picture>
+                </div>
+
+                <button type="button" class="forward-arrow" data-forward-arrow>
                   <img
-                    src="../assets/imgs/insects-gal/Guneratne_2023.09.05_caterpillar-horizontal-900p.jpg"
-                    alt="Slide 2 of 6: A close up of a swallowtail butterfly caterpillar on the horizontal branch of a dill plant, feeding on the flower at the end. The caterpillar is green with black stripes and yellow dots on every other stripe."
-                    id="slide2"
+                    data-icon-forward
+                    class="arrow"
+                    src="../assets/imgs/icons/reshot-icon-arrow-chevron-right-WDGHUKQ634.svg"
+                    alt="Forward Arrow"
                   />
-                </picture>
-
-                <!-- DRAGONFLY -->
-                <picture
-                  class="picture"
-                  role="group"
-                  aria-roledescription="slide"
-                  aria-labelledby="slide3"
-                  tabindex="0"
-                >
-                  <source
-                    media="(min-width: 640px) and (max-width: 959px) and (orientation: landscape)"
-                    srcset="
-                      ../assets/imgs/insects-gal/Guneratne_2023.08.02_dragonfly-horizontal-280p.jpg
-                    "
-                  />
-
-                  <source
-                    media="(min-width: 960px) and (max-width: 1279px) and (orientation: landscape)"
-                    srcset="
-                      ../assets/imgs/insects-gal/Guneratne_2023.08.02_dragonfly-horizontal-460p.jpg
-                    "
-                  />
-
-                  <source
-                    media="(min-width: 1280px) and (max-width: 1599px) and (orientation: landscape)"
-                    srcset="
-                      ../assets/imgs/insects-gal/Guneratne_2023.08.02_dragonfly-horizontal-600p.jpg
-                    "
-                  />
-
-                  <img
-                    src="../assets/imgs/insects-gal/Guneratne_2023.08.02_dragonfly-horizontal-900p.jpg"
-                    alt="Slide 3 of 6: An eastern amberwing dragonfly sits on the branch of a cotoneaster plant, facing right in the frame and glancing toward the viewer."
-                    id="slide3"
-                  />
-                </picture>
-
-                <!-- BEE ON ASTER FLOWER -->
-                <picture
-                  class="picture"
-                  role="group"
-                  aria-roledescription="slide"
-                  aria-labelledby="slide4"
-                  tabindex="0"
-                >
-                  <source
-                    media="(min-width: 640px) and (max-width: 959px) and (orientation: landscape)"
-                    srcset="
-                      ../assets/imgs/insects-gal/Guneratne_2023.10.01_aster-bee-horizontal-280p.jpg
-                    "
-                  />
-
-                  <source
-                    media="(min-width: 960px) and (max-width: 1279px) and (orientation: landscape)"
-                    srcset="
-                      ../assets/imgs/insects-gal/Guneratne_2023.10.01_aster-bee-horizontal-460p.jpg
-                    "
-                  />
-
-                  <source
-                    media="(min-width: 1280px) and (max-width: 1599px) and (orientation: landscape)"
-                    srcset="
-                      ../assets/imgs/insects-gal/Guneratne_2023.10.01_aster-bee-horizontal-600p.jpg
-                    "
-                  />
-
-                  <img
-                    src="../assets/imgs/insects-gal/Guneratne_2023.10.01_aster-bee-horizontal-900p.jpg"
-                    alt="Slide 4 of 6: A branch of small aster flowers enters the frame from the left, which are mostly out of focus. At the end of the branch, about 3/4 of the way toward the right of the frame, a bumble bee sits on a flower. The bee is facing toward the viewer with its head down toward the flower. The yellow fuzz on the bee's back is clearly visible with its wings pointing up toward the sky."
-                    id="slide4"
-                  />
-                </picture>
-
-                <!-- BUTTERFLY -->
-                <picture
-                  class="picture"
-                  role="group"
-                  aria-roledescription="slide"
-                  aria-labelledby="slide5"
-                  tabindex="0"
-                >
-                  <source
-                    media="(min-width: 640px) and (max-width: 959px) and (orientation: landscape)"
-                    srcset="
-                      ../assets/imgs/insects-gal/Guneratne_2023.08.09_butterfly-horizontal-280p.jpg
-                    "
-                  />
-
-                  <source
-                    media="(min-width: 960px) and (max-width: 1279px) and (orientation: landscape)"
-                    srcset="
-                      ../assets/imgs/insects-gal/Guneratne_2023.08.09_butterfly-horizontal-460p.jpg
-                    "
-                  />
-
-                  <source
-                    media="(min-width: 1280px) and (max-width: 1599px) and (orientation: landscape)"
-                    srcset="
-                      ../assets/imgs/insects-gal/Guneratne_2023.08.09_butterfly-horizontal-600p.jpg
-                    "
-                  />
-
-                  <img
-                    src="../assets/imgs/insects-gal/Guneratne_2023.08.09_butterfly-horizontal-900p.jpg"
-                    alt="Slide 5 of 6: A bright yellow eastern tiger swallowtail butterfly with black stripes sits on top of a purple thistle flower."
-                    id="slide5"
-                  />
-                </picture>
-
-                <!-- GRASSHOPPER -->
-                <picture
-                  class="picture"
-                  role="group"
-                  aria-roledescription="slide"
-                  aria-labelledby="slide6"
-                  tabindex="0"
-                >
-                  <source
-                    media="(min-width: 640px) and (max-width: 959px) and (orientation: landscape)"
-                    srcset="
-                      ../assets/imgs/insects-gal/Guneratne_2023.08.26_grasshopper-horizontal-280p.jpg
-                    "
-                  />
-
-                  <source
-                    media="(min-width: 960px) and (max-width: 1279px) and (orientation: landscape)"
-                    srcset="
-                      ../assets/imgs/insects-gal/Guneratne_2023.08.26_grasshopper-horizontal-460p.jpg
-                    "
-                  />
-
-                  <source
-                    media="(min-width: 1280px) and (max-width: 1599px) and (orientation: landscape)"
-                    srcset="
-                      ../assets/imgs/insects-gal/Guneratne_2023.08.26_grasshopper-horizontal-600p.jpg
-                    "
-                  />
-
-                  <img
-                    src="../assets/imgs/insects-gal/Guneratne_2023.08.26_grasshopper-horizontal-900p.jpg"
-                    alt="Slide 6 of 6: A closeup of a grasshopper sitting on a serrated leaf parallel to the long edge of the frame, facing right."
-                    id="slide6"
-                  />
-                </picture>
+                </button>
               </div>
-
-              <button type="button" class="forward-arrow" data-forward-arrow>
-                <img
-                  data-icon-forward
-                  class="arrow"
-                  src="../assets/imgs/reshot-icon-arrow-chevron-right-WDGHUKQ634.svg"
-                  alt="Forward Arrow"
-                />
-              </button>
 
               <div class="img-dots-container">
                 <div class="img-dots">
@@ -684,9 +635,8 @@
             </div>
           </div>
         </section>
+        <%- include('footer.ejs') %>
       </main>
-
-      <%- include('footer.ejs') %>
     </div>
   </body>
 </html>

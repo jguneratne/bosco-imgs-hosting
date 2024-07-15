@@ -1,4 +1,8 @@
-import { ctrlTabHighlight, addAriaCurrent } from "./navStyles";
+import {
+  ctrlMenuVisibility,
+  ctrlTabHighlight,
+  addAriaCurrent,
+} from "./navStyles";
 
 import { galleriesClickMenu } from "./dropDown";
 
@@ -10,6 +14,7 @@ console.log("photogallery");
 
 document.addEventListener("DOMContentLoaded", (e) => {
   console.log("The page is loaded");
+  ctrlMenuVisibility();
   ctrlTabHighlight();
   addAriaCurrent();
   galleriesClickMenu();

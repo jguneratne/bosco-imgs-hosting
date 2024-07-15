@@ -10,12 +10,11 @@
   </head>
 
   <body>
-    <div class="container">
-      <%- include('header.ejs') %>
-
+    <div class="scroll-wrapper">
       <main class="main main-two">
+        <%- include('header.ejs') %>
         <!-- CONTACT -->
-        <section class="tab-content contact-tab" id="contact">
+        <section class="section contact-tab" id="contact">
           <div class="form-instructions">
             <h1
               id="contact-header"
@@ -33,7 +32,7 @@
           </div>
 
           <form action="#" method="POST" id="contact" novalidate>
-            <fieldset disabled>
+            <fieldset>
               <label for="first-name">
                 <div class="input-type">
                   First Name:
@@ -140,9 +139,8 @@
             </fieldset>
           </form>
         </section>
+        <%- include('footer.ejs') %>
       </main>
-
-      <%- include('footer.ejs') %>
     </div>
   </body>
 </html>
