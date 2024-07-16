@@ -56,7 +56,7 @@ body {
 /* Main Setup for Each Page */
 
 .main {
-  max-width: 110rem;
+  max-width: 110em;
   min-height: 100vh;
   margin-left: auto;
   margin-right: auto;
@@ -392,7 +392,7 @@ li {
 .gal-title {
   text-align: center;
   color: var(--light-font-col);
-  font-size: 1.3rem;
+  font-size: 1.3em;
   padding-bottom: 1em;
 }
 
@@ -473,7 +473,7 @@ li {
   border: 3px solid transparent;
   border-radius: 3em;
   background-color: var(--slider-box-col);
-  min-height: 0.625rem;
+  min-height: 0.625em;
   max-width: min-content;
   margin: 2em auto;
 
@@ -498,8 +498,8 @@ li {
 
 .img-dots-container {
   grid-area: 2 / 1 / 3 / 2;
-  max-width: 25rem;
-  margin: 1.6rem 0 1rem 0;
+  max-width: 25em;
+  margin: 1.6em 0 1em 0;
 }
 
 .img-dots {
@@ -612,11 +612,11 @@ li {
 
 .bosco-entry {
   font-size: 2ch;
-  margin-bottom: 2rem;
+  margin-bottom: 2em;
 }
 
 .definition {
-  margin-bottom: 0.4rem;
+  margin-bottom: 0.4em;
 }
 
 .about-box {
@@ -628,7 +628,7 @@ li {
 }
 
 .about-text:not(.last-para) {
-  margin-bottom: 1.2rem;
+  margin-bottom: 1.2em;
 }
 
 /* Contact Form */
@@ -639,12 +639,12 @@ li {
 
 .required-text {
   padding: 0.5em 0;
-  font-size: 1.2rem;
+  font-size: 1.2em;
   color: var(--dark-font-col);
 }
 
 .form-disabled {
-  font-size: 1.2rem;
+  font-size: 1.2em;
   color: var(--error-color);
   text-decoration: underline;
   display: none;
@@ -879,7 +879,7 @@ textarea::placeholder {
   }
 
   .img-dots-container {
-    max-width: 40rem;
+    max-width: 40em;
   }
 
   .circle-icon {
