@@ -357,9 +357,11 @@ li {
   color: var(--dark-font-col);
 }
 
-.cta-btn:hover {
+.cta-btn:hover,
+.cta-btn:focus-visible {
   background-color: var(--head-foot-col);
   border: 0.4ch solid var(--dark-font-col);
+  outline: 1px solid (var(--dark-font-col));
   cursor: pointer;
 }
 
