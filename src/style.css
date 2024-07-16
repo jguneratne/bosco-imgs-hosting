@@ -22,7 +22,8 @@
 
 @-webkit-keyframes slide-down {
   0% {
-    opacity: 0;
+    /* opacity: 0; */
+    display: none;
     -webkit-transform: translateY(-5px);
     transform: translateY(-10px);
   }
@@ -86,11 +87,22 @@ nav {
 .menu-icon-div {
   display: flex;
   justify-content: center;
+  max-width: min-content;
+  padding: 0.5em;
+  margin: 2ch auto;
+
+  background-color: transparent;
+  border: 2px solid transparent;
+  outline: 2px solid transparent;
+}
+
+.menu-icon-div:focus-visible {
+  outline: 2px solid var(--dark-font-col);
+  border-radius: 0.5em;
 }
 
 .menu-icon {
   width: 3ch;
-  margin: 2ch 0;
 }
 
 .header {
@@ -247,6 +259,7 @@ li {
 .dropdown-content {
   list-style: none;
   z-index: 10;
+  -webkit-animation: slide-down-reverse;
   display: none;
 }
 
@@ -792,9 +805,9 @@ textarea::placeholder {
     min-height: 4ch;
   }
 
-  .menu-icon {
+  /* .menu-icon {
     margin: 3ch 0 2ch 0;
-  }
+  } */
 
   .home-link,
   .gals-link,
@@ -954,9 +967,9 @@ textarea::placeholder {
     min-height: 4ch;
   }
 
-  .menu-icon {
+  /* .menu-icon {
     margin: 3ch 0 2ch 0;
-  }
+  } */
 
   .home-link,
   .gals-link,
@@ -1023,9 +1036,9 @@ textarea::placeholder {
     gap: 2em;
   }
 
-  .menu-icon {
+  /* .menu-icon {
     margin: 2ch 0;
-  }
+  } */
 
   .home {
     background-image: url(../src/assets/imgs/home-imgs/Guneratne_2024.06.09_home-horizontal-1200p.jpg);

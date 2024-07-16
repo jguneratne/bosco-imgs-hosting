@@ -19,12 +19,34 @@ export function ctrlMenuVisibility() {
     ) {
       menuBar.classList.add("active");
       menuIcon.style.width = newMenuIconWidth + "px";
+      menuIcon.setAttribute("alt", "Menu Button: Click to hide menu options");
     } else if (
       menuBar.classList.contains("active") &&
       (e.target === menuIconDiv || e.target === menuIcon)
     ) {
       menuBar.classList.remove("active");
       menuIcon.style.width = menuIconWidth + "px";
+      menuIcon.setAttribute("alt", "Menu Button: Click to expand menu options");
+    }
+  });
+
+  menuIconDiv.addEventListener("keydown", (e) => {
+    if (
+      (e.key === "Enter" || e.key === " ") &&
+      (e.target === menuIconDiv || e.target === menuIcon) &&
+      !menuBar.classList.contains("active")
+    ) {
+      menuBar.classList.add("active");
+      menuIcon.style.width = newMenuIconWidth + "px";
+      menuIcon.setAttribute("alt", "Menu Button: Click to hide menu options");
+    } else if (
+      (e.key === "Enter" || e.key === " ") &&
+      (e.target === menuIconDiv || e.target === menuIcon) &&
+      menuBar.classList.contains("active")
+    ) {
+      menuBar.classList.remove("active");
+      menuIcon.style.width = menuIconWidth + "px";
+      menuIcon.setAttribute("alt", "Menu Button: Click to expand menu options");
     }
   });
 }
