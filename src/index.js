@@ -1,6 +1,7 @@
 import {
   ctrlMenuVisibility,
   ctrlTabHighlight,
+  giveHomeLinkFocus,
   addAriaCurrent,
 } from "./navStyles";
 
@@ -16,6 +17,7 @@ document.addEventListener("DOMContentLoaded", (e) => {
   console.log("The page is loaded");
   ctrlMenuVisibility();
   ctrlTabHighlight();
+  giveHomeLinkFocus();
   addAriaCurrent();
   galleriesClickMenu();
   gallerySetup();

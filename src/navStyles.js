@@ -7,6 +7,7 @@ import {
   shortPageName,
   menuBtnStyle,
   menuLinks,
+  homeLinkFocus,
   dropDownDiv,
   dropDownItems,
 } from "./variables";
@@ -69,6 +70,12 @@ export function ctrlTabHighlight() {
   });
 }
 
+export function giveHomeLinkFocus() {
+  menuIconDiv.blur();
+  homeLinkFocus.focus({ focusVisible: true });
+  console.log(document.activeElement);
+}
+
 function showGalNavLink() {
   dropDownItems.forEach((item) => {
     if (
@@ -85,10 +92,10 @@ function showGalNavLink() {
 }
 
 export function addAriaCurrent() {
-  console.log(menuLinks);
+  // console.log(menuLinks);
   menuLinks.forEach((link) => {
     if (link.dataset.name === shortPageName) {
-      console.log(link.dataset.name);
+      // console.log(link.dataset.name);
       menuLinks.forEach((link) => {
         link.removeAttribute("aria-current", "page");
       });

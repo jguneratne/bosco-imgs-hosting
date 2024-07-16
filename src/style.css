@@ -96,7 +96,8 @@ nav {
   outline: 2px solid transparent;
 }
 
-.menu-icon-div:focus-visible {
+.menu-icon-div:focus-visible,
+.menu-icon-div:hover {
   outline: 2px solid var(--dark-font-col);
   border-radius: 0.5em;
 }
@@ -805,10 +806,6 @@ textarea::placeholder {
     min-height: 4ch;
   }
 
-  /* .menu-icon {
-    margin: 3ch 0 2ch 0;
-  } */
-
   .home-link,
   .gals-link,
   .about-link,
@@ -967,9 +964,10 @@ textarea::placeholder {
     min-height: 4ch;
   }
 
-  /* .menu-icon {
-    margin: 3ch 0 2ch 0;
-  } */
+  .menu-btn.selected a:focus-visible,
+  .menu-focus:focus-visible {
+    outline: 3px solid var(--dark-font-col);
+  }
 
   .home-link,
   .gals-link,
