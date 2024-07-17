@@ -1050,6 +1050,7 @@ textarea::placeholder {
 
   .logo-box {
     min-width: 90%;
+    margin: auto 0;
   }
 
   .home-box {

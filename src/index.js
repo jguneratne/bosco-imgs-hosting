@@ -1,7 +1,7 @@
 import {
   ctrlMenuVisibility,
-  ctrlTabHighlight,
-  giveHomeLinkFocus,
+  // ctrlTabHighlight,
+  // giveHomeLinkFocus,
   addAriaCurrent,
 } from "./navStyles";
 
@@ -16,8 +16,8 @@ console.log("photogallery");
 document.addEventListener("DOMContentLoaded", (e) => {
   console.log("The page is loaded");
   ctrlMenuVisibility();
-  ctrlTabHighlight();
-  giveHomeLinkFocus();
+  // ctrlTabHighlight();
+  // giveHomeLinkFocus();
   addAriaCurrent();
   galleriesClickMenu();
   gallerySetup();
