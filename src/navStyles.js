@@ -42,6 +42,7 @@ export function ctrlMenuVisibility() {
       menuIcon.setAttribute("alt", "Menu Button: Click to hide menu options");
       ctrlTabHighlight();
       giveHomeLinkFocus();
+      e.preventDefault();
     } else if (
       (e.key === "Enter" || e.key === " ") &&
       (e.target === menuIconDiv || e.target === menuIcon) &&
