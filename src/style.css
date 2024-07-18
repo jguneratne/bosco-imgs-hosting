@@ -82,9 +82,13 @@ body {
 nav {
   display: grid;
   grid-template-rows: auto min-content;
+  grid-template-areas:
+    "menu"
+    "icon";
 }
 
 .menu-icon-div {
+  grid-area: icon;
   display: flex;
   justify-content: center;
   max-width: min-content;
@@ -113,6 +117,7 @@ nav {
 }
 
 .menu-items {
+  grid-area: menu;
   -webkit-animation: slide-down-reverse 0.5s ease-in-out both;
   display: none;
 }
@@ -200,8 +205,7 @@ li {
 }
 
 .menu-btn a:focus-visible,
-.menu-btn.selected a:focus-visible,
-.menu-focus:focus-visible {
+.menu-btn.selected a:focus-visible {
   outline: 3px solid var(--dark-font-col);
   border-radius: 0.5em;
 }
