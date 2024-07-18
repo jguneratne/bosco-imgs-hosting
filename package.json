@@ -3,10 +3,10 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "homepage": "http://jguneratne.github.io/photo-gallery",
+  "homepage": "http://jguneratne.github.io/bosco-images",
   "repository": {
     "type": "git",
-    "url": "git+https://girhub.com/jguneratne/photo-gallery.git"
+    "url": "git+https://girhub.com/jguneratne/bosco-images.git"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
