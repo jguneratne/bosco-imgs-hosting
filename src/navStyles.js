@@ -7,7 +7,6 @@ import {
   shortPageName,
   menuBtnStyle,
   menuLinks,
-  homeLinkFocus,
   dropDownDiv,
   dropDownItems,
 } from "./variables";
@@ -21,6 +20,7 @@ export function ctrlMenuVisibility() {
       menuBar.classList.add("active");
       menuIcon.style.width = newMenuIconWidth + "px";
       menuIcon.setAttribute("alt", "Menu Button: Click to hide menu options");
+      ctrlTabHighlight();
     } else if (
       menuBar.classList.contains("active") &&
       (e.target === menuIconDiv || e.target === menuIcon)
@@ -41,8 +41,6 @@ export function ctrlMenuVisibility() {
       menuIcon.style.width = newMenuIconWidth + "px";
       menuIcon.setAttribute("alt", "Menu Button: Click to hide menu options");
       ctrlTabHighlight();
-      giveHomeLinkFocus();
-      e.preventDefault();
     } else if (
       (e.key === "Enter" || e.key === " ") &&
       (e.target === menuIconDiv || e.target === menuIcon) &&
@@ -55,7 +53,7 @@ export function ctrlMenuVisibility() {
   });
 }
 
-export function ctrlTabHighlight() {
+function ctrlTabHighlight() {
   menuBtnStyle.forEach((btn) => {
     if (btn.dataset.name === shortPageName) {
       console.log(btn.dataset.name);
@@ -71,12 +69,6 @@ export function ctrlTabHighlight() {
       showGalNavLink();
     }
   });
-}
-
-export function giveHomeLinkFocus() {
-  menuIconDiv.blur();
-  homeLinkFocus.focus({ focusVisible: true });
-  console.log(document.activeElement);
 }
 
 function showGalNavLink() {
