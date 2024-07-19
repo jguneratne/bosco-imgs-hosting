@@ -1210,7 +1210,7 @@ textarea::placeholder {
   }
 
   .menu-btn {
-    font-size: 3ch;
+    font-size: 1.8rem;
   }
 
   .menu-items.active {
@@ -1283,7 +1283,7 @@ textarea::placeholder {
   }
 
   .footer-div {
-    font-size: 3ch;
+    font-size: 1.8rem;
   }
 }
 
