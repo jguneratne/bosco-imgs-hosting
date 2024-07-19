@@ -239,10 +239,8 @@ li {
 
 .dropdown-content {
   list-style: none;
-  z-index: 10;
   -webkit-animation: slide-down;
   display: none;
-  position: absolute;
 }
 
 .dropdown-content li a {
@@ -258,10 +256,11 @@ li {
   margin-top: 13em;
   padding: 0 0.5em 1em 0.5em;
   border-radius: 1em;
+  position: absolute;
 }
 
 .dropdown-item {
-  margin-top: 1ch;
+  margin-top: 0.3em;
   max-height: 4ch;
 }
 
@@ -422,7 +421,6 @@ li {
   background-color: transparent;
   border: 1px solid transparent;
   width: max-content;
-  opacity: 75%;
   visibility: hidden;
 }
 
@@ -439,7 +437,6 @@ li {
   outline: 1px solid var(--dark-font-col);
   border-radius: 1em;
   cursor: pointer;
-  opacity: 100%;
 }
 
 .pause-icon,
