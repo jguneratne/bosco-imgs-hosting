@@ -49,7 +49,7 @@
 
 body {
   min-height: 100vh;
-  background-color: var(--fallback-col);
+  background-color: var(--slider-box-col);
   overflow: hidden;
 }
 
@@ -91,8 +91,8 @@ nav {
   grid-area: icon;
   display: flex;
   justify-content: center;
-  max-width: min-content;
-  padding: 0.5em;
+  width: min-content;
+  padding: 0.8em;
   margin: 2ch auto;
 
   background-color: transparent;
@@ -163,8 +163,8 @@ li {
   width: 15ch;
   min-height: 6ch;
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   text-decoration: none;
   text-align: center;
   font-family: Arial, Helvetica, sans-serif;
@@ -254,6 +254,10 @@ li {
   position: absolute;
 }
 
+.dropdown-content li a {
+  color: var(--light-font-col);
+}
+
 .dropdown-content--active {
   -webkit-animation: slide-down-reverse;
   display: flex;
@@ -338,7 +342,6 @@ li {
   padding: 2em 3em;
   border-radius: 1.2em;
   min-width: 22ch;
-  font-size: 2ch;
   border: 0.4ch solid var(--menu-btn-selected);
   color: var(--dark-font-col);
 }
@@ -354,10 +357,11 @@ li {
 /* Galleries Thumbnail Links */
 
 .thumbnails {
-  grid-area: 1 / 2 / 2 / 3;
-  margin: 2em 0;
+  min-height: 100%;
+  padding: 2em 0;
+  margin: auto 0;
   display: flex;
-  align-items: flex-start;
+  align-content: center;
   justify-content: center;
   gap: 2em;
   flex-wrap: wrap;
@@ -380,7 +384,7 @@ li {
 .gal-title {
   text-align: center;
   color: var(--light-font-col);
-  font-size: 1.3em;
+  font-size: 1.5rem;
   padding-bottom: 1em;
 }
 
@@ -576,15 +580,17 @@ li {
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
+  display: grid;
+  justify-content: center;
 }
 
 .about-text-div {
   display: flex;
   flex-direction: column;
 
-  max-width: 90%;
+  max-width: 35em;
   height: min-content;
-  margin: 3ch auto;
+  margin: 3em 1em;
   padding: 2.5em 2em;
   text-align: left;
   color: var(--light-font-col);
@@ -593,7 +599,6 @@ li {
 }
 
 .bosco-entry {
-  font-size: 2ch;
   margin-bottom: 2em;
 }
 
@@ -602,7 +607,7 @@ li {
 }
 
 .about-box {
-  font-size: 2.5ch;
+  font-size: 1.5rem;
   display: flex;
   flex-direction: column;
 
@@ -621,12 +626,10 @@ li {
 
 .required-text {
   padding: 0.5em 0;
-  font-size: 1.2em;
   color: var(--dark-font-col);
 }
 
 .form-disabled {
-  font-size: 1.2em;
   color: var(--error-color);
   text-decoration: underline;
   display: none;
@@ -640,7 +643,7 @@ fieldset {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 90%;
+  max-width: 20em;
   margin: 0 auto;
   border: none;
 }
@@ -648,13 +651,12 @@ fieldset {
 label {
   display: flex;
   flex-direction: column;
-  padding: 0.5em;
   width: 100%;
 }
 
 .input-type {
   text-align: left;
-  padding: 0 1em 0.6em 0;
+  padding-bottom: 0.6em;
 }
 
 .input-box-msg {
@@ -706,7 +708,7 @@ textarea::placeholder {
   text-align: right;
   font-weight: bold;
   color: var(--error-color);
-  padding-bottom: 1.5em;
+  padding: 0.5em 0 1.5em 0;
   visibility: hidden;
 }
 
@@ -723,9 +725,8 @@ textarea::placeholder {
 
 .send-contact {
   padding: 0.5em 2em 0.5em 2em;
-  margin: 1.5em 0 0 0;
+  margin-bottom: 3em;
   max-width: min-content;
-  font-size: 2ch;
   border-radius: 0.5em;
   border: 2px solid transparent;
   outline: 1px solid var(--slider-box-col);
@@ -762,7 +763,7 @@ textarea::placeholder {
 }
 
 .footer-div .logo-div a img {
-  height: 4ch;
+  height: 3ch;
   outline: 1.5px solid transparent;
   border: 1px solid transparent;
 }
@@ -807,6 +808,14 @@ textarea::placeholder {
     width: min-content;
   }
 
+  .home-box {
+    gap: 4em;
+  }
+
+  .cta-btn {
+    font-size: 1.5rem;
+  }
+
   .pause-icon,
   .play-icon {
     width: 7em;
@@ -816,9 +825,29 @@ textarea::placeholder {
   .img-dots-container {
     max-width: 30em;
   }
+
+  .about-text-div {
+    max-width: 45em;
+  }
+
+  fieldset {
+    max-width: 30em;
+  }
+
+  .footer-div {
+    font-size: 1.2rem;
+  }
 }
 
 @media (min-width: 700px) and (orientation: portrait) {
+  .menu-icon {
+    width: 4ch;
+  }
+
+  .menu-btn {
+    font-size: 1.3rem;
+  }
+
   .menu-items.active {
     gap: 2em;
   }
@@ -838,11 +867,11 @@ textarea::placeholder {
 
   .cta-btn {
     padding: 2.5em 3em;
-    font-size: 2.5ch;
   }
 
   .thumbnails {
-    margin: 4em 0;
+    align-content: flex-start;
+    margin: 3em 0;
     gap: 3em;
   }
 
@@ -865,36 +894,78 @@ textarea::placeholder {
   }
 
   .circle-icon {
-    width: 3ch;
-    height: 3ch;
-    margin: 3ch;
+    width: 2.5ch;
+    height: 2.5ch;
+    margin: 2.5ch;
   }
 
   .about {
     background-image: url(../src/assets/imgs/about-page/Guneratne_2023.10.01_about-vertical-800p.jpg);
   }
 
+  .bosco-entry {
+    font-size: 1.5rem;
+  }
+
+  .about-box {
+    font-size: 2rem;
+  }
+
+  .contact-header {
+    font-size: 3rem;
+  }
+
+  .required-text,
+  .form-disabled {
+    font-size: 2.5rem;
+  }
+
   form {
-    margin: 5em 0;
+    margin: 2em 0;
   }
 
   fieldset {
-    width: 80%;
+    max-width: 38em;
   }
 
   label {
     padding: 0;
-    margin: 1.5em 0;
+    font-size: 2rem;
+  }
+
+  input,
+  textarea {
+    font-size: 1.7rem;
+  }
+
+  .send-contact {
+    font-size: 2.2rem;
+  }
+
+  .footer-div {
+    font-size: 1.5rem;
   }
 }
 
 @media (min-width: 1000px) and (orientation: portrait) {
+  .menu-icon {
+    width: 5ch;
+  }
+
+  .menu-btn {
+    font-size: 1.8rem;
+  }
+
   .menu-items.active {
     gap: 4em;
   }
 
   .home {
     background-image: url(../src/assets/imgs/home-imgs/Guneratne_2024.06.09_home-vertical-1200p.jpg);
+  }
+
+  .cta-btn {
+    font-size: 2.3rem;
   }
 
   .pause-icon,
@@ -923,21 +994,35 @@ textarea::placeholder {
 
   .about {
     background-image: url(../src/assets/imgs/about-page/Guneratne_2023.10.01_about-vertical-1200p.jpg);
-    display: grid;
-    grid-template-rows: repeat(2, 1fr);
   }
 
   .about-text-div {
-    max-width: 60%;
+    max-width: 60em;
     margin: auto;
   }
 
+  .bosco-entry {
+    font-size: 2.5rem;
+  }
+
+  .about-box {
+    font-size: 3rem;
+  }
+
   fieldset {
-    width: 70%;
+    max-width: 45em;
+  }
+
+  .footer-div {
+    font-size: 1.8rem;
   }
 }
 
 @media (min-width: 600px) and (orientation: landscape) {
+  .menu-icon {
+    width: 3ch;
+  }
+
   .menu-items.active {
     display: flex;
     align-items: flex-start;
@@ -1002,13 +1087,18 @@ textarea::placeholder {
 
   .about {
     background-image: url(../src/assets/imgs/about-page/Guneratne_2023.10.01_about-horizontal-800p.jpg);
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .about-text-div {
+    max-width: 50em;
   }
 
   fieldset {
-    width: 70%;
-    margin-bottom: 2em;
+    max-width: 30em;
+  }
+
+  .send-contact {
+    font-size: 1.2rem;
   }
 }
 
@@ -1019,6 +1109,11 @@ textarea::placeholder {
 
   .home {
     background-image: url(../src/assets/imgs/home-imgs/Guneratne_2024.06.09_home-horizontal-1200p.jpg);
+  }
+
+  .thumbnails {
+    align-content: flex-start;
+    margin: 3em 0 0 0;
   }
 
   .play-btn,
@@ -1034,18 +1129,22 @@ textarea::placeholder {
     max-width: 40em;
   }
 
-  .circle-icon {
-    width: 2.5ch;
-    height: 2.5ch;
-    margin: 2.5ch;
-  }
-
   .about {
     background-image: url(../src/assets/imgs/about-page/Guneratne_2023.10.01_about-horizontal-1200p.jpg);
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .about-text-div {
-    max-width: 80%;
+    margin: 3em 0 3em 2em;
+  }
+
+  .contact-header {
+    font-size: 1.8rem;
+  }
+
+  .required-text,
+  .form-disabled {
+    font-size: 1.2rem;
   }
 
   form {
@@ -1054,6 +1153,14 @@ textarea::placeholder {
 }
 
 @media (min-width: 1250px) and (orientation: landscape) {
+  .menu-icon {
+    width: 3.5ch;
+  }
+
+  .menu-btn {
+    font-size: 1.2rem;
+  }
+
   .home {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -1062,7 +1169,7 @@ textarea::placeholder {
 
   .logo-box {
     min-width: 90%;
-    margin: auto 0;
+    margin: auto 0 auto 4em;
   }
 
   .home-box {
@@ -1071,9 +1178,17 @@ textarea::placeholder {
     margin: 0;
   }
 
+  .cta-btn {
+    font-size: 1.3rem;
+  }
+
+  .thumbnails {
+    gap: 4em;
+  }
+
   .play-icon,
   .pause-icon {
-    width: 7em;
+    width: 6em;
   }
 
   .arrow {
@@ -1084,18 +1199,38 @@ textarea::placeholder {
     max-width: 55em;
   }
 
-  fieldset {
-    max-width: 50%;
+  .footer-div {
+    font-size: 1.2rem;
   }
 }
 
 @media (min-width: 1800px) and (orientation: landscape) {
+  .menu-icon {
+    width: 5ch;
+  }
+
+  .menu-btn {
+    font-size: 3ch;
+  }
+
   .menu-items.active {
     gap: 4em;
   }
 
   .home {
     background-image: url(../src/assets/imgs/home-imgs/Guneratne_2024.06.09_home-horizontal-1600p.jpg);
+  }
+
+  .logo-box {
+    margin: auto 0 auto 3em;
+  }
+
+  .cta-btn {
+    font-size: 1.8rem;
+  }
+
+  .thumbnails {
+    gap: 6em;
   }
 
   .play-btn,
@@ -1118,7 +1253,37 @@ textarea::placeholder {
   }
 
   .about-text-div {
-    margin: auto;
+    margin: 5em 0 0 5em;
+  }
+
+  .contact-header {
+    font-size: 2.5rem;
+  }
+
+  .required-text,
+  .form-disabled {
+    font-size: 2rem;
+  }
+
+  fieldset {
+    max-width: 40em;
+  }
+
+  label {
+    font-size: 1.5rem;
+  }
+
+  input,
+  textarea {
+    font-size: 1.2rem;
+  }
+
+  .send-contact {
+    font-size: 1.8rem;
+  }
+
+  .footer-div {
+    font-size: 3ch;
   }
 }
 
