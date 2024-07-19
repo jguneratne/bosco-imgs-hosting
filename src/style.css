@@ -55,6 +55,11 @@ body {
 
 /* Main Setup for Each Page */
 
+.scroll-wrapper {
+  height: 100vh;
+  overflow: auto;
+}
+
 .main {
   max-width: 110em;
   min-height: 100vh;
@@ -70,11 +75,6 @@ body {
     "header"
     "section"
     "footer";
-}
-
-.scroll-wrapper {
-  height: 100vh;
-  overflow: auto;
 }
 
 /* Header Content */
@@ -168,15 +168,6 @@ li {
   text-decoration: none;
   text-align: center;
   font-family: Arial, Helvetica, sans-serif;
-}
-
-/* Set pseudo-element to preset width of element; prevents hover from changing size of element when bold */
-.menu-btn:after {
-  display: block;
-  font-weight: bold;
-  color: transparent;
-  overflow: hidden;
-  visibility: hidden;
 }
 
 .home-link.selected,
@@ -397,7 +388,7 @@ li {
 .thumbnail-link:hover .thumbnail-img,
 .thumbnail-link:focus .thumbnail-img {
   cursor: pointer;
-  border: 1.5px solid var(--main-col);
+  border: 1.5px solid var(--light-font-col);
 }
 
 .thumbnail-link:hover .gal-title,
@@ -441,14 +432,12 @@ li {
 }
 
 .pause-btn--active:focus,
-.play-btn--active:focus {
+.play-btn--active:focus,
+.pause-btn:hover,
+.play-btn:hover {
   border: 1px solid var(--dark-font-col);
   outline: 1px solid var(--dark-font-col);
   border-radius: 1em;
-}
-
-.pause-btn:hover,
-.play-btn:hover {
   cursor: pointer;
   opacity: 100%;
 }
@@ -502,9 +491,11 @@ li {
   border: none;
 }
 
-.circle-icon-div:focus-visible {
+.circle-icon-div:focus-visible,
+.circle-icon-div:hover {
   outline: 2px solid var(--slider-icon-col);
   border-radius: 0.5em;
+  cursor: pointer;
 }
 
 .circle-icon-div--active {
@@ -529,7 +520,7 @@ li {
   background-color: transparent;
   justify-self: center;
   align-self: center;
-  min-height: 100%;
+  min-height: 90%;
   margin: 0 1em;
   border: 2px solid transparent;
 }
@@ -540,9 +531,12 @@ li {
 }
 
 .back-arrow:focus-visible,
-.forward-arrow:focus-visible {
+.forward-arrow:focus-visible,
+.back-arrow:hover,
+.forward-arrow:hover {
   outline: 2px solid var(--slider-icon-col);
   border-radius: 0.5em;
+  cursor: pointer;
 }
 
 .photo-box {
