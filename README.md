@@ -2,8 +2,10 @@ Bosco Images Wildlife Photography: website began as a way to complete The Odin P
 
 Start: September 12th, 2023
 
-Publish Date: July 5th, 2024
+Initial Publish Date: July 5th, 2024
+
+Begin Redesign: July 13th, 2024
 
 Rename Repo Date: July 17th, 2024
 
-Test Commit
+Final Publish Date: July 19th, 2024
