@@ -367,6 +367,8 @@ function clickCircles() {
       clearActiveState();
       handleIndexes();
       addActiveState();
+      clearInterval(getAnimationID.animationID);
+      getAnimationID.animationID = setInterval(slideRight, 3000);
     }
   });
 
@@ -394,6 +396,8 @@ function arrowCtrl() {
     ) {
       console.log("right");
       slideRight();
+      clearInterval(getAnimationID.animationID);
+      getAnimationID.animationID = setInterval(slideRight, 3000);
     }
     if (
       e.target === getLeftArrow.leftArrow ||
@@ -401,6 +405,8 @@ function arrowCtrl() {
     ) {
       console.log("left");
       slideLeft();
+      clearInterval(getAnimationID.animationID);
+      getAnimationID.animationID = setInterval(slideRight, 3000);
     }
   });
 
