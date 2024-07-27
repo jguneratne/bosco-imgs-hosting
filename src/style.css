@@ -749,19 +749,23 @@ textarea::placeholder {
   color: var(--dark-font-col);
 }
 
-.footer-div .logo-div a {
-  margin-left: 1em;
+.footer-div .copyright-div {
+  margin-right: 1em;
 }
 
+.footer-div .logo-div a,
 .footer-div .logo-div a img {
+  width: 3ch;
   height: 3ch;
-  outline: 1.5px solid transparent;
-  border: 1px solid transparent;
+  outline: 0.1em solid transparent;
+  border: 0.1em solid transparent;
 }
 
-.footer-div .logo-div a img:focus-visible {
-  outline: 1.5px solid var(--dark-font-col);
-  border: 1px solid transparent;
+.footer-div .logo-div a:focus-visible img {
+  outline: 0.1em solid var(--dark-font-col);
+  outline-offset: 0.2em;
+  border: 0.1em solid transparent;
+  border-radius: 0.5em;
 }
 
 /* Media Queries */
