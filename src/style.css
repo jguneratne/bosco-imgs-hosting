@@ -678,10 +678,7 @@ textarea:focus {
   border: 2px solid var(--dark-font-col);
 }
 
-.firstName--invalid,
-.lastName--invalid,
-.emailField--invalid,
-.messageField--invalid {
+.input--invalid {
   border: 2px solid var(--error-color);
 }
 
@@ -716,7 +713,7 @@ textarea::placeholder {
 
 .send-contact {
   padding: 0.5em 2em 0.5em 2em;
-  margin-bottom: 3em;
+  margin-bottom: 1em;
   max-width: min-content;
   border-radius: 0.5em;
   border: 2px solid transparent;
