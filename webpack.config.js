@@ -7,6 +7,10 @@ module.exports = {
   output: {
     path: path.join(__dirname, "dist/"),
     clean: true,
+    environment: {
+      // See babel documentation: https://github.com/babel/babel-loader
+      arrowFunction: false,
+    },
   },
   resolve: {
     alias: {
@@ -121,6 +125,26 @@ module.exports = {
             );
 
             return `images/${assetPath}/[name].[hash:8][ext]`;
+          },
+        },
+      },
+      {
+        test: /\.(?:js|mjs|cjs)$/,
+        exclude: [
+          /node_modules/,
+          /node_modules[\\/]core-js/,
+          /node_modules[\\/]webpack[\\/]buildin/,
+        ],
+        use: {
+          loader: "babel-loader",
+          options: {
+            presets: [
+              [
+                "@babel/preset-env",
+                { targets: "defaults" },
+                { cacheDirectory: true },
+              ],
+            ],
           },
         },
       },
