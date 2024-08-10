@@ -5,7 +5,9 @@
       {
         "useBuiltIns": "usage",
         "corejs": "3.6.5"
-      }
+      },
+      "@babel/plugin-transform-runtime",
+      { "corejs": 3 }
     ]
   ]
 }
