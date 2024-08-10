@@ -130,22 +130,27 @@ module.exports = {
       },
       {
         test: /\.(?:js|mjs|cjs)$/,
-        exclude: [
-          /node_modules/,
-          /node_modules[\\/]core-js/,
-          /node_modules[\\/]webpack[\\/]buildin/,
-        ],
+        exclude: /node_modules/,
         use: {
           loader: "babel-loader",
           options: {
             presets: [
               [
                 "@babel/preset-env",
-                { targets: "defaults" },
-                { cacheDirectory: true },
+                {
+                  useBuiltIns: "entry",
+                  targets: {
+                    browsers: ["defaults"],
+                  },
+                  corejs: {
+                    version: 3,
+                    proposals: false,
+                  },
+                  cacheDirectory: true,
+                },
               ],
             ],
-            plugins: ["@babel/plugin-transform-runtime"],
+            plugins: [["@babel/plugin-transform-runtime", { corejs: 3 }]],
           },
         },
       },
