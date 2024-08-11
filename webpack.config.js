@@ -124,34 +124,19 @@ module.exports = {
               regExp.exec(filename)[1].replace("@", "").replace(/\\/g, "/")
             );
 
-            return `images/${assetPath}/[name].[hash:8][ext]`;
+            return `images/${assetPath}/[name].[contenthash:8][ext]`;
           },
         },
       },
       {
         test: /\.(?:js|mjs|cjs)$/,
-        exclude: /node_modules/,
+        exclude: [
+          /node_modules/,
+          /node_modules[\\/]core-js/,
+          /node_modules[\\/]webpack[\\/]buildin/,
+        ],
         use: {
           loader: "babel-loader",
-          options: {
-            presets: [
-              [
-                "@babel/preset-env",
-                {
-                  useBuiltIns: "entry",
-                  targets: {
-                    browsers: ["defaults"],
-                  },
-                  corejs: {
-                    version: 3,
-                    proposals: false,
-                  },
-                  cacheDirectory: true,
-                },
-              ],
-            ],
-            plugins: [["@babel/plugin-transform-runtime", { corejs: 3 }]],
-          },
         },
       },
     ],
