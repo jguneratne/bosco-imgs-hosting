@@ -1,8 +1,4 @@
-import {
-  ctrlMenuVisibility,
-  ctrlTabHighlight,
-  addAriaCurrent,
-} from "./navStyles";
+import { ctrlMenuVisibility, addAriaCurrent } from "./navStyles";
 
 import { galleriesClickMenu } from "./dropDown";
 
