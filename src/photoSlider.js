@@ -369,7 +369,7 @@ function clickCircles() {
       addActiveState();
       clearInterval(getAnimationID.animationID);
       if (
-        sliderPlayBtn.currentPlayBtn.classList.contains("pause-btn--active")
+        sliderPauseBtn.currentPauseBtn.classList.contains("pause-btn--active")
       ) {
         getAnimationID.animationID = setInterval(slideRight, 3000);
       }
@@ -388,7 +388,7 @@ function clickCircles() {
       handleIndexes();
       addActiveState();
       if (
-        sliderPlayBtn.currentPlayBtn.classList.contains("pause-btn--active")
+        sliderPauseBtn.currentPauseBtn.classList.contains("pause-btn--active")
       ) {
         getAnimationID.animationID = setInterval(slideRight, 3000);
       }
@@ -407,7 +407,7 @@ function arrowCtrl() {
       slideRight();
       clearInterval(getAnimationID.animationID);
       if (
-        sliderPlayBtn.currentPlayBtn.classList.contains("pause-btn--active")
+        sliderPauseBtn.currentPauseBtn.classList.contains("pause-btn--active")
       ) {
         getAnimationID.animationID = setInterval(slideRight, 3000);
       }
@@ -420,7 +420,7 @@ function arrowCtrl() {
       slideLeft();
       clearInterval(getAnimationID.animationID);
       if (
-        sliderPlayBtn.currentPlayBtn.classList.contains("pause-btn--active")
+        sliderPauseBtn.currentPauseBtn.classList.contains("pause-btn--active")
       ) {
         getAnimationID.animationID = setInterval(slideRight, 3000);
       }
