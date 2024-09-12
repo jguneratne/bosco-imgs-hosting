@@ -9,3 +9,5 @@ Begin Redesign: July 13th, 2024
 Rename Repo Date: July 17th, 2024
 
 Final Publish Date: July 19th, 2024
+
+Split configuration into dev and prod modes: Sept. 12th, 2024
