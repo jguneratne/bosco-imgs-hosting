@@ -543,7 +543,9 @@ li {
 }
 
 .photo-box picture {
-  transition: visibility 0s 500ms, opacity 500ms linear;
+  transition:
+    visibility 0s 500ms,
+    opacity 500ms linear;
   display: none;
   opacity: 0;
   pointer-events: none;
