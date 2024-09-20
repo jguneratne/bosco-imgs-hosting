@@ -35,11 +35,11 @@ module.exports = {
           filename: "galleries.html",
           data: { title: "Bosco Images Wildlife Photography: Photo Galleries" },
         },
-        {
-          import: "./src/views/birds-gallery.ejs",
-          filename: "birds-gallery.html",
-          data: { title: "Bosco Images Wildlife Photography: Birds Gallery" },
-        },
+        // {
+        //   import: "./src/views/birds-gallery.ejs",
+        //   filename: "birds-gallery.html",
+        //   data: { title: "Bosco Images Wildlife Photography: Birds Gallery" },
+        // },
         {
           import: "./src/views/insects-gallery.ejs",
           filename: "insects-gallery.html",
@@ -47,13 +47,13 @@ module.exports = {
             title: "Bosco Images Wildlife Photography: Insects Gallery",
           },
         },
-        {
-          import: "./src/views/small-animals-gallery.ejs",
-          filename: "small-animals-gallery.html",
-          data: {
-            title: "Bosco Images Wildlife Photography: Small Animals Gallery",
-          },
-        },
+        // {
+        //   import: "./src/views/small-animals-gallery.ejs",
+        //   filename: "small-animals-gallery.html",
+        //   data: {
+        //     title: "Bosco Images Wildlife Photography: Small Animals Gallery",
+        //   },
+        // },
         {
           import: "./src/views/about.ejs",
           filename: "about.html",
