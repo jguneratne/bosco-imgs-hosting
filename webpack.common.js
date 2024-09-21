@@ -2,6 +2,7 @@ const path = require("path");
 const HtmlBundlerPlugin = require("html-bundler-webpack-plugin");
 
 module.exports = {
+  mode: "development",
   stats: { children: true },
   output: {
     path: path.join(__dirname, "dist/"),
@@ -10,7 +11,7 @@ module.exports = {
       // See babel documentation: https://github.com/babel/babel-loader
       arrowFunction: false,
     },
-    crossOriginLoading: "anonymous", // required for subresource integrity to work See: https://dev.to/webdiscus/webpack-auto-generate-an-integrity-hash-for-link-and-script-tags-in-an-html-template-48p5
+    // crossOriginLoading: "anonymous", // required for subresource integrity to work See: https://dev.to/webdiscus/webpack-auto-generate-an-integrity-hash-for-link-and-script-tags-in-an-html-template-48p5
   },
   resolve: {
     alias: {
@@ -73,7 +74,7 @@ module.exports = {
         // output filename for CSS
         filename: "css/[name].[contenthash:8].css",
       },
-      integrity: "auto", // include `integrity` attribute in production mode only
+      //integrity: "auto", // include `integrity` attribute in production mode only
 
       preprocessor: "ejs",
       preprocessorOptions: {
@@ -113,7 +114,8 @@ module.exports = {
               "src/assets/imgs/about-page" ||
               "src/assets/imgs/birds-gal" ||
               "src/assets/imgs/home-imgs" ||
-              "src/assets/imgs/insects-gal" ||
+              "src/assets/imgs/insects-gal/avif" ||
+              "src/assets/imgs/insects-gal/jpg" ||
               "src/assets/imgs/small-animals-gal" ||
               "src/assets/imgs/thumbnails";
             const regExp = new RegExp(
