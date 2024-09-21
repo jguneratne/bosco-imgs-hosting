@@ -7,7 +7,7 @@ export const newMenuIconWidth = menuIconWidth / 2;
 export const menuBar = document.querySelector(".menu-items");
 export const currentPage = window.location.href;
 export const fullPageName = currentPage.substring(
-  currentPage.lastIndexOf("/") + 1
+  currentPage.lastIndexOf("/") + 1,
 );
 export const indexOfExtension = fullPageName.indexOf(".");
 export const shortPageName = fullPageName.substring(0, indexOfExtension);
@@ -21,7 +21,7 @@ export const dropDownMenu = document.querySelector(".dropdown-content");
 export const menuChildrenDiv = document.querySelector(".menu-items");
 export const menuBtnStyle = Array.from(document.querySelectorAll(".menu-btn"));
 export const dropDownItems = Array.from(
-  document.querySelectorAll(".dropdown-item")
+  document.querySelectorAll(".dropdown-item"),
 );
 
 // Accessibility
@@ -54,51 +54,15 @@ export const windowWidth = window.innerWidth;
 
 // Photo Gallery
 
-export let getPortraitGal = {
-  galPortraitView: undefined,
+export let getGal = {
+  galView: undefined,
 
-  get portraitGalLocale() {
-    return this.galPortraitView;
+  get galLocale() {
+    return this.galView;
   },
 
-  set portraitGalLocale(newPortraitGalLocale) {
-    this.galPortraitView = newPortraitGalLocale;
-  },
-};
-
-export let getLandscapeGal = {
-  galLandscapeView: undefined,
-
-  get landscapeGalLocale() {
-    return this.galLandscapeView;
-  },
-
-  set landscapeGalLocale(newLandscapeGalLocale) {
-    this.galLandscapeView = newLandscapeGalLocale;
-  },
-};
-
-export let getPortraitSliderBox = {
-  portraitSliderBox: undefined,
-
-  get portraitSliderLocale() {
-    return this.portraitSliderBox;
-  },
-
-  set portraitSliderLocale(newPortraitSliderLocale) {
-    this.portraitSliderBox = newPortraitSliderLocale;
-  },
-};
-
-export let getLandscapeSliderBox = {
-  landscapeSliderBox: undefined,
-
-  get landscapeSliderLocale() {
-    return this.landscapeSliderBox;
-  },
-
-  set landscapeSliderLocale(newLandscapeSliderLocale) {
-    this.landscapeSliderBox = newLandscapeSliderLocale;
+  set galLocale(newGalLocale) {
+    this.galView = newGalLocale;
   },
 };
 
@@ -174,9 +138,7 @@ export let sliderPlayIcon = {
   },
 };
 
-export const galleryMainDivs = document.querySelectorAll(".gal-main");
-export const arrowDivs = document.querySelectorAll(".arrow-div");
-export const photoBoxes = document.querySelectorAll(".photo-box");
+export const galMainDivs = document.querySelectorAll(".gal-main");
 
 export let activeSliderBox = {
   activeBox: undefined,
