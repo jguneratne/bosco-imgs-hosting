@@ -537,10 +537,9 @@ li {
 }
 
 .photo-box {
-  margin: 3em auto 0 auto;
+  margin-top: 3em;
   display: grid;
   place-content: center;
-  width: 60%;
 }
 
 .photo-box picture {
@@ -556,7 +555,7 @@ li {
 
 .photo-box .picture--active {
   transition: opacity 500ms linear;
-  /* display: initial; */
+  display: initial;
   opacity: 1;
   border: 1px solid transparent;
   outline: 1px solid transparent;
