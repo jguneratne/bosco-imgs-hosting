@@ -48,13 +48,13 @@ module.exports = {
             title: "Bosco Images Wildlife Photography: Insects Gallery",
           },
         },
-        // {
-        //   import: "./src/views/small-animals-gallery.ejs",
-        //   filename: "small-animals-gallery.html",
-        //   data: {
-        //     title: "Bosco Images Wildlife Photography: Small Animals Gallery",
-        //   },
-        // },
+        {
+          import: "./src/views/small-animals-gallery.ejs",
+          filename: "small-animals-gallery.html",
+          data: {
+            title: "Bosco Images Wildlife Photography: Small Animals Gallery",
+          },
+        },
         {
           import: "./src/views/about.ejs",
           filename: "about.html",
