@@ -441,7 +441,7 @@ li {
 
 .pause-icon,
 .play-icon {
-  width: 5em;
+  width: 3em;
   margin: 0.5em;
 }
 
@@ -453,7 +453,7 @@ li {
   background-color: var(--slider-box-col);
   min-height: 0.625em;
   max-width: min-content;
-  margin: 1em auto 3em auto;
+  margin: 0 auto 3em auto;
 
   display: grid;
   grid-template-columns: 1fr;
@@ -500,9 +500,9 @@ li {
 }
 
 .circle-icon {
-  width: 2ch;
-  height: 2ch;
-  margin: 2ch;
+  width: 1.3ch;
+  height: 1.3ch;
+  margin: 1.4ch;
   border-radius: 50%;
   border: 1px solid var(--light-font-col);
   background-color: transparent;
@@ -539,7 +539,8 @@ li {
 .photo-box {
   margin-top: 3em;
   display: grid;
-  place-content: center;
+  justify-content: center;
+  align-items: center;
 }
 
 .photo-box picture {

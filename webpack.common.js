@@ -104,7 +104,7 @@ module.exports = {
         ],
       },
       {
-        test: /\.(png|jpe?g|ico|svg)$/,
+        test: /\.(png|jpe?g|avif|svg|)$/,
         type: "asset/resource",
         generator: {
           filename: ({ filename }) => {
@@ -125,7 +125,7 @@ module.exports = {
               regExp.exec(filename)[1].replace("@", "").replace(/\\/g, "/"),
             );
 
-            return `images/${assetPath}/[name].[contenthash:8][ext]`;
+            return `imgs/${assetPath}/[name].[contenthash:8][ext]`;
           },
         },
       },
