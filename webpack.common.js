@@ -56,6 +56,13 @@ module.exports = {
           },
         },
         {
+          import: "./src/views/urban-animals-gallery.ejs",
+          filename: "urban-animals-gallery.html",
+          data: {
+            title: "Bosco Images Wildlife Photography: Urban Animals Gallery",
+          },
+        },
+        {
           import: "./src/views/about.ejs",
           filename: "about.html",
           data: { title: "About: Bosco Images Wildlife Photography" },
