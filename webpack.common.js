@@ -56,6 +56,13 @@ module.exports = {
           },
         },
         {
+          import: "./src/views/pond-life-gallery.ejs",
+          filename: "pond-life-gallery.html",
+          data: {
+            title: "Bosco Images Wildlife Photography: Pond Life Gallery",
+          },
+        },
+        {
           import: "./src/views/urban-animals-gallery.ejs",
           filename: "urban-animals-gallery.html",
           data: {
