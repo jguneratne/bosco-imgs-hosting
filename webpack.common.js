@@ -36,11 +36,11 @@ module.exports = {
           filename: "galleries.html",
           data: { title: "Bosco Images Wildlife Photography: Photo Galleries" },
         },
-        // {
-        //   import: "./src/views/birds-gallery.ejs",
-        //   filename: "birds-gallery.html",
-        //   data: { title: "Bosco Images Wildlife Photography: Birds Gallery" },
-        // },
+        {
+          import: "./src/views/birds-gallery.ejs",
+          filename: "birds-gallery.html",
+          data: { title: "Bosco Images Wildlife Photography: Birds Gallery" },
+        },
         {
           import: "./src/views/insects-gallery.ejs",
           filename: "insects-gallery.html",
