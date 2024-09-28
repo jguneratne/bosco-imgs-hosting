@@ -399,14 +399,12 @@ li {
 
 .gallery {
   display: grid;
-  grid-template-rows: min-content auto;
-  grid-template-columns: 1fr;
+  grid-auto-rows: auto;
   min-height: 100%;
   align-items: center;
 }
 
 .animation-ctrl-div {
-  grid-area: 1 / 1 / 2 / 2;
   max-height: min-content;
   margin: 1em 0;
 
@@ -446,7 +444,6 @@ li {
 }
 
 .slider-box {
-  grid-area: 2 / 1 / 3 / 2;
   outline: 1px solid var(--dark-font-col);
   border: 3px solid transparent;
   border-radius: 3em;
@@ -457,7 +454,7 @@ li {
 
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: repeat(2, min-content);
+  grid-template-rows: repeat(3, min-content);
   align-content: center;
   justify-items: center;
 }
@@ -471,7 +468,7 @@ li {
 }
 
 .img-dots-container {
-  grid-area: 2 / 1 / 3 / 2;
+  grid-area: 3 / 1 / 4 / 2;
   max-width: 18em;
   margin: 1.6em 0 1em 0;
 }
