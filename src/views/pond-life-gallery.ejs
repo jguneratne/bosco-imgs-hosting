@@ -1,0 +1,756 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <!-- Removed initial-scale and max-width from content attribute to fix zooming problems on mobile -->
+    <title><%= title %></title>
+    <link href="../style.css" rel="stylesheet" />
+    <script src="../menu-index.js" defer="defer"></script>
+    <script src="../gallery-index.js" defer="defer"></script>
+  </head>
+
+  <body>
+    <div class="scroll-wrapper">
+      <main class="main gal-main" data-name="pond-life-gallery">
+        <%- include('header.ejs') %>
+        <!-- POND LIFE GALLERY -->
+
+        <section class="section" id="pond-life-gallery">
+          <div class="gallery">
+            <%- include ('animation-ctrl.ejs') %>
+
+            <div
+              class="slider-box"
+              tabindex="0"
+              role="region"
+              aria-roledescription="photo slider"
+              aria-label="Pond Life Gallery"
+              hidden
+            >
+              <div class="img-display-container">
+                <button type="button" class="back-arrow" data-back-arrow>
+                  <img
+                    data-icon-back
+                    class="arrow"
+                    src="../assets/imgs/icons/reshot-icon-arrow-chevron-left-975UQXVKZF.svg"
+                    alt="Back Arrow"
+                  />
+                </button>
+
+                <div class="photo-box">
+                  <!-- BULL FROG 2-->
+                  <picture class="picture" tabindex="0">
+                    <source
+                      type="image/avif"
+                      media="(min-width: 300px) and (max-width: 600px) and (orientation: portrait)"
+                      srcset="
+                        ../assets/imgs/pond/avif/Guneratne_2024.06.07_bull-frog2-horizontal-171h.avif,
+                        ../assets/imgs/pond/jpg/Guneratne_2024.06.07_bull-frog2-horizontal-171h.jpg
+                      "
+                    />
+
+                    <source
+                      type="image/avif"
+                      media="(min-width: 601px) and (max-width: 799px) and (orientation: portrait)"
+                      srcset="
+                        ../assets/imgs/pond/avif/Guneratne_2024.06.07_bull-frog2-horizontal-300h.avif,
+                        ../assets/imgs/pond/jpg/Guneratne_2024.06.07_bull-frog2-horizontal-300h.jpg
+                      "
+                    />
+
+                    <source
+                      type="image/avif"
+                      media="(min-width: 800px) and (max-width: 980px) and (orientation: portrait)"
+                      srcset="
+                        ../assets/imgs/pond/avif/Guneratne_2024.06.07_bull-frog2-horizontal-500h.avif,
+                        ../assets/imgs/pond/jpg/Guneratne_2024.06.07_bull-frog2-horizontal-500h.jpg
+                      "
+                    />
+
+                    <source
+                      type="image/avif"
+                      media="(min-width: 981px) and (max-width: 2000px) and (orientation: portrait)"
+                      srcset="
+                        ../assets/imgs/pond/avif/Guneratne_2024.06.07_bull-frog2-horizontal-547h.avif,
+                        ../assets/imgs/pond/jpg/Guneratne_2024.06.07_bull-frog2-horizontal-547h.jpg
+                      "
+                    />
+
+                    <source
+                      type="image/avif"
+                      media="(min-width: 2001px) and (orientation: portrait)"
+                      srcset="
+                        ../assets/imgs/pond/avif/Guneratne_2024.06.07_bull-frog2-horizontal-1000h.avif,
+                        ../assets/imgs/pond/jpg/Guneratne_2024.06.07_bull-frog2-horizontal-1000h.jpg
+                      "
+                    />
+
+                    <source
+                      type="image/avif"
+                      media="(min-width: 800px) and (max-width: 900px) and (orientation: landscape)"
+                      srcset="
+                        ../assets/imgs/pond/avif/Guneratne_2024.06.07_bull-frog2-horizontal-320h.avif,
+                        ../assets/imgs/pond/jpg/Guneratne_2024.06.07_bull-frog2-horizontal-320h.jpg
+                      "
+                    />
+
+                    <source
+                      type="image/avif"
+                      media="(min-width: 901px) and (max-width: 1250px) and (orientation: landscape)"
+                      srcset="
+                        ../assets/imgs/pond/avif/Guneratne_2024.06.07_bull-frog2-horizontal-427h.avif,
+                        ../assets/imgs/pond/jpg/Guneratne_2024.06.07_bull-frog2-horizontal-427h.jpg
+                      "
+                    />
+
+                    <source
+                      type="image/avif"
+                      media="(min-width: 1251px) and (max-width: 1600px) and (orientation: landscape)"
+                      srcset="
+                        ../assets/imgs/pond/avif/Guneratne_2024.06.07_bull-frog2-horizontal-547h.avif,
+                        ../assets/imgs/pond/jpg/Guneratne_2024.06.07_bull-frog2-horizontal-547h.jpg
+                      "
+                    />
+
+                    <source
+                      type="image/avif"
+                      media="(min-width: 1601px)  and (orientation: landscape)"
+                      srcset="
+                        ../assets/imgs/pond/avif/Guneratne_2024.06.07_bull-frog2-horizontal-800h.avif,
+                        ../assets/imgs/pond/jpg/Guneratne_2024.06.07_bull-frog2-horizontal-800h.jpg
+                      "
+                    />
+
+                    <img
+                      src="../assets/imgs/pond/jpg/Guneratne_2024.06.07_bull-frog2-horizontal-547h.jpg"
+                      alt="Slide 1 of 7: WRITE ALT TEXT"
+                      id="slide6"
+                    />
+                  </picture>
+
+                  <!-- FROG SIDE PROFILE -->
+                  <picture class="picture" tabindex="0">
+                    <source
+                      type="image/avif"
+                      media="(min-width: 300px) and (max-width: 600px) and (orientation: portrait)"
+                      srcset="
+                        ../assets/imgs/pond/avif/Guneratne_2024.07.28_frog-side-horizontal-171h.avif,
+                        ../assets/imgs/pond/jpg/Guneratne_2024.07.28_frog-side-horizontal-171h.jpg
+                      "
+                    />
+
+                    <source
+                      type="image/avif"
+                      media="(min-width: 601px) and (max-width: 799px) and (orientation: portrait)"
+                      srcset="
+                        ../assets/imgs/pond/avif/Guneratne_2024.07.28_frog-side-horizontal-300h.avif,
+                        ../assets/imgs/pond/jpg/Guneratne_2024.07.28_frog-side-horizontal-300h.jpg
+                      "
+                    />
+
+                    <source
+                      type="image/avif"
+                      media="(min-width: 800px) and (max-width: 980px) and (orientation: portrait)"
+                      srcset="
+                        ../assets/imgs/pond/avif/Guneratne_2024.07.28_frog-side-horizontal-500h.avif,
+                        ../assets/imgs/pond/jpg/Guneratne_2024.07.28_frog-side-horizontal-500h.jpg
+                      "
+                    />
+
+                    <source
+                      type="image/avif"
+                      media="(min-width: 981px) and (max-width: 2000px) and (orientation: portrait)"
+                      srcset="
+                        ../assets/imgs/pond/avif/Guneratne_2024.07.28_frog-side-horizontal-547h.avif,
+                        ../assets/imgs/pond/jpg/Guneratne_2024.07.28_frog-side-horizontal-547h.jpg
+                      "
+                    />
+
+                    <source
+                      type="image/avif"
+                      media="(min-width: 2001px) and (orientation: portrait)"
+                      srcset="
+                        ../assets/imgs/pond/avif/Guneratne_2024.07.28_frog-side-horizontal-1000h.avif,
+                        ../assets/imgs/pond/jpg/Guneratne_2024.07.28_frog-side-horizontal-1000h.jpg
+                      "
+                    />
+
+                    <source
+                      type="image/avif"
+                      media="(min-width: 800px) and (max-width: 900px) and (orientation: landscape)"
+                      srcset="
+                        ../assets/imgs/pond/avif/Guneratne_2024.07.28_frog-side-horizontal-320h.avif,
+                        ../assets/imgs/pond/jpg/Guneratne_2024.07.28_frog-side-horizontal-320h.jpg
+                      "
+                    />
+
+                    <source
+                      type="image/avif"
+                      media="(min-width: 901px) and (max-width: 1250px) and (orientation: landscape)"
+                      srcset="
+                        ../assets/imgs/pond/avif/Guneratne_2024.07.28_frog-side-horizontal-427h.avif,
+                        ../assets/imgs/pond/jpg/Guneratne_2024.07.28_frog-side-horizontal-427h.jpg
+                      "
+                    />
+
+                    <source
+                      type="image/avif"
+                      media="(min-width: 1251px) and (max-width: 1600px) and (orientation: landscape)"
+                      srcset="
+                        ../assets/imgs/pond/avif/Guneratne_2024.07.28_frog-side-horizontal-547h.avif,
+                        ../assets/imgs/pond/jpg/Guneratne_2024.07.28_frog-side-horizontal-547h.jpg
+                      "
+                    />
+
+                    <source
+                      type="image/avif"
+                      media="(min-width: 1601px)  and (orientation: landscape)"
+                      srcset="
+                        ../assets/imgs/pond/avif/Guneratne_2024.07.28_frog-side-horizontal-800h.avif,
+                        ../assets/imgs/pond/jpg/Guneratne_2024.07.28_frog-side-horizontal-800h.jpg
+                      "
+                    />
+
+                    <img
+                      src="../assets/imgs/pond/jpg/Guneratne_2024.07.28_frog-side-horizontal-547h.jpg"
+                      alt="Slide 2 of 7: WRITE ALT TEXT"
+                      id="slide6"
+                    />
+                  </picture>
+
+                  <!-- LARGE SNAPPING TURTLE -->
+                  <picture class="picture" tabindex="0">
+                    <source
+                      type="image/avif"
+                      media="(min-width: 300px) and (max-width: 600px) and (orientation: portrait)"
+                      srcset="
+                        ../assets/imgs/pond/avif/Guneratne_2024.06.03_lg-turtle-horizontal-171h.avif,
+                        ../assets/imgs/pond/jpg/Guneratne_2024.06.03_lg-turtle-horizontal-171h.jpg
+                      "
+                    />
+
+                    <source
+                      type="image/avif"
+                      media="(min-width: 601px) and (max-width: 799px) and (orientation: portrait)"
+                      srcset="
+                        ../assets/imgs/pond/avif/Guneratne_2024.06.03_lg-turtle-horizontal-300h.avif,
+                        ../assets/imgs/pond/jpg/Guneratne_2024.06.03_lg-turtle-horizontal-300h.jpg
+                      "
+                    />
+
+                    <source
+                      type="image/avif"
+                      media="(min-width: 800px) and (max-width: 980px) and (orientation: portrait)"
+                      srcset="
+                        ../assets/imgs/pond/avif/Guneratne_2024.06.03_lg-turtle-horizontal-500h.avif,
+                        ../assets/imgs/pond/jpg/Guneratne_2024.06.03_lg-turtle-horizontal-500h.jpg
+                      "
+                    />
+
+                    <source
+                      type="image/avif"
+                      media="(min-width: 981px) and (max-width: 2000px) and (orientation: portrait)"
+                      srcset="
+                        ../assets/imgs/pond/avif/Guneratne_2024.06.03_lg-turtle-horizontal-547h.avif,
+                        ../assets/imgs/pond/jpg/Guneratne_2024.06.03_lg-turtle-horizontal-547h.jpg
+                      "
+                    />
+
+                    <source
+                      type="image/avif"
+                      media="(min-width: 2001px) and (orientation: portrait)"
+                      srcset="
+                        ../assets/imgs/pond/avif/Guneratne_2024.06.03_lg-turtle-horizontal-1000h.avif,
+                        ../assets/imgs/pond/jpg/Guneratne_2024.06.03_lg-turtle-horizontal-1000h.jpg
+                      "
+                    />
+
+                    <source
+                      type="image/avif"
+                      media="(min-width: 800px) and (max-width: 900px) and (orientation: landscape)"
+                      srcset="
+                        ../assets/imgs/pond/avif/Guneratne_2024.06.03_lg-turtle-horizontal-320h.avif,
+                        ../assets/imgs/pond/jpg/Guneratne_2024.06.03_lg-turtle-horizontal-320h.jpg
+                      "
+                    />
+
+                    <source
+                      type="image/avif"
+                      media="(min-width: 901px) and (max-width: 1250px) and (orientation: landscape)"
+                      srcset="
+                        ../assets/imgs/pond/avif/Guneratne_2024.06.03_lg-turtle-horizontal-427h.avif,
+                        ../assets/imgs/pond/jpg/Guneratne_2024.06.03_lg-turtle-horizontal-427h.jpg
+                      "
+                    />
+
+                    <source
+                      type="image/avif"
+                      media="(min-width: 1251px) and (max-width: 1600px) and (orientation: landscape)"
+                      srcset="
+                        ../assets/imgs/pond/avif/Guneratne_2024.06.03_lg-turtle-horizontal-547h.avif,
+                        ../assets/imgs/pond/jpg/Guneratne_2024.06.03_lg-turtle-horizontal-547h.jpg
+                      "
+                    />
+
+                    <source
+                      type="image/avif"
+                      media="(min-width: 1601px)  and (orientation: landscape)"
+                      srcset="
+                        ../assets/imgs/pond/avif/Guneratne_2024.06.03_lg-turtle-horizontal-800h.avif,
+                        ../assets/imgs/pond/jpg/Guneratne_2024.06.03_lg-turtle-horizontal-800h.jpg
+                      "
+                    />
+
+                    <img
+                      src="../assets/imgs/pond/jpg/Guneratne_2024.06.03_lg-turtle-horizontal-547h.jpg"
+                      alt="Slide 3 of 7: WRITE ALT TEXT"
+                      id="slide6"
+                    />
+                  </picture>
+
+                  <!-- FROG ROCK CLING -->
+                  <picture class="picture" tabindex="0">
+                    <source
+                      type="image/avif"
+                      media="(min-width: 300px) and (max-width: 600px) and (orientation: portrait)"
+                      srcset="
+                        ../assets/imgs/pond/avif/Guneratne_2024.07.28_frog-rock-cling-horizontal-171h.avif,
+                        ../assets/imgs/pond/jpg/Guneratne_2024.07.28_frog-rock-cling-horizontal-171h.jpg
+                      "
+                    />
+
+                    <source
+                      type="image/avif"
+                      media="(min-width: 601px) and (max-width: 799px) and (orientation: portrait)"
+                      srcset="
+                        ../assets/imgs/pond/avif/Guneratne_2024.07.28_frog-rock-cling-horizontal-300h.avif,
+                        ../assets/imgs/pond/jpg/Guneratne_2024.07.28_frog-rock-cling-horizontal-300h.jpg
+                      "
+                    />
+
+                    <source
+                      type="image/avif"
+                      media="(min-width: 800px) and (max-width: 980px) and (orientation: portrait)"
+                      srcset="
+                        ../assets/imgs/pond/avif/Guneratne_2024.07.28_frog-rock-cling-horizontal-500h.avif,
+                        ../assets/imgs/pond/jpg/Guneratne_2024.07.28_frog-rock-cling-horizontal-500h.jpg
+                      "
+                    />
+
+                    <source
+                      type="image/avif"
+                      media="(min-width: 981px) and (max-width: 2000px) and (orientation: portrait)"
+                      srcset="
+                        ../assets/imgs/pond/avif/Guneratne_2024.07.28_frog-rock-cling-horizontal-547h.avif,
+                        ../assets/imgs/pond/jpg/Guneratne_2024.07.28_frog-rock-cling-horizontal-547h.jpg
+                      "
+                    />
+
+                    <source
+                      type="image/avif"
+                      media="(min-width: 2001px) and (orientation: portrait)"
+                      srcset="
+                        ../assets/imgs/pond/avif/Guneratne_2024.07.28_frog-rock-cling-horizontal-1000h.avif,
+                        ../assets/imgs/pond/jpg/Guneratne_2024.07.28_frog-rock-cling-horizontal-1000h.jpg
+                      "
+                    />
+
+                    <source
+                      type="image/avif"
+                      media="(min-width: 800px) and (max-width: 900px) and (orientation: landscape)"
+                      srcset="
+                        ../assets/imgs/pond/avif/Guneratne_2024.07.28_frog-rock-cling-horizontal-320h.avif,
+                        ../assets/imgs/pond/jpg/Guneratne_2024.07.28_frog-rock-cling-horizontal-320h.jpg
+                      "
+                    />
+
+                    <source
+                      type="image/avif"
+                      media="(min-width: 901px) and (max-width: 1250px) and (orientation: landscape)"
+                      srcset="
+                        ../assets/imgs/pond/avif/Guneratne_2024.07.28_frog-rock-cling-horizontal-427h.avif,
+                        ../assets/imgs/pond/jpg/Guneratne_2024.07.28_frog-rock-cling-horizontal-427h.jpg
+                      "
+                    />
+
+                    <source
+                      type="image/avif"
+                      media="(min-width: 1251px) and (max-width: 1600px) and (orientation: landscape)"
+                      srcset="
+                        ../assets/imgs/pond/avif/Guneratne_2024.07.28_frog-rock-cling-horizontal-547h.avif,
+                        ../assets/imgs/pond/jpg/Guneratne_2024.07.28_frog-rock-cling-horizontal-547h.jpg
+                      "
+                    />
+
+                    <source
+                      type="image/avif"
+                      media="(min-width: 1601px)  and (orientation: landscape)"
+                      srcset="
+                        ../assets/imgs/pond/avif/Guneratne_2024.07.28_frog-rock-cling-horizontal-800h.avif,
+                        ../assets/imgs/pond/jpg/Guneratne_2024.07.28_frog-rock-cling-horizontal-800h.jpg
+                      "
+                    />
+
+                    <img
+                      src="../assets/imgs/pond/jpg/Guneratne_2024.07.28_frog-rock-cling-horizontal-547h.jpg"
+                      alt="Slide 4 of 7: WRITE ALT TEXT"
+                      id="slide6"
+                    />
+                  </picture>
+
+                  <!-- BULL FROG 1-->
+                  <picture class="picture" tabindex="0">
+                    <source
+                      type="image/avif"
+                      media="(min-width: 300px) and (max-width: 600px) and (orientation: portrait)"
+                      srcset="
+                        ../assets/imgs/pond/avif/Guneratne_2024.06.07_bull-frog1-horizontal-171h.avif,
+                        ../assets/imgs/pond/jpg/Guneratne_2024.06.07_bull-frog1-horizontal-171h.jpg
+                      "
+                    />
+
+                    <source
+                      type="image/avif"
+                      media="(min-width: 601px) and (max-width: 799px) and (orientation: portrait)"
+                      srcset="
+                        ../assets/imgs/pond/avif/Guneratne_2024.06.07_bull-frog1-horizontal-300h.avif,
+                        ../assets/imgs/pond/jpg/Guneratne_2024.06.07_bull-frog1-horizontal-300h.jpg
+                      "
+                    />
+
+                    <source
+                      type="image/avif"
+                      media="(min-width: 800px) and (max-width: 980px) and (orientation: portrait)"
+                      srcset="
+                        ../assets/imgs/pond/avif/Guneratne_2024.06.07_bull-frog1-horizontal-500h.avif,
+                        ../assets/imgs/pond/jpg/Guneratne_2024.06.07_bull-frog1-horizontal-500h.jpg
+                      "
+                    />
+
+                    <source
+                      type="image/avif"
+                      media="(min-width: 981px) and (max-width: 2000px) and (orientation: portrait)"
+                      srcset="
+                        ../assets/imgs/pond/avif/Guneratne_2024.06.07_bull-frog1-horizontal-547h.avif,
+                        ../assets/imgs/pond/jpg/Guneratne_2024.06.07_bull-frog1-horizontal-547h.jpg
+                      "
+                    />
+
+                    <source
+                      type="image/avif"
+                      media="(min-width: 2001px) and (orientation: portrait)"
+                      srcset="
+                        ../assets/imgs/pond/avif/Guneratne_2024.06.07_bull-frog1-horizontal-1000h.avif,
+                        ../assets/imgs/pond/jpg/Guneratne_2024.06.07_bull-frog1-horizontal-1000h.jpg
+                      "
+                    />
+
+                    <source
+                      type="image/avif"
+                      media="(min-width: 800px) and (max-width: 900px) and (orientation: landscape)"
+                      srcset="
+                        ../assets/imgs/pond/avif/Guneratne_2024.06.07_bull-frog1-horizontal-320h.avif,
+                        ../assets/imgs/pond/jpg/Guneratne_2024.06.07_bull-frog1-horizontal-320h.jpg
+                      "
+                    />
+
+                    <source
+                      type="image/avif"
+                      media="(min-width: 901px) and (max-width: 1250px) and (orientation: landscape)"
+                      srcset="
+                        ../assets/imgs/pond/avif/Guneratne_2024.06.07_bull-frog1-horizontal-427h.avif,
+                        ../assets/imgs/pond/jpg/Guneratne_2024.06.07_bull-frog1-horizontal-427h.jpg
+                      "
+                    />
+
+                    <source
+                      type="image/avif"
+                      media="(min-width: 1251px) and (max-width: 1600px) and (orientation: landscape)"
+                      srcset="
+                        ../assets/imgs/pond/avif/Guneratne_2024.06.07_bull-frog1-horizontal-547h.avif,
+                        ../assets/imgs/pond/jpg/Guneratne_2024.06.07_bull-frog1-horizontal-547h.jpg
+                      "
+                    />
+
+                    <source
+                      type="image/avif"
+                      media="(min-width: 1601px)  and (orientation: landscape)"
+                      srcset="
+                        ../assets/imgs/pond/avif/Guneratne_2024.06.07_bull-frog1-horizontal-800h.avif,
+                        ../assets/imgs/pond/jpg/Guneratne_2024.06.07_bull-frog1-horizontal-800h.jpg
+                      "
+                    />
+
+                    <img
+                      src="../assets/imgs/pond/jpg/Guneratne_2024.06.07_bull-frog1-horizontal-547h.jpg"
+                      alt="Slide 5 of 7: WRITE ALT TEXT"
+                      id="slide6"
+                    />
+                  </picture>
+
+                  <!-- SMALL POND TURTLES-->
+                  <picture class="picture" tabindex="0">
+                    <source
+                      type="image/avif"
+                      media="(min-width: 300px) and (max-width: 600px) and (orientation: portrait)"
+                      srcset="
+                        ../assets/imgs/pond/avif/Guneratne_2024.06.07_pond-turtles-horizontal-171h.avif,
+                        ../assets/imgs/pond/jpg/Guneratne_2024.06.07_pond-turtles-horizontal-171h.jpg
+                      "
+                    />
+
+                    <source
+                      type="image/avif"
+                      media="(min-width: 601px) and (max-width: 799px) and (orientation: portrait)"
+                      srcset="
+                        ../assets/imgs/pond/avif/Guneratne_2024.06.07_pond-turtles-horizontal-300h.avif,
+                        ../assets/imgs/pond/jpg/Guneratne_2024.06.07_pond-turtles-horizontal-300h.jpg
+                      "
+                    />
+
+                    <source
+                      type="image/avif"
+                      media="(min-width: 800px) and (max-width: 980px) and (orientation: portrait)"
+                      srcset="
+                        ../assets/imgs/pond/avif/Guneratne_2024.06.07_pond-turtles-horizontal-500h.avif,
+                        ../assets/imgs/pond/jpg/Guneratne_2024.06.07_pond-turtles-horizontal-500h.jpg
+                      "
+                    />
+
+                    <source
+                      type="image/avif"
+                      media="(min-width: 981px) and (max-width: 2000px) and (orientation: portrait)"
+                      srcset="
+                        ../assets/imgs/pond/avif/Guneratne_2024.06.07_pond-turtles-horizontal-547h.avif,
+                        ../assets/imgs/pond/jpg/Guneratne_2024.06.07_pond-turtles-horizontal-547h.jpg
+                      "
+                    />
+
+                    <source
+                      type="image/avif"
+                      media="(min-width: 2001px) and (orientation: portrait)"
+                      srcset="
+                        ../assets/imgs/pond/avif/Guneratne_2024.06.07_pond-turtles-horizontal-1000h.avif,
+                        ../assets/imgs/pond/jpg/Guneratne_2024.06.07_pond-turtles-horizontal-1000h.jpg
+                      "
+                    />
+
+                    <source
+                      type="image/avif"
+                      media="(min-width: 800px) and (max-width: 900px) and (orientation: landscape)"
+                      srcset="
+                        ../assets/imgs/pond/avif/Guneratne_2024.06.07_pond-turtles-horizontal-320h.avif,
+                        ../assets/imgs/pond/jpg/Guneratne_2024.06.07_pond-turtles-horizontal-320h.jpg
+                      "
+                    />
+
+                    <source
+                      type="image/avif"
+                      media="(min-width: 901px) and (max-width: 1250px) and (orientation: landscape)"
+                      srcset="
+                        ../assets/imgs/pond/avif/Guneratne_2024.06.07_pond-turtles-horizontal-427h.avif,
+                        ../assets/imgs/pond/jpg/Guneratne_2024.06.07_pond-turtles-horizontal-427h.jpg
+                      "
+                    />
+
+                    <source
+                      type="image/avif"
+                      media="(min-width: 1251px) and (max-width: 1600px) and (orientation: landscape)"
+                      srcset="
+                        ../assets/imgs/pond/avif/Guneratne_2024.06.07_pond-turtles-horizontal-547h.avif,
+                        ../assets/imgs/pond/jpg/Guneratne_2024.06.07_pond-turtles-horizontal-547h.jpg
+                      "
+                    />
+
+                    <source
+                      type="image/avif"
+                      media="(min-width: 1601px)  and (orientation: landscape)"
+                      srcset="
+                        ../assets/imgs/pond/avif/Guneratne_2024.06.07_pond-turtles-horizontal-800h.avif,
+                        ../assets/imgs/pond/jpg/Guneratne_2024.06.07_pond-turtles-horizontal-800h.jpg
+                      "
+                    />
+
+                    <img
+                      src="../assets/imgs/pond/jpg/Guneratne_2024.06.07_pond-turtles-horizontal-547h.jpg"
+                      alt="Slide 6 of 7: WRITE ALT TEXT"
+                      id="slide6"
+                    />
+                  </picture>
+
+                  <!-- FROG PEEKING -->
+                  <picture class="picture" tabindex="0">
+                    <source
+                      type="image/avif"
+                      media="(min-width: 300px) and (max-width: 600px) and (orientation: portrait)"
+                      srcset="
+                        ../assets/imgs/pond/avif/Guneratne_2024.07.28_frog-peeking-horizontal-171h.avif,
+                        ../assets/imgs/pond/jpg/Guneratne_2024.07.28_frog-peeking-horizontal-171h.jpg
+                      "
+                    />
+
+                    <source
+                      type="image/avif"
+                      media="(min-width: 601px) and (max-width: 799px) and (orientation: portrait)"
+                      srcset="
+                        ../assets/imgs/pond/avif/Guneratne_2024.07.28_frog-peeking-horizontal-300h.avif,
+                        ../assets/imgs/pond/jpg/Guneratne_2024.07.28_frog-peeking-horizontal-300h.jpg
+                      "
+                    />
+
+                    <source
+                      type="image/avif"
+                      media="(min-width: 800px) and (max-width: 980px) and (orientation: portrait)"
+                      srcset="
+                        ../assets/imgs/pond/avif/Guneratne_2024.07.28_frog-peeking-horizontal-500h.avif,
+                        ../assets/imgs/pond/jpg/Guneratne_2024.07.28_frog-peeking-horizontal-500h.jpg
+                      "
+                    />
+
+                    <source
+                      type="image/avif"
+                      media="(min-width: 981px) and (max-width: 2000px) and (orientation: portrait)"
+                      srcset="
+                        ../assets/imgs/pond/avif/Guneratne_2024.07.28_frog-peeking-horizontal-547h.avif,
+                        ../assets/imgs/pond/jpg/Guneratne_2024.07.28_frog-peeking-horizontal-547h.jpg
+                      "
+                    />
+
+                    <source
+                      type="image/avif"
+                      media="(min-width: 2001px) and (orientation: portrait)"
+                      srcset="
+                        ../assets/imgs/pond/avif/Guneratne_2024.07.28_frog-peeking-horizontal-1000h.avif,
+                        ../assets/imgs/pond/jpg/Guneratne_2024.07.28_frog-peeking-horizontal-1000h.jpg
+                      "
+                    />
+
+                    <source
+                      type="image/avif"
+                      media="(min-width: 800px) and (max-width: 900px) and (orientation: landscape)"
+                      srcset="
+                        ../assets/imgs/pond/avif/Guneratne_2024.07.28_frog-peeking-horizontal-320h.avif,
+                        ../assets/imgs/pond/jpg/Guneratne_2024.07.28_frog-peeking-horizontal-320h.jpg
+                      "
+                    />
+
+                    <source
+                      type="image/avif"
+                      media="(min-width: 901px) and (max-width: 1250px) and (orientation: landscape)"
+                      srcset="
+                        ../assets/imgs/pond/avif/Guneratne_2024.07.28_frog-peeking-horizontal-427h.avif,
+                        ../assets/imgs/pond/jpg/Guneratne_2024.07.28_frog-peeking-horizontal-427h.jpg
+                      "
+                    />
+
+                    <source
+                      type="image/avif"
+                      media="(min-width: 1251px) and (max-width: 1600px) and (orientation: landscape)"
+                      srcset="
+                        ../assets/imgs/pond/avif/Guneratne_2024.07.28_frog-peeking-horizontal-547h.avif,
+                        ../assets/imgs/pond/jpg/Guneratne_2024.07.28_frog-peeking-horizontal-547h.jpg
+                      "
+                    />
+
+                    <source
+                      type="image/avif"
+                      media="(min-width: 1601px)  and (orientation: landscape)"
+                      srcset="
+                        ../assets/imgs/pond/avif/Guneratne_2024.07.28_frog-peeking-horizontal-800h.avif,
+                        ../assets/imgs/pond/jpg/Guneratne_2024.07.28_frog-peeking-horizontal-800h.jpg
+                      "
+                    />
+
+                    <img
+                      src="../assets/imgs/pond/jpg/Guneratne_2024.07.28_frog-peeking-horizontal-547h.jpg"
+                      alt="Slide 7 of 7: WRITE ALT TEXT"
+                      id="slide6"
+                    />
+                  </picture>
+                </div>
+
+                <button type="button" class="forward-arrow" data-forward-arrow>
+                  <img
+                    data-icon-forward
+                    class="arrow"
+                    src="../assets/imgs/icons/reshot-icon-arrow-chevron-right-WDGHUKQ634.svg"
+                    alt="Forward Arrow"
+                  />
+                </button>
+              </div>
+
+              <div class="img-dots-container">
+                <div class="img-dots">
+                  <button
+                    type="button"
+                    class="circle-icon-div"
+                    data-circle="0"
+                    aria-label="Select Slide 1 of 7."
+                  >
+                    <div class="circle-icon" data-circle="0"></div>
+                  </button>
+
+                  <button
+                    type="button"
+                    class="circle-icon-div"
+                    data-circle="1"
+                    aria-label="Select Slide 2 of 7."
+                  >
+                    <div class="circle-icon" data-circle="1"></div>
+                  </button>
+
+                  <button
+                    type="button"
+                    class="circle-icon-div"
+                    data-circle="2"
+                    aria-label="Select Slide 3 of 7."
+                  >
+                    <div class="circle-icon" data-circle="2"></div>
+                  </button>
+
+                  <button
+                    type="button"
+                    class="circle-icon-div"
+                    data-circle="3"
+                    aria-label="Select Slide 4 of 7."
+                  >
+                    <div class="circle-icon" data-circle="3"></div>
+                  </button>
+
+                  <button
+                    type="button"
+                    class="circle-icon-div"
+                    data-circle="4"
+                    aria-label="Select Slide 5 of 7."
+                  >
+                    <div class="circle-icon" data-circle="4"></div>
+                  </button>
+
+                  <button
+                    type="button"
+                    class="circle-icon-div"
+                    data-circle="5"
+                    aria-label="Select Slide 6 of 7."
+                  >
+                    <div class="circle-icon" data-circle="5"></div>
+                  </button>
+
+                  <button
+                    type="button"
+                    class="circle-icon-div"
+                    data-circle="6"
+                    aria-label="Select Slide 7 of 7."
+                  >
+                    <div class="circle-icon" data-circle="6"></div>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <%- include('footer.ejs') %>
+      </main>
+    </div>
+  </body>
+</html>
