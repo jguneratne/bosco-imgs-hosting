@@ -406,7 +406,7 @@ li {
 
 .animation-ctrl-div {
   max-height: min-content;
-  margin: 1em 0;
+  margin: 1em 0 0.5em 0;
 
   display: grid;
   grid-template-rows: min-content;
@@ -439,7 +439,7 @@ li {
 
 .pause-icon,
 .play-icon {
-  width: 3em;
+  width: 4em;
   margin: 0.5em;
 }
 
@@ -450,7 +450,7 @@ li {
   background-color: var(--slider-box-col);
   min-height: 0.625em;
   max-width: min-content;
-  margin: 0 auto 3em auto;
+  margin: 3em auto;
 
   display: grid;
   grid-template-columns: 1fr;
@@ -470,7 +470,7 @@ li {
 .img-dots-container {
   grid-area: 3 / 1 / 4 / 2;
   max-width: 18em;
-  margin: 1.6em 0 1em 0;
+  margin: 1em 0 2em 0;
 }
 
 .img-dots {
@@ -497,8 +497,8 @@ li {
 }
 
 .circle-icon {
-  width: 1.3ch;
-  height: 1.3ch;
+  width: 1.6ch;
+  height: 1.6ch;
   margin: 1.4ch;
   border-radius: 50%;
   border: 1px solid var(--light-font-col);
@@ -515,8 +515,8 @@ li {
   justify-self: center;
   align-self: center;
   min-height: 90%;
-  margin: 0 1em;
-  border: 2px solid transparent;
+  margin: 0 0.5em;
+  border: 1px solid transparent;
 }
 
 .arrow {
@@ -528,16 +528,17 @@ li {
 .forward-arrow:focus-visible,
 .back-arrow:hover,
 .forward-arrow:hover {
-  outline: 2px solid var(--slider-icon-col);
+  outline: 1px solid var(--slider-icon-col);
   border-radius: 0.5em;
   cursor: pointer;
 }
 
 .photo-box {
-  margin-top: 3em;
   display: grid;
   justify-content: center;
   align-items: center;
+  margin: 1em 0;
+  min-height: 171px;
 }
 
 .photo-box picture {
@@ -792,12 +793,22 @@ textarea::placeholder {
 
   .pause-icon,
   .play-icon {
-    width: 7em;
+    width: 5em;
     margin: 1em;
+  }
+
+  .arrow {
+    width: 5ch;
   }
 
   .img-dots-container {
     max-width: 30em;
+  }
+
+  .circle-icon {
+    width: 1.8ch;
+    height: 1.8ch;
+    margin: 1.6ch;
   }
 
   .about-text-div {
@@ -849,31 +860,19 @@ textarea::placeholder {
     gap: 3em;
   }
 
-  .animation-ctrl-div {
-    margin: 2em 0 1em 0;
-  }
-
   .pause-icon,
   .play-icon {
-    width: 8em;
+    width: 6em;
     margin: 1em;
   }
 
-  .slider-box {
-    margin: 2em auto 3em auto;
-  }
-
   .arrow {
-    width: 7ch;
-  }
-
-  .photo-box {
-    margin-top: 4em;
+    width: 8ch;
   }
 
   .circle-icon {
-    width: 2.5ch;
-    height: 2.5ch;
+    width: 2.8ch;
+    height: 2.8ch;
     margin: 2.5ch;
   }
 
@@ -948,7 +947,7 @@ textarea::placeholder {
 
   .pause-icon,
   .play-icon {
-    width: 10em;
+    width: 7em;
     margin: 1em;
   }
 
@@ -956,18 +955,14 @@ textarea::placeholder {
     width: 10ch;
   }
 
-  .photo-box {
-    margin-top: 5em;
-  }
-
   .img-dots-container {
     max-width: 45em;
   }
 
   .circle-icon {
-    width: 3.5ch;
-    height: 3.5ch;
-    margin: 3.5ch;
+    width: 3ch;
+    height: 3ch;
+    margin: 3ch;
   }
 
   .about {
@@ -1050,17 +1045,25 @@ textarea::placeholder {
     margin: 2em 0 3em 0;
   }
 
-  .animation-ctrl-div {
-    margin: 1em 0;
+  .pause-icon,
+  .play-icon {
+    width: 3.5em;
+    margin: 0.5em;
   }
 
-  .slider-box {
-    margin: 1em auto 3em auto;
+  .arrow {
+    width: 5ch;
   }
 
   .img-dots-container {
     margin: 1em 0;
     max-width: 25em;
+  }
+
+  circle-icon {
+    width: 1.4ch;
+    height: 1.4ch;
+    margin: 1.4ch;
   }
 
   .about {
@@ -1094,9 +1097,9 @@ textarea::placeholder {
     margin: 3em 0 0 0;
   }
 
-  .play-btn,
-  .pause-btn {
-    width: 10em;
+  .play-icon,
+  .pause-icon {
+    width: 4.5em;
   }
 
   .arrow {
@@ -1104,7 +1107,7 @@ textarea::placeholder {
   }
 
   .img-dots-container {
-    max-width: 40em;
+    max-width: 35em;
   }
 
   .about {
@@ -1164,17 +1167,14 @@ textarea::placeholder {
     gap: 4em;
   }
 
-  .play-icon,
-  .pause-icon {
-    width: 6em;
-  }
-
   .arrow {
-    width: 8ch;
+    width: 7ch;
   }
 
-  .img-dots-container {
-    max-width: 55em;
+  .circle-icon {
+    width: 2ch;
+    height: 2ch;
+    margin: 2ch;
   }
 
   .footer-div {
@@ -1211,17 +1211,17 @@ textarea::placeholder {
     gap: 6em;
   }
 
-  .animation-ctrl-div {
-    margin: 2em 0 1em 0;
-  }
-
   .play-icon,
   .pause-icon {
-    width: 8em;
+    width: 7em;
+  }
+
+  .arrow {
+    width: 10ch;
   }
 
   .img-dots-container {
-    max-width: 80em;
+    max-width: 50em;
   }
 
   .circle-icon {
