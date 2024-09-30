@@ -3,10 +3,10 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "homepage": "http://jguneratne.github.io/bosco-images",
+  "homepage": "http://jguneratne.github.io/bosco-imgs-hosting",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jguneratne/bosco-images.git"
+    "url": "git+https://github.com/jguneratne/bosco-imgs-hosting.git"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
