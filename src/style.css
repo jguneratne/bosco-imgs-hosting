@@ -22,10 +22,9 @@
 
 @-webkit-keyframes slide-down {
   0% {
-    /* opacity: 0; */
-    display: none;
+    opacity: 0;
     -webkit-transform: translateY(-5px);
-    transform: translateY(-10px);
+    transform: translateY(-5px);
   }
   100% {
     opacity: 1;
