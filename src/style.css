@@ -20,7 +20,7 @@
 
 /* Menu Keyframes */
 
-@-webkit-keyframes slide-down {
+@keyframes slide-down {
   0% {
     opacity: 0;
     -webkit-transform: translateY(-5px);
@@ -33,7 +33,7 @@
   }
 }
 
-@-webkit-keyframes slide-down-reverse {
+@keyframes slide-down-reverse {
   0% {
     opacity: 1;
     -webkit-transform: translateY(5px);
@@ -117,7 +117,7 @@ nav {
 
 .menu-items {
   grid-area: menu;
-  -webkit-animation: slide-down-reverse 0.5s ease-in-out both;
+  animation: slide-down-reverse 0.5s ease-in-out both;
   display: none;
 }
 
@@ -127,7 +127,7 @@ nav {
   grid-template-areas:
     "home about"
     "galleries contact";
-  -webkit-animation: slide-down 0.5s ease-in-out both;
+  animation: slide-down 0.5s ease-in-out both;
 }
 
 .home-link {
@@ -238,7 +238,7 @@ li {
 
 .dropdown-content {
   list-style: none;
-  -webkit-animation: slide-down;
+  animation: slide-down;
   display: none;
 }
 
@@ -247,7 +247,7 @@ li {
 }
 
 .dropdown-content--active {
-  -webkit-animation: slide-down-reverse;
+  animation: slide-down-reverse;
   display: flex;
   flex-direction: column;
   gap: 0.2em;
@@ -264,7 +264,7 @@ li {
 }
 
 .dropdown-content--active li.dropdown-item--active {
-  -webkit-animation: slide-down 0.5s ease-in-out both;
+  animation: slide-down 0.5s ease-in-out both;
   background: var(--menu-btn-selected);
   outline: 2px solid transparent;
   border: 2px solid transparent;
@@ -1318,7 +1318,7 @@ textarea::placeholder {
 
 @media (prefers-reduced-motion) {
   .menu-items {
-    -webkit-animation: none;
+    animation: none;
   }
 
   .gal-arrow {
@@ -1326,6 +1326,6 @@ textarea::placeholder {
   }
 
   .dropdown-content--active li.dropdown-item--active {
-    -webkit-animation: none;
+    animation: none;
   }
 }
