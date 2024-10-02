@@ -512,7 +512,7 @@ li {
   pointer-events: none;
   object-fit: contain;
   max-width: calc(100% - 0.5em);
-  max-height: 60vh;
+  max-height: 65vh;
   margin: auto;
 }
 
