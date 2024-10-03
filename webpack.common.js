@@ -1,8 +1,11 @@
 const path = require("path");
 const HtmlBundlerPlugin = require("html-bundler-webpack-plugin");
+const {
+  FaviconsBundlerPlugin,
+} = require("html-bundler-webpack-plugin/plugins");
 
 module.exports = {
-  mode: "development",
+  // mode: "development",
   stats: { children: true },
   output: {
     path: path.join(__dirname, "dist/"),
@@ -69,6 +72,7 @@ module.exports = {
             title: "Bosco Images Wildlife Photography: Urban Animals Gallery",
           },
         },
+
         {
           import: "./src/views/about.ejs",
           filename: "about.html",
@@ -102,6 +106,33 @@ module.exports = {
         ],
       },
     }),
+    new FaviconsBundlerPlugin({
+      enabled: "auto", // true, false, auto - generate favicons in production mode only
+      // favicons configuration options, see https://github.com/itgalaxy/favicons#usage
+
+      faviconOptions: {
+        path: "assets/imgs/icons", // favicons output path relative to webpack output.path
+        background: "#fff",
+        appleStatusBarStyle: "fff",
+        orientation: "any",
+        icons: {
+          android: true, // Create Android homescreen icon.
+          appleIcon: true, // Create Apple touch icons.
+          appleStartup: false, // Create Apple startup images.
+          favicons: true, // Create regular favicons.
+          windows: true, // Create Windows 8 tile icons.
+          yandex: true, // Create Yandex browser icon.
+        },
+      },
+      module: {
+        rules: [
+          {
+            test: /\.(png|jpe?g|ico|svg)$/,
+            type: "asset/resource",
+          },
+        ],
+      },
+    }),
   ],
 
   module: {
@@ -126,12 +157,20 @@ module.exports = {
             const srcPath =
               "src/assets/imgs" ||
               "src/assets/imgs/about-page" ||
-              "src/assets/imgs/birds-gal" ||
+              "src/assets/imgs/birds-gal/avif" ||
+              "src/assets/imgs/birds-gal/jpg" ||
               "src/assets/imgs/home-imgs" ||
+              "src/assets/imgs/icons" ||
               "src/assets/imgs/insects-gal/avif" ||
               "src/assets/imgs/insects-gal/jpg" ||
-              "src/assets/imgs/small-animals-gal" ||
-              "src/assets/imgs/thumbnails";
+              "src/assets/imgs/pond-gallery/avif" ||
+              "src/assets/imgs/pong-gallery/jpg" ||
+              "src/assets/imgs/small-animals-gal/avif" ||
+              "src/assets/imgs/small-animals-gal/jpg" ||
+              "src/assets/imgs/thumbnails/avif" ||
+              "src/assets/imgs/thumbnails/jpg" ||
+              "src/assets/imgs/urban/avif" ||
+              "src/assets/imgs/urban/jpg";
             const regExp = new RegExp(
               `[\\\\/]?(?:${path.normalize(srcPath)}|node_modules)[\\\\/](.+?)$`,
             );
