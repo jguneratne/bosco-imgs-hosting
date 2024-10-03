@@ -474,7 +474,7 @@ li {
   min-height: 50%;
   margin: 0 0.5em;
   border: 1px solid transparent;
-  opacity: 0;
+  opacity: 0.4;
 }
 
 .back-arrow {
@@ -498,6 +498,7 @@ li {
   border-radius: 0.5em;
   cursor: pointer;
   opacity: 1;
+  transition: opacity 0.3s;
 }
 
 .photo-box {
