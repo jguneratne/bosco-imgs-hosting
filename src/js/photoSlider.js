@@ -171,7 +171,7 @@ function sliderAnimationOn() {
   sliderPauseBtn.currentPauseBtn.classList.add("pause-btn--active");
   sliderPlayBtn.currentPlayBtn.classList.remove("play-btn--active");
   activePhotoBox.photoBox.setAttribute("aria-live", "off");
-  getAnimationID.animationIDValue = setInterval(slideRight, 3000);
+  getAnimationID.animationIDValue = setInterval(slideRight, 3500);
 }
 
 function sliderAnimationOff() {
@@ -199,7 +199,7 @@ function clickCircles() {
       if (
         sliderPauseBtn.currentPauseBtn.classList.contains("pause-btn--active")
       ) {
-        getAnimationID.animationID = setInterval(slideRight, 3000);
+        getAnimationID.animationID = setInterval(slideRight, 3500);
       }
     }
   });
@@ -218,7 +218,7 @@ function clickCircles() {
       if (
         sliderPauseBtn.currentPauseBtn.classList.contains("pause-btn--active")
       ) {
-        getAnimationID.animationID = setInterval(slideRight, 3000);
+        getAnimationID.animationID = setInterval(slideRight, 3500);
       }
     }
   });
@@ -237,7 +237,7 @@ function arrowCtrl() {
       if (
         sliderPauseBtn.currentPauseBtn.classList.contains("pause-btn--active")
       ) {
-        getAnimationID.animationID = setInterval(slideRight, 3000);
+        getAnimationID.animationID = setInterval(slideRight, 3500);
       }
     }
     if (
@@ -250,7 +250,7 @@ function arrowCtrl() {
       if (
         sliderPauseBtn.currentPauseBtn.classList.contains("pause-btn--active")
       ) {
-        getAnimationID.animationID = setInterval(slideRight, 3000);
+        getAnimationID.animationID = setInterval(slideRight, 3500);
       }
     }
   });
