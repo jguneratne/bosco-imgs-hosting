@@ -513,6 +513,7 @@ li {
     visibility 0s 500ms,
     opacity 500ms linear;
   display: inline-block;
+  visibility: hidden;
   opacity: 0;
   pointer-events: none;
   object-fit: contain;
@@ -523,7 +524,7 @@ li {
 
 .photo-box .picture--active {
   transition: opacity 500ms linear;
-  display: initial;
+  visibility: visible;
   opacity: 1;
   border: 1px solid transparent;
   outline: 1px solid transparent;
