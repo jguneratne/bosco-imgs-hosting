@@ -1,5 +1,4 @@
 // Menu Variables
-export const navigation = document.querySelector("nav");
 export const menuIconDiv = document.querySelector(".menu-icon-div");
 export const menuIcon = document.querySelector(".menu-icon");
 export const menuIconWidth = menuIcon.offsetWidth;

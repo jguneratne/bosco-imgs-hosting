@@ -1,34 +1,15 @@
 import {
   currentPage,
   menuBtnStyle,
-  navigation,
   dropDownCarat,
+  dropDownDiv,
   dropDownMenu,
   dropDownItems,
   shortPageName,
-  dropDownDiv,
 } from "./variables";
 
 export function galleriesClickMenu() {
-  navigation.addEventListener("keydown", (e) => {
-    if (
-      (e.key === " " || e.key === "Enter") &&
-      (e.target.innerText.toLowerCase() === "galleries" ||
-        e.target === dropDownCarat) &&
-      !dropDownMenu.classList.contains("dropdown-content--active")
-    ) {
-      activateDropdown();
-    } else if (
-      (e.key === " " || e.key === "Enter") &&
-      (e.target.innerText.toLowerCase() === "galleries" ||
-        e.target === dropDownCarat) &&
-      dropDownMenu.classList.contains("dropdown-content--active")
-    ) {
-      closeDropdown();
-    }
-  });
-
-  navigation.addEventListener("pointerdown", (e) => {
+  dropDownDiv.addEventListener("pointerdown", (e) => {
     if (
       (e.target.innerText.toLowerCase() === "galleries" ||
         e.target === dropDownCarat) &&
@@ -48,6 +29,29 @@ export function galleriesClickMenu() {
     ) {
       closeDropdown();
       changeActiveState();
+    }
+  });
+
+  dropDownDiv.addEventListener("keydown", (e) => {
+    if (
+      (e.key === " " || e.key === "Enter") &&
+      (e.target.innerText.toLowerCase() === "galleries" ||
+        e.target === dropDownCarat) &&
+      !dropDownMenu.classList.contains("dropdown-content--active")
+    ) {
+      activateDropdown();
+    } else if (
+      (e.key === " " || e.key === "Enter") &&
+      (e.target.innerText.toLowerCase() === "galleries" ||
+        e.target === dropDownCarat) &&
+      dropDownMenu.classList.contains("dropdown-content--active")
+    ) {
+      console.log(e.target);
+      closeDropdown();
+      changeActiveState();
+      if (e.target.dataset.name === "galleries") {
+        e.target.blur();
+      }
     }
   });
 }
@@ -70,6 +74,7 @@ function activateDropdown() {
 
 function changeActiveState() {
   menuBtnStyle.forEach((btn) => {
+    btn.classList.remove("selected");
     if (btn.dataset.name === shortPageName) {
       btn.classList.add("selected");
       console.log(currentPage);
