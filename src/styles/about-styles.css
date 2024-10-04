@@ -1,0 +1,147 @@
+/* About Page */
+
+.about {
+  min-height: 100%;
+  background-image: image-set(
+    url(../assets/imgs/about-page/Guneratne_2023.10.01_about-vertical-600p.webp)
+      type("image/webp"),
+    url(../assets/imgs/about-page/Guneratne_2023.10.01_about-vertical-600p.jpg)
+      type("image/jpg")
+  );
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  display: grid;
+  justify-content: center;
+}
+
+.about-text-div {
+  display: flex;
+  flex-direction: column;
+
+  max-width: 35em;
+  height: min-content;
+  margin: 3em 1em;
+  padding: 2.5em 2em;
+  text-align: left;
+  color: var(--light-font-col);
+  border-radius: 1em;
+  background-color: var(--about-box-col);
+}
+
+.bosco-entry {
+  margin-bottom: 2em;
+}
+
+.definition {
+  margin-bottom: 0.4em;
+}
+
+.about-box {
+  font-size: 1.5rem;
+  display: flex;
+  flex-direction: column;
+
+  height: min-content;
+}
+
+.about-text:not(.last-para) {
+  margin-bottom: 1.2em;
+}
+
+/* Media Queries */
+
+@media (min-width: 600px) and (orientation: portrait) {
+  .about-text-div {
+    max-width: 45em;
+  }
+}
+
+@media (min-width: 700px) and (orientation: portrait) {
+  .about {
+    background-image: image-set(
+      url(../assets/imgs/about-page/Guneratne_2023.10.01_about-vertical-800p.webp)
+        ("type/webp"),
+      url(../assets/imgs/about-page/Guneratne_2023.10.01_about-vertical-800p.jpg)
+        type(image/jpg)
+    );
+  }
+
+  .bosco-entry {
+    font-size: 1.5rem;
+  }
+
+  .about-box {
+    font-size: 2rem;
+  }
+}
+
+@media (min-width: 1000px) and (orientation: portrait) {
+  .about {
+    background-image: image-set(
+      url(../assets/imgs/about-page/Guneratne_2023.10.01_about-vertical-1200p.webp)
+        type("image/webp"),
+      url(../assets/imgs/about-page/Guneratne_2023.10.01_about-vertical-1200p.jpg)
+        type("image/jpg")
+    );
+  }
+
+  .about-text-div {
+    max-width: 60em;
+    margin: auto;
+  }
+
+  .bosco-entry {
+    font-size: 2.5rem;
+  }
+
+  .about-box {
+    font-size: 3rem;
+  }
+}
+
+@media (min-width: 600px) and (orientation: landscape) {
+  .about {
+    background-image: image-set(
+      url(../assets/imgs/about-page/Guneratne_2023.10.01_about-horizontal-800p.webp)
+        type("image/webp"),
+      url(../assets/imgs/about-page/Guneratne_2023.10.01_about-horizontal-800p.jpg)
+        type("image/jpg")
+    );
+  }
+
+  .about-text-div {
+    max-width: 50em;
+  }
+}
+
+@media (min-width: 950px) and (orientation: landscape) {
+  .about {
+    background-image: image-set(
+      url(../assets/imgs/about-page/Guneratne_2023.10.01_about-horizontal-1200p.webp)
+        type("image/webp"),
+      url(../assets/imgs/about-page/Guneratne_2023.10.01_about-horizontal-1200p.jpg)
+        type("image/jpg")
+    );
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .about-text-div {
+    margin: 3em 0 3em 2em;
+  }
+}
+
+@media (min-width: 1800px) and (orientation: landscape) {
+  .about {
+    background-image: image-set(
+      url(../assets/imgs/about-page/Guneratne_2023.10.01_about-horizontal-1600p.webp)
+        type("image/webp"),
+      url(../assets/imgs/about-page/Guneratne_2023.10.01_about-horizontal-1600p.jpg)
+        type("image/jpg")
+    );
+  }
+
+  .about-text-div {
+    margin: 5em 0 0 5em;
+  }
+}

@@ -1,0 +1,220 @@
+/* Contact Form */
+
+.contact-header {
+  margin-top: 1.5em;
+}
+
+.required-text {
+  padding: 0.5em 0;
+  color: var(--dark-font-col);
+}
+
+.form-disabled {
+  color: var(--error-color);
+  text-decoration: underline;
+  display: none;
+}
+
+form {
+  padding-top: 2em;
+}
+
+fieldset {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 20em;
+  margin: 0 auto;
+  border: none;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.input-type {
+  text-align: left;
+  padding-bottom: 0.6em;
+}
+
+.input-box-msg {
+  resize: both;
+}
+
+input,
+textarea {
+  width: 100%;
+  border-radius: 0.5em;
+  background-color: var(--head-foot-col);
+  outline: 1px solid var(--slider-box-col);
+  border: 2px solid transparent;
+  padding: 0.5em;
+}
+
+textarea {
+  resize: both;
+}
+
+input:hover,
+textarea:hover {
+  cursor: pointer;
+}
+
+input:focus,
+textarea:focus {
+  border: 2px solid var(--dark-font-col);
+}
+
+.input--invalid {
+  border: 2px solid var(--error-color);
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: var(--dark-font-col);
+  opacity: 1;
+}
+
+.firstNameError,
+.lastNameError,
+.emailError,
+.messageError,
+.submitError {
+  text-align: right;
+  font-weight: bold;
+  color: var(--error-color);
+  padding: 0.5em 0 1.5em 0;
+  visibility: hidden;
+}
+
+.firstNameError:focus,
+.lastNameError:focus,
+.emailError:focus,
+.messageError:focus,
+.submitError:focus {
+  border: none;
+  outline: none;
+  text-decoration: underline;
+  color: var(--error-color);
+}
+
+.send-contact {
+  padding: 0.5em 2em 0.5em 2em;
+  margin-bottom: 1em;
+  max-width: min-content;
+  border-radius: 0.5em;
+  border: 2px solid transparent;
+  outline: 1px solid var(--slider-box-col);
+}
+
+.send-contact:hover {
+  background-color: var(--dark-font-col);
+  color: var(--light-font-col);
+  cursor: pointer;
+}
+
+.send-contact:focus {
+  border: 2px solid var(--dark-font-col);
+}
+
+/* Media Queries */
+
+@media (min-width: 600px) and (orientation: portrait) {
+  fieldset {
+    max-width: 30em;
+  }
+}
+
+@media (min-width: 700px) and (orientation: portrait) {
+  .contact-header {
+    font-size: 3rem;
+  }
+
+  .required-text,
+  .form-disabled {
+    font-size: 2.5rem;
+  }
+
+  form {
+    margin: 2em 0;
+  }
+
+  fieldset {
+    max-width: 38em;
+  }
+
+  label {
+    padding: 0;
+    font-size: 2rem;
+  }
+
+  input,
+  textarea {
+    font-size: 1.7rem;
+  }
+
+  .send-contact {
+    font-size: 2.2rem;
+  }
+}
+
+@media (min-width: 1000px) and (orientation: portrait) {
+  fieldset {
+    max-width: 45em;
+  }
+}
+
+@media (min-width: 600px) and (orientation: landscape) {
+  fieldset {
+    max-width: 30em;
+  }
+
+  .send-contact {
+    font-size: 1.2rem;
+  }
+}
+
+@media (min-width: 950px) and (orientation: landscape) {
+  .contact-header {
+    font-size: 1.8rem;
+  }
+
+  .required-text,
+  .form-disabled {
+    font-size: 1.2rem;
+  }
+
+  form {
+    padding-top: 4em;
+  }
+}
+
+@media (min-width: 1800px) and (orientation: landscape) {
+  .contact-header {
+    font-size: 2.5rem;
+  }
+
+  .required-text,
+  .form-disabled {
+    font-size: 2rem;
+  }
+
+  fieldset {
+    max-width: 40em;
+  }
+
+  label {
+    font-size: 1.5rem;
+  }
+
+  input,
+  textarea {
+    font-size: 1.2rem;
+  }
+
+  .send-contact {
+    font-size: 1.8rem;
+  }
+}

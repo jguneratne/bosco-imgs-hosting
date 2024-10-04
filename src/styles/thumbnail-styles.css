@@ -1,0 +1,79 @@
+/* Galleries Thumbnail Links */
+
+.thumbnails {
+  min-height: 100%;
+  padding: 2em 0;
+  margin: auto 0;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  gap: 2em;
+  flex-wrap: wrap;
+}
+
+.thumbnail-link {
+  text-decoration: none;
+}
+
+.thumbnail-box {
+  background-color: var(--slider-box-col);
+  border-radius: 1em;
+}
+
+.thumbnail-img {
+  margin: 1em;
+  border: 1.5px solid transparent;
+}
+
+.gal-title {
+  text-align: center;
+  color: var(--light-font-col);
+  font-size: 1.5rem;
+  padding-bottom: 1em;
+}
+
+.thumbnail-link:hover,
+.thumbnail-link:focus {
+  cursor: pointer;
+  outline: none;
+}
+
+.thumbnail-link:hover .thumbnail-img,
+.thumbnail-link:focus .thumbnail-img {
+  cursor: pointer;
+  border: 1.5px solid var(--light-font-col);
+}
+
+.thumbnail-link:hover .gal-title,
+.thumbnail-link:focus .gal-title {
+  text-decoration: underline;
+}
+
+/* Media Queries */
+
+@media (min-width: 700px) and (orientation: portrait) {
+  .thumbnails {
+    align-content: flex-start;
+    margin: 3em 0;
+    gap: 3em;
+  }
+}
+
+@media (min-width: 950px) and (orientation: landscape) {
+  .thumbnails {
+    align-content: flex-start;
+    margin: 3em 0 0 0;
+  }
+}
+
+@media (min-width: 1250px) and (orientation: landscape) {
+  .thumbnails {
+    gap: 4em;
+  }
+}
+
+@media (min-width: 1800px) and (orientation: landscape) {
+  .thumbnails {
+    gap: 6em;
+  }
+}
