@@ -192,10 +192,20 @@ li {
   text-decoration: var(--light-font-col);
 }
 
-.menu-btn a:focus-visible,
-.menu-btn.selected a:focus-visible {
+.home-link a:focus-visible,
+.home-link.selected a:focus-visible,
+.gals-link a:focus-visible,
+.gals-link.selected a:focus-visible {
   outline: 3px solid var(--dark-font-col);
-  border-radius: 0.5em;
+  border-radius: 0 1em 1em 0;
+}
+
+.about-link a:focus-visible,
+.about-link.selected a:focus-visible,
+.contact-link a:focus-visible,
+.contact-link.selected a:focus-visible {
+  outline: 3px solid var(--dark-font-col);
+  border-radius: 1em 0 0 1em;
 }
 
 .menu-btn:hover {
@@ -249,8 +259,8 @@ li {
   display: grid;
   gap: 0.2em;
   background-color: var(--head-foot-col);
-  margin-top: 14em;
-  padding: 0 0.5em 1em 0.5em;
+  margin-top: 14.5em;
+  padding: 0 0.8em 1.4em 0.5em;
   border-radius: 1em;
   position: absolute;
 }
@@ -265,7 +275,7 @@ li {
   background: var(--menu-btn-selected);
   outline: 2px solid transparent;
   border: 2px solid transparent;
-  border-radius: 0 1em 1em 0;
+  border-radius: 0 0.4em 0.4em 0;
 }
 
 .dropdown-content--active li.dropdown-item--active a {
@@ -279,6 +289,11 @@ li {
   color: var(--light-font-col);
   text-decoration: underline;
   font-weight: bold;
+}
+
+.dropdown-content--active li.dropdown-item--active a:focus-visible {
+  outline: 3px solid var(--dark-font-col);
+  border-radius: 0 0.4em 0.4em 0;
 }
 
 /* Section Content */
@@ -319,7 +334,7 @@ li {
   }
 
   .menu-btn {
-    width: 12ch;
+    width: 15ch;
     min-height: 4ch;
   }
 
@@ -337,8 +352,25 @@ li {
     border-radius: 0 0 1em 1em;
   }
 
+  .home-link a:focus-visible,
+  .home-link.selected a:focus-visible,
+  .gals-link a:focus-visible,
+  .gals-link.selected a:focus-visible,
+  .about-link a:focus-visible,
+  .about-link.selected a:focus-visible,
+  .contact-link a:focus-visible,
+  .contact-link.selected a:focus-visible {
+    outline: 3px solid var(--dark-font-col);
+    border-radius: 0 0 1em 1em;
+  }
+
   .dropdown-content--active li.dropdown-item--active {
-    border-radius: 0.8em;
+    border-radius: 0.4em;
+  }
+
+  .dropdown-content--active li.dropdown-item--active a:focus-visible {
+    outline: 3px solid var(--dark-font-col);
+    border-radius: 0.4em;
   }
 
   .footer-div {
@@ -396,7 +428,7 @@ li {
   }
 
   .menu-btn {
-    width: 12ch;
+    width: 15ch;
     min-height: 4ch;
   }
 
@@ -414,8 +446,25 @@ li {
     border-radius: 0 0 1em 1em;
   }
 
+  .home-link a:focus-visible,
+  .home-link.selected a:focus-visible,
+  .gals-link a:focus-visible,
+  .gals-link.selected a:focus-visible,
+  .about-link a:focus-visible,
+  .about-link.selected a:focus-visible,
+  .contact-link a:focus-visible,
+  .contact-link.selected a:focus-visible {
+    outline: 3px solid var(--dark-font-col);
+    border-radius: 0 0 1em 1em;
+  }
+
   .dropdown-content--active li.dropdown-item--active {
-    border-radius: 0.8em;
+    border-radius: 0.4em;
+  }
+
+  .dropdown-content--active li.dropdown-item--active a:focus-visible {
+    outline: 3px solid var(--dark-font-col);
+    border-radius: 0.4em;
   }
 }
 
