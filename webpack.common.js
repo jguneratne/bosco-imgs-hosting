@@ -19,8 +19,8 @@ module.exports = {
   resolve: {
     alias: {
       "@scripts": path.join(__dirname, "src/js"),
-      "@styles": path.join(__dirname, "src/css"),
-      "@images": path.join(__dirname, "src/images"),
+      "@styles": path.join(__dirname, "src/styles"),
+      "@images": path.join(__dirname, "src/assets/imgs"),
     },
   },
 
@@ -90,7 +90,7 @@ module.exports = {
       },
       css: {
         // output filename for CSS
-        filename: "css/[name].[contenthash:8].css",
+        filename: "styles/[name].[contenthash:8].css",
       },
       //integrity: "auto", // include `integrity` attribute in production mode only
 
