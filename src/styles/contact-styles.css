@@ -77,8 +77,7 @@ textarea::placeholder {
   opacity: 1;
 }
 
-.firstNameError,
-.lastNameError,
+.nameError,
 .emailError,
 .messageError,
 .submitError {
@@ -89,8 +88,7 @@ textarea::placeholder {
   visibility: hidden;
 }
 
-.firstNameError:focus,
-.lastNameError:focus,
+.nameError:focus,
 .emailError:focus,
 .messageError:focus,
 .submitError:focus {

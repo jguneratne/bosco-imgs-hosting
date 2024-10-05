@@ -4,10 +4,8 @@ import {
   formFieldset,
   inputFields,
   textArea,
-  firstName,
-  firstNameError,
-  lastName,
-  lastNameError,
+  name,
+  nameError,
   email,
   emailError,
   message,
@@ -34,51 +32,30 @@ export function validateFormFields() {
     submitBtn.style.pointerEvents = "none";
   } else if (shortPageName === "contact" && !formFieldset.disabled) {
     // Validate form fields if form is not diabled
-    validateFirstNameInput();
-    validateLastNameInput();
+    validateNameInput();
     validateEmailInput();
     validateMessageInput();
     validateOnSubmit();
   }
 }
 
-// First Name Validation
+// Name Validation
 
-function firstNameErrorFunc() {
-  if (firstName.validity.valueMissing) {
-    showError(firstName, firstNameError);
-    firstNameError.textContent = "You need to enter your first name.";
-  } else if (firstName.validity.typeMismatch) {
-    showError(firstName, firstNameError);
-    firstNameError.textContent = "Entered value needs to be a name.";
+function nameErrorFunc() {
+  if (name.validity.valueMissing) {
+    showError(name, nameError);
+    nameError.textContent = "Please tell me who you are.";
+  } else if (name.validity.typeMismatch) {
+    showError(name, nameError);
+    nameError.textContent = "Entered value needs to be a name.";
   } else {
-    removeError(firstName, firstNameError);
+    removeError(name, nameError);
   }
 }
 
-function validateFirstNameInput() {
-  firstName.addEventListener("blur", (e) => {
-    firstNameErrorFunc();
-  });
-}
-
-// Last Name Validation
-
-function lastNameErrorFunc() {
-  if (lastName.validity.valueMissing) {
-    showError(lastName, lastNameError);
-    lastNameError.textContent = "You need to enter your first name.";
-  } else if (lastName.validity.typeMismatch) {
-    showError(lastName, lastNameError);
-    lastNameError.textContent = "Entered value needs to be a name.";
-  } else {
-    removeError(lastName, lastNameError);
-  }
-}
-
-function validateLastNameInput() {
-  lastName.addEventListener("blur", (e) => {
-    lastNameErrorFunc();
+function validateNameInput() {
+  name.addEventListener("blur", (e) => {
+    nameErrorFunc();
   });
 }
 
@@ -133,14 +110,12 @@ function validateMessageInput() {
 function validateOnSubmit() {
   form.addEventListener("submit", (e) => {
     if (
-      !firstName.validity.valid ||
-      !lastName.validity.valid ||
+      name.validity.valid ||
       !email.validity.valid ||
       !message.validity.valid
     ) {
       e.preventDefault();
-      firstNameErrorFunc();
-      lastNameErrorFunc();
+      nameErrorFunc();
       emailErrorFunc();
       messageErrorFunc();
 

@@ -36,48 +36,25 @@
           </div>
 
           <form action="#" method="POST" id="contact" novalidate>
-            <fieldset disabled>
+            <fieldset>
               <label for="first-name">
                 <div class="input-type">
-                  First Name:
+                  Name:
                   <span aria-hidden="true">*</span>
                 </div>
                 <div class="input-box">
                   <input
-                    id="first-name"
+                    id="name"
                     type="text"
-                    name="first-name"
-                    placeholder="This form is not yet active."
+                    name="name"
+                    placeholder="Preferred Name"
                     required
                     minlength="1"
                   />
                 </div>
                 <span
-                  id="firstNameError"
-                  class="firstNameError"
-                  role="alert"
-                  tabindex="0"
-                  aria-live="polite"
-                ></span>
-              </label>
-
-              <label for="last-name">
-                <div class="input-type">
-                  Last Name: <span aria-hidden="true">*</span>
-                </div>
-                <div class="input-box">
-                  <input
-                    id="last-name"
-                    type="text"
-                    name="last-name"
-                    placeholder="This form is not yet active."
-                    required
-                    minlength="1"
-                  />
-                </div>
-                <span
-                  id="lastNameError"
-                  class="lastNameError"
+                  id="nameError"
+                  class="nameError"
                   role="alert"
                   tabindex="0"
                   aria-live="polite"
@@ -117,7 +94,7 @@
                     id="message"
                     rows="15"
                     cols="50"
-                    placeholder="This form is not yet active."
+                    placeholder="I look forward to hearing from you!"
                     type="text"
                     required
                     minlength="10"
