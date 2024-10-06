@@ -6,7 +6,6 @@
 
 .required-text {
   padding: 0.5em 0;
-  color: var(--dark-font-col);
 }
 
 .form-disabled {
@@ -80,7 +79,8 @@ textarea::placeholder {
 .nameError,
 .emailError,
 .messageError,
-.submitError {
+.subjectError,
+.submitMessage {
   text-align: right;
   font-weight: bold;
   color: var(--error-color);
@@ -91,7 +91,8 @@ textarea::placeholder {
 .nameError:focus,
 .emailError:focus,
 .messageError:focus,
-.submitError:focus {
+.subjectError:focus,
+.submitMessage:focus {
   border: none;
   outline: none;
   text-decoration: underline;

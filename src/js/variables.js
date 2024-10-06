@@ -32,7 +32,7 @@ export const menuLinks = document.querySelectorAll(".menu-link");
 
 // Contact Form Validation
 export const formDisabledText = document.querySelector(".form-disabled");
-export const form = document.querySelector("#contact");
+export const form = document.getElementById("form");
 export const formFieldset = document.querySelector("fieldset");
 export const inputFields = document.querySelectorAll("input");
 export const textArea = document.querySelector("textarea");
@@ -40,10 +40,12 @@ export const name = document.getElementById("name");
 export const nameError = document.querySelector(".nameError");
 export const email = document.getElementById("email");
 export const emailError = document.querySelector(".emailError");
+export const subject = document.getElementById("email-subject");
+export const subjectError = document.querySelector(".subjectError");
 export const message = document.getElementById("message");
 export const messageError = document.querySelector(".messageError");
 export const submitBtn = document.querySelector(".send-contact");
-export const submitError = document.querySelector(".submitError");
+export const submitMessage = document.querySelector(".submitMessage");
 
 // Window Dimensions
 export const windowHeight = window.innerHeight;

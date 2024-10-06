@@ -35,7 +35,12 @@
             </p>
           </div>
 
-          <form action="#" method="POST" id="contact" novalidate>
+          <form method="POST" id="form" novalidate>
+            <input
+              type="hidden"
+              name="access_key"
+              value="74cfe89f-ad45-44f3-81df-7c2c100b6a7c"
+            />
             <fieldset>
               <label for="first-name">
                 <div class="input-type">
@@ -84,6 +89,29 @@
                 ></span>
               </label>
 
+              <label for="email-subject">
+                <div class="input-type">
+                  Subject: <span aria-hidden="true">*</span>
+                </div>
+                <div class="input-box">
+                  <input
+                    id="email-subject"
+                    type="text"
+                    name="subject"
+                    placeholder="Enter a subject to describe your message"
+                    required
+                    minlength="5"
+                  />
+                </div>
+                <span
+                  id="subjectError"
+                  class="subjectError"
+                  role="alert"
+                  tabindex="0"
+                  aria-live="polite"
+                ></span>
+              </label>
+
               <label for="message">
                 <div class="input-type">
                   Message: <span aria-hidden="true">*</span>
@@ -109,10 +137,17 @@
                 ></span>
               </label>
 
+              <input
+                type="checkbox"
+                name="botcheck"
+                id=""
+                style="display: none"
+              />
+
               <button class="send-contact" type="submit">Submit</button>
               <span
-                id="submitError"
-                class="submitError"
+                id="submitMessage"
+                class="submitMessage"
                 role="alert"
                 tabindex="0"
                 aria-live="polite"

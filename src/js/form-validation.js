@@ -8,12 +8,16 @@ import {
   nameError,
   email,
   emailError,
+  subject,
+  subjectError,
   message,
   messageError,
   submitBtn,
-  submitError,
+  submitMessage,
   shortPageName,
 } from "./variables";
+
+import { sendContact } from "./submitContact";
 
 export function validateFormFields() {
   if (shortPageName === "contact" && formFieldset.disabled) {
@@ -34,6 +38,7 @@ export function validateFormFields() {
     // Validate form fields if form is not diabled
     validateNameInput();
     validateEmailInput();
+    validateSubjectInput();
     validateMessageInput();
     validateOnSubmit();
   }
@@ -82,6 +87,26 @@ function validateEmailInput() {
   });
 }
 
+// Subject Validation
+
+function subjectErrorFunc() {
+  if (subject.validity.valueMissing) {
+    showError(subject, subjectError);
+    subjectError.textContent = "Please provide the subject of your email.";
+  } else if (subject.validity.typeMismatch) {
+    showError(subject, subjectError);
+    subjectError.textContent = "Entered value needs to be in text format.";
+  } else {
+    removeError(subject, subjectError);
+  }
+}
+
+function validateSubjectInput() {
+  subject.addEventListener("blur", (e) => {
+    subjectErrorFunc();
+  });
+}
+
 // Message Validation
 
 function messageErrorFunc() {
@@ -110,19 +135,22 @@ function validateMessageInput() {
 function validateOnSubmit() {
   form.addEventListener("submit", (e) => {
     if (
-      name.validity.valid ||
+      !name.validity.valid ||
       !email.validity.valid ||
+      !subject.validity.valid ||
       !message.validity.valid
     ) {
       e.preventDefault();
       nameErrorFunc();
       emailErrorFunc();
+      subjectErrorFunc();
       messageErrorFunc();
 
-      submitError.style.visibility = "visible";
-      submitError.textContent = "Please complete all text fields.";
+      submitMessage.style.visibility = "visible";
+      submitMessage.textContent = "Please complete all text fields.";
     } else {
-      // Code to submit form
+      e.preventDefault();
+      sendContact();
     }
   });
 }
