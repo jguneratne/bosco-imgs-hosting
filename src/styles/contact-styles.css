@@ -92,7 +92,7 @@ textarea::placeholder {
 
 .h-captcha {
   max-width: 100%;
-  margin: 1em 0 2.5em 0;
+  margin: 1em 0 0 0;
 }
 
 .nameError,
@@ -106,6 +106,10 @@ textarea::placeholder {
   color: var(--error-color);
   padding: 0.5em 0 1.5em 0;
   visibility: hidden;
+}
+
+.hCaptchaError {
+  margin-bottom: 2em;
 }
 
 .submitMessage {
@@ -152,10 +156,6 @@ textarea::placeholder {
 }
 
 @media (min-width: 700px) {
-  .h-captcha {
-    margin: 1em 0 5em 0;
-  }
-
   .send-contact {
     font-size: 1.2rem;
   }
