@@ -76,10 +76,15 @@ textarea::placeholder {
   opacity: 1;
 }
 
+.h-captcha {
+  margin: 1em 0 2.5em 0;
+}
+
 .nameError,
 .emailError,
 .messageError,
 .subjectError,
+.hCaptchaError,
 .submitMessage {
   text-align: right;
   font-weight: bold;
@@ -88,10 +93,15 @@ textarea::placeholder {
   visibility: hidden;
 }
 
+.submitMessage {
+  margin-bottom: 1.5em;
+}
+
 .nameError:focus,
 .emailError:focus,
 .messageError:focus,
 .subjectError:focus,
+.hCaptchaError:focus,
 .submitMessage:focus {
   border: none;
   outline: none;

@@ -42,7 +42,7 @@
               value="74cfe89f-ad45-44f3-81df-7c2c100b6a7c"
             />
             <fieldset>
-              <label for="first-name">
+              <label for="name">
                 <div class="input-type">
                   Name:
                   <span aria-hidden="true">*</span>
@@ -52,7 +52,7 @@
                     id="name"
                     type="text"
                     name="name"
-                    placeholder="Preferred Name"
+                    placeholder="Your Name"
                     required
                     minlength="1"
                   />
@@ -144,6 +144,16 @@
                 style="display: none"
               />
 
+              <div class="h-captcha" data-captcha="true">
+                <span
+                  id="hCaptchaError"
+                  class="hCaptchaError"
+                  role="alert"
+                  tabindex="0"
+                  aria-live="polite"
+                ></span>
+              </div>
+
               <button class="send-contact" type="submit">Submit</button>
               <span
                 id="submitMessage"
@@ -158,5 +168,7 @@
         <%- include('footer.ejs') %>
       </main>
     </div>
+
+    <script src="https://web3forms.com/client/script.js" async defer></script>
   </body>
 </html>
