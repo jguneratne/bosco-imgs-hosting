@@ -77,7 +77,7 @@ textarea:hover {
 
 input:focus,
 textarea:focus {
-  border: 2px solid var(--dark-font-col);
+  border: 2px solid var(--slider-box-col);
 }
 
 .input--invalid {
