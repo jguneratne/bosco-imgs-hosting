@@ -134,6 +134,10 @@ function validateMessageInput() {
 
 function validateOnSubmit() {
   form.addEventListener("submit", (e) => {
+    const hCaptcha = form.querySelector(
+      "textarea[name=h-captcha-response]",
+    ).value;
+
     if (
       !name.validity.valid ||
       !email.validity.valid ||
@@ -148,8 +152,16 @@ function validateOnSubmit() {
 
       submitMessage.style.visibility = "visible";
       submitMessage.textContent = "Please complete all text fields.";
+    } else if (!hCaptcha) {
+      e.preventDefault();
+      hCaptchaError.style.visibility = "visible";
+      hCaptchaError.textContent = "Please complete the captcha field";
+      hCaptchaError.setAttribute("aria-live", "polite");
+      hCaptchaError.focus();
     } else {
       e.preventDefault();
+      hCaptchaError.style.visibility = "hidden";
+      hCaptchaError.blur();
       sendContact();
     }
   });
@@ -161,6 +173,7 @@ export function removeError(inputEl, inputError) {
   inputEl.classList.remove("input--invalid");
   inputError.textContent = "";
   inputError.style.visibility = "hidden";
+  inputError.blur();
 }
 
 function showError(inputEl, inputError) {
