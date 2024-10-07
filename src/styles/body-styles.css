@@ -318,10 +318,6 @@ li {
   align-items: center;
 }
 
-.footer-div p {
-  color: var(--dark-font-col);
-}
-
 /* Media Queries */
 
 @media (min-width: 600px) and (orientation: portrait) {
