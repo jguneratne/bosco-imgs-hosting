@@ -5,7 +5,7 @@ const {
 } = require("html-bundler-webpack-plugin/plugins");
 
 module.exports = {
-  // mode: "development",
+  mode: "production",
   stats: { children: true },
   output: {
     path: path.join(__dirname, "dist/"),
@@ -97,33 +97,6 @@ module.exports = {
         ],
       },
     }),
-    // new FaviconsBundlerPlugin({
-    //   enabled: "auto", // true, false, auto - generate favicons in production mode only
-    //   // favicons configuration options, see https://github.com/itgalaxy/favicons#usage
-
-    //   faviconOptions: {
-    //     path: "assets/imgs/icons", // favicons output path relative to webpack output.path
-    //     background: "#fff",
-    //     appleStatusBarStyle: "fff",
-    //     orientation: "any",
-    //     icons: {
-    //       android: true, // Create Android homescreen icon.
-    //       appleIcon: true, // Create Apple touch icons.
-    //       appleStartup: false, // Create Apple startup images.
-    //       favicons: true, // Create regular favicons.
-    //       windows: true, // Create Windows 8 tile icons.
-    //       yandex: true, // Create Yandex browser icon.
-    //     },
-    //   },
-    //   module: {
-    //     rules: [
-    //       {
-    //         test: /\.(png|jpe?g|ico|svg)$/,
-    //         type: "asset/resource",
-    //       },
-    //     ],
-    //   },
-    // }),
   ],
 
   module: {
