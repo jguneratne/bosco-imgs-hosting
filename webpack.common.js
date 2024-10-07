@@ -26,64 +26,55 @@ module.exports = {
 
   plugins: [
     new HtmlBundlerPlugin({
-      entry: [
-        {
-          import: "./src/views/template.ejs", // template file
-          filename: "index.html", // => dist/index.html
+      entry: {
+        index: {
+          import: path.join(__dirname, "./src/views/template.ejs"),
           data: {
-            title: "Bosco Images Wildlife Photography: Homepage",
-          }, // pass variables into template
+            title: "Bosco Images: Homepage",
+          },
         },
-        {
+        galleries: {
           import: "./src/views/galleries.ejs",
-          filename: "galleries.html",
-          data: { title: "Bosco Images Wildlife Photography: Photo Galleries" },
+          data: { title: "Bosco Images: Photo Galleries" },
         },
-        {
+        "birds-gallery": {
           import: "./src/views/birds-gallery.ejs",
-          filename: "birds-gallery.html",
-          data: { title: "Bosco Images Wildlife Photography: Birds Gallery" },
+          data: { title: "Bosco Images: Birds Gallery" },
         },
-        {
+        "insects-gallery": {
           import: "./src/views/insects-gallery.ejs",
-          filename: "insects-gallery.html",
           data: {
-            title: "Bosco Images Wildlife Photography: Insects Gallery",
+            title: "Bosco Images: Insects Gallery",
           },
         },
-        {
+        "small-animals-gallery": {
           import: "./src/views/small-animals-gallery.ejs",
-          filename: "small-animals-gallery.html",
           data: {
-            title: "Bosco Images Wildlife Photography: Small Animals Gallery",
+            title: "Bosco Images: Small Animals Gallery",
           },
         },
-        {
+        "pond-life-gallery": {
           import: "./src/views/pond-life-gallery.ejs",
-          filename: "pond-life-gallery.html",
           data: {
-            title: "Bosco Images Wildlife Photography: Pond Life Gallery",
+            title: "Bosco Images: Pond Life Gallery",
           },
         },
-        {
+        "urban-animals-gallery": {
           import: "./src/views/urban-animals-gallery.ejs",
-          filename: "urban-animals-gallery.html",
           data: {
-            title: "Bosco Images Wildlife Photography: Urban Animals Gallery",
+            title: "Bosco Images: Urban Animals Gallery",
           },
         },
-
-        {
+        about: {
           import: "./src/views/about.ejs",
-          filename: "about.html",
-          data: { title: "About: Bosco Images Wildlife Photography" },
+          data: { title: "About: Bosco Images" },
         },
-        {
+        contact: {
           import: "./src/views/contact.ejs",
-          filename: "contact.html",
-          data: { title: "Contact: Bosco Images Wildlife Photography" },
+          data: { title: "Contact: Bosco Images" },
         },
-      ],
+      },
+
       js: {
         // output filename for JS
         filename: "js/[name].[contenthash:8].js",
@@ -106,33 +97,33 @@ module.exports = {
         ],
       },
     }),
-    new FaviconsBundlerPlugin({
-      enabled: "auto", // true, false, auto - generate favicons in production mode only
-      // favicons configuration options, see https://github.com/itgalaxy/favicons#usage
+    // new FaviconsBundlerPlugin({
+    //   enabled: "auto", // true, false, auto - generate favicons in production mode only
+    //   // favicons configuration options, see https://github.com/itgalaxy/favicons#usage
 
-      faviconOptions: {
-        path: "assets/imgs/icons", // favicons output path relative to webpack output.path
-        background: "#fff",
-        appleStatusBarStyle: "fff",
-        orientation: "any",
-        icons: {
-          android: true, // Create Android homescreen icon.
-          appleIcon: true, // Create Apple touch icons.
-          appleStartup: false, // Create Apple startup images.
-          favicons: true, // Create regular favicons.
-          windows: true, // Create Windows 8 tile icons.
-          yandex: true, // Create Yandex browser icon.
-        },
-      },
-      module: {
-        rules: [
-          {
-            test: /\.(png|jpe?g|ico|svg)$/,
-            type: "asset/resource",
-          },
-        ],
-      },
-    }),
+    //   faviconOptions: {
+    //     path: "assets/imgs/icons", // favicons output path relative to webpack output.path
+    //     background: "#fff",
+    //     appleStatusBarStyle: "fff",
+    //     orientation: "any",
+    //     icons: {
+    //       android: true, // Create Android homescreen icon.
+    //       appleIcon: true, // Create Apple touch icons.
+    //       appleStartup: false, // Create Apple startup images.
+    //       favicons: true, // Create regular favicons.
+    //       windows: true, // Create Windows 8 tile icons.
+    //       yandex: true, // Create Yandex browser icon.
+    //     },
+    //   },
+    //   module: {
+    //     rules: [
+    //       {
+    //         test: /\.(png|jpe?g|ico|svg)$/,
+    //         type: "asset/resource",
+    //       },
+    //     ],
+    //   },
+    // }),
   ],
 
   module: {
