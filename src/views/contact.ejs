@@ -10,7 +10,7 @@
     <link href="../styles/contact-styles.css" rel="stylesheet" />
     <script src="../js/menu-index.js" defer="defer"></script>
     <script src="../js/footerDate.js" defer="defer"></script>
-    <!-- <script src="../js/validation-index.js" defer="defer"></script> -->
+    <script src="../js/validation-index.js" defer="defer"></script>
   </head>
 
   <body>
@@ -167,24 +167,5 @@
     </div>
 
     <script src="https://web3forms.com/client/script.js" async defer></script>
-    <script>
-      const form = document.getElementById("form");
-      const hCaptchaError = document.querySelector(".hCaptchaError");
-
-      form.addEventListener("submit", function (e) {
-        const hCaptcha = form.querySelector(
-          "textarea[name=h-captcha-response]",
-        ).value;
-
-        if (!hCaptcha) {
-          e.preventDefault();
-          hCaptchaError.style.visibility = "visible";
-          hCaptchaError.textContent = "Please complete the captcha field";
-          hCaptchaError.setAttribute("aria-live", "polite");
-          hCaptchaError.focus();
-          return;
-        }
-      });
-    </script>
   </body>
 </html>
