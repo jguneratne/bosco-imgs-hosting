@@ -30,7 +30,8 @@ fieldset {
   display: flex;
   flex-direction: column;
   align-items: center;
-  max-width: 100%;
+  width: 100%;
+  max-width: 35em;
   margin: 0 auto;
   border: none;
 }
@@ -145,93 +146,17 @@ textarea::placeholder {
 /* Media Queries */
 
 @media (min-width: 600px) {
-  fieldset {
-    max-width: 25em;
-  }
-
   label {
     width: 100%;
-  }
-
-  .send-contact {
-    font-size: 1.2rem;
   }
 }
 
 @media (min-width: 700px) {
-  .contact-header {
-    font-size: 3rem;
-  }
-
-  .required-text,
-  .form-disabled {
-    font-size: 2.5rem;
-  }
-
-  fieldset {
-    max-width: 38em;
-  }
-
-  label {
-    padding: 0;
-    font-size: 2rem;
-  }
-
-  input,
-  textarea {
-    font-size: 1.7rem;
-  }
-
   .h-captcha {
     margin: 1em 0 5em 0;
   }
 
   .send-contact {
-    font-size: 2.2rem;
-  }
-}
-
-@media (min-width: 950px) {
-  .contact-header {
-    font-size: 2.8rem;
-  }
-
-  .required-text,
-  .form-disabled {
-    font-size: 2rem;
-  }
-}
-
-@media (min-width: 1000px) {
-  fieldset {
-    max-width: 45em;
-  }
-}
-
-@media (min-width: 1800px) {
-  .contact-header {
-    font-size: 2.5rem;
-  }
-
-  .required-text,
-  .form-disabled {
-    font-size: 2rem;
-  }
-
-  fieldset {
-    max-width: 40em;
-  }
-
-  label {
-    font-size: 1.5rem;
-  }
-
-  input,
-  textarea {
     font-size: 1.2rem;
-  }
-
-  .send-contact {
-    font-size: 1.8rem;
   }
 }
