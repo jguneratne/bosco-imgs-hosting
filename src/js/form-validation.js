@@ -19,8 +19,33 @@ import {
 
 import { sendContact } from "./submitContact";
 
+// export function validateFormFields() {
+//   if (shortPageName === "contact" && formFieldset.disabled) {
+//     Adjust styles to show form is disabled
+//     formDisabledText.style.display = "initial";
+
+//     inputFields.forEach((field) => {
+//       field.style.backgroundColor = "#edf0f0";
+//       field.style.pointerEvents = "none";
+//     });
+
+//     textArea.style.backgroundColor = "#edf0f0";
+//     textArea.style.pointerEvents = "none";
+
+//     submitBtn.style.backgroundColor = "#edf0f0";
+//     submitBtn.style.pointerEvents = "none";
+//   } else if (shortPageName === "contact" && !formFieldset.disabled) {
+//     Validate form fields if form is not diabled
+//     validateNameInput();
+//     validateEmailInput();
+//     validateSubjectInput();
+//     validateMessageInput();
+//     validateOnSubmit();
+//   }
+// }
+
 export function validateFormFields() {
-  if (shortPageName === "contact" && formFieldset.disabled) {
+  if (formFieldset.disabled) {
     // Adjust styles to show form is disabled
     formDisabledText.style.display = "initial";
 
@@ -34,7 +59,7 @@ export function validateFormFields() {
 
     submitBtn.style.backgroundColor = "#edf0f0";
     submitBtn.style.pointerEvents = "none";
-  } else if (shortPageName === "contact" && !formFieldset.disabled) {
+  } else if (!formFieldset.disabled) {
     // Validate form fields if form is not diabled
     validateNameInput();
     validateEmailInput();
