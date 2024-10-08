@@ -2,6 +2,7 @@ import {
   galMainDivs,
   getGal,
   reduceMotion,
+  fullPageName,
   shortPageName,
   getAnimationID,
   sliderAnimationCtrlDiv,
@@ -27,7 +28,11 @@ import {
 
 export function sliderBoxCtrl() {
   galMainDivs.forEach((div) => {
-    if (div.dataset.name === shortPageName) {
+    // Use shortPageName to run locally
+    // Use fullPageName when hosted
+
+    // if (div.dataset.name === shortPageName) {
+    if (div.dataset.name === fullPageName) {
       getGal.galLocale = document.querySelector(".gallery");
 
       const currentGallery = getGal.galView;
