@@ -32,7 +32,8 @@ export function sliderBoxCtrl() {
     // Use fullPageName when hosted
 
     if (
-      (div.dataset.name === fullPageName || div.dataset.name) === shortPageName
+      div.dataset.name === fullPageName ||
+      div.dataset.name === shortPageName
     ) {
       getGal.galLocale = document.querySelector(".gallery");
 
