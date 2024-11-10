@@ -118,23 +118,7 @@ module.exports = {
         generator: {
           filename: ({ filename }) => {
             // Keep directory structure for images in dist folder
-            const srcPath =
-              "src/assets/imgs" ||
-              "src/assets/imgs/about-page" ||
-              "src/assets/imgs/birds-gal/avif" ||
-              "src/assets/imgs/birds-gal/jpg" ||
-              "src/assets/imgs/home-imgs" ||
-              "src/assets/imgs/icons" ||
-              "src/assets/imgs/insects-gal/avif" ||
-              "src/assets/imgs/insects-gal/jpg" ||
-              "src/assets/imgs/pond-gallery/avif" ||
-              "src/assets/imgs/pong-gallery/jpg" ||
-              "src/assets/imgs/small-animals-gal/avif" ||
-              "src/assets/imgs/small-animals-gal/jpg" ||
-              "src/assets/imgs/thumbnails/avif" ||
-              "src/assets/imgs/thumbnails/jpg" ||
-              "src/assets/imgs/urban/avif" ||
-              "src/assets/imgs/urban/jpg";
+            const srcPath = "src/assets/imgs";
             const regExp = new RegExp(
               `[\\\\/]?(?:${path.normalize(srcPath)}|node_modules)[\\\\/](.+?)$`,
             );
