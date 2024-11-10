@@ -8,9 +8,9 @@
   justify-content: flex-start;
 
   background-image: image-set(
-    url(../assets/imgs/home-imgs/Guneratne_2024.06.09_home-vertical-600p.webp)
+    url(@images/home-imgs/Guneratne_2024.06.09_home-vertical-600p.webp)
       type("image/webp"),
-    url(../assets/imgs/home-imgs/Guneratne_2024.06.09_home-vertical-600p.jpg)
+    url(@images/home-imgs/Guneratne_2024.06.09_home-vertical-600p.jpg)
       type("image/jpg")
   );
   background-repeat: no-repeat;
@@ -68,9 +68,9 @@
 @media (min-width: 700px) and (orientation: portrait) {
   .home {
     background-image: image-set(
-      url(../assets/imgs/home-imgs/Guneratne_2024.06.09_home-vertical-800p.webp)
+      url(@images/home-imgs/Guneratne_2024.06.09_home-vertical-800p.webp)
         type("image/webp"),
-      url(../assets/imgs/home-imgs/Guneratne_2024.06.09_home-vertical-800p.jpg)
+      url(@images/home-imgs/Guneratne_2024.06.09_home-vertical-800p.jpg)
         type("image/jpg")
     );
   }
@@ -92,9 +92,9 @@
 @media (min-width: 1000px) and (orientation: portrait) {
   .home {
     background-image: image-set(
-      url(../assets/imgs/home-imgs/Guneratne_2024.06.09_home-vertical-1200p.webp)
+      url(@images/home-imgs/Guneratne_2024.06.09_home-vertical-1200p.webp)
         type("image/webp"),
-      url(../assets/imgs/home-imgs/Guneratne_2024.06.09_home-vertical-1200p.jpg)
+      url(@images/home-imgs/Guneratne_2024.06.09_home-vertical-1200p.jpg)
         type("image/jpg")
     );
   }
@@ -107,9 +107,9 @@
 @media (min-width: 600px) and (orientation: landscape) {
   .home {
     background-image: image-set(
-      url(../assets/imgs/home-imgs/Guneratne_2024.06.09_home-horizontal-800p.webp)
+      url(@images/home-imgs/Guneratne_2024.06.09_home-horizontal-800p.webp)
         type("image/webp"),
-      url(../assets/imgs/home-imgs/Guneratne_2024.06.09_home-horizontal-800p.jpg)
+      url(@images/home-imgs/Guneratne_2024.06.09_home-horizontal-800p.jpg)
         type("image/jpg")
     );
     gap: 2em;
@@ -131,9 +131,9 @@
 @media (min-width: 950px) and (orientation: landscape) {
   .home {
     background-image: image-set(
-      url(../assets/imgs/home-imgs/Guneratne_2024.06.09_home-horizontal-1200p.webp)
+      url(@images/home-imgs/Guneratne_2024.06.09_home-horizontal-1200p.webp)
         type("image/webp"),
-      url(../assets/imgs/home-imgs/Guneratne_2024.06.09_home-horizontal-1200p.jpg)
+      url(@images/home-imgs/Guneratne_2024.06.09_home-horizontal-1200p.jpg)
         type("image/jpg")
     );
   }
@@ -165,9 +165,9 @@
 @media (min-width: 1800px) and (orientation: landscape) {
   .home {
     background-image: image-set(
-        url(../assets/imgs/home-imgs/Guneratne_2024.06.09_home-horizontal-1600p.webp)
+        url(@images/home-imgs/Guneratne_2024.06.09_home-horizontal-1600p.webp)
           type("image/webp"),
-        url(../assets/imgs/home-imgs/Guneratne_2024.06.09_home-horizontal-1600p.jpg)
+        url(@images/home-imgs/Guneratne_2024.06.09_home-horizontal-1600p.jpg)
       )
       type("image/jpg");
   }

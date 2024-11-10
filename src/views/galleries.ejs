@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width" />
     <!-- Removed initial-scale and max-width from content attribute to fix zooming problems on mobile -->
     <title><%= title %></title>
-    <link href="../styles/body-styles.css" rel="stylesheet" />
-    <link href="../styles/thumbnail-styles.css" rel="stylesheet" />
+    <link href="@styles/body-styles.css" rel="stylesheet" />
+    <link href="@styles/thumbnail-styles.css" rel="stylesheet" />
   </head>
 
   <body>
@@ -26,9 +26,9 @@
                   loading="lazy"
                   class="thumbnail-img"
                   srcset="
-                    ../assets/imgs/thumbnails/avif/Guneratne_2023.06.27_birds-gal-thumb.avif
+                    @images/thumbnails/avif/Guneratne_2023.06.27_birds-gal-thumb.avif
                   "
-                  src="../assets/imgs/thumbnails/jpg/Guneratne_2023.06.27_birds-gal-thumb.jpg"
+                  src="@images/thumbnails/jpg/Guneratne_2023.06.27_birds-gal-thumb.jpg"
                   alt="A bright red male cardinal on the right of the frame perched on a stick gazing toward the left of the frame, with an out-of-focus green background."
                 />
                 <p class="gal-title">Birds Gallery</p>
@@ -45,9 +45,9 @@
                   loading="lazy"
                   class="thumbnail-img"
                   srcset="
-                    ../assets/imgs/thumbnails/avif/Guneratne_2023.09.05_insects-gal-thumb.avif
+                    @images/thumbnails/avif/Guneratne_2023.09.05_insects-gal-thumb.avif
                   "
-                  src="../assets/imgs/thumbnails/jpg/Guneratne_2023.09.05_insects-gal-thumb.jpg"
+                  src="@images/thumbnails/jpg/Guneratne_2023.09.05_insects-gal-thumb.jpg"
                   alt="A close up of a swallowtail butterfly caterpillar, which
                   is green with black stripes, and yellow dots on every other
                   stripe. It is crawling along the branch of a dill plant,
@@ -67,9 +67,9 @@
                   loading="lazy"
                   class="thumbnail-img"
                   srcset="
-                    ../assets/imgs/thumbnails/avif/Guneratne_2024.06.19_sm-anim-gal-thumb.avif
+                    @images/thumbnails/avif/Guneratne_2024.06.19_sm-anim-gal-thumb.avif
                   "
-                  src="../assets/imgs/thumbnails/jpg/Guneratne_2024.06.19_sm-anim-gal-thumb.jpg"
+                  src="@images/thumbnails/jpg/Guneratne_2024.06.19_sm-anim-gal-thumb.jpg"
                   alt="An old black drain pipe protrudes from the ground in the center of the frame, revealing the top of a chipmunk's head peeking up toward the right."
                 />
                 <p class="gal-title">Small Animals Gallery</p>
@@ -86,9 +86,9 @@
                   loading="lazy"
                   class="thumbnail-img"
                   srcset="
-                    ../assets/imgs/thumbnails/avif/Guneratne_2024.06.07_pond-life-thumb.avif
+                    @images/thumbnails/avif/Guneratne_2024.06.07_pond-life-thumb.avif
                   "
-                  src="../assets/imgs/thumbnails/jpg/Guneratne_2024.06.07_pond-life-thumb.jpg"
+                  src="@images/thumbnails/jpg/Guneratne_2024.06.07_pond-life-thumb.jpg"
                   alt="A large bull frog sits on a lilly pad in the center of the frame angled toward the bottom left corner of the frame surrounded by blue water with a vignette of other lilly pads around the top, right, and bottom of the frame. The lilly that the frog is sitting on is partially submerged in water, held under by the weight of the frog. The frogs legs can be seen beneath the water while its body and head are above water."
                 />
                 <p class="gal-title">Pond Life Gallery</p>
@@ -105,9 +105,9 @@
                   loading="lazy"
                   class="thumbnail-img"
                   srcset="
-                    ../assets/imgs/thumbnails/avif/Guneratne_2023.07.27_urban-anim-thumb.avif
+                    @images/thumbnails/avif/Guneratne_2023.07.27_urban-anim-thumb.avif
                   "
-                  src="../assets/imgs/thumbnails/jpg/Guneratne_2023.07.27_urban-anim-thumb.jpg"
+                  src="@images/thumbnails/jpg/Guneratne_2023.07.27_urban-anim-thumb.jpg"
                   alt="The back slats of a red adirondack chair arch through the frame from center left to the bottom right corner. A house sparrow is perchec on top of the second from the right slat, angled toward the left of the frame with it's head nobly held in the air."
                 />
                 <p class="gal-title">Urban Animals Gallery</p>
@@ -119,8 +119,8 @@
       </main>
     </div>
 
-    <script src="../js/menu-index.js" defer="defer"></script>
-    <script src="../js/footerDate.js" defer="defer"></script>
+    <script src="@scripts/menu-index.js" defer="defer"></script>
+    <script src="@scripts/footerDate.js" defer="defer"></script>
     <!-- Cloudflare Web Analytics -->
     <script
       defer
