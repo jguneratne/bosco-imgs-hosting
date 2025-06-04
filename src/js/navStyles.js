@@ -64,7 +64,7 @@ function ctrlTabHighlight() {
     } else if (
       shortPageName === "birds-gallery" ||
       shortPageName === "insects-gallery" ||
-      shortPageName === "small-animals-gallery"
+      shortPageName === "mammals-gallery"
     ) {
       showGalNavLink();
     }
@@ -76,7 +76,7 @@ function showGalNavLink() {
     if (
       item.dataset.name === "birds-gallery" ||
       item.dataset.name === "insects-gallery" ||
-      item.dataset.name === "small-animals-gallery"
+      item.dataset.name === "mammals-gallery"
     ) {
       menuBtnStyle.forEach((btn) => {
         btn.classList.remove("selected");

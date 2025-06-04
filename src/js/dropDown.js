@@ -82,7 +82,7 @@ function changeActiveState() {
       btn.dataset.name !== shortPageName &&
       (shortPageName === "birds-gallery" ||
         shortPageName === "insects-gallery" ||
-        shortPageName === "small-animals-gallery" ||
+        shortPageName === "mammals-gallery" ||
         shortPageName === "pond-life-gallery" ||
         shortPageName === "urban-animals-gallery")
     ) {

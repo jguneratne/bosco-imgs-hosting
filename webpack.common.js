@@ -47,8 +47,8 @@ module.exports = {
             title: "Bosco Images: Insects Gallery",
           },
         },
-        "small-animals-gallery": {
-          import: "./src/views/small-animals-gallery.ejs",
+        "mammals-gallery": {
+          import: "./src/views/mammals-gallery.ejs",
           data: {
             title: "Bosco Images: Small Animals Gallery",
           },
